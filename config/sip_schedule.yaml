@@ -1,0 +1,10 @@
+# Your active SIPs. Used to project mutual fund units between monthly CAS statements.
+# The ISIN is optional if the fund name matches the CAS exactly; adding it is more reliable.
+#
+# Example:
+# - fund: "Parag Parikh Flexi Cap Fund - Direct Plan - Growth"
+#   isin: "INF879O01027"
+#   amount: 5000
+#   day: 5          # day of the month the SIP is debited
+
+sips: []

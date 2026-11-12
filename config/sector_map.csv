@@ -1,0 +1,51 @@
+symbol,sector,industry,market_cap_bucket
+RELIANCE,Energy,Oil & Gas Refining,Large
+TCS,Information Technology,IT Services,Large
+INFY,Information Technology,IT Services,Large
+HCLTECH,Information Technology,IT Services,Large
+WIPRO,Information Technology,IT Services,Large
+TECHM,Information Technology,IT Services,Large
+HDFCBANK,Banks,Private Bank,Large
+ICICIBANK,Banks,Private Bank,Large
+KOTAKBANK,Banks,Private Bank,Large
+AXISBANK,Banks,Private Bank,Large
+SBIN,PSU Banks,Public Bank,Large
+BAJFINANCE,Financial Services,NBFC,Large
+BAJAJFINSV,Financial Services,Financial Holding,Large
+HDFCLIFE,Financial Services,Life Insurance,Large
+SBILIFE,Financial Services,Life Insurance,Large
+LT,Infrastructure,Construction & Engineering,Large
+ITC,FMCG,Tobacco & FMCG,Large
+HINDUNILVR,FMCG,Personal Products,Large
+NESTLEIND,FMCG,Packaged Foods,Large
+BRITANNIA,FMCG,Packaged Foods,Large
+TATACONSUM,FMCG,Packaged Foods,Large
+ASIANPAINT,Consumer Durables,Paints,Large
+TITAN,Consumer Durables,Jewellery,Large
+MARUTI,Automobile,Passenger Vehicles,Large
+TATAMOTORS,Automobile,Passenger Vehicles,Large
+M&M,Automobile,Passenger Vehicles,Large
+BAJAJ-AUTO,Automobile,Two Wheelers,Large
+EICHERMOT,Automobile,Two Wheelers,Large
+HEROMOTOCO,Automobile,Two Wheelers,Large
+SUNPHARMA,Pharmaceuticals,Pharma,Large
+DRREDDY,Pharmaceuticals,Pharma,Large
+CIPLA,Pharmaceuticals,Pharma,Large
+DIVISLAB,Pharmaceuticals,Pharma,Large
+APOLLOHOSP,Healthcare,Hospitals,Large
+TATASTEEL,Metals,Steel,Large
+JSWSTEEL,Metals,Steel,Large
+HINDALCO,Metals,Aluminium,Large
+COALINDIA,Energy,Coal,Large
+ONGC,Energy,Oil Exploration,Large
+NTPC,Energy,Power Generation,Large
+POWERGRID,Energy,Power Transmission,Large
+BHARTIARTL,Communication Services,Telecom,Large
+ULTRACEMCO,Infrastructure,Cement,Large
+GRASIM,Infrastructure,Cement & Diversified,Large
+ADANIENT,Infrastructure,Diversified,Large
+ADANIPORTS,Infrastructure,Ports,Large
+DLF,Realty,Real Estate,Large
+ZOMATO,Consumer Services,Food Delivery,Large
+ETERNAL,Consumer Services,Food Delivery,Large
+IRFC,Financial Services,NBFC,Large

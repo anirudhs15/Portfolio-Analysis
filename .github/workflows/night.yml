@@ -1,0 +1,47 @@
+name: Night run (stocks + mutual funds)
+
+on:
+  schedule:
+    - cron: "0 16 * * 1-5"    # 9:30 PM IST, Monday-Friday
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: portfolio-data
+  cancel-in-progress: false
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install
+        run: pip install -e .
+
+      - name: Run night pipeline
+        env:
+          GROWW_TOTP_TOKEN: ${{ secrets.GROWW_TOTP_TOKEN }}
+          GROWW_TOTP_SECRET: ${{ secrets.GROWW_TOTP_SECRET }}
+          CAS_PASSWORD: ${{ secrets.CAS_PASSWORD }}
+          DELETE_CAS_AFTER_IMPORT: "true"
+        run: python -m portfolio.run --mode night
+
+      - name: Commit snapshot
+        if: always()
+        run: |
+          git config user.name "portfolio-bot"
+          git config user.email "portfolio-bot@users.noreply.github.com"
+          git add -A data
+          git diff --cached --quiet && exit 0
+          git commit -m "Night run $(TZ=Asia/Kolkata date +%F)"
+          git pull --rebase --autostash
+          git push

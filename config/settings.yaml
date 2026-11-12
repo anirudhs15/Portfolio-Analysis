@@ -1,0 +1,56 @@
+# Portfolio analytics settings. Edit freely; no code changes needed.
+
+timezone: Asia/Kolkata
+
+benchmark:
+  primary: "^NSEI"        # Nifty 50 (Yahoo Finance symbol)
+  broad: "^CRSLDX"        # Nifty 500
+
+# A holding counts as a "significant mover" when either rule is met.
+movers:
+  abs_move_pct: 2.0             # moved more than ±2% today
+  vs_sector_multiple: 1.5       # or moved 1.5x its sector index
+
+# Diversification flags
+diversification:
+  max_single_stock_pct: 10.0    # look-through weight of one stock
+  max_sector_pct: 30.0
+  max_fund_overlap_pct: 50.0
+  max_top5_pct: 50.0
+
+# Beta and risk metrics use this much daily price history
+risk:
+  lookback_days: 365
+  risk_free_rate_pct: 6.5       # approx. 91-day T-bill yield; update occasionally
+
+# Scenario stress tests shown in the outlook section (Nifty % move)
+scenarios: [-5, -10, -20]
+
+# Price source: "yahoo" (free) or "groww" (needs the paid Groww Live Data plan)
+price_source: yahoo
+
+# Map of sectors (as classified in config/sector_map.csv or by Yahoo Finance)
+# to the NSE sector index used for attribution.
+sector_index:
+  Financial Services: "NIFTY_FIN_SERVICE.NS"
+  Banks: "^NSEBANK"
+  Information Technology: "^CNXIT"
+  Technology: "^CNXIT"
+  Automobile: "^CNXAUTO"
+  Consumer Cyclical: "^CNXAUTO"
+  Pharmaceuticals: "^CNXPHARMA"
+  Healthcare: "^CNXPHARMA"
+  FMCG: "^CNXFMCG"
+  Consumer Defensive: "^CNXFMCG"
+  Metals: "^CNXMETAL"
+  Basic Materials: "^CNXMETAL"
+  Energy: "^CNXENERGY"
+  Oil & Gas: "^CNXENERGY"
+  Utilities: "^CNXENERGY"
+  Realty: "^CNXREALTY"
+  Real Estate: "^CNXREALTY"
+  Infrastructure: "^CNXINFRA"
+  Industrials: "^CNXINFRA"
+  Media: "^CNXMEDIA"
+  Communication Services: "^CNXMEDIA"
+  PSU Banks: "^CNXPSUBANK"
