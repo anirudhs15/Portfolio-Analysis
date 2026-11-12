@@ -1,266 +1,287 @@
 <meta name="dash-one-writer">
 <style>
-  .pf { font-family: var(--font-anthropic-sans); color: var(--color-fg); display: grid; gap: var(--cds-gap-xl); max-width: 1100px; margin: 0 auto; }
-  .pf h1 { font-family: var(--font-anthropic-serif); font-weight: 400; font-size: 2.1rem; margin: 0; letter-spacing: -0.01em; }
-  .pf h2 { font-family: var(--font-anthropic-serif); font-weight: 400; font-size: 1.45rem; margin: 0 0 var(--cds-gap-xs); }
-  .pf h3 { font-size: var(--cds-font-size-body); font-weight: var(--cds-font-weight-medium); margin: 0; }
-  .pf h4 { font-size: var(--cds-font-size-caption); font-weight: var(--cds-font-weight-medium); text-transform: uppercase; letter-spacing: .05em; color: var(--color-fg-muted); margin: 0 0 6px; }
-  .pf p { margin: 0; line-height: 1.55; }
-  .pf .muted { color: var(--color-fg-muted); }
-  .pf .small { font-size: var(--cds-font-size-caption); }
-  .pf .num { font-variant-numeric: tabular-nums; }
-  .pf .good { color: var(--color-ok); }
-  .pf .bad { color: var(--color-bad); }
-  .pf-head { display: grid; gap: var(--cds-gap-sm); }
-  .pf-take { font-size: 1.12rem; max-width: 62ch; }
-  .pf-take b { font-weight: var(--cds-font-weight-medium); }
-  .pf-nav { display: flex; flex-wrap: wrap; gap: var(--cds-gap-xs); }
-  .pf-nav a { font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); text-decoration: none; border: 1px solid var(--color-border-line); border-radius: 999px; padding: 5px 12px; }
-  .pf-nav a:hover { color: var(--color-fg); border-color: var(--color-fg-muted); }
-  .pf-card { background: var(--color-panel); border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); padding: var(--cds-pad-lg); min-width: 0; }
-  .pf-kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--cds-gap-md); }
-  .pf-kpi .label { font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); text-transform: uppercase; letter-spacing: .04em; }
-  .pf-kpi .big { font-family: var(--font-anthropic-serif); font-weight: 400; font-size: 2rem; line-height: 1.15; margin: 6px 0 4px; font-variant-numeric: tabular-nums; }
-  .pf-kpi .sub { font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); }
-  .pf-section { display: grid; gap: var(--cds-gap-md); scroll-margin-top: 12px; }
-  .pf-section-head { display: flex; justify-content: space-between; align-items: end; gap: var(--cds-gap-md); flex-wrap: wrap; }
-  .pf-intro { max-width: 70ch; color: var(--color-fg-muted); }
-  .pf-two { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--cds-gap-md); }
-  .pf-three { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: var(--cds-gap-md); }
-  .pf-chart { position: relative; min-height: 120px; }
-  .pf-chart svg { display: block; overflow: visible; }
-  .pf-chart text { font-family: var(--font-anthropic-sans); }
-  .pf-tip { position: absolute; pointer-events: none; background: var(--cds-surface-popover); border: 1px solid var(--cds-border); box-shadow: var(--cds-shadow-popover); border-radius: 8px; padding: 8px 10px; font-size: var(--cds-font-size-caption); max-width: 280px; z-index: 5; line-height: 1.45; }
-  .pf-tip b { display: block; font-weight: var(--cds-font-weight-medium); margin-bottom: 2px; }
-  .pf-chip { display: inline-block; font-size: 11px; line-height: 1; padding: 4px 8px; border-radius: 999px; border: 1px solid var(--color-border-line); color: var(--color-fg-muted); white-space: nowrap; }
-  .pf-chip.positive { color: var(--color-ok); border-color: currentColor; }
-  .pf-chip.negative { color: var(--color-bad); border-color: currentColor; }
-  .pf-chip.high { color: var(--color-bad); border-color: currentColor; }
-  .pf-chip.medium { color: var(--color-warn); border-color: currentColor; }
-  .pf-chip.mover { color: var(--color-fg); border-color: var(--color-fg-muted); }
-  .pf-src { font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); }
-  .pf-src a { color: inherit; }
-  .pf-wrap { border-left: 3px solid var(--color-border-line); padding-left: var(--cds-pad-md); }
-  .pf-bars { display: grid; gap: 10px; }
-  .pf-bar-row { display: grid; grid-template-columns: minmax(90px, 38%) 1fr auto; gap: 10px; align-items: center; font-size: var(--cds-font-size-caption); }
-  .pf-bar-track { height: 10px; border-radius: 5px; background: var(--cds-chart-grid); overflow: hidden; }
-  .pf-bar-fill { height: 100%; border-radius: 5px; }
-  .pf-list { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--cds-gap-md); }
+  .app { font-family: var(--font-anthropic-sans); color: var(--color-fg); max-width: 860px; margin: 0 auto; display: grid; gap: var(--cds-gap-lg); }
+  .app * { box-sizing: border-box; }
+  .app h1, .app h2, .app h3, .app h4, .app p { margin: 0; }
+  .app p { line-height: 1.55; }
+  .app .muted { color: var(--color-fg-muted); }
+  .app .small { font-size: var(--cds-font-size-caption); }
+  .app .num { font-variant-numeric: tabular-nums; }
+  .app .good { color: var(--color-ok); }
+  .app .bad { color: var(--color-bad); }
+  .app a { color: inherit; }
 
-  /* Holdings: each one opens into its own panel */
-  .pf-hold { display: grid; gap: 8px; }
-  .pf-h { background: var(--color-panel); border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); scroll-margin-top: 12px; }
-  .pf-h[open] { border-color: var(--color-fg-muted); }
-  .pf-h > summary { list-style: none; cursor: pointer; display: grid; grid-template-columns: 1fr auto auto 18px; gap: var(--cds-gap-md); align-items: center; padding: 14px var(--cds-pad-lg); }
-  .pf-h > summary::-webkit-details-marker { display: none; }
-  .pf-h > summary:focus-visible { outline: 2px solid var(--color-fg-muted); outline-offset: 2px; border-radius: var(--cds-radius); }
-  .pf-h .nm { font-size: var(--cds-font-size-body); font-weight: var(--cds-font-weight-medium); }
-  .pf-h .meta { font-size: 12px; color: var(--color-fg-muted); margin-top: 2px; display: flex; gap: 6px; flex-wrap: wrap; align-items: center; }
-  .pf-h .val { text-align: right; font-variant-numeric: tabular-nums; }
-  .pf-h .val .v { font-size: var(--cds-font-size-body); }
-  .pf-h .val .w { font-size: 12px; color: var(--color-fg-muted); }
-  .pf-h .chev { width: 18px; height: 18px; color: var(--color-fg-muted); transition: transform .15s; }
-  .pf-h[open] .chev { transform: rotate(180deg); }
-  .pf-panel { border-top: 1px solid var(--color-border-line); padding: var(--cds-pad-lg); display: grid; gap: var(--cds-gap-lg); }
-  .pf-facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: var(--cds-gap-md); }
-  .pf-fact .k { font-size: 11px; color: var(--color-fg-muted); text-transform: uppercase; letter-spacing: .04em; }
-  .pf-fact .x { font-variant-numeric: tabular-nums; margin-top: 2px; }
-  .pf-range { position: relative; height: 6px; background: var(--cds-chart-grid); border-radius: 3px; margin: 10px 0 4px; }
-  .pf-range i { position: absolute; top: -4px; width: 4px; height: 14px; border-radius: 2px; background: var(--color-fg); transform: translateX(-2px); }
-  .pf-range-l { display: flex; justify-content: space-between; font-size: 11px; color: var(--color-fg-muted); font-variant-numeric: tabular-nums; }
-  .pf-block { display: grid; gap: 6px; }
-  .pf-news { display: grid; gap: 4px; padding-bottom: var(--cds-gap-sm); border-bottom: 1px solid var(--color-border-line); }
-  .pf-news:last-child { border-bottom: 0; padding-bottom: 0; }
-  .pf-news-top { display: flex; gap: var(--cds-gap-sm); align-items: center; flex-wrap: wrap; }
-  .pf-total { font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); font-variant-numeric: tabular-nums; }
+  /* App bar and tabs */
+  .bar { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+  .bar h1 { font-family: var(--font-anthropic-serif); font-weight: 400; font-size: 1.6rem; }
+  .tabs { position: sticky; top: 0; z-index: 4; display: grid; grid-template-columns: repeat(4, 1fr); background: var(--color-bg); border-bottom: 1px solid var(--color-border-line); }
+  .tab { appearance: none; background: none; border: 0; border-bottom: 2px solid transparent; padding: 12px 4px 10px; font: inherit; font-size: var(--cds-font-size-body); color: var(--color-fg-muted); cursor: pointer; }
+  .tab[aria-selected="true"] { color: var(--color-fg); border-bottom-color: var(--color-fg); font-weight: var(--cds-font-weight-medium); }
+  .tab:focus-visible { outline: 2px solid var(--color-fg-muted); outline-offset: -2px; }
+  .screen { display: grid; gap: var(--cds-gap-lg); }
 
-  .pf-event { display: grid; grid-template-columns: 64px 1fr; gap: var(--cds-gap-sm); }
-  .pf-date { text-align: center; border: 1px solid var(--color-border-line); border-radius: 8px; padding: 6px 4px; align-self: start; }
-  .pf-date .d { font-family: var(--font-anthropic-serif); font-size: 1.4rem; line-height: 1; }
-  .pf-date .m { font-size: 11px; color: var(--color-fg-muted); text-transform: uppercase; }
-  .pf-out { display: grid; gap: 6px; align-content: start; }
-  .pf-sugg { display: grid; gap: 8px; align-content: start; }
-  .pf-sugg .consider { border-top: 1px dashed var(--color-border-line); padding-top: 8px; font-size: var(--cds-font-size-caption); }
-  .pf-risk { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: var(--cds-gap-md); }
-  .pf-risk .big { font-size: 1.6rem; }
-  .pf-foot { display: grid; gap: var(--cds-gap-sm); font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); border-top: 1px solid var(--color-border-line); padding-top: var(--cds-pad-lg); }
-  .pf-foot details summary { cursor: pointer; color: var(--color-fg); }
-  .pf-foot dl { display: grid; grid-template-columns: max-content 1fr; gap: 6px 14px; margin: 10px 0 0; }
-  .pf-foot dt { color: var(--color-fg); }
-  .pf-foot dd { margin: 0; }
+  /* Cards */
+  .card { background: var(--color-panel); border: 1px solid var(--color-border-line); border-radius: 14px; padding: 18px; min-width: 0; }
+  .card-title { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; margin-bottom: 12px; }
+  .card-title h2 { font-size: var(--cds-font-size-body); font-weight: var(--cds-font-weight-medium); }
+  .link-btn { appearance: none; background: none; border: 0; padding: 0; font: inherit; font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); cursor: pointer; text-decoration: underline; text-underline-offset: 3px; }
+
+  /* Portfolio hero */
+  .hero .label { font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); }
+  .hero .value { font-family: var(--font-anthropic-serif); font-size: 2.4rem; font-weight: 400; line-height: 1.1; margin: 4px 0 6px; font-variant-numeric: tabular-nums; }
+  .hero .line { font-variant-numeric: tabular-nums; }
+  .hero-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 16px; padding-top: 14px; border-top: 1px solid var(--color-border-line); }
+  .stat .k { font-size: 11px; color: var(--color-fg-muted); text-transform: uppercase; letter-spacing: .04em; }
+  .stat .v { font-variant-numeric: tabular-nums; margin-top: 2px; }
+
+  /* Movers strip */
+  .movers { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 10px; }
+  .mover { appearance: none; text-align: left; font: inherit; color: inherit; cursor: pointer; background: var(--color-bg); border: 1px solid var(--color-border-line); border-radius: 12px; padding: 12px; display: grid; gap: 6px; }
+  .mover:hover { border-color: var(--color-fg-muted); }
+  .mover .n { font-size: var(--cds-font-size-caption); font-weight: var(--cds-font-weight-medium); line-height: 1.3; }
+  .mover .p { font-variant-numeric: tabular-nums; font-size: 1.05rem; }
+
+  .split { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .tile { appearance: none; text-align: left; font: inherit; color: inherit; cursor: pointer; background: var(--color-panel); border: 1px solid var(--color-border-line); border-radius: 14px; padding: 16px; display: grid; gap: 4px; }
+  .tile:hover { border-color: var(--color-fg-muted); }
+  .tile .k { font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); }
+  .tile .v { font-family: var(--font-anthropic-serif); font-size: 1.5rem; font-variant-numeric: tabular-nums; }
+
+  /* Holding list */
+  .list-head { display: flex; justify-content: space-between; align-items: end; gap: 12px; flex-wrap: wrap; }
+  .pills { display: flex; gap: 6px; flex-wrap: wrap; }
+  .pill { appearance: none; font: inherit; font-size: var(--cds-font-size-caption); padding: 6px 12px; border-radius: 999px; border: 1px solid var(--color-border-line); background: none; color: var(--color-fg-muted); cursor: pointer; }
+  .pill[aria-pressed="true"] { color: var(--color-fg); border-color: var(--color-fg); }
+  .rows { background: var(--color-panel); border: 1px solid var(--color-border-line); border-radius: 14px; overflow: hidden; }
+  .row { appearance: none; width: 100%; text-align: left; font: inherit; color: inherit; background: none; border: 0; border-bottom: 1px solid var(--color-border-line); padding: 14px 16px; display: grid; grid-template-columns: 40px 1fr auto; gap: 12px; align-items: center; cursor: pointer; }
+  .row:last-child { border-bottom: 0; }
+  .row:hover { background: var(--color-bg); }
+  .row:focus-visible { outline: 2px solid var(--color-fg-muted); outline-offset: -2px; }
+  .ava { width: 40px; height: 40px; border-radius: 50%; display: grid; place-items: center; font-size: 13px; font-weight: var(--cds-font-weight-medium); color: var(--color-fg); border: 1px solid var(--color-border-line); background: var(--color-bg); }
+  .row .nm { font-weight: var(--cds-font-weight-medium); line-height: 1.3; }
+  .row .sub { font-size: 12px; color: var(--color-fg-muted); margin-top: 3px; }
+  .row .right { text-align: right; font-variant-numeric: tabular-nums; }
+  .row .right .v { font-weight: var(--cds-font-weight-medium); }
+  .row .right .c { font-size: 12px; margin-top: 3px; }
+  .tag { display: inline-block; font-size: 10.5px; padding: 2px 7px; border-radius: 999px; border: 1px solid currentColor; margin-left: 6px; vertical-align: 1px; }
+
+  /* Detail screen */
+  .back { appearance: none; background: none; border: 0; font: inherit; color: var(--color-fg-muted); cursor: pointer; padding: 4px 0; display: inline-flex; gap: 6px; align-items: center; }
+  .back:hover { color: var(--color-fg); }
+  .d-head { display: grid; grid-template-columns: 52px 1fr; gap: 14px; align-items: center; }
+  .d-head .ava { width: 52px; height: 52px; font-size: 16px; }
+  .d-head h2 { font-size: 1.25rem; font-weight: var(--cds-font-weight-medium); line-height: 1.3; }
+  .d-price { font-family: var(--font-anthropic-serif); font-size: 2.1rem; font-variant-numeric: tabular-nums; line-height: 1.1; }
+  .facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 14px; }
+  .fact .k { font-size: 11px; color: var(--color-fg-muted); text-transform: uppercase; letter-spacing: .04em; }
+  .fact .v { font-variant-numeric: tabular-nums; margin-top: 3px; }
+  .range { position: relative; height: 6px; background: var(--cds-chart-grid); border-radius: 3px; margin: 12px 0 6px; }
+  .range i { position: absolute; top: -4px; width: 4px; height: 14px; border-radius: 2px; background: var(--color-fg); transform: translateX(-2px); }
+  .range-l { display: flex; justify-content: space-between; font-size: 11px; color: var(--color-fg-muted); font-variant-numeric: tabular-nums; }
+  .bul { list-style: none; padding: 0; margin: 0; display: grid; gap: 8px; }
+  .bul li { display: grid; grid-template-columns: 18px 1fr; gap: 6px; font-size: var(--cds-font-size-caption); line-height: 1.5; }
+  .bul li b { font-weight: var(--cds-font-weight-medium); }
+  .two { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .sub-h { font-size: 11px; color: var(--color-fg-muted); text-transform: uppercase; letter-spacing: .05em; margin-bottom: 8px; font-weight: var(--cds-font-weight-medium); }
+  .chip { display: inline-block; font-size: 11px; line-height: 1; padding: 5px 9px; border-radius: 999px; border: 1px solid var(--color-border-line); color: var(--color-fg-muted); white-space: nowrap; }
+  .chip.positive { color: var(--color-ok); border-color: currentColor; }
+  .chip.negative { color: var(--color-bad); border-color: currentColor; }
+  .chip.medium { color: var(--color-warn); border-color: currentColor; }
+  .src { font-size: 12px; color: var(--color-fg-muted); }
+  .news { display: grid; gap: 4px; padding-bottom: 14px; border-bottom: 1px solid var(--color-border-line); }
+  .news:last-child { border-bottom: 0; padding-bottom: 0; }
+  .news h3 { font-size: var(--cds-font-size-body); font-weight: var(--cds-font-weight-medium); line-height: 1.35; }
+  .news-top { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+  .stack { display: grid; gap: 14px; }
+  .rating { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
+  .badge { font-size: 1.05rem; font-weight: var(--cds-font-weight-medium); padding: 8px 16px; border-radius: 10px; border: 1.5px solid currentColor; }
+  .badge.buy { color: var(--color-ok); }
+  .badge.hold { color: var(--color-warn); }
+  .badge.sell { color: var(--color-bad); }
+  .note { font-size: 12px; color: var(--color-fg-muted); border-top: 1px dashed var(--color-border-line); padding-top: 10px; }
+
+  /* Insights */
+  .bars { display: grid; gap: 10px; }
+  .bar-row { display: grid; grid-template-columns: minmax(90px, 36%) 1fr auto; gap: 10px; align-items: center; font-size: var(--cds-font-size-caption); }
+  .track { height: 8px; border-radius: 4px; background: var(--cds-chart-grid); overflow: hidden; }
+  .fill { height: 100%; border-radius: 4px; }
+  .grid3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 12px; }
+  .grid2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px; }
+  .kpi .k { font-size: 11px; color: var(--color-fg-muted); text-transform: uppercase; letter-spacing: .04em; }
+  .kpi .v { font-family: var(--font-anthropic-serif); font-size: 1.6rem; font-variant-numeric: tabular-nums; margin: 4px 0 2px; }
+  .kpi .s { font-size: 12px; color: var(--color-fg-muted); }
+  .chart { position: relative; min-height: 120px; }
+  .chart svg { display: block; overflow: visible; }
+  .chart text { font-family: var(--font-anthropic-sans); }
+  .tip { position: absolute; pointer-events: none; background: var(--cds-surface-popover); border: 1px solid var(--cds-border); box-shadow: var(--cds-shadow-popover); border-radius: 8px; padding: 8px 10px; font-size: 12px; max-width: 260px; z-index: 5; line-height: 1.45; }
+  .tip b { display: block; font-weight: var(--cds-font-weight-medium); }
+  .event { display: grid; grid-template-columns: 56px 1fr; gap: 12px; }
+  .date { text-align: center; border: 1px solid var(--color-border-line); border-radius: 10px; padding: 6px 4px; align-self: start; }
+  .date .d { font-family: var(--font-anthropic-serif); font-size: 1.3rem; line-height: 1; }
+  .date .m { font-size: 10.5px; color: var(--color-fg-muted); text-transform: uppercase; }
+  .finding { display: grid; gap: 6px; }
+  .finding .f { font-weight: var(--cds-font-weight-medium); }
+  .foot { font-size: 12px; color: var(--color-fg-muted); display: grid; gap: 8px; padding: 8px 0 24px; }
+  .foot details summary { cursor: pointer; color: var(--color-fg); }
+  .foot dl { display: grid; grid-template-columns: max-content 1fr; gap: 6px 14px; margin: 10px 0 0; }
+  .foot dt { color: var(--color-fg); }
+  .foot dd { margin: 0; }
   [data-dash-source-state=refreshing] { opacity: .5; }
-  @media (max-width: 560px) {
-    .pf h1 { font-size: 1.7rem; }
-    .pf-kpi .big { font-size: 1.6rem; }
-    .pf-h > summary { grid-template-columns: 1fr auto 16px; gap: 10px; padding: 12px 14px; }
-    .pf-h .day { display: none; }
-    .pf-panel { padding: 14px; }
-    .pf-foot dl { grid-template-columns: 1fr; }
+
+  @media (max-width: 600px) {
+    .app { gap: var(--cds-gap-md); }
+    .hero .value { font-size: 2rem; }
+    .hero-stats { grid-template-columns: 1fr 1fr; }
+    .two, .split { grid-template-columns: 1fr; }
+    .row { padding: 12px 14px; grid-template-columns: 36px 1fr auto; gap: 10px; }
+    .ava { width: 36px; height: 36px; font-size: 12px; }
+    .card { padding: 16px; }
+    .tab { font-size: var(--cds-font-size-caption); }
+    .foot dl { grid-template-columns: 1fr; }
   }
-  @media (min-width: 561px) { .pf-h .day-m { display: none; } }
-  @media (prefers-reduced-motion: reduce) { .pf-h .chev { transition: none; } }
 </style>
 
-<div class="pf">
-  <header class="pf-head" id="top">
+<div class="app">
+  <div class="bar" id="top">
     <h1>My portfolio</h1>
-    <p class="muted small">Groww stocks and mutual funds · prices as of <span data-draw="asof" data-source="summary" data-field="as_of" data-row="0">—</span> · updated <span data-draw="updated" data-source="summary" data-field="generated_at" data-row="0">—</span></p>
-    <p class="pf-take" id="takeaway">Your portfolio <span data-draw="t-dir">—</span> <b data-draw="t-pct" data-source="summary" data-field="day_pct" data-row="0">—</b> today, while the Nifty 50 <span data-draw="t-ndir">—</span> <b data-draw="t-npct" data-source="summary" data-field="nifty_pct" data-row="0">—</b>. <span data-draw="t-driver">—</span></p>
-    <nav class="pf-nav" aria-label="Sections">
-      <a href="#moved">Today</a>
-      <a href="#stocks">Stocks &amp; ETFs</a>
-      <a href="#funds">Mutual funds</a>
-      <a href="#breakdown">Breakdown</a>
-      <a href="#market-news">Market news</a>
-      <a href="#ahead">What's ahead</a>
-      <a href="#risk">Risk</a>
-      <a href="#diversify">Diversification</a>
-    </nav>
-  </header>
+    <span class="muted small">As of <span data-draw="asof" data-source="summary" data-field="as_of" data-row="0">—</span></span>
+  </div>
 
-  <section class="pf-kpis" id="kpis" aria-label="Key figures">
-    <div class="pf-card pf-kpi" id="kpi-value">
-      <div class="label">Portfolio value</div>
-      <div class="big" data-draw="k-value" data-source="summary" data-field="total_value" data-row="0">—</div>
-      <div class="sub"><span data-draw="k-count" data-source="summary" data-field="holdings_count" data-row="0">—</span> holdings: <span data-draw="k-funds" data-source="summary" data-field="funds_count" data-row="0">—</span> funds &amp; ETFs, <span data-draw="k-stocks" data-source="summary" data-field="stocks_count" data-row="0">—</span> stocks</div>
-    </div>
-    <div class="pf-card pf-kpi" id="kpi-today">
-      <div class="label">Today</div>
-      <div class="big" data-draw="k-day" data-source="summary" data-field="day_inr" data-row="0">—</div>
-      <div class="sub"><span data-draw="k-daypct" data-source="summary" data-field="day_pct" data-row="0">—</span> vs Nifty 50 <span data-draw="k-nifty" data-source="summary" data-field="nifty_pct" data-row="0">—</span></div>
-    </div>
-    <div class="pf-card pf-kpi" id="kpi-gain">
-      <div class="label">Overall gain</div>
-      <div class="big" data-draw="k-gain" data-source="summary" data-field="gain_inr" data-row="0">—</div>
-      <div class="sub"><span data-draw="k-gainpct" data-source="summary" data-field="gain_pct" data-row="0">—</span> on <span data-draw="k-invested" data-source="summary" data-field="invested" data-row="0">—</span> invested · covers <span data-draw="k-cover" data-source="summary" data-field="cost_coverage_pct" data-row="0">—</span>% of holdings with a known cost</div>
-    </div>
-    <div class="pf-card pf-kpi" id="kpi-div">
-      <div class="label">Diversification</div>
-      <div class="big"><span data-draw="k-eff" data-source="summary" data-field="effective_holdings" data-row="0">—</span></div>
-      <div class="sub">effective holdings · top 5 are <span data-draw="k-top5" data-source="summary" data-field="top5_pct" data-row="0">—</span>% of the portfolio</div>
-    </div>
-  </section>
+  <nav class="tabs" role="tablist" aria-label="Screens">
+    <button class="tab" role="tab" data-screen="home" aria-selected="true">Home</button>
+    <button class="tab" role="tab" data-screen="stocks" aria-selected="false">Stocks</button>
+    <button class="tab" role="tab" data-screen="funds" aria-selected="false">Funds</button>
+    <button class="tab" role="tab" data-screen="insights" aria-selected="false">Insights</button>
+  </nav>
 
-  <section class="pf-section" id="moved">
-    <div>
-      <h2>Today at a glance</h2>
-      <p class="pf-intro">Each bar is a holding's gain or loss today in rupees; darker bars are the bigger moves. Tap a bar to open that holding's details below.</p>
-    </div>
-    <div class="pf-card pf-wrap" id="market-wrap">
-      <h3>The market today</h3>
-      <p data-draw="wrap" data-source="summary" data-field="market_wrap" data-row="0">—</p>
-      <p class="pf-src" data-draw="wrap-src">—</p>
-    </div>
-    <div class="pf-card">
-      <div class="pf-chart" id="movers-chart" data-draw="movers" data-source="holdings" style="min-height:420px">—</div>
-    </div>
-  </section>
-
-  <section class="pf-section" id="stocks">
-    <div class="pf-section-head">
-      <div>
-        <h2>Stocks &amp; ETFs</h2>
-        <p class="pf-intro">Shares and exchange-traded funds in your Groww demat account. Tap any holding to see why it moved, its latest news and what to watch.</p>
+  <!-- HOME -->
+  <section class="screen" id="home" data-screen-id="home">
+    <div class="card hero" id="hero">
+      <div class="label">Current value</div>
+      <div class="value" data-draw="h-value" data-source="summary" data-field="total_value" data-row="0">—</div>
+      <div class="line"><span data-draw="h-day" data-source="summary" data-field="day_inr" data-row="0">—</span> <span data-draw="h-daypct" data-source="summary" data-field="day_pct" data-row="0">—</span> <span class="muted small">today</span></div>
+      <div class="hero-stats">
+        <div class="stat"><div class="k">Overall gain</div><div class="v" data-draw="h-gain" data-source="summary" data-field="gain_inr" data-row="0">—</div></div>
+        <div class="stat"><div class="k">Invested</div><div class="v" data-draw="h-inv" data-source="summary" data-field="invested" data-row="0">—</div></div>
+        <div class="stat"><div class="k">Nifty 50 today</div><div class="v" data-draw="h-nifty" data-source="summary" data-field="nifty_pct" data-row="0">—</div></div>
       </div>
-      <select class="dash-select" data-draw="sort" data-group="stocks" aria-label="Sort stocks and ETFs"></select>
+      <p class="muted small" style="margin-top:12px">Gain covers holdings with a known purchase cost (<span data-draw="h-cover" data-source="summary" data-field="cost_coverage_pct" data-row="0">—</span>% of value).</p>
     </div>
-    <p class="pf-total" data-draw="group-total" data-group="stocks" data-source="holdings">—</p>
-    <div class="pf-hold" data-draw="hold-list" data-group="stocks" data-source="holdings news outlook"></div>
+
+    <div class="split" id="home-split">
+      <button class="tile" data-go="stocks" id="tile-stocks">
+        <span class="k">Stocks &amp; ETFs</span>
+        <span class="v" data-draw="tile-value" data-group="stocks" data-source="group_totals">—</span>
+        <span class="small" data-draw="tile-day" data-group="stocks" data-source="group_totals">—</span>
+      </button>
+      <button class="tile" data-go="funds" id="tile-funds">
+        <span class="k">Mutual funds</span>
+        <span class="v" data-draw="tile-value" data-group="funds" data-source="group_totals">—</span>
+        <span class="small" data-draw="tile-day" data-group="funds" data-source="group_totals">—</span>
+      </button>
+    </div>
+
+    <div class="card" id="home-movers">
+      <div class="card-title"><h2>Today's biggest moves</h2><span class="muted small">Tap for details</span></div>
+      <div class="movers" data-draw="movers-strip" data-source="holdings"></div>
+    </div>
+
+    <div class="card" id="home-market">
+      <div class="card-title"><h2>The market today</h2></div>
+      <p class="small" data-draw="wrap" data-source="summary" data-field="market_wrap" data-row="0">—</p>
+      <p class="src" style="margin-top:6px" data-draw="wrap-src">—</p>
+    </div>
+
+    <div class="card" id="home-attention">
+      <div class="card-title"><h2>Worth your attention</h2><button class="link-btn" data-go="insights">See all insights</button></div>
+      <div class="stack" data-draw="attention" data-source="suggestions"></div>
+    </div>
   </section>
 
-  <section class="pf-section" id="funds">
-    <div class="pf-section-head">
+  <!-- STOCKS -->
+  <section class="screen" id="stocks" data-screen-id="stocks" hidden>
+    <div class="list-head">
       <div>
-        <h2>Mutual funds</h2>
-        <p class="pf-intro">Fund units come from your latest CDSL statement and are valued at the latest NAV, so a fund can show yesterday's price until AMFI publishes today's. Tap a fund for details.</p>
+        <p class="muted small">Stocks &amp; ETFs</p>
+        <p class="num" style="font-family:var(--font-anthropic-serif);font-size:1.7rem" data-draw="tile-value" data-group="stocks" data-source="group_totals">—</p>
+        <p class="small" data-draw="tile-day" data-group="stocks" data-source="group_totals">—</p>
       </div>
-      <select class="dash-select" data-draw="sort" data-group="funds" aria-label="Sort mutual funds"></select>
+      <div class="pills" data-draw="sort-pills" data-group="stocks"></div>
     </div>
-    <p class="pf-total" data-draw="group-total" data-group="funds" data-source="holdings">—</p>
-    <div class="pf-hold" data-draw="hold-list" data-group="funds" data-source="holdings news outlook"></div>
+    <div class="rows" data-draw="rows" data-group="stocks" data-source="holdings"></div>
   </section>
 
-  <section class="pf-section" id="breakdown">
-    <div>
-      <h2>Where your money is</h2>
-      <p class="pf-intro">Your portfolio split three ways. Gold &amp; silver includes ETFs and fund-of-funds that hold metal ETFs. Company size covers equity only; thematic funds hold companies of all sizes.</p>
+  <!-- FUNDS -->
+  <section class="screen" id="funds" data-screen-id="funds" hidden>
+    <div class="list-head">
+      <div>
+        <p class="muted small">Mutual funds</p>
+        <p class="num" style="font-family:var(--font-anthropic-serif);font-size:1.7rem" data-draw="tile-value" data-group="funds" data-source="group_totals">—</p>
+        <p class="small" data-draw="tile-day" data-group="funds" data-source="group_totals">—</p>
+      </div>
+      <div class="pills" data-draw="sort-pills" data-group="funds"></div>
     </div>
-    <div class="pf-three">
-      <div class="pf-card" id="alloc-asset"><h3>By asset class</h3><div class="pf-bars" style="margin-top:14px" data-draw="alloc" data-dim="Asset class" data-source="allocation"></div></div>
-      <div class="pf-card" id="alloc-cat"><h3>By category</h3><div class="pf-bars" style="margin-top:14px" data-draw="alloc" data-dim="Category" data-source="allocation"></div></div>
-      <div class="pf-card" id="alloc-cap"><h3>Equity by company size</h3><div class="pf-bars" style="margin-top:14px" data-draw="alloc" data-dim="Market cap (equity only)" data-source="allocation"></div></div>
+    <div class="rows" data-draw="rows" data-group="funds" data-source="holdings"></div>
+    <p class="muted small">Fund NAVs are the latest AMFI has published, so a fund can show yesterday's price until today's NAV is out.</p>
+  </section>
+
+  <!-- INSIGHTS -->
+  <section class="screen" id="insights" data-screen-id="insights" hidden>
+    <div class="card" id="ins-moves">
+      <div class="card-title"><h2>Every holding today</h2><span class="muted small">Gain or loss in ₹ · tap a bar</span></div>
+      <div class="chart" data-draw="movers-chart" data-source="holdings" style="min-height:420px">—</div>
+    </div>
+    <div class="grid3" id="ins-alloc">
+      <div class="card"><div class="card-title"><h2>By asset class</h2></div><div class="bars" data-draw="alloc" data-dim="Asset class" data-source="allocation"></div></div>
+      <div class="card"><div class="card-title"><h2>By category</h2></div><div class="bars" data-draw="alloc" data-dim="Category" data-source="allocation"></div></div>
+      <div class="card"><div class="card-title"><h2>Equity by company size</h2></div><div class="bars" data-draw="alloc" data-dim="Market cap (equity only)" data-source="allocation"></div></div>
+    </div>
+    <div class="card" id="ins-div">
+      <div class="card-title"><h2>Diversification check</h2></div>
+      <p class="muted small" style="margin:-4px 0 14px">Observations about how your money is spread, and questions to consider. Not advice to buy or sell.</p>
+      <div class="grid2" data-draw="findings" data-source="suggestions"></div>
+    </div>
+    <div class="grid3" id="ins-risk">
+      <div class="card kpi"><div class="k">Yearly volatility</div><div class="v" data-draw="r-vol" data-source="summary" data-field="volatility_pct" data-row="0">—</div><div class="s">typical yearly swing</div></div>
+      <div class="card kpi"><div class="k">Beta to Nifty</div><div class="v" data-draw="r-beta" data-source="summary" data-field="beta" data-row="0">—</div><div class="s">1.0 moves with the market</div></div>
+      <div class="card kpi"><div class="k">Worst fall, past year</div><div class="v" data-draw="r-dd" data-source="summary" data-field="max_drawdown_pct" data-row="0">—</div><div class="s">of today's mix of holdings</div></div>
+    </div>
+    <div class="card" id="ins-scen">
+      <div class="card-title"><h2>If the market falls</h2></div>
+      <div class="bars" data-draw="scenarios" data-source="scenarios"></div>
+    </div>
+    <div class="grid2" id="ins-ahead">
+      <div class="card"><div class="card-title"><h2>Coming up</h2></div><div class="stack" data-draw="events" data-source="events"></div></div>
+      <div class="card"><div class="card-title"><h2>Market news</h2></div><div class="stack" data-draw="market-news" data-source="news"></div></div>
+    </div>
+    <div class="foot" id="health">
+      <div data-draw="health" data-source="health"></div>
+      <details>
+        <summary>What the terms mean</summary>
+        <dl>
+          <dt>Analyst view</dt><dd>The rating and price target published by brokerage analysts, with how many analysts and when. It is their opinion, not a recommendation from this dashboard.</dd>
+          <dt>52-week range</dt><dd>The lowest and highest price in the past year, with today's price marked.</dd>
+          <dt>Beta</dt><dd>How much the portfolio tends to move when the Nifty moves 1%.</dd>
+          <dt>Volatility</dt><dd>The typical size of yearly ups and downs.</dd>
+          <dt>Fund of funds</dt><dd>A fund that invests in other funds or ETFs, such as a silver FoF that holds silver ETFs.</dd>
+        </dl>
+      </details>
+      <p>Holdings from Groww and your CDSL statement; prices from Yahoo Finance; NAVs from AMFI; news and analyst views from the sources linked. This dashboard explains your portfolio; it is not investment advice.</p>
     </div>
   </section>
 
-  <section class="pf-section" id="market-news">
-    <div>
-      <h2>Market news that affects you</h2>
-      <p class="pf-intro">Broader news that touches several of your holdings. News about a single holding is inside that holding's panel above.</p>
-    </div>
-    <div class="pf-card"><ul class="pf-list" data-draw="market-news" data-source="news"></ul></div>
+  <!-- DETAIL -->
+  <section class="screen" id="detail" data-screen-id="detail" hidden>
+    <div><button class="back" id="back-btn" aria-label="Back">← Back</button></div>
+    <div class="stack" data-draw="detail" data-source="holdings profiles news analyst_upside"></div>
   </section>
-
-  <section class="pf-section" id="ahead">
-    <div>
-      <h2>What's ahead</h2>
-      <p class="pf-intro">Dates and themes worth knowing about. These describe what could move your holdings; nobody can reliably predict prices, so there are no price targets here.</p>
-    </div>
-    <div class="pf-two">
-      <div class="pf-card"><h3>Coming up</h3><ul class="pf-list" style="margin-top:14px" data-draw="events" data-source="events"></ul></div>
-      <div class="pf-card"><h3>Themes to watch</h3><ul class="pf-list" style="margin-top:14px" data-draw="outlook" data-source="outlook"></ul></div>
-    </div>
-  </section>
-
-  <section class="pf-section" id="risk">
-    <div>
-      <h2>How risky is it?</h2>
-      <p class="pf-intro">Worked out by applying today's holdings to the past year of daily prices, so it describes the portfolio you hold now.</p>
-    </div>
-    <div class="pf-risk">
-      <div class="pf-card pf-kpi" id="risk-vol"><div class="label">Yearly volatility</div><div class="big" data-draw="r-vol" data-source="summary" data-field="volatility_pct" data-row="0">—</div><div class="sub">typical yearly swing</div></div>
-      <div class="pf-card pf-kpi" id="risk-beta"><div class="label">Beta to Nifty</div><div class="big" data-draw="r-beta" data-source="summary" data-field="beta" data-row="0">—</div><div class="sub">1.0 moves with the market</div></div>
-      <div class="pf-card pf-kpi" id="risk-dd"><div class="label">Worst fall</div><div class="big" data-draw="r-dd" data-source="summary" data-field="max_drawdown_pct" data-row="0">—</div><div class="sub">peak to trough, past year</div></div>
-      <div class="pf-card pf-kpi" id="risk-ret"><div class="label">Past-year return</div><div class="big" data-draw="r-ret" data-source="summary" data-field="one_year_return_pct" data-row="0">—</div><div class="sub">of today's mix, not your actual return</div></div>
-    </div>
-    <div class="pf-card" id="scenarios">
-      <h3>If the market falls</h3>
-      <p class="muted small" style="margin:4px 0 12px">Estimated effect on your portfolio, from how each holding has moved with the Nifty over the past year.</p>
-      <div class="pf-bars" data-draw="scenarios" data-source="scenarios"></div>
-    </div>
-  </section>
-
-  <section class="pf-section" id="diversify">
-    <div>
-      <h2>Diversification check</h2>
-      <p class="pf-intro">What stands out in how your money is spread, and questions worth asking yourself. These are observations about categories, not advice to buy or sell any security; the decisions are yours.</p>
-    </div>
-    <div class="pf-two" data-draw="suggestions" data-source="suggestions"></div>
-  </section>
-
-  <footer class="pf-foot" id="health">
-    <div><b style="color:var(--color-fg)">Data notes</b></div>
-    <ul data-draw="health" data-source="health" style="margin:0;padding-left:18px"></ul>
-    <details>
-      <summary>What the terms mean</summary>
-      <dl>
-        <dt>Effective holdings</dt><dd>How many equal-sized holdings your portfolio behaves like. 24 holdings that act like 13 means a few large positions dominate.</dd>
-        <dt>Driver</dt><dd>Whether a move came from the market, a market segment (small or mid caps), a commodity price, or news about the company itself.</dd>
-        <dt>52-week range</dt><dd>The lowest and highest price in the past year, with today's price marked.</dd>
-        <dt>Beta</dt><dd>How much the portfolio tends to move when the Nifty moves 1%.</dd>
-        <dt>Volatility</dt><dd>The typical size of yearly ups and downs, from daily price changes.</dd>
-        <dt>Fund of funds (FoF)</dt><dd>A mutual fund that invests in other funds or ETFs, such as a silver FoF that holds silver ETFs.</dd>
-      </dl>
-    </details>
-    <p>Stock holdings come from Groww; fund units from your latest CDSL statement; prices from Yahoo Finance; NAVs from AMFI; news from the sources linked. This page describes and explains your portfolio. It is not investment advice.</p>
-  </footer>
 </div>
 
 <script>
 (function () {
-  const S = (id) => dash.data(id);
   const inr0 = new Intl.NumberFormat('en-IN', { maximumFractionDigits: 0 });
   const inr2 = new Intl.NumberFormat('en-IN', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
-  window.pfFmt = {
+  window.F = {
     inr: (v) => (v == null || isNaN(v)) ? '—' : '₹' + inr0.format(Math.round(Math.abs(v))),
     price: (v) => (v == null || isNaN(v)) ? '—' : '₹' + inr2.format(v),
     sinr: (v) => (v == null || isNaN(v)) ? '—' : (v > 0 ? '+' : v < 0 ? '−' : '') + '₹' + inr0.format(Math.round(Math.abs(v))),
@@ -268,439 +289,434 @@
     upct: (v, d = 1) => (v == null || isNaN(v)) ? '—' : Number(v).toFixed(d) + '%',
     cls: (v) => v > 0 ? 'good' : v < 0 ? 'bad' : '',
     date: (s) => { if (!s) return '—'; const d = new Date(s.length <= 10 ? s + 'T00:00:00Z' : s); return d3.utcFormat('%-d %b %Y')(d); },
+    initials: (name) => name.replace(/\b(limited|ltd|india|fund|of|the|and|direct|growth|etf)\b/gi, '').trim().split(/\s+/).filter(Boolean).slice(0, 2).map((w) => w[0]).join('').toUpperCase() || name.slice(0, 2).toUpperCase(),
   };
-  const F = window.pfFmt;
-  window.pfRow = () => { const s = S('summary'); return s.status === 'ok' && s.data.length ? s.data[0] : null; };
+  window.el = (tag, cls, text) => { const e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; };
+  window.mk = (e, source, field, where, row) => { e.dataset.source = source; e.dataset.field = field; if (where != null) e.dataset.where = where; if (row != null) e.dataset.row = String(row); return e; };
+  window.srcLink = (url, name) => {
+    const s = el('p', 'src'); if (!url) return s;
+    s.append('Source: ');
+    const a = el('a'); a.href = url; a.target = '_blank'; a.rel = 'noopener';
+    try { a.textContent = name || new URL(url).hostname.replace('www.', ''); } catch (e) { a.textContent = name || 'link'; }
+    s.append(a); return s;
+  };
+  window.groupOf = (d) => d.kind === 'Mutual fund' ? 'funds' : 'stocks';
+  window.sumRow = () => { const s = dash.data('summary'); return s.status === 'ok' && s.data.length ? s.data[0] : null; };
 
-  dash.calc('top_driver', {
-    title: 'Biggest driver today',
-    description: 'The holding category whose combined rupee change today was largest in size.',
-    inputs: ['holdings'],
-    fn: (holdings) => {
-      const by = d3.rollups(holdings, (v) => d3.sum(v, (d) => +d.day_inr || 0), (d) => d.category);
-      by.sort((a, b) => Math.abs(b[1]) - Math.abs(a[1]));
-      return by.length ? [{ category: by[0][0], day_inr: Math.round(by[0][1]) }] : [];
-    },
-  });
+  // ---- navigation between screens
+  window.nav = { screen: 'home', prev: 'home', isin: null };
+  const SCREENS = ['home', 'stocks', 'funds', 'insights', 'detail'];
+  window.show = (screen, isin) => {
+    if (screen !== 'detail' && screen !== nav.screen) nav.prev = screen;
+    if (screen === 'detail') { if (nav.screen !== 'detail') nav.prev = nav.screen; nav.isin = isin; }
+    nav.screen = screen;
+    document.querySelectorAll('[data-screen-id]').forEach((s) => { s.hidden = s.dataset.screenId !== screen; });
+    const tabFor = screen === 'detail' ? nav.prev : screen;
+    document.querySelectorAll('.tab').forEach((t) => t.setAttribute('aria-selected', String(t.dataset.screen === tabFor)));
+    dash.setLink(screen === 'detail' ? 'h-' + isin : screen);
+    if (screen === 'detail') dash.draw('detail');
+    const top = document.getElementById('top'); if (top) top.scrollIntoView({ block: 'start' });
+  };
+  window.openHolding = (isin) => show('detail', isin);
+  document.querySelectorAll('.tab').forEach((t) => t.addEventListener('click', () => show(t.dataset.screen)));
+  document.querySelectorAll('[data-go]').forEach((b) => b.addEventListener('click', () => show(b.dataset.go)));
+  const back = document.getElementById('back-btn'); if (back) back.addEventListener('click', () => show(nav.prev || 'home'));
 
+  window.SCREENS = SCREENS;
+
+  // ---- derived values
   dash.calc('group_totals', {
-    title: 'Value and change by section',
-    description: 'Total value and today\'s rupee change for stocks & ETFs and for mutual funds.',
+    title: 'Value and change: stocks & ETFs vs mutual funds',
+    description: "Total value and today's rupee change for each of the two holding screens.",
     inputs: ['holdings'],
     fn: (holdings) => [['stocks', (h) => h.kind !== 'Mutual fund'], ['funds', (h) => h.kind === 'Mutual fund']].map(([group, test]) => {
       const rows = holdings.filter(test);
       const value = d3.sum(rows, (d) => +d.value || 0), day = d3.sum(rows, (d) => +d.day_inr || 0);
-      const total = d3.sum(holdings, (d) => +d.value || 0);
-      return { group, count: rows.length, value: Math.round(value), share_pct: total ? Math.round(value / total * 1000) / 10 : 0, day_inr: Math.round(day), day_pct: value - day ? Math.round(day / (value - day) * 10000) / 100 : 0 };
+      return { group, count: rows.length, value: Math.round(value), day_inr: Math.round(day), day_pct: value - day ? Math.round(day / (value - day) * 10000) / 100 : 0 };
+    }),
+  });
+  dash.calc('analyst_upside', {
+    title: "Analyst target vs today's price",
+    description: "How far each analyst average price target is above or below today's price.",
+    inputs: ['holdings', 'profiles'],
+    fn: (holdings, profiles) => profiles.filter((p) => p.section === 'analyst' && p.target_avg != null).map((p) => {
+      const h = holdings.find((x) => x.isin === p.isin);
+      return { isin: p.isin, upside_pct: h && h.price ? Math.round((p.target_avg / h.price - 1) * 1000) / 10 : null };
     }),
   });
 
-  const simple = (name, field, fmt, colorBy) => dash.draw(name, (el) => {
-    const r = pfRow();
-    el.classList.remove('good', 'bad');
-    if (!r) { el.textContent = '—'; return; }
-    el.textContent = fmt(r[field]);
-    if (colorBy) { const c = F.cls(r[colorBy]); if (c) el.classList.add(c); }
+  // ---- simple values
+  const simple = (name, field, fmt, colorBy) => dash.draw(name, (e) => {
+    const r = sumRow(); e.classList.remove('good', 'bad');
+    if (!r) { e.textContent = '—'; return; }
+    e.textContent = fmt(r[field]);
+    if (colorBy) { const c = F.cls(r[colorBy]); if (c) e.classList.add(c); }
   });
   simple('asof', 'as_of', F.date);
-  simple('updated', 'generated_at', (v) => v ? d3.timeFormat('%-d %b, %-I:%M %p')(new Date(v)) + ' IST' : '—');
-  simple('t-pct', 'day_pct', (v) => F.upct(Math.abs(v), 2), 'day_pct');
-  simple('t-npct', 'nifty_pct', (v) => F.upct(Math.abs(v), 2), 'nifty_pct');
-  simple('t-dir', 'day_pct', (v) => v > 0 ? 'rose' : v < 0 ? 'fell' : 'was flat at');
-  simple('t-ndir', 'nifty_pct', (v) => v > 0 ? 'rose' : v < 0 ? 'fell' : 'was flat at');
-  simple('k-value', 'total_value', F.inr);
-  simple('k-count', 'holdings_count', (v) => v);
-  simple('k-funds', 'funds_count', (v) => v);
-  simple('k-stocks', 'stocks_count', (v) => v);
-  simple('k-day', 'day_inr', F.sinr, 'day_inr');
-  simple('k-daypct', 'day_pct', (v) => F.pct(v), 'day_pct');
-  simple('k-nifty', 'nifty_pct', (v) => F.pct(v), 'nifty_pct');
-  simple('k-gain', 'gain_inr', F.sinr, 'gain_inr');
-  simple('k-gainpct', 'gain_pct', (v) => F.pct(v), 'gain_pct');
-  simple('k-invested', 'invested', F.inr);
-  simple('k-cover', 'cost_coverage_pct', (v) => v == null ? '—' : Math.round(v));
-  simple('k-eff', 'effective_holdings', (v) => v == null ? '—' : Number(v).toFixed(1));
-  simple('k-top5', 'top5_pct', (v) => v == null ? '—' : Math.round(v));
-  simple('wrap', 'market_wrap', (v) => v || 'Market summary not available for this update.');
+  simple('h-value', 'total_value', F.inr);
+  simple('h-day', 'day_inr', F.sinr, 'day_inr');
+  simple('h-daypct', 'day_pct', (v) => '(' + F.pct(v) + ')', 'day_pct');
+  simple('h-gain', 'gain_inr', F.sinr, 'gain_inr');
+  simple('h-inv', 'invested', F.inr);
+  simple('h-nifty', 'nifty_pct', (v) => F.pct(v), 'nifty_pct');
+  simple('h-cover', 'cost_coverage_pct', (v) => v == null ? '—' : Math.round(v));
+  simple('wrap', 'market_wrap', (v) => v || 'Market summary not available.');
   simple('r-vol', 'volatility_pct', (v) => F.upct(v));
   simple('r-beta', 'beta', (v) => v == null ? '—' : Number(v).toFixed(2));
   simple('r-dd', 'max_drawdown_pct', (v) => F.pct(v, 1), 'max_drawdown_pct');
-  simple('r-ret', 'one_year_return_pct', (v) => F.pct(v, 1), 'one_year_return_pct');
+  dash.draw('wrap-src', (e) => { const r = sumRow(); e.replaceChildren(); if (r && r.market_wrap_source) e.append(...srcLink(r.market_wrap_source).childNodes); });
 
-  window.pfLink = (url, name) => {
-    const s = document.createElement('span'); s.className = 'pf-src';
-    if (!url) return s;
-    s.append('Source: ');
-    const a = document.createElement('a'); a.href = url; a.target = '_blank'; a.rel = 'noopener';
-    try { a.textContent = name || new URL(url).hostname.replace('www.', ''); } catch (e) { a.textContent = name || 'link'; }
-    s.append(a); return s;
-  };
-
-  dash.draw('wrap-src', (el) => {
-    const r = pfRow();
-    el.replaceChildren();
-    if (r && r.market_wrap_source) el.append(pfLink(r.market_wrap_source));
+  const groupCell = (name, fn) => dash.draw(name, (e) => {
+    const t = dash.data('group_totals'); e.replaceChildren(); e.classList.remove('good', 'bad');
+    if (t.status !== 'ok' || !t.data) { e.textContent = '—'; return; }
+    const i = t.data.findIndex((r) => r.group === e.dataset.group); if (i < 0) return;
+    fn(e, t.data[i], i);
   });
-
-  dash.draw('t-driver', (el) => {
-    const t = S('top_driver');
-    el.replaceChildren();
-    if (t.status !== 'ok' || !t.data || !t.data.length) return;
-    const d = t.data[0];
-    el.append(d.day_inr < 0 ? 'The biggest drag was ' : 'The biggest lift came from ');
-    const b = document.createElement('b'); b.textContent = d.category.toLowerCase(); Object.assign(b.dataset, { source: 'top_driver', field: 'category', row: '0' });
-    const v = document.createElement('span'); v.textContent = F.sinr(d.day_inr); v.className = F.cls(d.day_inr); Object.assign(v.dataset, { source: 'top_driver', field: 'day_inr', row: '0' });
-    el.append(b, ' (', v, ').');
+  groupCell('tile-value', (e, r, i) => { e.textContent = F.inr(r.value); mk(e, 'group_totals', 'value', null, i); });
+  groupCell('tile-day', (e, r, i) => {
+    const a = mk(el('span', F.cls(r.day_inr), F.sinr(r.day_inr)), 'group_totals', 'day_inr', null, i);
+    const b = mk(el('span', F.cls(r.day_pct), ' (' + F.pct(r.day_pct) + ')'), 'group_totals', 'day_pct', null, i);
+    const c = mk(el('span', 'muted', ' today · ' + r.count + ' holdings'), 'group_totals', 'count', null, i);
+    e.append(a, b, c);
   });
 })();
 </script>
 
 <script>
 (function () {
-  const F = window.pfFmt;
   const short = (s, n) => s.length > n ? s.slice(0, n - 1) + '…' : s;
-  window.pfOpen = new Set();
-  window.pfGroupOf = (d) => d.kind === 'Mutual fund' ? 'funds' : 'stocks';
+  const W = (d) => 'isin=' + encodeURIComponent(d.isin);
 
-  // Opens a holding's panel and scrolls to it (used by the chart)
-  window.pfOpenHolding = (isin) => {
-    window.pfOpen.add(isin);
-    dash.draw('hold-list');
-    requestAnimationFrame(() => {
-      const el = document.getElementById('h-' + isin.replace(/[^A-Za-z0-9_-]/g, ''));
-      if (el) el.scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start' });
+  dash.draw('movers-strip', (box) => {
+    const h = dash.data('holdings'); box.replaceChildren();
+    if (h.status !== 'ok') return;
+    const rows = h.data.filter((d) => d.day_pct != null).sort((a, b) => Math.abs(b.day_pct) - Math.abs(a.day_pct)).slice(0, 6);
+    for (const d of rows) {
+      const b = el('button', 'mover'); b.type = 'button'; b.addEventListener('click', () => openHolding(d.isin));
+      b.append(mk(el('span', 'n', short(d.name.replace(/ Limited$/, ''), 34)), 'holdings', 'name', W(d)),
+               mk(el('span', 'p ' + F.cls(d.day_pct), F.pct(d.day_pct)), 'holdings', 'day_pct', W(d)),
+               mk(el('span', 'small muted', F.sinr(d.day_inr)), 'holdings', 'day_inr', W(d)));
+      box.append(b);
+    }
+  });
+
+  dash.draw('attention', (box) => {
+    const s = dash.data('suggestions'); box.replaceChildren();
+    if (s.status !== 'ok') return;
+    s.data.slice(0, 2).forEach((d, i) => {
+      const f = el('div', 'finding');
+      f.append(mk(el('p', 'f', d.finding), 'suggestions', 'finding', null, i), mk(el('p', 'small muted', d.consider), 'suggestions', 'consider', null, i));
+      box.append(f);
     });
-  };
+  });
 
-  dash.draw('movers', (el) => {
+  // ---- holding lists
+  const SORTS = [['value', 'Value'], ['move', "Today's move"], ['gain', 'Gain']];
+  window.sortBy = { stocks: 'value', funds: 'value' };
+  const sorters = { value: (a, b) => b.value - a.value, move: (a, b) => (b.day_pct || 0) - (a.day_pct || 0), gain: (a, b) => (b.gain_pct ?? -1e9) - (a.gain_pct ?? -1e9) };
+
+  dash.draw('sort-pills', (box) => {
+    const g = box.dataset.group; box.replaceChildren();
+    for (const [k, t] of SORTS) {
+      const b = el('button', 'pill', t); b.type = 'button'; b.setAttribute('aria-pressed', String(sortBy[g] === k));
+      b.addEventListener('click', () => { sortBy[g] = k; dash.draw('sort-pills'); dash.draw('rows'); });
+      box.append(b);
+    }
+  });
+
+  dash.draw('rows', (box) => {
+    const h = dash.data('holdings'); box.replaceChildren();
+    if (h.status !== 'ok') { box.textContent = h.status === 'error' ? 'Failed to load' : '—'; return; }
+    const g = box.dataset.group;
+    const rows = h.data.filter((d) => groupOf(d) === g).sort(sorters[sortBy[g]]);
+    for (const d of rows) {
+      const r = el('button', 'row'); r.type = 'button'; r.addEventListener('click', () => openHolding(d.isin));
+      const av = el('span', 'ava', F.initials(d.name)); av.setAttribute('aria-hidden', 'true');
+      const mid = el('span');
+      const nm = mk(el('span', 'nm', d.name.replace(/ Limited$/, '')), 'holdings', 'name', W(d));
+      const wrap = el('div'); wrap.append(nm);
+      if (d.significant) { const t = el('span', 'tag ' + F.cls(d.day_pct), 'Big move'); wrap.append(t); }
+      const sub = el('div', 'sub');
+      if (g === 'stocks') sub.append(mk(el('span', null, (d.quantity == null ? '' : d3.format(',')(d.quantity) + ' qty · ')), 'holdings', 'quantity', W(d)), mk(el('span', null, d.kind === 'ETF' ? 'ETF · ' + d.category : d.category), 'holdings', 'category', W(d)));
+      else sub.append(mk(el('span', null, d.category), 'holdings', 'category', W(d)), el('span', null, ' · ' + F.upct(d.weight_pct) + ' of portfolio'));
+      mid.append(wrap, sub);
+      const right = el('span', 'right');
+      const v = mk(el('div', 'v', F.inr(d.value)), 'holdings', 'value', W(d));
+      const c = el('div', 'c');
+      c.append(mk(el('span', F.cls(d.day_pct), F.pct(d.day_pct)), 'holdings', 'day_pct', W(d)));
+      const gain = mk(el('div', 'c muted', d.gain_pct == null ? 'gain n/a' : 'gain ' + F.pct(d.gain_pct, 1)), 'holdings', 'gain_pct', W(d));
+      right.append(v, c, gain);
+      r.append(av, mid, right); box.append(r);
+    }
+  });
+
+  // ---- detail screen
+  const RATING = (r) => !r ? '' : /sell/i.test(r) ? 'sell' : /hold|neutral/i.test(r) ? 'hold' : 'buy';
+
+  dash.draw('detail', (box) => {
+    box.replaceChildren();
     const h = dash.data('holdings');
-    el.replaceChildren();
-    if (h.status !== 'ok') { el.textContent = h.status === 'error' ? 'Failed to load' : '—'; return; }
+    if (h.status !== 'ok' || !nav.isin) return;
+    const d = h.data.find((x) => x.isin === nav.isin);
+    if (!d) { box.append(el('p', 'muted', 'This holding is no longer in your portfolio.')); return; }
+    const where = W(d);
+    const P = dash.data('profiles'), N = dash.data('news'), U = dash.data('analyst_upside');
+    const prof = P.status === 'ok' ? P.data.map((p, i) => [p, i]).filter(([p]) => p.isin === d.isin) : [];
+    const sec = (s) => prof.filter(([p]) => p.section === s).sort((a, b) => a[0].order - b[0].order);
+    const isFund = d.kind === 'Mutual fund';
+
+    // Header
+    const head = el('div', 'd-head');
+    const av = el('span', 'ava', F.initials(d.name)); av.setAttribute('aria-hidden', 'true');
+    const ht = el('div');
+    ht.append(mk(el('h2', null, d.name), 'holdings', 'name', where),
+              mk(el('p', 'small muted', [d.kind, d.category, d.cap ? d.cap + ' cap' : ''].filter(Boolean).join(' · ')), 'holdings', 'category', where));
+    head.append(av, ht);
+    box.append(head);
+    const about = sec('about')[0];
+    if (about) box.append(mk(el('p', 'small muted', about[0].text), 'profiles', 'text', null, about[1]));
+
+    // 1. How much it moved
+    const c1 = el('div', 'card');
+    c1.append(el('div', 'sub-h', isFund ? 'NAV today' : 'Price today'));
+    c1.append(mk(el('div', 'd-price', F.price(d.price)), 'holdings', 'price', where));
+    const mv = el('p', 'num'); mv.style.marginTop = '4px';
+    mv.append(mk(el('span', F.cls(d.day_pct), F.pct(d.day_pct)), 'holdings', 'day_pct', where), ' ',
+              mk(el('span', F.cls(d.day_inr), '(' + F.sinr(d.day_inr) + ' on your holding)'), 'holdings', 'day_inr', where), ' ',
+              mk(el('span', 'muted small', '· ' + F.date(d.price_date)), 'holdings', 'price_date', where));
+    c1.append(mv);
+    if (d.low_52w != null && d.high_52w != null && d.high_52w > d.low_52w) {
+      const pos = Math.max(0, Math.min(1, (d.price - d.low_52w) / (d.high_52w - d.low_52w)));
+      const rg = el('div', 'range'); rg.setAttribute('role', 'img'); rg.setAttribute('aria-label', `52-week range: today is ${Math.round(pos * 100)}% of the way from low to high`);
+      const m = el('i'); m.style.left = (pos * 100) + '%'; rg.append(m);
+      const lb = el('div', 'range-l');
+      lb.append(mk(el('span', null, '52W low ' + F.price(d.low_52w)), 'holdings', 'low_52w', where), mk(el('span', null, '52W high ' + F.price(d.high_52w)), 'holdings', 'high_52w', where));
+      c1.append(rg, lb);
+    }
+    const facts = el('div', 'facts'); facts.style.marginTop = '16px';
+    const fact = (k, v, f, cls) => { const x = el('div', 'fact'); x.append(el('div', 'k', k)); const y = el('div', 'v ' + (cls || ''), v); if (f) mk(y, 'holdings', f, where); x.append(y); return x; };
+    facts.append(
+      fact('Your value', F.inr(d.value), 'value'),
+      fact(isFund ? 'Units' : 'Quantity', d.quantity == null ? '—' : d3.format(',')(d.quantity), 'quantity'),
+      fact('Avg. cost', d.avg_cost == null ? 'Not known' : F.price(d.avg_cost), 'avg_cost'),
+      fact('Total gain', d.gain_inr == null ? 'Not known' : F.sinr(d.gain_inr) + ' (' + F.pct(d.gain_pct, 1) + ')', 'gain_inr', F.cls(d.gain_inr)),
+    );
+    c1.append(facts);
+    box.append(c1);
+
+    // 2. Reasons
+    const c2 = el('div', 'card');
+    c2.append(el('div', 'sub-h', 'Why it moved today'));
+    const line = el('p'); line.style.marginBottom = '6px';
+    const showDriver = d.driver && (d.reason || d.significant);
+    if (showDriver) { line.append(mk(el('span', 'chip', d.driver), 'holdings', 'driver', where)); c2.append(line); }
+    if (d.reason) { c2.append(mk(el('p', null, d.reason), 'holdings', 'reason', where)); if (d.source_url) c2.append(srcLink(d.source_url, d.source_name)); }
+    else c2.append(el('p', 'muted', d.significant ? 'A big move, but no explanation has been researched for it yet.' : isFund ? 'A normal day for this fund; it moved in line with its category.' : 'A small move, within its normal daily range.'));
+    const up = sec('up'), down = sec('down');
+    if (up.length || down.length) {
+      const two = el('div', 'two'); two.style.marginTop = '18px';
+      const list = (title, items, sym, cls) => {
+        const w = el('div'); w.append(el('div', 'sub-h', title));
+        const ul = el('ul', 'bul');
+        for (const [p, i] of items) { const li = el('li'); li.append(el('b', cls, sym), mk(el('span', null, p.text), 'profiles', 'text', null, i)); ul.append(li); }
+        w.append(ul); return w;
+      };
+      two.append(list('What could push it up', up, '↑', 'good'), list('What could pull it down', down, '↓', 'bad'));
+      c2.append(two);
+    }
+    box.append(c2);
+
+    // 3. News
+    const c3 = el('div', 'card');
+    c3.append(el('div', 'sub-h', 'Latest news'));
+    const news = N.status === 'ok' ? N.data.map((n, i) => [n, i]).filter(([n]) => (n.isins || '').split(',').includes(d.isin)) : [];
+    if (!news.length) c3.append(el('p', 'muted small', 'No recent news found for this holding.'));
+    const st = el('div', 'stack');
+    for (const [n, i] of news) {
+      const it = el('div', 'news');
+      const top = el('div', 'news-top');
+      top.append(mk(el('span', 'chip ' + n.impact, n.impact === 'positive' ? 'Positive' : n.impact === 'negative' ? 'Negative' : 'Neutral'), 'news', 'impact', null, i),
+                 mk(el('span', 'small muted', F.date(n.date)), 'news', 'date', null, i));
+      it.append(top, mk(el('h3', null, n.headline), 'news', 'headline', null, i), mk(el('p', 'small', n.summary), 'news', 'summary', null, i), srcLink(n.source_url, n.source_name));
+      st.append(it);
+    }
+    c3.append(st);
+    box.append(c3);
+
+    // 4. Prospects
+    const near = sec('near')[0], far = sec('far')[0];
+    if (near || far) {
+      const c4 = el('div', 'card');
+      c4.append(el('div', 'sub-h', isFund ? 'Outlook for this kind of fund' : 'Outlook'));
+      const two = el('div', 'two');
+      const blk = (t, x) => { const w = el('div'); w.append(el('p', 'small muted', t)); if (x) w.append(mk(el('p', 'small', x[0].text), 'profiles', 'text', null, x[1])); else w.append(el('p', 'small muted', 'No published outlook.')); return w; };
+      two.append(blk('Near term (next few months)', near), blk('Long term (next few years)', far));
+      c4.append(two);
+      const s = near || far; if (s && s[0].source_url) { const l = srcLink(s[0].source_url, s[0].source_name); l.style.marginTop = '10px'; c4.append(l); }
+      box.append(c4);
+    }
+
+    // 5. Analyst view
+    const c5 = el('div', 'card');
+    c5.append(el('div', 'sub-h', 'What analysts say'));
+    const an = sec('analyst')[0];
+    if (isFund) {
+      c5.append(el('p', 'small', 'Brokerages don\'t publish buy, sell or hold ratings on mutual funds. Judge a fund by its category, cost and how it fits your mix (see Insights).'));
+    } else if (!an) {
+      c5.append(el('p', 'small', d.kind === 'ETF' ? 'ETFs simply track a price or index, so analysts don\'t rate them. Its outlook depends on what it tracks (see above).' : 'No published analyst rating was found for this stock; it has little or no brokerage coverage.'));
+    } else {
+      const [a, i] = an;
+      const rt = el('div', 'rating');
+      rt.append(mk(el('span', 'badge ' + RATING(a.rating), a.rating), 'profiles', 'rating', null, i));
+      const tgt = el('div');
+      tgt.append(el('p', 'small muted', a.analysts ? `Average target of ${a.analysts} analysts` : 'Price target'));
+      const tv = el('p', 'num'); tv.style.fontSize = '1.2rem';
+      tv.append(mk(el('span', null, F.price(a.target_avg)), 'profiles', 'target_avg', null, i));
+      const u = U.status === 'ok' && U.data ? U.data.findIndex((x) => x.isin === d.isin) : -1;
+      if (u >= 0 && U.data[u].upside_pct != null) {
+        const up = U.data[u].upside_pct;
+        tv.append(' ', mk(el('span', 'small ' + F.cls(up), `(${F.pct(up, 1)} vs today)`), 'analyst_upside', 'upside_pct', null, u));
+      }
+      tgt.append(tv);
+      rt.append(tgt);
+      c5.append(rt);
+      const meta = el('p', 'small muted'); meta.style.marginTop = '10px';
+      if (a.target_low != null && a.target_high != null) meta.append(mk(el('span', null, `Range ${F.price(a.target_low)}`), 'profiles', 'target_low', null, i), ' – ', mk(el('span', null, F.price(a.target_high)), 'profiles', 'target_high', null, i), ' · ');
+      meta.append(mk(el('span', null, 'as of ' + a.as_of), 'profiles', 'as_of', null, i));
+      c5.append(meta);
+      c5.append(mk(el('p', 'small', a.text), 'profiles', 'text', null, i));
+      const l = srcLink(a.source_url, a.source_name); l.style.marginTop = '6px'; c5.append(l);
+    }
+    c5.append(el('p', 'note', 'This shows published analyst opinions, which are often wrong and can be out of date. It is not a recommendation from this dashboard; decide based on your own goals, or ask a SEBI-registered adviser.'));
+    c5.style.marginBottom = '8px';
+    box.append(c5);
+  });
+})();
+</script>
+
+<script>
+(function () {
+  const short = (s, n) => s.length > n ? s.slice(0, n - 1) + '…' : s;
+
+  dash.draw('movers-chart', (box) => {
+    const h = dash.data('holdings'); box.replaceChildren();
+    if (h.status !== 'ok') { box.textContent = h.status === 'error' ? 'Failed to load' : '—'; return; }
     const rows = h.data.filter((d) => d.day_inr != null).slice().sort((a, b) => b.day_inr - a.day_inr);
-    const W = Math.max(280, el.clientWidth);
-    const narrow = W < 560;
-    const labelW = narrow ? 118 : 210, rowH = 24, top = 8, bottom = 26;
-    const H = top + rows.length * rowH + bottom;
+    const Wd = Math.max(280, box.clientWidth), narrow = Wd < 560;
+    const labelW = narrow ? 112 : 200, rowH = 24, top = 6, bottom = 26, H = top + rows.length * rowH + bottom;
     const ext = d3.max(rows, (d) => Math.abs(d.day_inr)) || 1;
-    const x = d3.scaleLinear().domain([-ext, ext]).nice().range([labelW + 8, W - (narrow ? 50 : 64)]);
-    const y = d3.scaleBand().domain(rows.map((d) => d.isin)).range([top, top + rows.length * rowH]).padding(0.28);
-    const svg = d3.select(el).append('svg').attr('width', '100%').attr('viewBox', `0 0 ${W} ${H}`).attr('role', 'img')
-      .attr('aria-label', "Each holding's gain or loss in rupees today, largest gains at the top");
+    const x = d3.scaleLinear().domain([-ext, ext]).nice().range([labelW + 8, Wd - (narrow ? 48 : 60)]);
+    const y = d3.scaleBand().domain(rows.map((d) => d.isin)).range([top, top + rows.length * rowH]).padding(0.3);
+    const svg = d3.select(box).append('svg').attr('width', '100%').attr('viewBox', `0 0 ${Wd} ${H}`).attr('role', 'img').attr('aria-label', "Each holding's gain or loss in rupees today");
     svg.append('g').attr('transform', `translate(0,${top + rows.length * rowH + 4})`)
       .call(d3.axisBottom(x).ticks(narrow ? 3 : 6).tickFormat((v) => (v > 0 ? '+' : v < 0 ? '−' : '') + '₹' + d3.format(',')(Math.abs(v))))
       .call((g) => { g.select('.domain').remove(); g.selectAll('line').attr('stroke', 'var(--cds-chart-grid)').attr('y2', -(rows.length * rowH + 4)); g.selectAll('text').style('fill', 'var(--cds-text-secondary)').style('font-size', '11px'); });
     svg.append('line').attr('x1', x(0)).attr('x2', x(0)).attr('y1', top).attr('y2', top + rows.length * rowH).style('stroke', 'var(--cds-chart-axis)');
-    const tip = d3.select(el).append('div').attr('class', 'pf-tip').style('display', 'none');
+    const tip = d3.select(box).append('div').attr('class', 'tip').style('display', 'none');
+    const wh = (d) => 'isin=' + encodeURIComponent(d.isin);
     const g = svg.append('g').selectAll('g').data(rows).join('g').attr('transform', (d) => `translate(0,${y(d.isin)})`).style('cursor', 'pointer');
-    const where = (d) => 'isin=' + encodeURIComponent(d.isin);
-    g.append('text').attr('x', labelW).attr('y', y.bandwidth() / 2).attr('dy', '0.35em').attr('text-anchor', 'end')
-      .style('font-size', '12px').style('fill', 'var(--color-fg)').text((d) => short(d.name, narrow ? 16 : 30))
-      .attr('data-source', 'holdings').attr('data-field', 'name').attr('data-where', where);
-    g.append('rect').attr('x', (d) => Math.min(x(0), x(d.day_inr))).attr('width', (d) => Math.max(1, Math.abs(x(d.day_inr) - x(0))))
-      .attr('height', y.bandwidth()).attr('rx', 3)
+    g.append('text').attr('x', labelW).attr('y', y.bandwidth() / 2).attr('dy', '0.35em').attr('text-anchor', 'end').style('font-size', '12px').style('fill', 'var(--color-fg)')
+      .text((d) => short(d.name.replace(/ Limited$/, ''), narrow ? 15 : 28)).attr('data-source', 'holdings').attr('data-field', 'name').attr('data-where', wh);
+    g.append('rect').attr('x', (d) => Math.min(x(0), x(d.day_inr))).attr('width', (d) => Math.max(1, Math.abs(x(d.day_inr) - x(0)))).attr('height', y.bandwidth()).attr('rx', 3)
       .style('fill', (d) => d.day_inr >= 0 ? 'var(--color-ok)' : 'var(--color-bad)').style('opacity', (d) => d.significant ? 1 : 0.5)
-      .attr('data-source', 'holdings').attr('data-field', 'day_inr').attr('data-where', where);
+      .attr('data-source', 'holdings').attr('data-field', 'day_inr').attr('data-where', wh);
     g.append('text').attr('x', (d) => d.day_inr >= 0 ? x(d.day_inr) + 5 : x(d.day_inr) - 5).attr('y', y.bandwidth() / 2).attr('dy', '0.35em')
       .attr('text-anchor', (d) => d.day_inr >= 0 ? 'start' : 'end').style('font-size', '11px').style('fill', 'var(--cds-text-secondary)')
-      .text((d) => F.pct(d.day_pct)).attr('data-source', 'holdings').attr('data-field', 'day_pct').attr('data-where', where);
-    g.append('rect').attr('x', 0).attr('width', W).attr('height', y.step()).attr('y', -(y.step() - y.bandwidth()) / 2).style('fill', 'transparent')
+      .text((d) => F.pct(d.day_pct)).attr('data-source', 'holdings').attr('data-field', 'day_pct').attr('data-where', wh);
+    g.append('rect').attr('x', 0).attr('width', Wd).attr('y', -(y.step() - y.bandwidth()) / 2).attr('height', y.step()).style('fill', 'transparent')
       .on('pointerenter pointermove', (ev, d) => {
         if (ev.pointerType === 'touch') return;
-        const [mx, my] = d3.pointer(ev, el);
+        const [mx, my] = d3.pointer(ev, box);
         tip.style('display', 'block').html('');
         tip.append('b').text(d.name);
-        tip.append('div').text(`${F.sinr(d.day_inr)} (${F.pct(d.day_pct)}) · value ${F.inr(d.value)}`);
-        tip.append('div').style('margin-top', '4px').style('color', 'var(--cds-text-secondary)').text('Click to open details');
+        tip.append('div').text(`${F.sinr(d.day_inr)} (${F.pct(d.day_pct)})`);
+        tip.append('div').style('color', 'var(--cds-text-secondary)').text('Click for details');
         const tw = tip.node().offsetWidth;
-        tip.style('left', Math.max(0, Math.min(mx + 12, el.clientWidth - tw)) + 'px').style('top', (my + 14) + 'px');
+        tip.style('left', Math.max(0, Math.min(mx + 12, box.clientWidth - tw)) + 'px').style('top', (my + 14) + 'px');
       })
       .on('pointerleave', () => tip.style('display', 'none'))
-      .on('click', (ev, d) => { tip.style('display', 'none'); window.pfOpenHolding(d.isin); });
+      .on('click', (ev, d) => { tip.style('display', 'none'); openHolding(d.isin); });
   });
 
-  dash.draw('alloc', (el) => {
-    const a = dash.data('allocation');
-    el.replaceChildren();
-    if (a.status !== 'ok') { el.textContent = '—'; return; }
-    const rows = a.data.filter((d) => d.dimension === el.dataset.dim && d.pct >= 0.05);
+  dash.draw('alloc', (box) => {
+    const a = dash.data('allocation'); box.replaceChildren();
+    if (a.status !== 'ok') { box.textContent = '—'; return; }
+    const rows = a.data.filter((d) => d.dimension === box.dataset.dim && d.pct >= 0.05);
     const max = d3.max(rows, (d) => d.pct) || 1;
     rows.forEach((d, i) => {
       const where = 'dimension=' + encodeURIComponent(d.dimension) + '&name=' + encodeURIComponent(d.name);
-      const row = document.createElement('div'); row.className = 'pf-bar-row';
-      const nm = document.createElement('span'); nm.textContent = d.name; Object.assign(nm.dataset, { source: 'allocation', field: 'name', where });
-      const tr = document.createElement('div'); tr.className = 'pf-bar-track';
-      const fill = document.createElement('div'); fill.className = 'pf-bar-fill'; fill.style.width = (d.pct / max * 100) + '%'; fill.style.background = dash.colors[0]; fill.style.opacity = String(1 - Math.min(i, 6) * 0.1);
-      tr.append(fill);
-      const v = document.createElement('span'); v.className = 'num'; v.title = F.inr(d.value); v.textContent = d.pct.toFixed(1) + '%'; Object.assign(v.dataset, { source: 'allocation', field: 'pct', where });
-      row.append(nm, tr, v); el.append(row);
-    });
-  });
-})();
-</script>
-
-<script>
-(function () {
-  const F = window.pfFmt;
-  const SORTS = [['value', 'Largest first'], ['move', 'Biggest move today'], ['gain', 'Best gain first'], ['loss', 'Worst gain first']];
-  window.pfSort = { stocks: 'value', funds: 'value' };
-  const sorters = {
-    value: (a, b) => b.value - a.value,
-    move: (a, b) => Math.abs(b.day_pct || 0) - Math.abs(a.day_pct || 0),
-    gain: (a, b) => (b.gain_pct ?? -1e9) - (a.gain_pct ?? -1e9),
-    loss: (a, b) => (a.gain_pct ?? 1e9) - (b.gain_pct ?? 1e9),
-  };
-  const mk = (tag, cls, text) => { const e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; };
-  const mark = (e, source, field, where) => { e.dataset.source = source; e.dataset.field = field; if (where != null) e.dataset.where = where; return e; };
-
-  dash.draw('sort', (sel) => {
-    const grp = sel.dataset.group;
-    sel.replaceChildren(...SORTS.map(([v, t]) => new Option(t, v)));
-    sel.value = window.pfSort[grp];
-    sel.onchange = () => { window.pfSort[grp] = sel.value; dash.draw('hold-list'); };
-  });
-
-  dash.draw('group-total', (el) => {
-    const t = dash.data('group_totals');
-    el.replaceChildren();
-    if (t.status !== 'ok' || !t.data) { el.textContent = '—'; return; }
-    const i = t.data.findIndex((r) => r.group === el.dataset.group);
-    if (i < 0) return;
-    const r = t.data[i];
-    const sp = (txt, field, cls) => { const s = mk('span', cls, txt); Object.assign(s.dataset, { source: 'group_totals', field, row: String(i) }); return s; };
-    el.append(sp(String(r.count), 'count'), ' holdings · ', sp(F.inr(r.value), 'value'), ' (', sp(F.upct(r.share_pct), 'share_pct'), ' of portfolio) · today ',
-      sp(F.sinr(r.day_inr), 'day_inr', F.cls(r.day_inr)), ' (', sp(F.pct(r.day_pct), 'day_pct', F.cls(r.day_pct)), ')');
-  });
-
-  function panel(d, newsRows, outlookRows) {
-    const where = 'isin=' + encodeURIComponent(d.isin);
-    const p = mk('div', 'pf-panel');
-
-    // Today's move and the reason
-    const why = mk('div', 'pf-block');
-    why.append(mk('h4', null, 'Why it moved today'));
-    const line = mk('div'); line.style.display = 'flex'; line.style.gap = '6px'; line.style.flexWrap = 'wrap'; line.style.alignItems = 'center';
-    line.append(mark(mk('span', 'num ' + F.cls(d.day_pct), F.pct(d.day_pct)), 'holdings', 'day_pct', where), ' ',
-      mark(mk('span', 'num muted small', '(' + F.sinr(d.day_inr) + ')'), 'holdings', 'day_inr', where));
-    if (d.driver) line.append(mark(mk('span', 'pf-chip', d.driver), 'holdings', 'driver', where));
-    why.append(line);
-    if (d.reason) {
-      why.append(mark(mk('p', null, d.reason), 'holdings', 'reason', where));
-      if (d.source_url) why.append(pfLink(d.source_url, d.source_name));
-    } else if (d.significant) {
-      why.append(mk('p', 'muted', 'This was a significant move, but no explanation has been researched for it yet.'));
-    } else {
-      why.append(mk('p', 'muted', d.kind === 'Mutual fund'
-        ? 'A normal day for this fund; its move was in line with its category.'
-        : 'A small move, within its normal daily range, so no separate research was needed.'));
-    }
-    p.append(why);
-
-    // Position facts
-    const facts = mk('div', 'pf-facts');
-    const fact = (k, v, field, cls) => { const f = mk('div', 'pf-fact'); f.append(mk('div', 'k', k)); const x = mk('div', 'x ' + (cls || ''), v); if (field) mark(x, 'holdings', field, where); f.append(x); return f; };
-    const unitLabel = d.kind === 'Mutual fund' ? 'Units' : 'Quantity';
-    facts.append(
-      fact('Value', F.inr(d.value), 'value'),
-      fact('Share of portfolio', F.upct(d.weight_pct), 'weight_pct'),
-      fact(unitLabel, d.quantity == null ? '—' : d3.format(',')(d.quantity), 'quantity'),
-      fact(d.kind === 'Mutual fund' ? 'NAV' : 'Price', F.price(d.price), 'price'),
-      fact('Average cost', d.avg_cost == null ? 'Not known' : F.price(d.avg_cost), 'avg_cost'),
-      fact('Gain', d.gain_inr == null ? 'Not known' : F.sinr(d.gain_inr), 'gain_inr', F.cls(d.gain_inr)),
-      fact('Gain %', d.gain_pct == null ? '—' : F.pct(d.gain_pct, 1), 'gain_pct', F.cls(d.gain_pct)),
-      fact('Price date', F.date(d.price_date), 'price_date'),
-    );
-    p.append(facts);
-
-    // 52-week range
-    if (d.low_52w != null && d.high_52w != null && d.high_52w > d.low_52w) {
-      const r = mk('div', 'pf-block');
-      r.append(mk('h4', null, '52-week range'));
-      const bar = mk('div', 'pf-range'); bar.setAttribute('role', 'img');
-      const pos = Math.max(0, Math.min(1, (d.price - d.low_52w) / (d.high_52w - d.low_52w)));
-      bar.setAttribute('aria-label', `Today's price is ${Math.round(pos * 100)}% of the way from the 52-week low to the high`);
-      const mkr = mk('i'); mkr.style.left = (pos * 100) + '%'; bar.append(mkr);
-      const lbl = mk('div', 'pf-range-l');
-      lbl.append(mark(mk('span', null, 'Low ' + F.price(d.low_52w)), 'holdings', 'low_52w', where),
-                 mark(mk('span', null, 'High ' + F.price(d.high_52w)), 'holdings', 'high_52w', where));
-      const note = mk('p', 'small muted', pos > 0.85 ? 'Near its 52-week high.' : pos < 0.15 ? 'Near its 52-week low.' : `${Math.round((1 - d.price / d.high_52w) * 100)}% below its 52-week high.`);
-      r.append(bar, lbl, note);
-      p.append(r);
-    }
-
-    // News for this holding
-    const nb = mk('div', 'pf-block');
-    nb.append(mk('h4', null, 'Latest news'));
-    if (!newsRows.length) nb.append(mk('p', 'muted small', 'No recent news found for this holding.'));
-    const ul = mk('ul', 'pf-list'); ul.style.gap = '10px';
-    for (const [n, i] of newsRows) {
-      const li = mk('li', 'pf-news');
-      const top = mk('div', 'pf-news-top');
-      top.append(mark(mk('span', 'pf-chip ' + n.impact, n.impact === 'positive' ? 'Positive' : n.impact === 'negative' ? 'Negative' : 'Neutral'), 'news', 'impact'),
-                 mark(mk('span', 'small muted', F.date(n.date)), 'news', 'date'));
-      top.querySelectorAll('[data-source]').forEach((e) => { e.dataset.row = String(i); });
-      const hl = mk('h3', null, n.headline); Object.assign(hl.dataset, { source: 'news', field: 'headline', row: String(i) });
-      const sm = mk('p', 'small', n.summary); Object.assign(sm.dataset, { source: 'news', field: 'summary', row: String(i) });
-      li.append(top, hl, sm, pfLink(n.source_url, n.source_name));
-      ul.append(li);
-    }
-    if (newsRows.length) nb.append(ul);
-    p.append(nb);
-
-    // What to watch
-    if (outlookRows.length) {
-      const [o, i] = outlookRows[0];
-      const ob = mk('div', 'pf-block');
-      const h = mk('h4', null, 'What to watch · '); const th = mk('span', null, o.theme); Object.assign(th.dataset, { source: 'outlook', field: 'theme', row: String(i) }); h.append(th);
-      const v = mk('p', 'small', o.view); Object.assign(v.dataset, { source: 'outlook', field: 'view', row: String(i) });
-      const w = mk('p', 'small muted', 'Watch: ' + o.watch); Object.assign(w.dataset, { source: 'outlook', field: 'watch', row: String(i) });
-      ob.append(h, v, w, pfLink(o.source_url, o.source_name));
-      p.append(ob);
-    }
-    return p;
-  }
-
-  const chevron = () => {
-    const ns = 'http://www.w3.org/2000/svg';
-    const s = document.createElementNS(ns, 'svg'); s.setAttribute('viewBox', '0 0 20 20'); s.setAttribute('class', 'chev'); s.setAttribute('aria-hidden', 'true');
-    const path = document.createElementNS(ns, 'path'); path.setAttribute('d', 'M5 7.5l5 5 5-5'); path.setAttribute('fill', 'none'); path.setAttribute('stroke', 'currentColor'); path.setAttribute('stroke-width', '1.6'); path.setAttribute('stroke-linecap', 'round'); path.setAttribute('stroke-linejoin', 'round');
-    s.append(path); return s;
-  };
-
-  dash.draw('hold-list', (el) => {
-    const h = dash.data('holdings'), n = dash.data('news'), o = dash.data('outlook');
-    el.replaceChildren();
-    if (h.status !== 'ok') { el.textContent = h.status === 'error' ? 'Failed to load' : '—'; return; }
-    const grp = el.dataset.group;
-    const news = n.status === 'ok' ? n.data.map((r, i) => [r, i]) : [];
-    const outlook = o.status === 'ok' ? o.data.map((r, i) => [r, i]) : [];
-    const rows = h.data.filter((d) => window.pfGroupOf(d) === grp).slice().sort(sorters[window.pfSort[grp]] || sorters.value);
-    for (const d of rows) {
-      const where = 'isin=' + encodeURIComponent(d.isin);
-      const det = mk('details', 'pf-h'); det.id = 'h-' + d.isin.replace(/[^A-Za-z0-9_-]/g, '');
-      if (window.pfOpen.has(d.isin)) det.open = true;
-      const sum = document.createElement('summary');
-      const left = mk('div');
-      left.append(mark(mk('div', 'nm', d.name), 'holdings', 'name', where));
-      const meta = mk('div', 'meta');
-      meta.append(mark(mk('span', null, d.kind === 'Mutual fund' ? d.category : `${d.kind} · ${d.category}`), 'holdings', 'category', where));
-      if (d.significant) meta.append(mk('span', 'pf-chip mover', 'Big move today'));
-      const dm = mark(mk('span', 'day-m num ' + F.cls(d.day_pct), F.pct(d.day_pct)), 'holdings', 'day_pct', where);
-      meta.append(dm);
-      left.append(meta);
-      const day = mk('div', 'val day');
-      day.append(mark(mk('div', 'v ' + F.cls(d.day_pct), F.pct(d.day_pct)), 'holdings', 'day_pct', where), mk('div', 'w', 'today'));
-      const val = mk('div', 'val');
-      val.append(mark(mk('div', 'v', F.inr(d.value)), 'holdings', 'value', where),
-                 mark(mk('div', 'w ' + F.cls(d.gain_pct), d.gain_pct == null ? 'gain n/a' : F.pct(d.gain_pct, 1) + ' gain'), 'holdings', 'gain_pct', where));
-      sum.append(left, day, val, chevron());
-      det.append(sum);
-      let built = false;
-      const build = () => {
-        if (built) return; built = true;
-        det.append(panel(d, news.filter(([r]) => (r.isins || '').split(',').includes(d.isin)), outlook.filter(([r]) => r.theme === d.theme)));
-      };
-      if (det.open) build();
-      det.addEventListener('toggle', () => { if (det.open) { window.pfOpen.add(d.isin); build(); } else window.pfOpen.delete(d.isin); });
-      el.append(det);
-    }
-  });
-
-  dash.draw('market-news', (ul) => {
-    const n = dash.data('news');
-    ul.replaceChildren();
-    if (n.status !== 'ok') return;
-    const rows = n.data.map((r, i) => [r, i]).filter(([r]) => r.scope === 'market' || (r.isins || '').split(',').length > 2);
-    if (!rows.length) { ul.append(mk('li', 'muted small', 'No broader market news for this update.')); return; }
-    for (const [d, i] of rows) {
-      const li = mk('li', 'pf-news');
-      const top = mk('div', 'pf-news-top');
-      const chip = mk('span', 'pf-chip ' + d.impact, d.impact === 'positive' ? 'Positive' : d.impact === 'negative' ? 'Negative' : 'Neutral');
-      const who = mk('span', 'small', d.holding); who.style.fontWeight = '500';
-      const when = mk('span', 'small muted', F.date(d.date));
-      [[chip, 'impact'], [who, 'holding'], [when, 'date']].forEach(([e, f]) => Object.assign(e.dataset, { source: 'news', field: f, row: String(i) }));
-      top.append(chip, who, when);
-      const hl = mk('h3', null, d.headline); Object.assign(hl.dataset, { source: 'news', field: 'headline', row: String(i) });
-      const p = mk('p', 'small', d.summary); Object.assign(p.dataset, { source: 'news', field: 'summary', row: String(i) });
-      li.append(top, hl, p, pfLink(d.source_url, d.source_name));
-      ul.append(li);
-    }
-  });
-
-  dash.draw('events', (ul) => {
-    const e = dash.data('events');
-    ul.replaceChildren();
-    if (e.status !== 'ok') return;
-    e.data.forEach((d, i) => {
-      const li = mk('li', 'pf-event');
-      const dt = new Date(d.date + 'T00:00:00Z');
-      const box = mk('div', 'pf-date'); Object.assign(box.dataset, { source: 'events', field: 'date', row: String(i) });
-      box.append(mk('div', 'd', d3.utcFormat('%-d')(dt)), mk('div', 'm', d3.utcFormat('%b %Y')(dt)));
-      const body = mk('div'); body.style.display = 'grid'; body.style.gap = '4px';
-      const t = mk('h3', null, d.event); Object.assign(t.dataset, { source: 'events', field: 'event', row: String(i) });
-      const p = mk('p', 'small', d.detail); Object.assign(p.dataset, { source: 'events', field: 'detail', row: String(i) });
-      const af = mk('span', 'pf-chip', 'Affects: ' + d.affects); af.style.justifySelf = 'start'; Object.assign(af.dataset, { source: 'events', field: 'affects', row: String(i) });
-      body.append(t, p, af);
-      if (d.source_url) body.append(pfLink(d.source_url, d.source_name));
-      li.append(box, body); ul.append(li);
+      const r = el('div', 'bar-row');
+      const tr = el('div', 'track'); const f = el('div', 'fill'); f.style.width = (d.pct / max * 100) + '%'; f.style.background = dash.colors[0]; f.style.opacity = String(1 - Math.min(i, 6) * 0.1); tr.append(f);
+      const v = mk(el('span', 'num', d.pct.toFixed(1) + '%'), 'allocation', 'pct', where); v.title = F.inr(d.value);
+      r.append(mk(el('span', null, d.name), 'allocation', 'name', where), tr, v); box.append(r);
     });
   });
 
-  dash.draw('outlook', (ul) => {
-    const o = dash.data('outlook');
-    ul.replaceChildren();
-    if (o.status !== 'ok') return;
-    o.data.forEach((d, i) => {
-      const li = mk('li', 'pf-out');
-      const top = mk('div'); top.style.display = 'flex'; top.style.gap = '8px'; top.style.alignItems = 'center';
-      const t = mk('h3', null, d.theme); Object.assign(t.dataset, { source: 'outlook', field: 'theme', row: String(i) });
-      const tone = mk('span', 'pf-chip ' + (d.tone === 'positive' ? 'positive' : d.tone === 'cautious' ? 'medium' : ''), d.tone); Object.assign(tone.dataset, { source: 'outlook', field: 'tone', row: String(i) });
-      top.append(t, tone);
-      const v = mk('p', 'small', d.view); Object.assign(v.dataset, { source: 'outlook', field: 'view', row: String(i) });
-      const w = mk('p', 'small muted', 'Watch: ' + d.watch); Object.assign(w.dataset, { source: 'outlook', field: 'watch', row: String(i) });
-      li.append(top, v, w, pfLink(d.source_url, d.source_name)); ul.append(li);
+  dash.draw('findings', (box) => {
+    const s = dash.data('suggestions'); box.replaceChildren();
+    if (s.status !== 'ok') return;
+    if (!s.data.length) { box.append(el('p', 'muted', 'Nothing stands out: your money is well spread.')); return; }
+    s.data.forEach((d, i) => {
+      const c = el('div', 'finding'); c.style.borderTop = '1px solid var(--color-border-line)'; c.style.paddingTop = '12px';
+      const top = el('div'); top.style.display = 'flex'; top.style.justifyContent = 'space-between'; top.style.gap = '8px';
+      top.append(mk(el('span', 'small muted', d.area), 'suggestions', 'area', null, i),
+                 mk(el('span', 'chip ' + (d.level === 'high' ? 'negative' : d.level === 'medium' ? 'medium' : ''), d.level === 'high' ? 'Look at this first' : d.level === 'medium' ? 'Worth a look' : 'For awareness'), 'suggestions', 'level', null, i));
+      c.append(top, mk(el('p', 'f', d.finding), 'suggestions', 'finding', null, i), mk(el('p', 'small muted', d.detail), 'suggestions', 'detail', null, i), mk(el('p', 'small', 'To consider: ' + d.consider), 'suggestions', 'consider', null, i));
+      box.append(c);
     });
   });
 
-  dash.draw('scenarios', (el) => {
-    const s = dash.data('scenarios');
-    el.replaceChildren();
+  dash.draw('scenarios', (box) => {
+    const s = dash.data('scenarios'); box.replaceChildren();
     if (s.status !== 'ok') return;
     const max = d3.max(s.data, (d) => Math.abs(d.impact_inr)) || 1;
     s.data.forEach((d, i) => {
-      const row = mk('div', 'pf-bar-row');
-      const nm = mk('span', null, `Nifty ${F.pct(d.nifty_move_pct, 0)}`); Object.assign(nm.dataset, { source: 'scenarios', field: 'nifty_move_pct', row: String(i) });
-      const tr = mk('div', 'pf-bar-track');
-      const fill = mk('div', 'pf-bar-fill'); fill.style.width = (Math.abs(d.impact_inr) / max * 100) + '%'; fill.style.background = 'var(--color-bad)'; tr.append(fill);
-      const v = mk('span', 'num');
-      const a = mk('span', null, F.sinr(d.impact_inr)); Object.assign(a.dataset, { source: 'scenarios', field: 'impact_inr', row: String(i) });
-      const b = mk('span', 'muted', ` (${F.pct(d.portfolio_move_pct, 1)})`); Object.assign(b.dataset, { source: 'scenarios', field: 'portfolio_move_pct', row: String(i) });
-      v.append(a, b); row.append(nm, tr, v); el.append(row);
+      const r = el('div', 'bar-row');
+      const tr = el('div', 'track'); const f = el('div', 'fill'); f.style.width = (Math.abs(d.impact_inr) / max * 100) + '%'; f.style.background = 'var(--color-bad)'; tr.append(f);
+      const v = el('span', 'num');
+      v.append(mk(el('span', null, F.sinr(d.impact_inr)), 'scenarios', 'impact_inr', null, i), mk(el('span', 'muted', ` (${F.pct(d.portfolio_move_pct, 1)})`), 'scenarios', 'portfolio_move_pct', null, i));
+      r.append(mk(el('span', null, 'Nifty ' + F.pct(d.nifty_move_pct, 0)), 'scenarios', 'nifty_move_pct', null, i), tr, v); box.append(r);
     });
   });
 
-  dash.draw('suggestions', (el) => {
-    const s = dash.data('suggestions');
-    el.replaceChildren();
-    if (s.status !== 'ok') return;
-    if (!s.data.length) { el.append(mk('p', 'muted', 'Nothing stands out: your money is well spread across categories.')); return; }
-    s.data.forEach((d, i) => {
-      const c = mk('div', 'pf-card pf-sugg');
-      const top = mk('div'); top.style.display = 'flex'; top.style.justifyContent = 'space-between'; top.style.gap = '8px';
-      const t = mk('h3', null, d.area); Object.assign(t.dataset, { source: 'suggestions', field: 'area', row: String(i) });
-      const lv = mk('span', 'pf-chip ' + d.level, d.level === 'high' ? 'Look at this first' : d.level === 'medium' ? 'Worth a look' : 'For awareness'); Object.assign(lv.dataset, { source: 'suggestions', field: 'level', row: String(i) });
-      top.append(t, lv);
-      const f = mk('p', null, d.finding); f.style.fontWeight = '500'; Object.assign(f.dataset, { source: 'suggestions', field: 'finding', row: String(i) });
-      const de = mk('p', 'small muted', d.detail); Object.assign(de.dataset, { source: 'suggestions', field: 'detail', row: String(i) });
-      const co = mk('p', 'consider', 'To consider: ' + d.consider); Object.assign(co.dataset, { source: 'suggestions', field: 'consider', row: String(i) });
-      c.append(top, f, de, co); el.append(c);
+  dash.draw('events', (box) => {
+    const e = dash.data('events'); box.replaceChildren();
+    if (e.status !== 'ok') return;
+    e.data.forEach((d, i) => {
+      const r = el('div', 'event'); const dt = new Date(d.date + 'T00:00:00Z');
+      const b = mk(el('div', 'date'), 'events', 'date', null, i); b.append(el('div', 'd', d3.utcFormat('%-d')(dt)), el('div', 'm', d3.utcFormat('%b %y')(dt)));
+      const t = el('div'); t.style.display = 'grid'; t.style.gap = '3px';
+      t.append(mk(el('p', null, d.event), 'events', 'event', null, i), mk(el('p', 'small muted', d.detail), 'events', 'detail', null, i));
+      if (d.source_url) t.append(srcLink(d.source_url, d.source_name));
+      r.append(b, t); box.append(r);
     });
   });
 
-  dash.draw('health', (ul) => {
-    const h = dash.data('health');
-    ul.replaceChildren();
+  dash.draw('market-news', (box) => {
+    const n = dash.data('news'); box.replaceChildren();
+    if (n.status !== 'ok') return;
+    const rows = n.data.map((r, i) => [r, i]).filter(([r]) => r.scope === 'market' || (r.isins || '').split(',').length > 2);
+    if (!rows.length) { box.append(el('p', 'muted small', 'No broader market news for this update.')); return; }
+    for (const [d, i] of rows) {
+      const it = el('div', 'news');
+      const top = el('div', 'news-top');
+      top.append(mk(el('span', 'chip ' + d.impact, d.impact === 'positive' ? 'Positive' : d.impact === 'negative' ? 'Negative' : 'Neutral'), 'news', 'impact', null, i),
+                 mk(el('span', 'small', d.holding), 'news', 'holding', null, i), mk(el('span', 'small muted', F.date(d.date)), 'news', 'date', null, i));
+      it.append(top, mk(el('h3', null, d.headline), 'news', 'headline', null, i), mk(el('p', 'small', d.summary), 'news', 'summary', null, i), srcLink(d.source_url, d.source_name));
+      box.append(it);
+    }
+  });
+
+  dash.draw('health', (box) => {
+    const h = dash.data('health'); box.replaceChildren();
     if (h.status !== 'ok') return;
-    h.data.forEach((d, i) => { const li = mk('li', null, d.item); Object.assign(li.dataset, { source: 'health', field: 'item', row: String(i) }); ul.append(li); });
+    box.append(el('b', null, 'Data notes'));
+    h.data.forEach((d, i) => box.append(mk(el('p', null, d.item), 'health', 'item', null, i)));
   });
+
+  // Open the screen named in the link, if any (after every drawing is registered)
+  const hash = (location.hash || '').slice(1);
+  if (hash.startsWith('h-')) show('detail', decodeURIComponent(hash.slice(2)));
+  else if (SCREENS.includes(hash) && hash !== 'detail') show(hash);
 })();
 </script>

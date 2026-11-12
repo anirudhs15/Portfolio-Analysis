@@ -232,7 +232,9 @@ def build(mode: str | None = None) -> dict[str, list]:
     def _theme(x: dict) -> str:
         c = x["category"].lower()
         if c in ("silver", "gold"):
-            return "Silver" if c == "silver" else ""
+            return "Silver" if c == "silver" else "Gold"
+        if "large" in c:
+            return "Large caps"
         if "bond" in c or "arbitrage" in c:
             return "Interest rates"
         if x["symbol"] == "HINDCOPPER":
@@ -245,13 +247,77 @@ def build(mode: str | None = None) -> dict[str, list]:
     for x in holdings:
         x["theme"] = _theme(x)
 
+    profiles = _profiles(holdings)
+
     return {
-        "summary": summary, "holdings": holdings, "allocation": allocation,
+        "summary": summary, "holdings": holdings, "allocation": allocation, "profiles": profiles,
         "news": news,
         "events": sorted(research.get("events", []), key=lambda e: e["date"]),
         "outlook": research.get("outlook", []), "suggestions": sugg, "scenarios": scenarios,
         "history": history, "indices": indices, "health": health,
     }
+
+
+FUND_ABOUT = {
+    "Small Cap": "A mutual fund that invests mainly in small companies: higher growth potential, bigger swings.",
+    "Mid Cap": "A mutual fund that invests mainly in mid-sized companies.",
+    "Large Cap": "A mutual fund that invests in India's largest, most established companies.",
+    "Sector / thematic": "A fund that invests in a single sector or theme, so it rises and falls with that industry.",
+    "Corporate Bond": "A debt fund that lends to highly rated companies; meant to be steady, with returns tied to interest rates.",
+    "Arbitrage (hybrid)": "A low-risk fund that earns from small price gaps between markets, behaving much like a debt fund.",
+    "Silver": "A fund of funds that invests in silver ETFs, so it tracks the price of silver.",
+    "Gold": "A fund that tracks the price of gold.",
+    "Other ETFs": "An exchange-traded fund that tracks an index of companies.",
+}
+
+
+def _profiles(holdings: list[dict]) -> list[dict]:
+    """Long-format rows: one per piece of background for each holding (about, up, down, near, far, analyst)."""
+    p = RESEARCH_DIR / "profiles.json"
+    if not p.exists():
+        return []
+    prof = json.loads(p.read_text())
+    stocks, etfs, themes = prof.get("stocks", {}), prof.get("etfs", {}), prof.get("themes", {})
+    rows: list[dict] = []
+
+    def add(isin, section, text, order=0, src_name="", src_url="", **extra):
+        rows.append({"isin": isin, "section": section, "order": order, "text": text,
+                     "source_name": src_name, "source_url": src_url,
+                     "rating": extra.get("rating"), "analysts": extra.get("analysts"),
+                     "target_avg": extra.get("target_avg"), "target_low": extra.get("target_low"),
+                     "target_high": extra.get("target_high"), "as_of": extra.get("as_of")})
+
+    for h in holdings:
+        isin, sym = h["isin"], str(h["symbol"])
+        st = stocks.get(sym)
+        if st:
+            src = (st.get("sources") or [{}])[0]
+            add(isin, "about", st["about"])
+            for i, t in enumerate(st.get("up", [])):
+                add(isin, "up", t, i)
+            for i, t in enumerate(st.get("down", [])):
+                add(isin, "down", t, i)
+            add(isin, "near", st.get("near", ""), 0, src.get("name", ""), src.get("url", ""))
+            add(isin, "far", st.get("far", ""), 0, src.get("name", ""), src.get("url", ""))
+            a = st.get("analyst")
+            if a:
+                add(isin, "analyst", a.get("detail", ""), 0, a.get("source_name", ""), a.get("source_url", ""),
+                    rating=a.get("rating"), analysts=a.get("analysts"), target_avg=a.get("target_avg"),
+                    target_low=a.get("target_low"), target_high=a.get("target_high"), as_of=a.get("as_of"))
+            continue
+        # ETFs and funds: background comes from their theme
+        about = (etfs.get(sym) or {}).get("about") or FUND_ABOUT.get(h["category"]) or ""
+        if about:
+            add(isin, "about", about)
+        th = themes.get(h.get("theme") or "")
+        if th:
+            for i, t in enumerate(th.get("up", [])):
+                add(isin, "up", t, i)
+            for i, t in enumerate(th.get("down", [])):
+                add(isin, "down", t, i)
+            add(isin, "near", th.get("near", ""), 0, th.get("source_name", ""), th.get("source_url", ""))
+            add(isin, "far", th.get("far", ""), 0, th.get("source_name", ""), th.get("source_url", ""))
+    return rows
 
 
 def main(argv=None):
