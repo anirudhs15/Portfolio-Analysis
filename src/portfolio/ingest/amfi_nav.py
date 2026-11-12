@@ -54,9 +54,28 @@ def parse_navall(text: str) -> dict[str, NavRecord]:
     """Parses NAVAll.txt into {isin: NavRecord} (each scheme is indexed under every ISIN it has)."""
     out: dict[str, NavRecord] = {}
     category = scheme_type = amc = None
+    # Column positions come from the header, because AMFI has changed the layout before
+    # (Nov 2026: "Plan" and "Option" columns added before the NAV).
+    idx = {"code": 0, "isin1": 1, "isin2": 2, "name": 3, "nav": 4, "date": 5}
     for raw in text.splitlines():
         line = raw.strip()
-        if not line or line.startswith("Scheme Code"):
+        if not line:
+            continue
+        if line.startswith("Scheme Code"):
+            cols = [c.strip().lower() for c in line.split(";")]
+            for i, c in enumerate(cols):
+                if c.startswith("scheme code"):
+                    idx["code"] = i
+                elif "isin div payout" in c or "isin growth" in c:
+                    idx["isin1"] = i
+                elif "reinvestment" in c:
+                    idx["isin2"] = i
+                elif c == "scheme name":
+                    idx["name"] = i
+                elif "net asset value" in c:
+                    idx["nav"] = i
+                elif c == "date":
+                    idx["date"] = i
             continue
         if ";" not in line:
             m = _CAT_RE.match(line)
@@ -66,9 +85,10 @@ def parse_navall(text: str) -> dict[str, NavRecord]:
                 amc = line
             continue
         parts = [p.strip() for p in line.split(";")]
-        if len(parts) < 6:
+        if len(parts) <= max(idx.values()):
             continue
-        code, isin1, isin2, name, nav_s, date_s = parts[:6]
+        code, isin1, isin2 = parts[idx["code"]], parts[idx["isin1"]], parts[idx["isin2"]]
+        name, nav_s, date_s = parts[idx["name"]], parts[idx["nav"]], parts[idx["date"]]
         try:
             nav = float(nav_s)
             nav_date = datetime.strptime(date_s, "%d-%b-%Y").date()

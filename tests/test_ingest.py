@@ -117,3 +117,14 @@ def test_fetch_latest_falls_back_and_rejects_html(monkeypatch):
     monkeypatch.setattr(amfi_nav, "_get", fake_get)
     navs = amfi_nav.fetch_latest()
     assert len(calls) == 2 and "INF179K01YV8" in navs
+
+
+def test_parse_navall_new_layout_with_plan_and_option():
+    text = ("Scheme Code;ISIN Div Payout/ ISIN Growth;ISIN Div Reinvestment;Scheme Name;Plan;Option;"
+            "Net Asset Value;Date\r\n \r\nOpen Ended Schemes(Equity Scheme - Mid Cap Fund)\r\n\r\n"
+            "Motilal Oswal Mutual Fund\r\n\r\n"
+            "127042;INF247L01445;-;Motilal Oswal Midcap Fund;Direct;Growth;120.8101;12-Nov-2026\r\n")
+    rec = amfi_nav.parse_navall(text)["INF247L01445"]
+    assert rec.nav == 120.8101 and rec.nav_date == date(2026, 11, 12)
+    assert rec.scheme_name == "Motilal Oswal Midcap Fund"
+    assert rec.category == "Equity Scheme - Mid Cap Fund"
