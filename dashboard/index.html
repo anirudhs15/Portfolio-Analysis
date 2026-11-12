@@ -1,44 +1,43 @@
 <meta name="dash-one-writer">
 <style>
-  .pf { font-family: var(--font-anthropic-sans); color: var(--color-fg); display: grid; gap: var(--cds-gap-xl); max-width: 1180px; margin: 0 auto; }
+  .pf { font-family: var(--font-anthropic-sans); color: var(--color-fg); display: grid; gap: var(--cds-gap-xl); max-width: 1100px; margin: 0 auto; }
   .pf h1 { font-family: var(--font-anthropic-serif); font-weight: 400; font-size: 2.1rem; margin: 0; letter-spacing: -0.01em; }
   .pf h2 { font-family: var(--font-anthropic-serif); font-weight: 400; font-size: 1.45rem; margin: 0 0 var(--cds-gap-xs); }
   .pf h3 { font-size: var(--cds-font-size-body); font-weight: var(--cds-font-weight-medium); margin: 0; }
+  .pf h4 { font-size: var(--cds-font-size-caption); font-weight: var(--cds-font-weight-medium); text-transform: uppercase; letter-spacing: .05em; color: var(--color-fg-muted); margin: 0 0 6px; }
   .pf p { margin: 0; line-height: 1.55; }
   .pf .muted { color: var(--color-fg-muted); }
   .pf .small { font-size: var(--cds-font-size-caption); }
   .pf .num { font-variant-numeric: tabular-nums; }
   .pf .good { color: var(--color-ok); }
   .pf .bad { color: var(--color-bad); }
-  .pf .warn { color: var(--color-warn); }
   .pf-head { display: grid; gap: var(--cds-gap-sm); }
   .pf-take { font-size: 1.12rem; max-width: 62ch; }
   .pf-take b { font-weight: var(--cds-font-weight-medium); }
   .pf-nav { display: flex; flex-wrap: wrap; gap: var(--cds-gap-xs); }
-  .pf-nav a { font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); text-decoration: none; border: 1px solid var(--color-border-line); border-radius: 999px; padding: 4px 12px; }
+  .pf-nav a { font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); text-decoration: none; border: 1px solid var(--color-border-line); border-radius: 999px; padding: 5px 12px; }
   .pf-nav a:hover { color: var(--color-fg); border-color: var(--color-fg-muted); }
   .pf-card { background: var(--color-panel); border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); padding: var(--cds-pad-lg); min-width: 0; }
-  .pf-kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: var(--cds-gap-md); }
+  .pf-kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--cds-gap-md); }
   .pf-kpi .label { font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); text-transform: uppercase; letter-spacing: .04em; }
   .pf-kpi .big { font-family: var(--font-anthropic-serif); font-weight: 400; font-size: 2rem; line-height: 1.15; margin: 6px 0 4px; font-variant-numeric: tabular-nums; }
   .pf-kpi .sub { font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); }
   .pf-section { display: grid; gap: var(--cds-gap-md); scroll-margin-top: 12px; }
+  .pf-section-head { display: flex; justify-content: space-between; align-items: end; gap: var(--cds-gap-md); flex-wrap: wrap; }
   .pf-intro { max-width: 70ch; color: var(--color-fg-muted); }
-  .pf-two { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: var(--cds-gap-md); }
-  .pf-three { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: var(--cds-gap-md); }
+  .pf-two { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--cds-gap-md); }
+  .pf-three { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: var(--cds-gap-md); }
   .pf-chart { position: relative; min-height: 120px; }
   .pf-chart svg { display: block; overflow: visible; }
   .pf-chart text { font-family: var(--font-anthropic-sans); }
   .pf-tip { position: absolute; pointer-events: none; background: var(--cds-surface-popover); border: 1px solid var(--cds-border); box-shadow: var(--cds-shadow-popover); border-radius: 8px; padding: 8px 10px; font-size: var(--cds-font-size-caption); max-width: 280px; z-index: 5; line-height: 1.45; }
   .pf-tip b { display: block; font-weight: var(--cds-font-weight-medium); margin-bottom: 2px; }
-  .pf-why { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--cds-gap-md); }
-  .pf-why-item { display: grid; gap: 6px; align-content: start; }
-  .pf-why-top { display: flex; justify-content: space-between; gap: var(--cds-gap-sm); align-items: baseline; }
   .pf-chip { display: inline-block; font-size: 11px; line-height: 1; padding: 4px 8px; border-radius: 999px; border: 1px solid var(--color-border-line); color: var(--color-fg-muted); white-space: nowrap; }
   .pf-chip.positive { color: var(--color-ok); border-color: currentColor; }
   .pf-chip.negative { color: var(--color-bad); border-color: currentColor; }
   .pf-chip.high { color: var(--color-bad); border-color: currentColor; }
   .pf-chip.medium { color: var(--color-warn); border-color: currentColor; }
+  .pf-chip.mover { color: var(--color-fg); border-color: var(--color-fg-muted); }
   .pf-src { font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); }
   .pf-src a { color: inherit; }
   .pf-wrap { border-left: 3px solid var(--color-border-line); padding-left: var(--cds-pad-md); }
@@ -46,19 +45,35 @@
   .pf-bar-row { display: grid; grid-template-columns: minmax(90px, 38%) 1fr auto; gap: 10px; align-items: center; font-size: var(--cds-font-size-caption); }
   .pf-bar-track { height: 10px; border-radius: 5px; background: var(--cds-chart-grid); overflow: hidden; }
   .pf-bar-fill { height: 100%; border-radius: 5px; }
-  .pf-tablewrap { overflow-x: auto; }
-  .pf-table { width: 100%; border-collapse: collapse; font-size: var(--cds-font-size-caption); font-variant-numeric: tabular-nums; }
-  .pf-table th { text-align: right; font-weight: var(--cds-font-weight-medium); color: var(--color-fg-muted); padding: 8px 10px; border-bottom: 1px solid var(--color-border-line); white-space: nowrap; }
-  .pf-table th:first-child, .pf-table td:first-child { text-align: left; }
-  .pf-table td { text-align: right; padding: 9px 10px; border-bottom: 1px solid var(--color-border-line); white-space: nowrap; }
-  .pf-table td:first-child { white-space: normal; min-width: 180px; }
-  .pf-table .nm { font-size: var(--cds-font-size-body); }
-  .pf-table .meta { color: var(--color-fg-muted); font-size: 11px; }
-  .pf-tools { display: flex; gap: var(--cds-gap-sm); align-items: center; flex-wrap: wrap; }
   .pf-list { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--cds-gap-md); }
-  .pf-news { display: grid; gap: 4px; padding-bottom: var(--cds-gap-md); border-bottom: 1px solid var(--color-border-line); }
+
+  /* Holdings: each one opens into its own panel */
+  .pf-hold { display: grid; gap: 8px; }
+  .pf-h { background: var(--color-panel); border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); scroll-margin-top: 12px; }
+  .pf-h[open] { border-color: var(--color-fg-muted); }
+  .pf-h > summary { list-style: none; cursor: pointer; display: grid; grid-template-columns: 1fr auto auto 18px; gap: var(--cds-gap-md); align-items: center; padding: 14px var(--cds-pad-lg); }
+  .pf-h > summary::-webkit-details-marker { display: none; }
+  .pf-h > summary:focus-visible { outline: 2px solid var(--color-fg-muted); outline-offset: 2px; border-radius: var(--cds-radius); }
+  .pf-h .nm { font-size: var(--cds-font-size-body); font-weight: var(--cds-font-weight-medium); }
+  .pf-h .meta { font-size: 12px; color: var(--color-fg-muted); margin-top: 2px; display: flex; gap: 6px; flex-wrap: wrap; align-items: center; }
+  .pf-h .val { text-align: right; font-variant-numeric: tabular-nums; }
+  .pf-h .val .v { font-size: var(--cds-font-size-body); }
+  .pf-h .val .w { font-size: 12px; color: var(--color-fg-muted); }
+  .pf-h .chev { width: 18px; height: 18px; color: var(--color-fg-muted); transition: transform .15s; }
+  .pf-h[open] .chev { transform: rotate(180deg); }
+  .pf-panel { border-top: 1px solid var(--color-border-line); padding: var(--cds-pad-lg); display: grid; gap: var(--cds-gap-lg); }
+  .pf-facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: var(--cds-gap-md); }
+  .pf-fact .k { font-size: 11px; color: var(--color-fg-muted); text-transform: uppercase; letter-spacing: .04em; }
+  .pf-fact .x { font-variant-numeric: tabular-nums; margin-top: 2px; }
+  .pf-range { position: relative; height: 6px; background: var(--cds-chart-grid); border-radius: 3px; margin: 10px 0 4px; }
+  .pf-range i { position: absolute; top: -4px; width: 4px; height: 14px; border-radius: 2px; background: var(--color-fg); transform: translateX(-2px); }
+  .pf-range-l { display: flex; justify-content: space-between; font-size: 11px; color: var(--color-fg-muted); font-variant-numeric: tabular-nums; }
+  .pf-block { display: grid; gap: 6px; }
+  .pf-news { display: grid; gap: 4px; padding-bottom: var(--cds-gap-sm); border-bottom: 1px solid var(--color-border-line); }
   .pf-news:last-child { border-bottom: 0; padding-bottom: 0; }
   .pf-news-top { display: flex; gap: var(--cds-gap-sm); align-items: center; flex-wrap: wrap; }
+  .pf-total { font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); font-variant-numeric: tabular-nums; }
+
   .pf-event { display: grid; grid-template-columns: 64px 1fr; gap: var(--cds-gap-sm); }
   .pf-date { text-align: center; border: 1px solid var(--color-border-line); border-radius: 8px; padding: 6px 4px; align-self: start; }
   .pf-date .d { font-family: var(--font-anthropic-serif); font-size: 1.4rem; line-height: 1; }
@@ -74,7 +89,16 @@
   .pf-foot dt { color: var(--color-fg); }
   .pf-foot dd { margin: 0; }
   [data-dash-source-state=refreshing] { opacity: .5; }
-  @media (max-width: 520px) { .pf h1 { font-size: 1.7rem; } .pf-kpi .big { font-size: 1.6rem; } }
+  @media (max-width: 560px) {
+    .pf h1 { font-size: 1.7rem; }
+    .pf-kpi .big { font-size: 1.6rem; }
+    .pf-h > summary { grid-template-columns: 1fr auto 16px; gap: 10px; padding: 12px 14px; }
+    .pf-h .day { display: none; }
+    .pf-panel { padding: 14px; }
+    .pf-foot dl { grid-template-columns: 1fr; }
+  }
+  @media (min-width: 561px) { .pf-h .day-m { display: none; } }
+  @media (prefers-reduced-motion: reduce) { .pf-h .chev { transition: none; } }
 </style>
 
 <div class="pf">
@@ -83,10 +107,11 @@
     <p class="muted small">Groww stocks and mutual funds · prices as of <span data-draw="asof" data-source="summary" data-field="as_of" data-row="0">—</span> · updated <span data-draw="updated" data-source="summary" data-field="generated_at" data-row="0">—</span></p>
     <p class="pf-take" id="takeaway">Your portfolio <span data-draw="t-dir">—</span> <b data-draw="t-pct" data-source="summary" data-field="day_pct" data-row="0">—</b> today, while the Nifty 50 <span data-draw="t-ndir">—</span> <b data-draw="t-npct" data-source="summary" data-field="nifty_pct" data-row="0">—</b>. <span data-draw="t-driver">—</span></p>
     <nav class="pf-nav" aria-label="Sections">
-      <a href="#moved">What moved</a>
+      <a href="#moved">Today</a>
+      <a href="#stocks">Stocks &amp; ETFs</a>
+      <a href="#funds">Mutual funds</a>
       <a href="#breakdown">Breakdown</a>
-      <a href="#holdings">Holdings</a>
-      <a href="#news">News</a>
+      <a href="#market-news">Market news</a>
       <a href="#ahead">What's ahead</a>
       <a href="#risk">Risk</a>
       <a href="#diversify">Diversification</a>
@@ -107,7 +132,7 @@
     <div class="pf-card pf-kpi" id="kpi-gain">
       <div class="label">Overall gain</div>
       <div class="big" data-draw="k-gain" data-source="summary" data-field="gain_inr" data-row="0">—</div>
-      <div class="sub"><span data-draw="k-gainpct" data-source="summary" data-field="gain_pct" data-row="0">—</span> on ₹<span data-draw="k-invested" data-source="summary" data-field="invested" data-row="0">—</span> invested · covers <span data-draw="k-cover" data-source="summary" data-field="cost_coverage_pct" data-row="0">—</span>% of holdings with a known cost</div>
+      <div class="sub"><span data-draw="k-gainpct" data-source="summary" data-field="gain_pct" data-row="0">—</span> on <span data-draw="k-invested" data-source="summary" data-field="invested" data-row="0">—</span> invested · covers <span data-draw="k-cover" data-source="summary" data-field="cost_coverage_pct" data-row="0">—</span>% of holdings with a known cost</div>
     </div>
     <div class="pf-card pf-kpi" id="kpi-div">
       <div class="label">Diversification</div>
@@ -118,8 +143,8 @@
 
   <section class="pf-section" id="moved">
     <div>
-      <h2>What moved today, and why</h2>
-      <p class="pf-intro">Each bar is a holding's gain or loss today in rupees. Hover or tap a bar for details. Holdings that moved more than 2%, or much more than their sector, are explained below.</p>
+      <h2>Today at a glance</h2>
+      <p class="pf-intro">Each bar is a holding's gain or loss today in rupees; darker bars are the bigger moves. Tap a bar to open that holding's details below.</p>
     </div>
     <div class="pf-card pf-wrap" id="market-wrap">
       <h3>The market today</h3>
@@ -129,14 +154,36 @@
     <div class="pf-card">
       <div class="pf-chart" id="movers-chart" data-draw="movers" data-source="holdings" style="min-height:420px">—</div>
     </div>
-    <h3 id="why-heading">Why they moved</h3>
-    <div class="pf-why" id="why" data-draw="why" data-source="holdings"></div>
+  </section>
+
+  <section class="pf-section" id="stocks">
+    <div class="pf-section-head">
+      <div>
+        <h2>Stocks &amp; ETFs</h2>
+        <p class="pf-intro">Shares and exchange-traded funds in your Groww demat account. Tap any holding to see why it moved, its latest news and what to watch.</p>
+      </div>
+      <select class="dash-select" data-draw="sort" data-group="stocks" aria-label="Sort stocks and ETFs"></select>
+    </div>
+    <p class="pf-total" data-draw="group-total" data-group="stocks" data-source="holdings">—</p>
+    <div class="pf-hold" data-draw="hold-list" data-group="stocks" data-source="holdings news outlook"></div>
+  </section>
+
+  <section class="pf-section" id="funds">
+    <div class="pf-section-head">
+      <div>
+        <h2>Mutual funds</h2>
+        <p class="pf-intro">Fund units come from your latest CDSL statement and are valued at the latest NAV, so a fund can show yesterday's price until AMFI publishes today's. Tap a fund for details.</p>
+      </div>
+      <select class="dash-select" data-draw="sort" data-group="funds" aria-label="Sort mutual funds"></select>
+    </div>
+    <p class="pf-total" data-draw="group-total" data-group="funds" data-source="holdings">—</p>
+    <div class="pf-hold" data-draw="hold-list" data-group="funds" data-source="holdings news outlook"></div>
   </section>
 
   <section class="pf-section" id="breakdown">
     <div>
       <h2>Where your money is</h2>
-      <p class="pf-intro">Your portfolio split three ways. Gold &amp; silver includes ETFs and fund-of-funds that hold metal ETFs. Market cap covers the equity part only; thematic funds hold companies of all sizes.</p>
+      <p class="pf-intro">Your portfolio split three ways. Gold &amp; silver includes ETFs and fund-of-funds that hold metal ETFs. Company size covers equity only; thematic funds hold companies of all sizes.</p>
     </div>
     <div class="pf-three">
       <div class="pf-card" id="alloc-asset"><h3>By asset class</h3><div class="pf-bars" style="margin-top:14px" data-draw="alloc" data-dim="Asset class" data-source="allocation"></div></div>
@@ -145,38 +192,12 @@
     </div>
   </section>
 
-  <section class="pf-section" id="holdings">
+  <section class="pf-section" id="market-news">
     <div>
-      <h2>Every holding</h2>
-      <p class="pf-intro">Gain is against your average purchase price. A blank gain means the purchase cost isn't known yet. Fund NAVs are the latest AMFI has published, so a fund may show yesterday's price until its NAV comes out.</p>
+      <h2>Market news that affects you</h2>
+      <p class="pf-intro">Broader news that touches several of your holdings. News about a single holding is inside that holding's panel above.</p>
     </div>
-    <div class="pf-tools">
-      <select class="dash-select" data-draw="kind-filter" aria-label="Show"></select>
-      <span class="muted small" data-draw="kind-count">—</span>
-    </div>
-    <div class="pf-card pf-tablewrap" style="padding:0">
-      <table class="pf-table" id="holdings-table" data-source="holdings" data-row-key="isin">
-        <thead><tr>
-          <th data-field="name">Holding</th>
-          <th data-field="value">Value</th>
-          <th data-field="weight_pct">Weight</th>
-          <th data-field="day_pct">Today</th>
-          <th data-field="day_inr">Today ₹</th>
-          <th data-field="gain_pct">Gain</th>
-          <th data-field="gain_inr">Gain ₹</th>
-          <th data-field="price">Price / NAV</th>
-        </tr></thead>
-        <tbody data-draw="holdings-rows"></tbody>
-      </table>
-    </div>
-  </section>
-
-  <section class="pf-section" id="news">
-    <div>
-      <h2>Latest news and its impact</h2>
-      <p class="pf-intro">The most recent results and announcements for your holdings, and market news that affects them. Impact is how the news bears on your holding, not a price forecast.</p>
-    </div>
-    <div class="pf-card"><ul class="pf-list" data-draw="news" data-source="news"></ul></div>
+    <div class="pf-card"><ul class="pf-list" data-draw="market-news" data-source="news"></ul></div>
   </section>
 
   <section class="pf-section" id="ahead">
@@ -186,7 +207,7 @@
     </div>
     <div class="pf-two">
       <div class="pf-card"><h3>Coming up</h3><ul class="pf-list" style="margin-top:14px" data-draw="events" data-source="events"></ul></div>
-      <div class="pf-card"><h3>Things to watch</h3><ul class="pf-list" style="margin-top:14px" data-draw="outlook" data-source="outlook"></ul></div>
+      <div class="pf-card"><h3>Themes to watch</h3><ul class="pf-list" style="margin-top:14px" data-draw="outlook" data-source="outlook"></ul></div>
     </div>
   </section>
 
@@ -223,8 +244,8 @@
       <summary>What the terms mean</summary>
       <dl>
         <dt>Effective holdings</dt><dd>How many equal-sized holdings your portfolio behaves like. 24 holdings that act like 13 means a few large positions dominate.</dd>
-        <dt>Contribution</dt><dd>A holding's rupee gain or loss today as a share of the whole portfolio.</dd>
         <dt>Driver</dt><dd>Whether a move came from the market, a market segment (small or mid caps), a commodity price, or news about the company itself.</dd>
+        <dt>52-week range</dt><dd>The lowest and highest price in the past year, with today's price marked.</dd>
         <dt>Beta</dt><dd>How much the portfolio tends to move when the Nifty moves 1%.</dd>
         <dt>Volatility</dt><dd>The typical size of yearly ups and downs, from daily price changes.</dd>
         <dt>Fund of funds (FoF)</dt><dd>A mutual fund that invests in other funds or ETFs, such as a silver FoF that holds silver ETFs.</dd>
@@ -238,8 +259,10 @@
 (function () {
   const S = (id) => dash.data(id);
   const inr0 = new Intl.NumberFormat('en-IN', { maximumFractionDigits: 0 });
+  const inr2 = new Intl.NumberFormat('en-IN', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
   window.pfFmt = {
     inr: (v) => (v == null || isNaN(v)) ? '—' : '₹' + inr0.format(Math.round(Math.abs(v))),
+    price: (v) => (v == null || isNaN(v)) ? '—' : '₹' + inr2.format(v),
     sinr: (v) => (v == null || isNaN(v)) ? '—' : (v > 0 ? '+' : v < 0 ? '−' : '') + '₹' + inr0.format(Math.round(Math.abs(v))),
     pct: (v, d = 2) => (v == null || isNaN(v)) ? '—' : (v > 0 ? '+' : v < 0 ? '−' : '') + Math.abs(v).toFixed(d) + '%',
     upct: (v, d = 1) => (v == null || isNaN(v)) ? '—' : Number(v).toFixed(d) + '%',
@@ -249,7 +272,6 @@
   const F = window.pfFmt;
   window.pfRow = () => { const s = S('summary'); return s.status === 'ok' && s.data.length ? s.data[0] : null; };
 
-  // Category with the biggest rupee effect today, for the opening sentence
   dash.calc('top_driver', {
     title: 'Biggest driver today',
     description: 'The holding category whose combined rupee change today was largest in size.',
@@ -257,8 +279,20 @@
     fn: (holdings) => {
       const by = d3.rollups(holdings, (v) => d3.sum(v, (d) => +d.day_inr || 0), (d) => d.category);
       by.sort((a, b) => Math.abs(b[1]) - Math.abs(a[1]));
-      return by.length ? [{ category: by[0][0], day_inr: Math.round(by[0][1]), count: holdings.filter((h) => h.category === by[0][0]).length }] : [];
+      return by.length ? [{ category: by[0][0], day_inr: Math.round(by[0][1]) }] : [];
     },
+  });
+
+  dash.calc('group_totals', {
+    title: 'Value and change by section',
+    description: 'Total value and today\'s rupee change for stocks & ETFs and for mutual funds.',
+    inputs: ['holdings'],
+    fn: (holdings) => [['stocks', (h) => h.kind !== 'Mutual fund'], ['funds', (h) => h.kind === 'Mutual fund']].map(([group, test]) => {
+      const rows = holdings.filter(test);
+      const value = d3.sum(rows, (d) => +d.value || 0), day = d3.sum(rows, (d) => +d.day_inr || 0);
+      const total = d3.sum(holdings, (d) => +d.value || 0);
+      return { group, count: rows.length, value: Math.round(value), share_pct: total ? Math.round(value / total * 1000) / 10 : 0, day_inr: Math.round(day), day_pct: value - day ? Math.round(day / (value - day) * 10000) / 100 : 0 };
+    }),
   });
 
   const simple = (name, field, fmt, colorBy) => dash.draw(name, (el) => {
@@ -283,7 +317,7 @@
   simple('k-nifty', 'nifty_pct', (v) => F.pct(v), 'nifty_pct');
   simple('k-gain', 'gain_inr', F.sinr, 'gain_inr');
   simple('k-gainpct', 'gain_pct', (v) => F.pct(v), 'gain_pct');
-  simple('k-invested', 'invested', (v) => v == null ? '—' : inr0.format(Math.round(v)));
+  simple('k-invested', 'invested', F.inr);
   simple('k-cover', 'cost_coverage_pct', (v) => v == null ? '—' : Math.round(v));
   simple('k-eff', 'effective_holdings', (v) => v == null ? '—' : Number(v).toFixed(1));
   simple('k-top5', 'top5_pct', (v) => v == null ? '—' : Math.round(v));
@@ -293,25 +327,30 @@
   simple('r-dd', 'max_drawdown_pct', (v) => F.pct(v, 1), 'max_drawdown_pct');
   simple('r-ret', 'one_year_return_pct', (v) => F.pct(v, 1), 'one_year_return_pct');
 
+  window.pfLink = (url, name) => {
+    const s = document.createElement('span'); s.className = 'pf-src';
+    if (!url) return s;
+    s.append('Source: ');
+    const a = document.createElement('a'); a.href = url; a.target = '_blank'; a.rel = 'noopener';
+    try { a.textContent = name || new URL(url).hostname.replace('www.', ''); } catch (e) { a.textContent = name || 'link'; }
+    s.append(a); return s;
+  };
+
   dash.draw('wrap-src', (el) => {
     const r = pfRow();
     el.replaceChildren();
-    if (!r || !r.market_wrap_source) { el.textContent = ''; return; }
-    el.append('Source: ');
-    const a = document.createElement('a'); a.href = r.market_wrap_source; a.target = '_blank'; a.rel = 'noopener'; a.textContent = new URL(r.market_wrap_source).hostname.replace('www.', '');
-    el.append(a);
+    if (r && r.market_wrap_source) el.append(pfLink(r.market_wrap_source));
   });
 
   dash.draw('t-driver', (el) => {
     const t = S('top_driver');
     el.replaceChildren();
-    if (t.status !== 'ok' || !t.data || !t.data.length) { el.textContent = ''; return; }
+    if (t.status !== 'ok' || !t.data || !t.data.length) return;
     const d = t.data[0];
     el.append(d.day_inr < 0 ? 'The biggest drag was ' : 'The biggest lift came from ');
-    const b = document.createElement('b'); b.textContent = d.category.toLowerCase(); b.dataset.source = 'top_driver'; b.dataset.field = 'category'; b.dataset.row = '0';
-    el.append(b, ' (');
-    const v = document.createElement('span'); v.textContent = F.sinr(d.day_inr); v.className = F.cls(d.day_inr); v.dataset.source = 'top_driver'; v.dataset.field = 'day_inr'; v.dataset.row = '0';
-    el.append(v, ').');
+    const b = document.createElement('b'); b.textContent = d.category.toLowerCase(); Object.assign(b.dataset, { source: 'top_driver', field: 'category', row: '0' });
+    const v = document.createElement('span'); v.textContent = F.sinr(d.day_inr); v.className = F.cls(d.day_inr); Object.assign(v.dataset, { source: 'top_driver', field: 'day_inr', row: '0' });
+    el.append(b, ' (', v, ').');
   });
 })();
 </script>
@@ -320,8 +359,19 @@
 (function () {
   const F = window.pfFmt;
   const short = (s, n) => s.length > n ? s.slice(0, n - 1) + '…' : s;
+  window.pfOpen = new Set();
+  window.pfGroupOf = (d) => d.kind === 'Mutual fund' ? 'funds' : 'stocks';
 
-  // Diverging bar chart of each holding's rupee change today
+  // Opens a holding's panel and scrolls to it (used by the chart)
+  window.pfOpenHolding = (isin) => {
+    window.pfOpen.add(isin);
+    dash.draw('hold-list');
+    requestAnimationFrame(() => {
+      const el = document.getElementById('h-' + isin.replace(/[^A-Za-z0-9_-]/g, ''));
+      if (el) el.scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start' });
+    });
+  };
+
   dash.draw('movers', (el) => {
     const h = dash.data('holdings');
     el.replaceChildren();
@@ -329,83 +379,57 @@
     const rows = h.data.filter((d) => d.day_inr != null).slice().sort((a, b) => b.day_inr - a.day_inr);
     const W = Math.max(280, el.clientWidth);
     const narrow = W < 560;
-    const labelW = narrow ? 120 : 210, rowH = 22, top = 8, bottom = 26;
+    const labelW = narrow ? 118 : 210, rowH = 24, top = 8, bottom = 26;
     const H = top + rows.length * rowH + bottom;
     const ext = d3.max(rows, (d) => Math.abs(d.day_inr)) || 1;
-    const x = d3.scaleLinear().domain([-ext, ext]).nice().range([labelW + 8, W - 64]);
+    const x = d3.scaleLinear().domain([-ext, ext]).nice().range([labelW + 8, W - (narrow ? 50 : 64)]);
     const y = d3.scaleBand().domain(rows.map((d) => d.isin)).range([top, top + rows.length * rowH]).padding(0.28);
     const svg = d3.select(el).append('svg').attr('width', '100%').attr('viewBox', `0 0 ${W} ${H}`).attr('role', 'img')
       .attr('aria-label', "Each holding's gain or loss in rupees today, largest gains at the top");
     svg.append('g').attr('transform', `translate(0,${top + rows.length * rowH + 4})`)
-      .call(d3.axisBottom(x).ticks(narrow ? 4 : 6).tickFormat((v) => (v > 0 ? '+' : v < 0 ? '−' : '') + '₹' + d3.format(',')(Math.abs(v))))
+      .call(d3.axisBottom(x).ticks(narrow ? 3 : 6).tickFormat((v) => (v > 0 ? '+' : v < 0 ? '−' : '') + '₹' + d3.format(',')(Math.abs(v))))
       .call((g) => { g.select('.domain').remove(); g.selectAll('line').attr('stroke', 'var(--cds-chart-grid)').attr('y2', -(rows.length * rowH + 4)); g.selectAll('text').style('fill', 'var(--cds-text-secondary)').style('font-size', '11px'); });
     svg.append('line').attr('x1', x(0)).attr('x2', x(0)).attr('y1', top).attr('y2', top + rows.length * rowH).style('stroke', 'var(--cds-chart-axis)');
     const tip = d3.select(el).append('div').attr('class', 'pf-tip').style('display', 'none');
-    const g = svg.append('g').selectAll('g').data(rows).join('g').attr('transform', (d) => `translate(0,${y(d.isin)})`);
+    const g = svg.append('g').selectAll('g').data(rows).join('g').attr('transform', (d) => `translate(0,${y(d.isin)})`).style('cursor', 'pointer');
+    const where = (d) => 'isin=' + encodeURIComponent(d.isin);
     g.append('text').attr('x', labelW).attr('y', y.bandwidth() / 2).attr('dy', '0.35em').attr('text-anchor', 'end')
-      .style('font-size', '12px').style('fill', 'var(--color-fg)').text((d) => short(d.name, narrow ? 17 : 30))
-      .attr('data-source', 'holdings').attr('data-field', 'name').attr('data-where', (d) => 'isin=' + encodeURIComponent(d.isin));
+      .style('font-size', '12px').style('fill', 'var(--color-fg)').text((d) => short(d.name, narrow ? 16 : 30))
+      .attr('data-source', 'holdings').attr('data-field', 'name').attr('data-where', where);
     g.append('rect').attr('x', (d) => Math.min(x(0), x(d.day_inr))).attr('width', (d) => Math.max(1, Math.abs(x(d.day_inr) - x(0))))
       .attr('height', y.bandwidth()).attr('rx', 3)
-      .style('fill', (d) => d.day_inr >= 0 ? 'var(--color-ok)' : 'var(--color-bad)').style('opacity', (d) => d.significant ? 1 : 0.55)
-      .attr('data-source', 'holdings').attr('data-field', 'day_inr').attr('data-where', (d) => 'isin=' + encodeURIComponent(d.isin));
+      .style('fill', (d) => d.day_inr >= 0 ? 'var(--color-ok)' : 'var(--color-bad)').style('opacity', (d) => d.significant ? 1 : 0.5)
+      .attr('data-source', 'holdings').attr('data-field', 'day_inr').attr('data-where', where);
     g.append('text').attr('x', (d) => d.day_inr >= 0 ? x(d.day_inr) + 5 : x(d.day_inr) - 5).attr('y', y.bandwidth() / 2).attr('dy', '0.35em')
       .attr('text-anchor', (d) => d.day_inr >= 0 ? 'start' : 'end').style('font-size', '11px').style('fill', 'var(--cds-text-secondary)')
-      .text((d) => F.pct(d.day_pct)).attr('data-source', 'holdings').attr('data-field', 'day_pct').attr('data-where', (d) => 'isin=' + encodeURIComponent(d.isin));
-    g.append('rect').attr('x', 0).attr('width', W).attr('height', y.bandwidth()).style('fill', 'transparent')
+      .text((d) => F.pct(d.day_pct)).attr('data-source', 'holdings').attr('data-field', 'day_pct').attr('data-where', where);
+    g.append('rect').attr('x', 0).attr('width', W).attr('height', y.step()).attr('y', -(y.step() - y.bandwidth()) / 2).style('fill', 'transparent')
       .on('pointerenter pointermove', (ev, d) => {
+        if (ev.pointerType === 'touch') return;
         const [mx, my] = d3.pointer(ev, el);
         tip.style('display', 'block').html('');
         tip.append('b').text(d.name);
         tip.append('div').text(`${F.sinr(d.day_inr)} (${F.pct(d.day_pct)}) · value ${F.inr(d.value)}`);
-        if (d.reason) tip.append('div').style('margin-top', '4px').text(d.reason);
+        tip.append('div').style('margin-top', '4px').style('color', 'var(--cds-text-secondary)').text('Click to open details');
         const tw = tip.node().offsetWidth;
         tip.style('left', Math.max(0, Math.min(mx + 12, el.clientWidth - tw)) + 'px').style('top', (my + 14) + 'px');
       })
-      .on('pointerleave', () => tip.style('display', 'none'));
+      .on('pointerleave', () => tip.style('display', 'none'))
+      .on('click', (ev, d) => { tip.style('display', 'none'); window.pfOpenHolding(d.isin); });
   });
 
-  // Reason cards for significant movers
-  dash.draw('why', (el) => {
-    const h = dash.data('holdings');
-    el.replaceChildren();
-    if (h.status !== 'ok') return;
-    const rows = h.data.filter((d) => d.significant).sort((a, b) => Math.abs(b.day_inr) - Math.abs(a.day_inr));
-    if (!rows.length) { const p = document.createElement('p'); p.className = 'muted'; p.textContent = 'Nothing moved enough today to need explaining.'; el.append(p); return; }
-    for (const d of rows) {
-      const card = document.createElement('div'); card.className = 'pf-card pf-why-item';
-      const where = 'isin=' + encodeURIComponent(d.isin);
-      const top = document.createElement('div'); top.className = 'pf-why-top';
-      const nm = document.createElement('h3'); nm.textContent = d.name; Object.assign(nm.dataset, { source: 'holdings', field: 'name', where });
-      const mv = document.createElement('span'); mv.className = 'num ' + F.cls(d.day_pct); mv.style.fontWeight = '500'; mv.textContent = F.pct(d.day_pct); Object.assign(mv.dataset, { source: 'holdings', field: 'day_pct', where });
-      top.append(nm, mv);
-      const chips = document.createElement('div'); chips.style.display = 'flex'; chips.style.gap = '6px'; chips.style.flexWrap = 'wrap';
-      if (d.driver) { const c = document.createElement('span'); c.className = 'pf-chip'; c.textContent = d.driver; Object.assign(c.dataset, { source: 'holdings', field: 'driver', where }); chips.append(c); }
-      const inr = document.createElement('span'); inr.className = 'pf-chip'; inr.textContent = F.sinr(d.day_inr) + ' today'; Object.assign(inr.dataset, { source: 'holdings', field: 'day_inr', where }); chips.append(inr);
-      const why = document.createElement('p'); why.textContent = d.reason || 'No explanation researched yet for this move.'; if (!d.reason) why.className = 'muted'; Object.assign(why.dataset, { source: 'holdings', field: 'reason', where });
-      card.append(top, chips, why);
-      if (d.source_url) {
-        const s = document.createElement('div'); s.className = 'pf-src'; s.append('Source: ');
-        const a = document.createElement('a'); a.href = d.source_url; a.target = '_blank'; a.rel = 'noopener'; a.textContent = d.source_name || 'link'; s.append(a); card.append(s);
-      }
-      el.append(card);
-    }
-  });
-
-  // Allocation bars
   dash.draw('alloc', (el) => {
     const a = dash.data('allocation');
     el.replaceChildren();
     if (a.status !== 'ok') { el.textContent = '—'; return; }
-    const dim = el.dataset.dim;
-    const rows = a.data.filter((d) => d.dimension === dim);
+    const rows = a.data.filter((d) => d.dimension === el.dataset.dim && d.pct >= 0.05);
     const max = d3.max(rows, (d) => d.pct) || 1;
     rows.forEach((d, i) => {
       const where = 'dimension=' + encodeURIComponent(d.dimension) + '&name=' + encodeURIComponent(d.name);
       const row = document.createElement('div'); row.className = 'pf-bar-row';
       const nm = document.createElement('span'); nm.textContent = d.name; Object.assign(nm.dataset, { source: 'allocation', field: 'name', where });
       const tr = document.createElement('div'); tr.className = 'pf-bar-track';
-      const fill = document.createElement('div'); fill.className = 'pf-bar-fill'; fill.style.width = (d.pct / max * 100) + '%'; fill.style.background = dash.colors[i === 0 ? 0 : 0]; fill.style.opacity = String(1 - Math.min(i, 6) * 0.1);
+      const fill = document.createElement('div'); fill.className = 'pf-bar-fill'; fill.style.width = (d.pct / max * 100) + '%'; fill.style.background = dash.colors[0]; fill.style.opacity = String(1 - Math.min(i, 6) * 0.1);
       tr.append(fill);
       const v = document.createElement('span'); v.className = 'num'; v.title = F.inr(d.value); v.textContent = d.pct.toFixed(1) + '%'; Object.assign(v.dataset, { source: 'allocation', field: 'pct', where });
       row.append(nm, tr, v); el.append(row);
@@ -417,70 +441,189 @@
 <script>
 (function () {
   const F = window.pfFmt;
-  const KINDS = [['', 'All holdings'], ['Mutual fund', 'Mutual funds'], ['ETF', 'ETFs'], ['Stock', 'Stocks']];
-  window.pfKind = '';
+  const SORTS = [['value', 'Largest first'], ['move', 'Biggest move today'], ['gain', 'Best gain first'], ['loss', 'Worst gain first']];
+  window.pfSort = { stocks: 'value', funds: 'value' };
+  const sorters = {
+    value: (a, b) => b.value - a.value,
+    move: (a, b) => Math.abs(b.day_pct || 0) - Math.abs(a.day_pct || 0),
+    gain: (a, b) => (b.gain_pct ?? -1e9) - (a.gain_pct ?? -1e9),
+    loss: (a, b) => (a.gain_pct ?? 1e9) - (b.gain_pct ?? 1e9),
+  };
+  const mk = (tag, cls, text) => { const e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; };
+  const mark = (e, source, field, where) => { e.dataset.source = source; e.dataset.field = field; if (where != null) e.dataset.where = where; return e; };
 
-  dash.draw('kind-filter', (sel) => {
-    sel.replaceChildren(...KINDS.map(([v, t]) => new Option(t, v)));
-    sel.value = window.pfKind;
-    sel.onchange = () => { window.pfKind = sel.value; dash.draw('holdings-rows'); dash.draw('kind-count'); };
+  dash.draw('sort', (sel) => {
+    const grp = sel.dataset.group;
+    sel.replaceChildren(...SORTS.map(([v, t]) => new Option(t, v)));
+    sel.value = window.pfSort[grp];
+    sel.onchange = () => { window.pfSort[grp] = sel.value; dash.draw('hold-list'); };
   });
 
-  const visible = () => {
-    const h = dash.data('holdings');
-    if (h.status !== 'ok') return null;
-    return h.data.filter((d) => !window.pfKind || d.kind === window.pfKind).slice().sort((a, b) => b.value - a.value);
+  dash.draw('group-total', (el) => {
+    const t = dash.data('group_totals');
+    el.replaceChildren();
+    if (t.status !== 'ok' || !t.data) { el.textContent = '—'; return; }
+    const i = t.data.findIndex((r) => r.group === el.dataset.group);
+    if (i < 0) return;
+    const r = t.data[i];
+    const sp = (txt, field, cls) => { const s = mk('span', cls, txt); Object.assign(s.dataset, { source: 'group_totals', field, row: String(i) }); return s; };
+    el.append(sp(String(r.count), 'count'), ' holdings · ', sp(F.inr(r.value), 'value'), ' (', sp(F.upct(r.share_pct), 'share_pct'), ' of portfolio) · today ',
+      sp(F.sinr(r.day_inr), 'day_inr', F.cls(r.day_inr)), ' (', sp(F.pct(r.day_pct), 'day_pct', F.cls(r.day_pct)), ')');
+  });
+
+  function panel(d, newsRows, outlookRows) {
+    const where = 'isin=' + encodeURIComponent(d.isin);
+    const p = mk('div', 'pf-panel');
+
+    // Today's move and the reason
+    const why = mk('div', 'pf-block');
+    why.append(mk('h4', null, 'Why it moved today'));
+    const line = mk('div'); line.style.display = 'flex'; line.style.gap = '6px'; line.style.flexWrap = 'wrap'; line.style.alignItems = 'center';
+    line.append(mark(mk('span', 'num ' + F.cls(d.day_pct), F.pct(d.day_pct)), 'holdings', 'day_pct', where), ' ',
+      mark(mk('span', 'num muted small', '(' + F.sinr(d.day_inr) + ')'), 'holdings', 'day_inr', where));
+    if (d.driver) line.append(mark(mk('span', 'pf-chip', d.driver), 'holdings', 'driver', where));
+    why.append(line);
+    if (d.reason) {
+      why.append(mark(mk('p', null, d.reason), 'holdings', 'reason', where));
+      if (d.source_url) why.append(pfLink(d.source_url, d.source_name));
+    } else if (d.significant) {
+      why.append(mk('p', 'muted', 'This was a significant move, but no explanation has been researched for it yet.'));
+    } else {
+      why.append(mk('p', 'muted', d.kind === 'Mutual fund'
+        ? 'A normal day for this fund; its move was in line with its category.'
+        : 'A small move, within its normal daily range, so no separate research was needed.'));
+    }
+    p.append(why);
+
+    // Position facts
+    const facts = mk('div', 'pf-facts');
+    const fact = (k, v, field, cls) => { const f = mk('div', 'pf-fact'); f.append(mk('div', 'k', k)); const x = mk('div', 'x ' + (cls || ''), v); if (field) mark(x, 'holdings', field, where); f.append(x); return f; };
+    const unitLabel = d.kind === 'Mutual fund' ? 'Units' : 'Quantity';
+    facts.append(
+      fact('Value', F.inr(d.value), 'value'),
+      fact('Share of portfolio', F.upct(d.weight_pct), 'weight_pct'),
+      fact(unitLabel, d.quantity == null ? '—' : d3.format(',')(d.quantity), 'quantity'),
+      fact(d.kind === 'Mutual fund' ? 'NAV' : 'Price', F.price(d.price), 'price'),
+      fact('Average cost', d.avg_cost == null ? 'Not known' : F.price(d.avg_cost), 'avg_cost'),
+      fact('Gain', d.gain_inr == null ? 'Not known' : F.sinr(d.gain_inr), 'gain_inr', F.cls(d.gain_inr)),
+      fact('Gain %', d.gain_pct == null ? '—' : F.pct(d.gain_pct, 1), 'gain_pct', F.cls(d.gain_pct)),
+      fact('Price date', F.date(d.price_date), 'price_date'),
+    );
+    p.append(facts);
+
+    // 52-week range
+    if (d.low_52w != null && d.high_52w != null && d.high_52w > d.low_52w) {
+      const r = mk('div', 'pf-block');
+      r.append(mk('h4', null, '52-week range'));
+      const bar = mk('div', 'pf-range'); bar.setAttribute('role', 'img');
+      const pos = Math.max(0, Math.min(1, (d.price - d.low_52w) / (d.high_52w - d.low_52w)));
+      bar.setAttribute('aria-label', `Today's price is ${Math.round(pos * 100)}% of the way from the 52-week low to the high`);
+      const mkr = mk('i'); mkr.style.left = (pos * 100) + '%'; bar.append(mkr);
+      const lbl = mk('div', 'pf-range-l');
+      lbl.append(mark(mk('span', null, 'Low ' + F.price(d.low_52w)), 'holdings', 'low_52w', where),
+                 mark(mk('span', null, 'High ' + F.price(d.high_52w)), 'holdings', 'high_52w', where));
+      const note = mk('p', 'small muted', pos > 0.85 ? 'Near its 52-week high.' : pos < 0.15 ? 'Near its 52-week low.' : `${Math.round((1 - d.price / d.high_52w) * 100)}% below its 52-week high.`);
+      r.append(bar, lbl, note);
+      p.append(r);
+    }
+
+    // News for this holding
+    const nb = mk('div', 'pf-block');
+    nb.append(mk('h4', null, 'Latest news'));
+    if (!newsRows.length) nb.append(mk('p', 'muted small', 'No recent news found for this holding.'));
+    const ul = mk('ul', 'pf-list'); ul.style.gap = '10px';
+    for (const [n, i] of newsRows) {
+      const li = mk('li', 'pf-news');
+      const top = mk('div', 'pf-news-top');
+      top.append(mark(mk('span', 'pf-chip ' + n.impact, n.impact === 'positive' ? 'Positive' : n.impact === 'negative' ? 'Negative' : 'Neutral'), 'news', 'impact'),
+                 mark(mk('span', 'small muted', F.date(n.date)), 'news', 'date'));
+      top.querySelectorAll('[data-source]').forEach((e) => { e.dataset.row = String(i); });
+      const hl = mk('h3', null, n.headline); Object.assign(hl.dataset, { source: 'news', field: 'headline', row: String(i) });
+      const sm = mk('p', 'small', n.summary); Object.assign(sm.dataset, { source: 'news', field: 'summary', row: String(i) });
+      li.append(top, hl, sm, pfLink(n.source_url, n.source_name));
+      ul.append(li);
+    }
+    if (newsRows.length) nb.append(ul);
+    p.append(nb);
+
+    // What to watch
+    if (outlookRows.length) {
+      const [o, i] = outlookRows[0];
+      const ob = mk('div', 'pf-block');
+      const h = mk('h4', null, 'What to watch · '); const th = mk('span', null, o.theme); Object.assign(th.dataset, { source: 'outlook', field: 'theme', row: String(i) }); h.append(th);
+      const v = mk('p', 'small', o.view); Object.assign(v.dataset, { source: 'outlook', field: 'view', row: String(i) });
+      const w = mk('p', 'small muted', 'Watch: ' + o.watch); Object.assign(w.dataset, { source: 'outlook', field: 'watch', row: String(i) });
+      ob.append(h, v, w, pfLink(o.source_url, o.source_name));
+      p.append(ob);
+    }
+    return p;
+  }
+
+  const chevron = () => {
+    const ns = 'http://www.w3.org/2000/svg';
+    const s = document.createElementNS(ns, 'svg'); s.setAttribute('viewBox', '0 0 20 20'); s.setAttribute('class', 'chev'); s.setAttribute('aria-hidden', 'true');
+    const path = document.createElementNS(ns, 'path'); path.setAttribute('d', 'M5 7.5l5 5 5-5'); path.setAttribute('fill', 'none'); path.setAttribute('stroke', 'currentColor'); path.setAttribute('stroke-width', '1.6'); path.setAttribute('stroke-linecap', 'round'); path.setAttribute('stroke-linejoin', 'round');
+    s.append(path); return s;
   };
 
-  dash.draw('kind-count', (el) => {
-    const rows = visible();
-    el.textContent = rows ? `${rows.length} shown · ${F.inr(d3.sum(rows, (d) => d.value))}` : '—';
-  });
-
-  dash.draw('holdings-rows', (tb) => {
-    const rows = visible();
-    tb.replaceChildren();
-    if (!rows) return;
+  dash.draw('hold-list', (el) => {
+    const h = dash.data('holdings'), n = dash.data('news'), o = dash.data('outlook');
+    el.replaceChildren();
+    if (h.status !== 'ok') { el.textContent = h.status === 'error' ? 'Failed to load' : '—'; return; }
+    const grp = el.dataset.group;
+    const news = n.status === 'ok' ? n.data.map((r, i) => [r, i]) : [];
+    const outlook = o.status === 'ok' ? o.data.map((r, i) => [r, i]) : [];
+    const rows = h.data.filter((d) => window.pfGroupOf(d) === grp).slice().sort(sorters[window.pfSort[grp]] || sorters.value);
     for (const d of rows) {
-      const tr = document.createElement('tr'); tr.dataset.key = encodeURIComponent(d.isin);
-      const td0 = document.createElement('td');
-      const nm = document.createElement('div'); nm.className = 'nm'; nm.textContent = d.name;
-      const meta = document.createElement('div'); meta.className = 'meta';
-      meta.textContent = [d.kind, d.category, d.cap ? d.cap + ' cap' : ''].filter(Boolean).join(' · ');
-      td0.append(nm, meta);
-      const cell = (txt, cls) => { const td = document.createElement('td'); td.textContent = txt; if (cls) td.className = cls; return td; };
-      tr.append(
-        td0,
-        cell(F.inr(d.value)),
-        cell(F.upct(d.weight_pct)),
-        cell(F.pct(d.day_pct), F.cls(d.day_pct)),
-        cell(F.sinr(d.day_inr), F.cls(d.day_inr)),
-        cell(d.gain_pct == null ? '—' : F.pct(d.gain_pct, 1), F.cls(d.gain_pct)),
-        cell(d.gain_inr == null ? '—' : F.sinr(d.gain_inr), F.cls(d.gain_inr)),
-        cell(d.price == null ? '—' : '₹' + d3.format(',.2f')(d.price)),
-      );
-      tb.append(tr);
+      const where = 'isin=' + encodeURIComponent(d.isin);
+      const det = mk('details', 'pf-h'); det.id = 'h-' + d.isin.replace(/[^A-Za-z0-9_-]/g, '');
+      if (window.pfOpen.has(d.isin)) det.open = true;
+      const sum = document.createElement('summary');
+      const left = mk('div');
+      left.append(mark(mk('div', 'nm', d.name), 'holdings', 'name', where));
+      const meta = mk('div', 'meta');
+      meta.append(mark(mk('span', null, d.kind === 'Mutual fund' ? d.category : `${d.kind} · ${d.category}`), 'holdings', 'category', where));
+      if (d.significant) meta.append(mk('span', 'pf-chip mover', 'Big move today'));
+      const dm = mark(mk('span', 'day-m num ' + F.cls(d.day_pct), F.pct(d.day_pct)), 'holdings', 'day_pct', where);
+      meta.append(dm);
+      left.append(meta);
+      const day = mk('div', 'val day');
+      day.append(mark(mk('div', 'v ' + F.cls(d.day_pct), F.pct(d.day_pct)), 'holdings', 'day_pct', where), mk('div', 'w', 'today'));
+      const val = mk('div', 'val');
+      val.append(mark(mk('div', 'v', F.inr(d.value)), 'holdings', 'value', where),
+                 mark(mk('div', 'w ' + F.cls(d.gain_pct), d.gain_pct == null ? 'gain n/a' : F.pct(d.gain_pct, 1) + ' gain'), 'holdings', 'gain_pct', where));
+      sum.append(left, day, val, chevron());
+      det.append(sum);
+      let built = false;
+      const build = () => {
+        if (built) return; built = true;
+        det.append(panel(d, news.filter(([r]) => (r.isins || '').split(',').includes(d.isin)), outlook.filter(([r]) => r.theme === d.theme)));
+      };
+      if (det.open) build();
+      det.addEventListener('toggle', () => { if (det.open) { window.pfOpen.add(d.isin); build(); } else window.pfOpen.delete(d.isin); });
+      el.append(det);
     }
   });
 
-  const link = (url, name) => { const s = document.createElement('span'); s.className = 'pf-src'; if (!url) return s; const a = document.createElement('a'); a.href = url; a.target = '_blank'; a.rel = 'noopener'; a.textContent = name || new URL(url).hostname; s.append(a); return s; };
-
-  dash.draw('news', (ul) => {
+  dash.draw('market-news', (ul) => {
     const n = dash.data('news');
     ul.replaceChildren();
     if (n.status !== 'ok') return;
-    n.data.forEach((d, i) => {
-      const li = document.createElement('li'); li.className = 'pf-news';
-      const top = document.createElement('div'); top.className = 'pf-news-top';
-      const chip = document.createElement('span'); chip.className = 'pf-chip ' + d.impact; chip.textContent = d.impact === 'positive' ? 'Positive' : d.impact === 'negative' ? 'Negative' : 'Neutral'; Object.assign(chip.dataset, { source: 'news', field: 'impact', row: i });
-      const who = document.createElement('span'); who.className = 'small'; who.style.fontWeight = '500'; who.textContent = d.holding; Object.assign(who.dataset, { source: 'news', field: 'holding', row: i });
-      const when = document.createElement('span'); when.className = 'small muted'; when.textContent = F.date(d.date); Object.assign(when.dataset, { source: 'news', field: 'date', row: i });
+    const rows = n.data.map((r, i) => [r, i]).filter(([r]) => r.scope === 'market' || (r.isins || '').split(',').length > 2);
+    if (!rows.length) { ul.append(mk('li', 'muted small', 'No broader market news for this update.')); return; }
+    for (const [d, i] of rows) {
+      const li = mk('li', 'pf-news');
+      const top = mk('div', 'pf-news-top');
+      const chip = mk('span', 'pf-chip ' + d.impact, d.impact === 'positive' ? 'Positive' : d.impact === 'negative' ? 'Negative' : 'Neutral');
+      const who = mk('span', 'small', d.holding); who.style.fontWeight = '500';
+      const when = mk('span', 'small muted', F.date(d.date));
+      [[chip, 'impact'], [who, 'holding'], [when, 'date']].forEach(([e, f]) => Object.assign(e.dataset, { source: 'news', field: f, row: String(i) }));
       top.append(chip, who, when);
-      const hl = document.createElement('h3'); hl.textContent = d.headline; Object.assign(hl.dataset, { source: 'news', field: 'headline', row: i });
-      const p = document.createElement('p'); p.className = 'small'; p.textContent = d.summary; Object.assign(p.dataset, { source: 'news', field: 'summary', row: i });
-      li.append(top, hl, p, link(d.source_url, d.source_name));
+      const hl = mk('h3', null, d.headline); Object.assign(hl.dataset, { source: 'news', field: 'headline', row: String(i) });
+      const p = mk('p', 'small', d.summary); Object.assign(p.dataset, { source: 'news', field: 'summary', row: String(i) });
+      li.append(top, hl, p, pfLink(d.source_url, d.source_name));
       ul.append(li);
-    });
+    }
   });
 
   dash.draw('events', (ul) => {
@@ -488,18 +631,16 @@
     ul.replaceChildren();
     if (e.status !== 'ok') return;
     e.data.forEach((d, i) => {
-      const li = document.createElement('li'); li.className = 'pf-event';
+      const li = mk('li', 'pf-event');
       const dt = new Date(d.date + 'T00:00:00Z');
-      const box = document.createElement('div'); box.className = 'pf-date'; Object.assign(box.dataset, { source: 'events', field: 'date', row: i });
-      const dd = document.createElement('div'); dd.className = 'd'; dd.textContent = d3.utcFormat('%-d')(dt);
-      const mm = document.createElement('div'); mm.className = 'm'; mm.textContent = d3.utcFormat('%b %Y')(dt);
-      box.append(dd, mm);
-      const body = document.createElement('div'); body.style.display = 'grid'; body.style.gap = '4px';
-      const t = document.createElement('h3'); t.textContent = d.event; Object.assign(t.dataset, { source: 'events', field: 'event', row: i });
-      const p = document.createElement('p'); p.className = 'small'; p.textContent = d.detail; Object.assign(p.dataset, { source: 'events', field: 'detail', row: i });
-      const af = document.createElement('span'); af.className = 'pf-chip'; af.style.justifySelf = 'start'; af.textContent = 'Affects: ' + d.affects; Object.assign(af.dataset, { source: 'events', field: 'affects', row: i });
+      const box = mk('div', 'pf-date'); Object.assign(box.dataset, { source: 'events', field: 'date', row: String(i) });
+      box.append(mk('div', 'd', d3.utcFormat('%-d')(dt)), mk('div', 'm', d3.utcFormat('%b %Y')(dt)));
+      const body = mk('div'); body.style.display = 'grid'; body.style.gap = '4px';
+      const t = mk('h3', null, d.event); Object.assign(t.dataset, { source: 'events', field: 'event', row: String(i) });
+      const p = mk('p', 'small', d.detail); Object.assign(p.dataset, { source: 'events', field: 'detail', row: String(i) });
+      const af = mk('span', 'pf-chip', 'Affects: ' + d.affects); af.style.justifySelf = 'start'; Object.assign(af.dataset, { source: 'events', field: 'affects', row: String(i) });
       body.append(t, p, af);
-      if (d.source_url) body.append(link(d.source_url, d.source_name));
+      if (d.source_url) body.append(pfLink(d.source_url, d.source_name));
       li.append(box, body); ul.append(li);
     });
   });
@@ -509,14 +650,14 @@
     ul.replaceChildren();
     if (o.status !== 'ok') return;
     o.data.forEach((d, i) => {
-      const li = document.createElement('li'); li.className = 'pf-out';
-      const top = document.createElement('div'); top.style.display = 'flex'; top.style.gap = '8px'; top.style.alignItems = 'center';
-      const t = document.createElement('h3'); t.textContent = d.theme; Object.assign(t.dataset, { source: 'outlook', field: 'theme', row: i });
-      const tone = document.createElement('span'); tone.className = 'pf-chip ' + (d.tone === 'positive' ? 'positive' : d.tone === 'cautious' ? 'medium' : ''); tone.textContent = d.tone; Object.assign(tone.dataset, { source: 'outlook', field: 'tone', row: i });
+      const li = mk('li', 'pf-out');
+      const top = mk('div'); top.style.display = 'flex'; top.style.gap = '8px'; top.style.alignItems = 'center';
+      const t = mk('h3', null, d.theme); Object.assign(t.dataset, { source: 'outlook', field: 'theme', row: String(i) });
+      const tone = mk('span', 'pf-chip ' + (d.tone === 'positive' ? 'positive' : d.tone === 'cautious' ? 'medium' : ''), d.tone); Object.assign(tone.dataset, { source: 'outlook', field: 'tone', row: String(i) });
       top.append(t, tone);
-      const v = document.createElement('p'); v.className = 'small'; v.textContent = d.view; Object.assign(v.dataset, { source: 'outlook', field: 'view', row: i });
-      const w = document.createElement('p'); w.className = 'small muted'; w.textContent = 'Watch: ' + d.watch; Object.assign(w.dataset, { source: 'outlook', field: 'watch', row: i });
-      li.append(top, v, w, link(d.source_url, d.source_name)); ul.append(li);
+      const v = mk('p', 'small', d.view); Object.assign(v.dataset, { source: 'outlook', field: 'view', row: String(i) });
+      const w = mk('p', 'small muted', 'Watch: ' + d.watch); Object.assign(w.dataset, { source: 'outlook', field: 'watch', row: String(i) });
+      li.append(top, v, w, pfLink(d.source_url, d.source_name)); ul.append(li);
     });
   });
 
@@ -526,15 +667,14 @@
     if (s.status !== 'ok') return;
     const max = d3.max(s.data, (d) => Math.abs(d.impact_inr)) || 1;
     s.data.forEach((d, i) => {
-      const row = document.createElement('div'); row.className = 'pf-bar-row';
-      const nm = document.createElement('span'); nm.textContent = `Nifty ${F.pct(d.nifty_move_pct, 0)}`; Object.assign(nm.dataset, { source: 'scenarios', field: 'nifty_move_pct', row: i });
-      const tr = document.createElement('div'); tr.className = 'pf-bar-track';
-      const fill = document.createElement('div'); fill.className = 'pf-bar-fill'; fill.style.width = (Math.abs(d.impact_inr) / max * 100) + '%'; fill.style.background = 'var(--color-bad)'; tr.append(fill);
-      const v = document.createElement('span'); v.className = 'num';
-      const a = document.createElement('span'); a.textContent = F.sinr(d.impact_inr); Object.assign(a.dataset, { source: 'scenarios', field: 'impact_inr', row: i });
-      const b = document.createElement('span'); b.className = 'muted'; b.textContent = ` (${F.pct(d.portfolio_move_pct, 1)})`; Object.assign(b.dataset, { source: 'scenarios', field: 'portfolio_move_pct', row: i });
-      v.append(a, b);
-      row.append(nm, tr, v); el.append(row);
+      const row = mk('div', 'pf-bar-row');
+      const nm = mk('span', null, `Nifty ${F.pct(d.nifty_move_pct, 0)}`); Object.assign(nm.dataset, { source: 'scenarios', field: 'nifty_move_pct', row: String(i) });
+      const tr = mk('div', 'pf-bar-track');
+      const fill = mk('div', 'pf-bar-fill'); fill.style.width = (Math.abs(d.impact_inr) / max * 100) + '%'; fill.style.background = 'var(--color-bad)'; tr.append(fill);
+      const v = mk('span', 'num');
+      const a = mk('span', null, F.sinr(d.impact_inr)); Object.assign(a.dataset, { source: 'scenarios', field: 'impact_inr', row: String(i) });
+      const b = mk('span', 'muted', ` (${F.pct(d.portfolio_move_pct, 1)})`); Object.assign(b.dataset, { source: 'scenarios', field: 'portfolio_move_pct', row: String(i) });
+      v.append(a, b); row.append(nm, tr, v); el.append(row);
     });
   });
 
@@ -542,16 +682,16 @@
     const s = dash.data('suggestions');
     el.replaceChildren();
     if (s.status !== 'ok') return;
-    if (!s.data.length) { const p = document.createElement('p'); p.className = 'muted'; p.textContent = 'Nothing stands out: your money is well spread across categories.'; el.append(p); return; }
+    if (!s.data.length) { el.append(mk('p', 'muted', 'Nothing stands out: your money is well spread across categories.')); return; }
     s.data.forEach((d, i) => {
-      const c = document.createElement('div'); c.className = 'pf-card pf-sugg';
-      const top = document.createElement('div'); top.style.display = 'flex'; top.style.justifyContent = 'space-between'; top.style.gap = '8px';
-      const t = document.createElement('h3'); t.textContent = d.area; Object.assign(t.dataset, { source: 'suggestions', field: 'area', row: i });
-      const lv = document.createElement('span'); lv.className = 'pf-chip ' + d.level; lv.textContent = d.level === 'high' ? 'Look at this first' : d.level === 'medium' ? 'Worth a look' : 'For awareness'; Object.assign(lv.dataset, { source: 'suggestions', field: 'level', row: i });
+      const c = mk('div', 'pf-card pf-sugg');
+      const top = mk('div'); top.style.display = 'flex'; top.style.justifyContent = 'space-between'; top.style.gap = '8px';
+      const t = mk('h3', null, d.area); Object.assign(t.dataset, { source: 'suggestions', field: 'area', row: String(i) });
+      const lv = mk('span', 'pf-chip ' + d.level, d.level === 'high' ? 'Look at this first' : d.level === 'medium' ? 'Worth a look' : 'For awareness'); Object.assign(lv.dataset, { source: 'suggestions', field: 'level', row: String(i) });
       top.append(t, lv);
-      const f = document.createElement('p'); f.style.fontWeight = '500'; f.textContent = d.finding; Object.assign(f.dataset, { source: 'suggestions', field: 'finding', row: i });
-      const de = document.createElement('p'); de.className = 'small muted'; de.textContent = d.detail; Object.assign(de.dataset, { source: 'suggestions', field: 'detail', row: i });
-      const co = document.createElement('p'); co.className = 'consider'; co.textContent = 'To consider: ' + d.consider; Object.assign(co.dataset, { source: 'suggestions', field: 'consider', row: i });
+      const f = mk('p', null, d.finding); f.style.fontWeight = '500'; Object.assign(f.dataset, { source: 'suggestions', field: 'finding', row: String(i) });
+      const de = mk('p', 'small muted', d.detail); Object.assign(de.dataset, { source: 'suggestions', field: 'detail', row: String(i) });
+      const co = mk('p', 'consider', 'To consider: ' + d.consider); Object.assign(co.dataset, { source: 'suggestions', field: 'consider', row: String(i) });
       c.append(top, f, de, co); el.append(c);
     });
   });
@@ -560,7 +700,7 @@
     const h = dash.data('health');
     ul.replaceChildren();
     if (h.status !== 'ok') return;
-    h.data.forEach((d, i) => { const li = document.createElement('li'); li.textContent = d.item; Object.assign(li.dataset, { source: 'health', field: 'item', row: i }); ul.append(li); });
+    h.data.forEach((d, i) => { const li = mk('li', null, d.item); Object.assign(li.dataset, { source: 'health', field: 'item', row: String(i) }); ul.append(li); });
   });
 })();
 </script>

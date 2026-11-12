@@ -25,7 +25,8 @@
   "reason": "",
   "sentiment": "",
   "source_name": "",
-  "source_url": ""
+  "source_url": "",
+  "theme": "Technology"
  },
  {
   "isin": "INF204K01K15",
@@ -53,7 +54,8 @@
   "reason": "",
   "sentiment": "",
   "source_name": "",
-  "source_url": ""
+  "source_url": "",
+  "theme": "Small & mid caps"
  },
  {
   "isin": "INF204K01XI3",
@@ -81,7 +83,8 @@
   "reason": "",
   "sentiment": "",
   "source_name": "",
-  "source_url": ""
+  "source_url": "",
+  "theme": ""
  },
  {
   "isin": "INF247L01445",
@@ -109,7 +112,8 @@
   "reason": "Mid caps rallied today (Nifty Midcap 100 +0.85%) and this fund rose more than the index; no fund-specific news.",
   "sentiment": "positive",
   "source_name": "Kotak Neo market wrap",
-  "source_url": "https://www.kotakneo.com/news/market-news/sensex-and-nifty-close-higher-after-a-volatile-session/"
+  "source_url": "https://www.kotakneo.com/news/market-news/sensex-and-nifty-close-higher-after-a-volatile-session/",
+  "theme": "Small & mid caps"
  },
  {
   "isin": "INF179K01XQ0",
@@ -137,7 +141,8 @@
   "reason": "",
   "sentiment": "",
   "source_name": "",
-  "source_url": ""
+  "source_url": "",
+  "theme": "Small & mid caps"
  },
  {
   "isin": "INF846K015J4",
@@ -165,7 +170,8 @@
   "reason": "Silver fell about 1.6% on MCX as markets prepared for another US Federal Reserve rate increase; higher interest rates make metals that pay no interest less attractive.",
   "sentiment": "negative",
   "source_name": "Kotak Neo market wrap",
-  "source_url": "https://www.kotakneo.com/news/market-news/sensex-and-nifty-close-higher-after-a-volatile-session/"
+  "source_url": "https://www.kotakneo.com/news/market-news/sensex-and-nifty-close-higher-after-a-volatile-session/",
+  "theme": "Silver"
  },
  {
   "isin": "INF204KC1378",
@@ -193,7 +199,8 @@
   "reason": "Silver fell about 1.6% on MCX as markets prepared for another US Federal Reserve rate increase; higher interest rates make metals that pay no interest less attractive.",
   "sentiment": "negative",
   "source_name": "Kotak Neo market wrap",
-  "source_url": "https://www.kotakneo.com/news/market-news/sensex-and-nifty-close-higher-after-a-volatile-session/"
+  "source_url": "https://www.kotakneo.com/news/market-news/sensex-and-nifty-close-higher-after-a-volatile-session/",
+  "theme": "Silver"
  },
  {
   "isin": "INF179KC1DU7",
@@ -221,7 +228,8 @@
   "reason": "Silver fell about 1.6% on MCX as markets prepared for another US Federal Reserve rate increase; higher interest rates make metals that pay no interest less attractive.",
   "sentiment": "negative",
   "source_name": "Kotak Neo market wrap",
-  "source_url": "https://www.kotakneo.com/news/market-news/sensex-and-nifty-close-higher-after-a-volatile-session/"
+  "source_url": "https://www.kotakneo.com/news/market-news/sensex-and-nifty-close-higher-after-a-volatile-session/",
+  "theme": "Silver"
  },
  {
   "isin": "INF204K01C15",
@@ -249,7 +257,8 @@
   "reason": "",
   "sentiment": "",
   "source_name": "",
-  "source_url": ""
+  "source_url": "",
+  "theme": "Interest rates"
  },
  {
   "isin": "INF204KC1402",
@@ -277,7 +286,8 @@
   "reason": "Silver fell about 1.6% on MCX as markets prepared for another US Federal Reserve rate increase; higher interest rates make metals that pay no interest less attractive.",
   "sentiment": "negative",
   "source_name": "Kotak Neo market wrap",
-  "source_url": "https://www.kotakneo.com/news/market-news/sensex-and-nifty-close-higher-after-a-volatile-session/"
+  "source_url": "https://www.kotakneo.com/news/market-news/sensex-and-nifty-close-higher-after-a-volatile-session/",
+  "theme": "Silver"
  },
  {
   "isin": "INF109K01W82",
@@ -305,7 +315,8 @@
   "reason": "",
   "sentiment": "",
   "source_name": "",
-  "source_url": ""
+  "source_url": "",
+  "theme": "Interest rates"
  },
  {
   "isin": "INF205K013T3",
@@ -333,7 +344,8 @@
   "reason": "",
   "sentiment": "",
   "source_name": "",
-  "source_url": ""
+  "source_url": "",
+  "theme": "Small & mid caps"
  },
  {
   "isin": "INF194KB1AL4",
@@ -361,7 +373,8 @@
   "reason": "",
   "sentiment": "",
   "source_name": "",
-  "source_url": ""
+  "source_url": "",
+  "theme": "Small & mid caps"
  },
  {
   "isin": "INF204KB17I5",
@@ -389,7 +402,8 @@
   "reason": "Gold futures fell about 1.2% on MCX on the same expectation of higher US interest rates.",
   "sentiment": "negative",
   "source_name": "Kotak Neo market wrap",
-  "source_url": "https://www.kotakneo.com/news/market-news/sensex-and-nifty-close-higher-after-a-volatile-session/"
+  "source_url": "https://www.kotakneo.com/news/market-news/sensex-and-nifty-close-higher-after-a-volatile-session/",
+  "theme": ""
  },
  {
   "isin": "INE1EEM01017",
@@ -417,7 +431,8 @@
   "reason": "",
   "sentiment": "",
   "source_name": "",
-  "source_url": ""
+  "source_url": "",
+  "theme": ""
  },
  {
   "isin": "INE0NT901020",
@@ -445,7 +460,8 @@
   "reason": "",
   "sentiment": "",
   "source_name": "",
-  "source_url": ""
+  "source_url": "",
+  "theme": "Technology"
  },
  {
   "isin": "INE531E01026",
@@ -473,7 +489,8 @@
   "reason": "September-quarter results approved on 11 Nov: revenue up 63.7% and profit up about 182% from a year earlier, helped by record copper prices.",
   "sentiment": "positive",
   "source_name": "Compounding AI",
-  "source_url": "https://compoundingai.in/market-news/hindcopper-q2-fy27-earnings-preview"
+  "source_url": "https://compoundingai.in/market-news/hindcopper-q2-fy27-earnings-preview",
+  "theme": "Copper & metals"
  },
  {
   "isin": "INE0ATZ01017",
@@ -501,7 +518,8 @@
   "reason": "No news today; it rose with small caps. Its results on 5 Nov were soft: revenue up 5.1%, profit down 3.6%.",
   "sentiment": "neutral",
   "source_name": "Univest",
-  "source_url": "https://univest.in/blogs/kronox-lab-sciences-q2-results-fy27-pat-6-crore"
+  "source_url": "https://univest.in/blogs/kronox-lab-sciences-q2-results-fy27-pat-6-crore",
+  "theme": "Small & mid caps"
  },
  {
   "isin": "INE00VM01036",
@@ -529,7 +547,8 @@
   "reason": "Reported September-quarter results today: revenue up 41.9% to ₹458.9 crore and profit up 51.8% to ₹80.8 crore from a year earlier.",
   "sentiment": "positive",
   "source_name": "Univest",
-  "source_url": "https://univest.in/blogs/manorama-industries-q2-results-fy27-pat-81-crore"
+  "source_url": "https://univest.in/blogs/manorama-industries-q2-results-fy27-pat-81-crore",
+  "theme": "Small & mid caps"
  },
  {
   "isin": "INE138Y01010",
@@ -557,7 +576,8 @@
   "reason": "No company news today; it rose with the small-cap rally (Nifty Smallcap 100 +1.12%). Its last results (27 Oct) showed revenue up 29.9% but profit up only 7.5%.",
   "sentiment": "neutral",
   "source_name": "Investywise",
-  "source_url": "https://www.investywise.com/kfin-technologies-limited-q2fy27-financial-results-announced/"
+  "source_url": "https://www.investywise.com/kfin-technologies-limited-q2fy27-financial-results-announced/",
+  "theme": "Technology"
  },
  {
   "isin": "INE419U01012",
@@ -585,7 +605,8 @@
   "reason": "",
   "sentiment": "",
   "source_name": "",
-  "source_url": ""
+  "source_url": "",
+  "theme": "Technology"
  },
  {
   "isin": "INE078V01014",
@@ -613,7 +634,8 @@
   "reason": "",
   "sentiment": "",
   "source_name": "",
-  "source_url": ""
+  "source_url": "",
+  "theme": "Technology"
  },
  {
   "isin": "INE0Q3J01015",
@@ -641,13 +663,14 @@
   "reason": "No fresh news today; it rose with small caps. Its September-quarter results (29 Oct) showed revenue and profit roughly doubling from a year earlier.",
   "sentiment": "positive",
   "source_name": "Multibagg",
-  "source_url": "https://www.multibagg.ai/market-pulse/articles/krn-q2-fy27-results-cmvu70q27005f2gqi2mdz4vgy"
+  "source_url": "https://www.multibagg.ai/market-pulse/articles/krn-q2-fy27-results-cmvu70q27005f2gqi2mdz4vgy",
+  "theme": "Technology"
  },
  {
   "isin": "INF457M01133",
   "symbol": "140107",
   "name": "CPSE ETF",
-  "kind": "Mutual fund",
+  "kind": "ETF",
   "category": "Other ETFs",
   "cap": "",
   "quantity": 1.0,
@@ -669,6 +692,7 @@
   "reason": "",
   "sentiment": "",
   "source_name": "",
-  "source_url": ""
+  "source_url": "",
+  "theme": ""
  }
 ]

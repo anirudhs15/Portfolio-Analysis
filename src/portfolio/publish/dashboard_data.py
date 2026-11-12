@@ -54,8 +54,11 @@ def _r(x, n=2):
 
 
 def _kind(h: dict) -> str:
+    name = h["name"].lower()
     if h["type"] == "mf":
-        return "Mutual fund"
+        # Exchange-traded funds can arrive through the CAS too (e.g. one held in another demat account)
+        is_etf = ("etf" in name or "bees" in name) and "fof" not in name and "fund of fund" not in name
+        return "ETF" if is_etf else "Mutual fund"
     return "ETF" if str(h["isin"]).startswith("INF") else "Stock"
 
 
@@ -205,9 +208,46 @@ def build(mode: str | None = None) -> dict[str, list]:
                for k, v in snap.get("indices", {}).items() if k in INDEX_NAMES]
     health = [{"item": n} for n in snap["health"]["notes"]] or [{"item": "All sources loaded normally."}]
 
+    # Link each news item to the holdings it is about, so a holding's panel can show its own news.
+    # A research note may list `match` (symbols, scheme codes or ISINs); otherwise names are matched.
+    def _news_isins(n: dict) -> list[str]:
+        keys = {str(k) for k in n.get("match", [])}
+        if keys:
+            return [x["isin"] for x in holdings if str(x["symbol"]) in keys or x["isin"] in keys]
+        who = n.get("holding", "").lower()
+        if "silver" in who:
+            return [x["isin"] for x in holdings if x["category"] == "Silver"]
+        if "gold" in who:
+            return [x["isin"] for x in holdings if x["category"] == "Gold"]
+        words = [w for w in re.split(r"\W+", who) if len(w) > 2][:2]
+        return [x["isin"] for x in holdings if words and all(w in x["name"].lower() for w in words)]
+
+    news = []
+    for n in sorted(research.get("news", []), key=lambda n: n["date"], reverse=True):
+        isins = _news_isins(n)
+        news.append({**{k: v for k, v in n.items() if k != "match"}, "isins": ",".join(isins),
+                     "scope": "holding" if isins else "market"})
+
+    # Which "things to watch" theme applies to each holding
+    def _theme(x: dict) -> str:
+        c = x["category"].lower()
+        if c in ("silver", "gold"):
+            return "Silver" if c == "silver" else ""
+        if "bond" in c or "arbitrage" in c:
+            return "Interest rates"
+        if x["symbol"] == "HINDCOPPER":
+            return "Copper & metals"
+        if "thematic" in c or c == "technology":
+            return "Technology"
+        if "small" in c or "mid" in c or x["cap"] in ("Small", "Mid"):
+            return "Small & mid caps"
+        return ""
+    for x in holdings:
+        x["theme"] = _theme(x)
+
     return {
         "summary": summary, "holdings": holdings, "allocation": allocation,
-        "news": sorted(research.get("news", []), key=lambda n: n["date"], reverse=True),
+        "news": news,
         "events": sorted(research.get("events", []), key=lambda e: e["date"]),
         "outlook": research.get("outlook", []), "suggestions": sugg, "scenarios": scenarios,
         "history": history, "indices": indices, "health": health,
