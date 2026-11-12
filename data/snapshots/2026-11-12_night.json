@@ -3,7 +3,7 @@
   "run": {
     "date": "2026-11-12",
     "mode": "night",
-    "generated_at": "2026-11-12T23:28:33+05:30",
+    "generated_at": "2026-11-12T23:30:59+05:30",
     "market_open_today": true,
     "mf_status": "ok"
   },
@@ -136,7 +136,7 @@
         "symbol": "SILVERBEES",
         "name": "Nippon India Silver ETF",
         "type": "stock",
-        "sector": null,
+        "sector": "Gold & Silver",
         "market_cap_bucket": null,
         "quantity": 162.0,
         "avg_cost": 284.82,
@@ -169,7 +169,7 @@
         "symbol": "GOLDBEES",
         "name": "Nippon India ETF Gold BeES",
         "type": "stock",
-        "sector": null,
+        "sector": "Gold & Silver",
         "market_cap_bucket": null,
         "quantity": 161.0,
         "avg_cost": 78.68,
@@ -595,7 +595,7 @@
       "symbol": "SILVERBEES",
       "name": "Nippon India Silver ETF",
       "type": "stock",
-      "sector": null,
+      "sector": "Gold & Silver",
       "market_cap_bucket": null,
       "quantity": 162.0,
       "avg_cost": 284.82,
@@ -703,7 +703,7 @@
       "symbol": "GOLDBEES",
       "name": "Nippon India ETF Gold BeES",
       "type": "stock",
-      "sector": null,
+      "sector": "Gold & Silver",
       "market_cap_bucket": null,
       "quantity": 161.0,
       "avg_cost": 78.68,
@@ -1131,25 +1131,30 @@
       },
       {
         "name": "Equity",
-        "value": 100539.449,
-        "pct": 16.33
+        "value": 54631.2,
+        "pct": 8.87
+      },
+      {
+        "name": "Gold & Silver",
+        "value": 45908.2491,
+        "pct": 7.46
       }
     ],
     "by_market_cap": [
       {
-        "name": "Unclassified",
-        "value": 54918.2491,
-        "pct": 54.62
-      },
-      {
         "name": "Small",
         "value": 38482.8,
-        "pct": 38.28
+        "pct": 70.44
+      },
+      {
+        "name": "Unclassified",
+        "value": 9010.0,
+        "pct": 16.49
       },
       {
         "name": "Mid",
         "value": 7138.3999,
-        "pct": 7.1
+        "pct": 13.07
       }
     ],
     "by_fund_category": [
@@ -1162,8 +1167,13 @@
     "by_sector": [
       {
         "name": "Unclassified",
-        "value": 561170.0509,
-        "pct": 91.13
+        "value": 515261.8018,
+        "pct": 83.67
+      },
+      {
+        "name": "Gold & Silver",
+        "value": 45908.2491,
+        "pct": 7.46
       },
       {
         "name": "Technology",
@@ -1306,6 +1316,7 @@
   },
   "health": {
     "notes": [
+      "AMFI NAV download failed: AMFI NAV file unavailable: https://portal.amfiindia.com/spages/NAVAll.txt: no NAV rows (starts with 'Scheme Code;ISIN Div Payout/ ISIN Growth;ISIN Div Reinvestment;Scheme Name;Plan;Option;Net Asset Value;Date\\r\\n \\r\\nOpen End') | https://www.amfiindia.com/spages/NAVAll.txt: no NAV rows (starts with 'Scheme Code;ISIN Div Payout/ ISIN Growth;ISIN Div Reinvestment;Scheme Name;Plan;Option;Net Asset Value;Date\\r\\n \\r\\nOpen End')",
       "Purchase cost unknown for 7 holdings (34% of value); total gain covers the rest only."
     ],
     "price_source": "yahoo",
