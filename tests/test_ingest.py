@@ -93,3 +93,27 @@ def test_cdsl_same_fund_in_demat_and_folio_is_merged():
     assert merged[0].units == pytest.approx(501.393)
     assert merged[0].cost is None  # demat part has no cost, so the total is unknown
     assert res.equities[0].quantity == 5
+
+
+def test_gold_and_silver_classified_as_commodity():
+    assert amfi_nav.asset_class_for_category("Other Scheme - FoF Domestic", "Axis Silver FoF") == "Gold & Silver"
+    assert amfi_nav.asset_class_for_category(None, "Nippon India ETF Gold BeES") == "Gold & Silver"
+    assert amfi_nav.asset_class_for_category("Debt Scheme - Short Duration Fund", "X Bond Fund") == "Debt"
+
+
+def test_fetch_latest_falls_back_and_rejects_html(monkeypatch):
+    calls = []
+
+    class R:
+        def __init__(self, text):
+            self.text = text
+
+    def fake_get(url, *a, **k):
+        calls.append(url)
+        if "portal" in url:
+            return R("<html>moved</html>")
+        return R(fx.navall_text(fx.nav_histories()))
+
+    monkeypatch.setattr(amfi_nav, "_get", fake_get)
+    navs = amfi_nav.fetch_latest()
+    assert len(calls) == 2 and "INF179K01YV8" in navs

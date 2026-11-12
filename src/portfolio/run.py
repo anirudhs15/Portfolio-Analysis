@@ -94,11 +94,19 @@ def ensure_stock_securities(src, con, settings: Settings, stocks: list[dict]) ->
             continue  # already classified earlier
         if meta is None:
             meta = src.sector_lookup(sym) or {}
+        name = meta.get("name") or sym
+        sector, asset_class, cap = meta.get("sector"), "Equity", meta.get("market_cap_bucket")
+        if s["isin"].startswith("INF"):  # an exchange-traded fund, not a company share
+            asset_class = amfi_nav.asset_class_for_category(None, f"{name} {sym}")
+            asset_class = "Equity" if asset_class == "Unknown" else asset_class
+            sector = "Gold & Silver" if asset_class == "Gold & Silver" else (sector or "Equity ETF")
+            cap = None if asset_class != "Equity" else cap
         rows.append({
-            "isin": s["isin"], "symbol": sym, "name": meta.get("name") or sym, "type": "stock",
-            "sector": meta.get("sector"), "industry": meta.get("industry"),
-            "market_cap_bucket": meta.get("market_cap_bucket"), "amc": None,
-            "fund_category": None, "asset_class": "Equity", "updated_at": _now_ist().replace(tzinfo=None),
+            "isin": s["isin"], "symbol": sym, "name": name, "type": "stock",
+            "sector": sector, "industry": meta.get("industry"),
+            "market_cap_bucket": cap, "amc": None,
+            "fund_category": "ETF" if s["isin"].startswith("INF") else None,
+            "asset_class": asset_class, "updated_at": _now_ist().replace(tzinfo=None),
         })
     if rows:
         db.upsert(con, "securities", pd.DataFrame(rows))
@@ -206,7 +214,7 @@ def ensure_fund_securities(con, positions: pd.DataFrame, navs: dict) -> None:
             "name": rec.scheme_name if rec else p["name"], "type": "mf", "sector": None, "industry": None,
             "market_cap_bucket": amfi_nav.market_cap_bucket_for_category(cat),
             "amc": (rec.amc if rec else None) or p["amc"], "fund_category": cat,
-            "asset_class": amfi_nav.asset_class_for_category(cat),
+            "asset_class": amfi_nav.asset_class_for_category(cat, rec.scheme_name if rec else p["name"]),
             "updated_at": _now_ist().replace(tzinfo=None),
         })
     if rows:
@@ -278,7 +286,8 @@ def run(mode: str, src, data_dir: Path = DATA_DIR, settings: Settings | None = N
             "price": px["close"], "price_date": px["price_date"], "prev_price": prev,
             "market_value": s["quantity"] * px["close"], "prev_value": s["quantity"] * prev,
             "sector": meta.get("sector"), "industry": meta.get("industry"),
-            "market_cap_bucket": meta.get("market_cap_bucket"), "asset_class": "Equity", "fund_category": None,
+            "market_cap_bucket": meta.get("market_cap_bucket"), "asset_class": meta.get("asset_class") or "Equity",
+            "fund_category": meta.get("fund_category"),
             "high_52w": px["high_52w"], "low_52w": px["low_52w"], "units_source": "groww",
         })
 
@@ -521,7 +530,8 @@ def run(mode: str, src, data_dir: Path = DATA_DIR, settings: Settings | None = N
         "finished_at": _now_ist().replace(tzinfo=None), "status": status, "notes": " | ".join(notes)[:2000],
     }]))
     con.close()
-    log.info("Wrote %s (status %s, value ₹%,.0f, day %+.2f%%)", path, status, mv["total_value"], mv["day_change_pct"])
+    log.info("Wrote %s (status %s, value Rs %s, day %+.2f%%)", path, status,
+             f"{mv['total_value']:,.0f}", mv["day_change_pct"])
     return snapshot
 
 

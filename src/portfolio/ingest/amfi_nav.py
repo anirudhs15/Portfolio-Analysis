@@ -14,7 +14,10 @@ import requests
 
 log = logging.getLogger(__name__)
 
-AMFI_URL = "https://www.amfiindia.com/spages/NAVAll.txt"
+AMFI_URLS = [
+    "https://portal.amfiindia.com/spages/NAVAll.txt",
+    "https://www.amfiindia.com/spages/NAVAll.txt",
+]
 MFAPI_URL = "https://api.mfapi.in/mf/{code}"
 
 
@@ -79,9 +82,21 @@ def parse_navall(text: str) -> dict[str, NavRecord]:
 
 
 def fetch_latest() -> dict[str, NavRecord]:
-    navs = parse_navall(_get(AMFI_URL).text)
-    log.info("Parsed %d ISINs from AMFI NAV file", len(navs))
-    return navs
+    """Tries each AMFI URL until one returns a parseable NAV file."""
+    problems = []
+    for url in AMFI_URLS:
+        try:
+            text = _get(url).text
+        except Exception as e:
+            problems.append(f"{url}: {e}")
+            continue
+        navs = parse_navall(text)
+        if navs:
+            log.info("Parsed %d ISINs from %s", len(navs), url)
+            return navs
+        problems.append(f"{url}: no NAV rows (starts with {text[:120]!r})")
+        log.warning(problems[-1])
+    raise RuntimeError("AMFI NAV file unavailable: " + " | ".join(problems))
 
 
 def parse_mfapi(js: dict) -> list[tuple[date, float]]:
@@ -117,7 +132,11 @@ def market_cap_bucket_for_category(category: str | None) -> str | None:
     return None
 
 
-def asset_class_for_category(category: str | None) -> str:
+def asset_class_for_category(category: str | None, name: str | None = None) -> str:
+    # Gold and silver funds/ETFs/FoFs are commodities whatever SEBI category they sit in.
+    text = f"{category or ''} {name or ''}".lower()
+    if "silver" in text or "gold" in text:
+        return "Gold & Silver"
     if not category:
         return "Unknown"
     c = category.lower()
