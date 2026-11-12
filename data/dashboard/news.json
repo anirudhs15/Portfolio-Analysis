@@ -1,0 +1,92 @@
+[
+ {
+  "date": "2026-11-12",
+  "holding": "Manorama Industries",
+  "headline": "September-quarter profit up 52%",
+  "summary": "Revenue rose 41.9% to ₹458.9 crore and profit 51.8% to ₹80.8 crore from a year earlier.",
+  "impact": "positive",
+  "source_name": "Univest",
+  "source_url": "https://univest.in/blogs/manorama-industries-q2-results-fy27-pat-81-crore"
+ },
+ {
+  "date": "2026-11-11",
+  "holding": "Hindustan Copper",
+  "headline": "Profit nearly triples on record copper prices",
+  "summary": "September-quarter revenue rose 63.7% from a year earlier and profit about 182%, as copper set repeated record highs during the quarter.",
+  "impact": "positive",
+  "source_name": "Compounding AI",
+  "source_url": "https://compoundingai.in/market-news/hindcopper-q2-fy27-earnings-preview"
+ },
+ {
+  "date": "2026-11-05",
+  "holding": "Kronox Lab Sciences",
+  "headline": "Profit slips despite higher sales",
+  "summary": "Revenue rose 5.1% to ₹26.8 crore but profit fell 3.6% to ₹6.4 crore, so margins narrowed; revenue was also lower than the previous quarter.",
+  "impact": "negative",
+  "source_name": "Univest",
+  "source_url": "https://univest.in/blogs/kronox-lab-sciences-q2-results-fy27-pat-6-crore"
+ },
+ {
+  "date": "2026-11-04",
+  "holding": "Happiest Minds Technologies",
+  "headline": "Revenue up 12.5%; ITC Infotech combination on track",
+  "summary": "Quarterly revenue reached ₹645 crore and the company kept its 12.5% growth guidance for the year. It says the planned combination with ITC Infotech is progressing as planned.",
+  "impact": "neutral",
+  "source_name": "Investywise",
+  "source_url": "https://www.investywise.com/happiest-minds-technologies-limited-q2-fy27-financial-results-merger-update/"
+ },
+ {
+  "date": "2026-10-29",
+  "holding": "KRN Heat Exchanger",
+  "headline": "Revenue and profit roughly double",
+  "summary": "September-quarter revenue rose 110% to ₹319 crore and profit 100% to ₹36 crore from a year earlier.",
+  "impact": "positive",
+  "source_name": "Multibagg",
+  "source_url": "https://www.multibagg.ai/market-pulse/articles/krn-q2-fy27-results-cmvu70q27005f2gqi2mdz4vgy"
+ },
+ {
+  "date": "2026-10-27",
+  "holding": "KFin Technologies",
+  "headline": "Revenue up 30%, profit up 7.5%",
+  "summary": "Revenue grew 29.9% to ₹402 crore with a 40% operating margin, but profit grew more slowly as costs rose.",
+  "impact": "neutral",
+  "source_name": "Investywise",
+  "source_url": "https://www.investywise.com/kfin-technologies-limited-q2fy27-financial-results-announced/"
+ },
+ {
+  "date": "2026-10-24",
+  "holding": "Netweb Technologies",
+  "headline": "AI systems drive a fourfold jump in revenue",
+  "summary": "Revenue rose 336% to ₹1,323 crore and profit 335% to ₹137 crore; AI systems were 58% of revenue. The order book stood at ₹2,629 crore and the company raised ₹1,200 crore.",
+  "impact": "positive",
+  "source_name": "Free Press Journal",
+  "source_url": "https://www.freepressjournal.in/business/netweb-technologies-reports-strong-q2-fy27-pat-up-3348-to-1367-crore-revenue-grows-3357"
+ },
+ {
+  "date": "2026-10-07",
+  "holding": "Market (RBI)",
+  "headline": "RBI raises repo rate to 5.50%",
+  "summary": "The RBI raised rates by 0.25 percentage points and changed its stance to 'calibrated tightening'. Rising rates tend to weigh on bond fund prices and on richly valued stocks.",
+  "impact": "negative",
+  "source_name": "5paisa",
+  "source_url": "https://www.5paisa.com/blog/rbi-mpc-meeting-schedule"
+ },
+ {
+  "date": "2026-09-22",
+  "holding": "Hindustan Copper",
+  "headline": "₹7,000 crore plan to expand mining",
+  "summary": "The company plans to invest ₹7,000 crore over five to six years, signed agreements with several public-sector firms, and partnered with Chile's CODELCO.",
+  "impact": "positive",
+  "source_name": "Kotak Neo",
+  "source_url": "https://www.kotakneo.com/news/stocks/hindustan-copper-shares-rise-on-7000-crore-investment-plan/"
+ },
+ {
+  "date": "2026-04-29",
+  "holding": "Silver (4 holdings)",
+  "headline": "Silver down 46% from its peak",
+  "summary": "After a huge 2025 rally, silver fell from ₹4.39 lakh per kg to about ₹2.38 lakh by late April on a strong dollar and profit-taking. Analysts cited long-term industrial demand but expected short-term pressure from interest rates.",
+  "impact": "negative",
+  "source_name": "Analytics Insight",
+  "source_url": "https://www.analyticsinsight.net/news/silver-price-falls-46-from-peak-as-rally-reverses-in-india"
+ }
+]

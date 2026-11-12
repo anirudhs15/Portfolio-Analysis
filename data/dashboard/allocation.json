@@ -1,0 +1,122 @@
+[
+ {
+  "dimension": "Asset class",
+  "name": "Equity",
+  "value": 412551.78,
+  "pct": 67.07
+ },
+ {
+  "dimension": "Asset class",
+  "name": "Gold & Silver",
+  "value": 151520.59,
+  "pct": 24.63
+ },
+ {
+  "dimension": "Asset class",
+  "name": "Debt",
+  "value": 29570.1,
+  "pct": 4.81
+ },
+ {
+  "dimension": "Asset class",
+  "name": "FoF",
+  "value": 21498.54,
+  "pct": 3.49
+ },
+ {
+  "dimension": "Market cap (equity only)",
+  "name": "Small",
+  "value": 144029.38,
+  "pct": 34.91
+ },
+ {
+  "dimension": "Market cap (equity only)",
+  "name": "Mid",
+  "value": 107678.01,
+  "pct": 26.1
+ },
+ {
+  "dimension": "Market cap (equity only)",
+  "name": "Unclassified",
+  "value": 96324.17,
+  "pct": 23.35
+ },
+ {
+  "dimension": "Market cap (equity only)",
+  "name": "Large",
+  "value": 64520.23,
+  "pct": 15.64
+ },
+ {
+  "dimension": "Category",
+  "name": "Silver",
+  "value": 133374.28,
+  "pct": 21.68
+ },
+ {
+  "dimension": "Category",
+  "name": "Small Cap",
+  "value": 105546.58,
+  "pct": 17.16
+ },
+ {
+  "dimension": "Category",
+  "name": "Mid Cap",
+  "value": 100539.61,
+  "pct": 16.34
+ },
+ {
+  "dimension": "Category",
+  "name": "Sector / thematic",
+  "value": 87222.13,
+  "pct": 14.18
+ },
+ {
+  "dimension": "Category",
+  "name": "Large Cap",
+  "value": 64520.23,
+  "pct": 10.49
+ },
+ {
+  "dimension": "Category",
+  "name": "Corporate Bond",
+  "value": 29570.1,
+  "pct": 4.81
+ },
+ {
+  "dimension": "Category",
+  "name": "Technology",
+  "value": 25182.3,
+  "pct": 4.09
+ },
+ {
+  "dimension": "Category",
+  "name": "Basic Materials",
+  "value": 23148.6,
+  "pct": 3.76
+ },
+ {
+  "dimension": "Category",
+  "name": "Arbitrage (hybrid)",
+  "value": 21498.54,
+  "pct": 3.49
+ },
+ {
+  "dimension": "Category",
+  "name": "Gold",
+  "value": 18146.31,
+  "pct": 2.95
+ },
+ {
+  "dimension": "Category",
+  "name": "Consumer Defensive",
+  "value": 6300.3,
+  "pct": 1.02
+ },
+ {
+  "dimension": "Category",
+  "name": "Other  ETFs",
+  "value": 92.04,
+  "pct": 0.01
+ }
+]

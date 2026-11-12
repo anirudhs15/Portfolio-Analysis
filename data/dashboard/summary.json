@@ -1,0 +1,29 @@
+[
+ {
+  "as_of": "2026-11-12",
+  "mode": "night",
+  "generated_at": "2026-11-12T23:32:22+05:30",
+  "total_value": 615141.01,
+  "day_inr": -1037.77,
+  "day_pct": -0.17,
+  "nifty_pct": 0.18,
+  "vs_nifty_pct": -0.34,
+  "invested": 416752.86,
+  "gain_inr": -10163.96,
+  "gain_pct": -2.44,
+  "cost_coverage_pct": 66.0,
+  "holdings_count": 24,
+  "stocks_count": 9,
+  "funds_count": 15,
+  "effective_holdings": 13.2,
+  "top5_pct": 51.5,
+  "volatility_pct": 18.77,
+  "beta": 0.88,
+  "max_drawdown_pct": -20.66,
+  "sharpe": 0.62,
+  "one_year_return_pct": 18.21,
+  "movers_count": 11,
+  "market_wrap": "Nifty ended 0.18% higher at 25,299 after a choppy, range-bound day. Mid caps (+0.85%) and small caps (+1.12%) did better than large caps, realty led the sectors, and auto, FMCG and IT slipped. Gold and silver futures fell on MCX.",
+  "market_wrap_source": "https://www.kotakneo.com/news/market-news/sensex-and-nifty-close-higher-after-a-volatile-session/"
+ }
+]
