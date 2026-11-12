@@ -2,7 +2,7 @@
  {
   "dimension": "Asset class",
   "name": "Equity",
-  "value": 412551.78,
+  "value": 412546.38,
   "pct": 67.07
  },
  {
@@ -19,33 +19,33 @@
  },
  {
   "dimension": "Asset class",
-  "name": "FoF",
+  "name": "Hybrid",
   "value": 21498.54,
   "pct": 3.49
  },
  {
   "dimension": "Market cap (equity only)",
   "name": "Small",
-  "value": 144029.38,
-  "pct": 34.91
+  "value": 144023.98,
+  "pct": 33.18
+ },
+ {
+  "dimension": "Market cap (equity only)",
+  "name": "Thematic / other",
+  "value": 117822.7,
+  "pct": 27.15
  },
  {
   "dimension": "Market cap (equity only)",
   "name": "Mid",
   "value": 107678.01,
-  "pct": 26.1
- },
- {
-  "dimension": "Market cap (equity only)",
-  "name": "Unclassified",
-  "value": 96324.17,
-  "pct": 23.35
+  "pct": 24.81
  },
  {
   "dimension": "Market cap (equity only)",
   "name": "Large",
   "value": 64520.23,
-  "pct": 15.64
+  "pct": 14.86
  },
  {
   "dimension": "Category",
@@ -86,7 +86,7 @@
  {
   "dimension": "Category",
   "name": "Technology",
-  "value": 25182.3,
+  "value": 25176.9,
   "pct": 4.09
  },
  {
@@ -115,7 +115,7 @@
  },
  {
   "dimension": "Category",
-  "name": "Other  ETFs",
+  "name": "Other ETFs",
   "value": 92.04,
   "pct": 0.01
  }

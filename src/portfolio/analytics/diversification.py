@@ -113,7 +113,7 @@ def analyse(holdings: pd.DataFrame, constituents: pd.DataFrame | None, limits: d
     if "Debt" not in asset_names and "Hybrid" not in asset_names:
         suggestions.append("No debt or hybrid allocation: the whole portfolio moves with equity markets.")
     # Market-cap split only makes sense for equity; shown as a share of the equity portion.
-    eq = h[h["asset_class"].isin(["Equity", "Hybrid"])]
+    eq = h[h["asset_class"] == "Equity"]
     eq_total = float(eq["market_value"].sum())
     caps = _alloc(eq, "market_cap_bucket", eq_total) if eq_total else []
     cap_names = {c["name"] for c in caps}
