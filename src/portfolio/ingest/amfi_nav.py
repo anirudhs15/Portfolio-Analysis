@@ -157,6 +157,8 @@ def asset_class_for_category(category: str | None, name: str | None = None) -> s
     text = f"{category or ''} {name or ''}".lower()
     if "silver" in text or "gold" in text:
         return "Gold & Silver"
+    if "arbitrage" in text:
+        return "Hybrid"  # arbitrage funds and FoFs behave like low-risk hybrid/debt
     if not category:
         return "Unknown"
     c = category.lower()
