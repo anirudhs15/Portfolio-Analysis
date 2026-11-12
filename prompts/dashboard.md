@@ -1,15 +1,20 @@
-# Dashboard
+# Portfolio Pulse app
 
-Live dashboard: https://claude.ai/artifact/NfPYz7qpinGdF6Jp9dyV3T
+Live app (with Claude chat): https://claude.ai/artifact/BgVcYZTRyt8MrAdUW5pSuU
+Source: `app/index.html` (publish it with capabilities `{"sample": {}, "db": {"rules": [{"path": "", "read": "view", "write": "admin"}]}}`).
 
-The page lives in the dashboard's store (`files/index.html`); `dashboard/index.html` in this repo is a copy.
-Its data comes from these datasets, each an attached JSON file built by
-`python -m portfolio.publish.dashboard_data` into `data/dashboard/<id>.json`:
+The page reads its data from its own store, collection `dash`, one document per dataset:
+summary, holdings, allocation, news, events, suggestions, scenarios, health, profiles.
+Each document is `{"rows": [...], "updated": "<UTC ISO time>"}` (`summary` holds one row).
 
-summary, holdings, allocation, news, events, outlook, suggestions, scenarios, health
+To refresh after a pipeline run:
+1. Write `data/research/<date>.json` (format: see `data/research/2026-11-12.json`);
+   update `data/research/profiles.json` when results or analyst views change.
+2. Run `python -m portfolio.publish.dashboard_data` to rebuild `data/dashboard/*.json`.
+3. Write each file into the app's store with ArtifactData (`set` on collection `dash`,
+   doc id = file name, body `{"rows": <file contents>, "updated": <now>}`), pinning
+   `if_version` to the version last read. Open copies of the app update by themselves;
+   no republish is needed.
 
-To refresh after a run:
-1. Write `data/research/<date>.json` (see `data/research/2026-11-12.json` for the format).
-2. Run `python -m portfolio.publish.dashboard_data`.
-3. Upload each `data/dashboard/<id>.json` as an asset of the dashboard, then update `datasets/<id>`
-   with the new `source.url`, `updated: {at, by}` and an `edit` stamp.
+The earlier dashboard (https://claude.ai/artifact/NfPYz7qpinGdF6Jp9dyV3T) and its copy in
+`dashboard/index.html` are kept for reference but are no longer updated.
