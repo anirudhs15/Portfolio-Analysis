@@ -1,8 +1,6 @@
 name: Night run (stocks + mutual funds)
 
 on:
-  schedule:
-    - cron: "0 16 * * 1-5"    # 9:30 PM IST, Monday-Friday
   workflow_dispatch: {}
 
 permissions:

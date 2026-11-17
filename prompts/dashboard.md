@@ -1,7 +1,7 @@
 # Portfolio Pulse app
 
 Live app (with Claude chat): https://claude.ai/artifact/BgVcYZTRyt8MrAdUW5pSuU
-Source: `app/index.html` (publish it with capabilities `{"sample": {}, "db": {"rules": [{"path": "", "read": "view", "write": "admin"}]}}`).
+Source: `app/index.html` (wrapped for publishing by `scripts_build_app.py`). Daily data is published beside it as `data/<name>.json`; see `prompts/scheduled_update.md`.
 
 The page reads its data from its own store, collection `dash`, one document per dataset:
 summary, holdings, allocation, news, events, suggestions, scenarios, health, profiles.

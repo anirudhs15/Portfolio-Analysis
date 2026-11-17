@@ -620,7 +620,15 @@ a { color: inherit; }
   }
 
   // ---------- data from the app's store
+  const DOCS = ['summary', 'holdings', 'allocation', 'news', 'events', 'suggestions', 'scenarios', 'health', 'profiles'];
   async function loadData() {
+    // Each daily update publishes data/<name>.json beside this page; the store is the fallback.
+    try {
+      const docs = await Promise.all(DOCS.map((n) => fetch('data/' + n + '.json', { cache: 'no-store' }).then((r) => { if (!r.ok) throw new Error(n); return r.json(); })));
+      DOCS.forEach((n, i) => { S[n] = n === 'summary' ? (docs[i].rows || [])[0] || null : docs[i].rows || []; });
+      renderAll(); renderAll.done = true;
+      if (S.summary) { routeFromHash(); return; }
+    } catch (e) { /* no published data files yet: use the store */ }
     const db = await claude.use('db');
     if (!db) { $('empty').replaceChildren(el('p', null, 'Open this page in Claude to see your portfolio.'), el('p', 'small', 'Your data loads from your private Claude workspace.')); $('empty').firstChild.style.cssText = 'font-weight:600;color:var(--ink)'; return; }
     db.collection('dash').onSnapshot((snap) => {

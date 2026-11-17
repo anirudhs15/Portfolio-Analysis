@@ -1,0 +1,20 @@
+{
+  "date": "2026-11-17",
+  "market_wrap": {
+    "text": "The Nifty 50 rose 0.38% today, while your portfolio was almost flat (−0.03%) at the close. Your large silver and gold holdings barely moved, and gains in KFin were offset by falls in Behari Lal and KRN. Mutual fund NAVs for today are added in the evening update.",
+    "source_name": "",
+    "source_url": ""
+  },
+  "reasons": [
+    {"match": ["KFINTECH"], "driver": "Company / other",
+     "reason": "No company announcement or news found today. The rise was well above the market's, so it was likely stock-specific buying; its last results (27 Oct) showed revenue up 29.9%.",
+     "sentiment": "neutral", "sources": []},
+    {"match": ["KRN"], "driver": "Company / other",
+     "reason": "No company news found today. The stock has been volatile: on 5 Nov the exchange asked the company about unusual trading volume, and it said there was no undisclosed information behind it.",
+     "sentiment": "neutral",
+     "sources": [{"name": "Screener (exchange filings)", "url": "https://www.screener.in/company/KRN/"}]},
+    {"match": ["BLEL"], "driver": "Company / other",
+     "reason": "No company news found today. As a recently listed small company with few shares traded, it often moves 2% or more on ordinary trading.",
+     "sentiment": "neutral", "sources": []}
+  ]
+}

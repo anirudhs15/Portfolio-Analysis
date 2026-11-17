@@ -1,8 +1,6 @@
 name: Close run (stocks)
 
 on:
-  schedule:
-    - cron: "15 10 * * 1-5"   # 3:45 PM IST, Monday-Friday
   workflow_dispatch: {}
 
 permissions:

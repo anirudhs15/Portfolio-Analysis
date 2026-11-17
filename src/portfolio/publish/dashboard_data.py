@@ -34,7 +34,9 @@ def _load_snapshot(mode: str | None) -> dict:
         p = SNAP_DIR / f"latest_{m}.json"
         if p.exists():
             s = json.loads(p.read_text())
-            if best is None or s["run"]["generated_at"] > best["run"]["generated_at"]:
+            # Latest market date wins; on the same date the night run (with fund NAVs) wins.
+            key = (s["run"]["date"], s["run"]["mode"] == "night")
+            if best is None or key > (best["run"]["date"], best["run"]["mode"] == "night"):
                 best = s
     if best is None:
         raise SystemExit("No snapshot found in data/snapshots")
@@ -42,11 +44,23 @@ def _load_snapshot(mode: str | None) -> dict:
 
 
 def _load_research(day: str) -> dict:
-    p = RESEARCH_DIR / f"{day}.json"
-    if p.exists():
-        return json.loads(p.read_text())
-    older = sorted(RESEARCH_DIR.glob("*.json"))
-    return json.loads(older[-1].read_text()) if older else {}
+    """Today's research notes. Reasons for moves and the market wrap are used only from the
+    same day's file; news, upcoming events and outlook carry over from the latest earlier file,
+    with events already past dropped."""
+    dated = sorted(p for p in RESEARCH_DIR.glob("*.json") if re.fullmatch(r"\d{4}-\d{2}-\d{2}", p.stem))
+    same = RESEARCH_DIR / f"{day}.json"
+    older = [p for p in dated if p.stem < day]
+    res = json.loads(older[-1].read_text()) if older else {}
+    res = {k: v for k, v in res.items() if k not in ("reasons", "market_wrap")}
+    if same.exists():
+        today = json.loads(same.read_text())
+        # Today's news is added on top of earlier news; other keys replace the carried-over ones.
+        if "news" in today:
+            seen = {n.get("source_url") for n in today["news"]}
+            today["news"] = today["news"] + [n for n in res.get("news", []) if n.get("source_url") not in seen]
+        res.update(today)
+    res["events"] = [e for e in res.get("events", []) if e.get("date", "") >= day]
+    return res
 
 
 def _r(x, n=2):
@@ -320,6 +334,9 @@ def _profiles(holdings: list[dict]) -> list[dict]:
     return rows
 
 
+APP_DOCS = ["summary", "holdings", "allocation", "news", "events", "suggestions", "scenarios", "health", "profiles"]
+
+
 def main(argv=None):
     ap = argparse.ArgumentParser()
     ap.add_argument("--mode", choices=["close", "night"])
@@ -328,7 +345,17 @@ def main(argv=None):
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     for name, rows in out.items():
         (OUT_DIR / f"{name}.json").write_text(json.dumps(rows, indent=1, ensure_ascii=False))
-    print(f"Wrote {len(out)} files to {OUT_DIR}")
+    # Ready-to-write documents for the Portfolio Pulse app's store (collection "dash").
+    app_dir = DATA_DIR / "app_docs"
+    app_dir.mkdir(parents=True, exist_ok=True)
+    from datetime import datetime, timezone
+    now = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+    for name in APP_DOCS:
+        (app_dir / f"{name}.json").write_text(json.dumps({"rows": out[name], "updated": now}, ensure_ascii=False))
+    s = out["summary"][0]
+    print(f"Wrote {len(out)} files to {OUT_DIR} and {len(APP_DOCS)} app documents to {app_dir}")
+    print(f"Snapshot: {s['as_of']} ({s['mode']}), value {s['total_value']}, day {s['day_pct']}%, "
+          f"significant movers {s['movers_count']}, research for today: {'yes' if s['market_wrap'] else 'no'}")
 
 
 if __name__ == "__main__":

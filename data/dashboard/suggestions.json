@@ -2,14 +2,14 @@
  {
   "area": "Silver",
   "level": "high",
-  "finding": "Silver is your largest exposure: 22% of the portfolio across 4 holdings.",
+  "finding": "Silver is your largest exposure: 21% of the portfolio across 4 holdings.",
   "detail": "The silver fund-of-funds invest in silver ETFs, so these holdings move almost identically and add little diversification over holding one. A single commodity at this weight makes the portfolio swing with silver prices.",
   "consider": "Decide what share of the portfolio you want in precious metals; one vehicle may be enough."
  },
  {
   "area": "Market cap",
   "level": "medium",
-  "finding": "58% of your equity is in mid- and small-cap funds and stocks; large caps are 15%.",
+  "finding": "61% of your equity is in mid- and small-cap funds and stocks; large caps are 16%.",
   "detail": "Mid and small caps can grow faster but usually fall further in market corrections.",
   "consider": "Check that this tilt matches how much short-term volatility you can sit through."
  },
@@ -23,14 +23,14 @@
  {
   "area": "Direct stocks",
   "level": "low",
-  "finding": "9 stocks make up 9% of the portfolio; 8 are below your purchase price.",
+  "finding": "9 stocks make up 9% of the portfolio; 9 are below your purchase price.",
   "detail": "Most are small companies, with positions of a few thousand rupees each, so they barely move the total but need following.",
   "consider": "Review each against why you bought it, using the news and results below."
  },
  {
   "area": "Sector bet",
   "level": "medium",
-  "finding": "Sector / thematic funds are 14% of the portfolio.",
+  "finding": "Sector / thematic funds are 15% of the portfolio.",
   "detail": "A single-sector fund rises and falls with that industry.",
   "consider": "Keep sector funds to a size you are comfortable seeing swing."
  },
