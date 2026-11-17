@@ -18,6 +18,7 @@ class Settings:
     raw: dict
     sips: list[dict] = field(default_factory=list)
     sector_map: dict[str, dict] = field(default_factory=dict)
+    manual_costs: dict[str, float] = field(default_factory=dict)  # ISIN -> total amount invested
 
     def get(self, *keys, default=None):
         node = self.raw
@@ -55,4 +56,11 @@ def load_settings(config_dir: Path | None = None) -> Settings:
                     "industry": row.get("industry", "").strip() or None,
                     "market_cap_bucket": row.get("market_cap_bucket", "").strip() or None,
                 }
-    return Settings(raw=raw, sips=sips, sector_map=sector_map)
+    manual_costs: dict[str, float] = {}
+    mfile = cdir / "manual_costs.yaml"
+    if mfile.exists():
+        for isin, entry in ((yaml.safe_load(mfile.read_text()) or {}).get("costs") or {}).items():
+            amt = entry.get("invested") if isinstance(entry, dict) else entry
+            if amt not in (None, "", 0):
+                manual_costs[str(isin).strip().upper()] = float(amt)
+    return Settings(raw=raw, sips=sips, sector_map=sector_map, manual_costs=manual_costs)

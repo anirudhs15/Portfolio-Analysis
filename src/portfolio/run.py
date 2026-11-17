@@ -373,6 +373,13 @@ def run(mode: str, src, data_dir: Path = DATA_DIR, settings: Settings | None = N
 
     if not rows:
         raise RuntimeError("No holdings could be valued. " + " | ".join(notes))
+    # Purchase costs entered by hand (config/manual_costs.yaml) for holdings whose statement has none.
+    for r in rows:
+        amt = settings.manual_costs.get(str(r["isin"]).upper())
+        has_cost = r.get("cost_value") is not None and r["cost_value"] == r["cost_value"] and r["cost_value"] > 0
+        if amt and not has_cost and r.get("quantity"):
+            r["cost_value"] = amt
+            r["avg_cost"] = amt / r["quantity"]
     holdings = pd.DataFrame(rows)
 
     # ---- analytics

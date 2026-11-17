@@ -1,0 +1,13 @@
+# Purchase cost for holdings whose statement doesn't include one.
+# The CDSL statement lists units for demat-held mutual funds but not what you paid.
+# Enter the total amount invested (₹) as shown in the Groww app for each holding
+# (Mutual funds → the fund → "Invested"). Leave blank if unknown.
+# Only used where Groww / the statement gives no cost; entered values never override real ones.
+costs:
+  INF247L01445: {name: Motilal Oswal Midcap Fund, invested: }
+  INF846K015J4: {name: Axis Silver Fund of Fund, invested: }
+  INF204KC1378: {name: Nippon India Silver ETF FOF, invested: }
+  INF179KC1DU7: {name: HDFC Silver ETF Fund of Fund, invested: }
+  INF205K013T3: {name: Invesco India Small Cap Fund, invested: }
+  INF194KB1AL4: {name: BANDHAN Small Cap Fund, invested: }
+  INF457M01133: {name: CPSE ETF, invested: }

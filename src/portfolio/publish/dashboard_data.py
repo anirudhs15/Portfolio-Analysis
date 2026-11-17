@@ -136,6 +136,10 @@ def build(mode: str | None = None) -> dict[str, list]:
         "nifty_pct": _r(s.get("benchmark_change_pct")), "vs_nifty_pct": _r(s.get("vs_benchmark_pct")),
         "invested": _r(s.get("total_cost")), "gain_inr": _r(s.get("total_gain_inr")),
         "gain_pct": _r(s.get("total_gain_pct")), "cost_coverage_pct": _r(s.get("cost_coverage_pct"), 0),
+        # Invested and gain cover only holdings with a known cost; say which value they cover and what's left out.
+        "value_with_cost": _r(sum(x["value"] or 0 for x in holdings if x.get("avg_cost"))),
+        "no_cost": [{"name": x["name"], "value": _r(x["value"])}
+                    for x in sorted(holdings, key=lambda x: -(x["value"] or 0)) if not x.get("avg_cost")],
         "holdings_count": len(holdings), "stocks_count": len(stocks),
         "funds_count": sum(x["kind"] != "Stock" for x in holdings),
         "effective_holdings": div.get("effective_holdings"), "top5_pct": div.get("top5_pct"),

@@ -64,6 +64,7 @@ a { color: inherit; }
 .hero .value { font-family: var(--f-display); font-weight: 700; font-size: 2.3rem; line-height: 1.1; margin: 4px 0 6px; font-variant-numeric: tabular-nums; letter-spacing: -.02em; }
 .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 16px; padding-top: 14px; border-top: 1px solid var(--line); }
 .stat .v { font-variant-numeric: tabular-nums; font-weight: 600; margin-top: 2px; }
+.stat .sub { font-size: 12px; color: var(--muted); font-variant-numeric: tabular-nums; margin-top: 2px; }
 
 .split { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
 .tile { text-align: left; cursor: pointer; background: var(--panel); border: 1px solid var(--line); border-radius: var(--r); padding: 16px; display: grid; gap: 4px; }
@@ -226,8 +227,8 @@ a { color: inherit; }
       <div class="value" id="h-value">—</div>
       <div class="num"><span id="h-day">—</span> <span class="muted small">today</span></div>
       <div class="stats">
-        <div class="stat"><div class="label">Overall gain</div><div class="v" id="h-gain">—</div></div>
-        <div class="stat"><div class="label">Invested</div><div class="v" id="h-inv">—</div></div>
+        <div class="stat"><div class="label" id="h-gain-l">Overall gain</div><div class="v" id="h-gain">—</div><div class="sub" id="h-gain-s"></div></div>
+        <div class="stat"><div class="label" id="h-inv-l">Invested</div><div class="v" id="h-inv">—</div><div class="sub" id="h-inv-s"></div></div>
         <div class="stat"><div class="label">Nifty 50 today</div><div class="v" id="h-nifty">—</div></div>
       </div>
       <p class="muted xs" style="margin-top:12px" id="h-cover"></p>
@@ -406,9 +407,18 @@ a { color: inherit; }
     $('h-value').textContent = F.inr(r.total_value);
     const hd = $('h-day'); hd.textContent = `${F.sinr(r.day_inr)} (${F.pct(r.day_pct)})`; hd.className = F.cls(r.day_inr);
     const hg = $('h-gain'); hg.textContent = F.sinr(r.gain_inr); hg.className = 'v ' + F.cls(r.gain_inr);
+    $('h-gain-s').textContent = r.gain_pct != null ? F.pct(r.gain_pct) : '';
     $('h-inv').textContent = F.inr(r.invested);
+    const partial = r.cost_coverage_pct < 99.5;
+    $('h-gain-l').textContent = partial ? 'Gain (known cost)' : 'Overall gain';
+    $('h-inv-l').textContent = partial ? 'Invested (known cost)' : 'Invested';
+    $('h-inv-s').textContent = partial && r.value_with_cost != null ? 'now worth ' + F.inr(r.value_with_cost) : '';
     const hn = $('h-nifty'); hn.textContent = F.pct(r.nifty_pct); hn.className = 'v ' + F.cls(r.nifty_pct);
-    $('h-cover').textContent = r.cost_coverage_pct < 99.5 ? `Gain covers holdings with a known purchase cost (${Math.round(r.cost_coverage_pct)}% of value).` : '';
+    const nc = r.no_cost || [];
+    const ncVal = nc.reduce((a, x) => a + (x.value || 0), 0);
+    $('h-cover').textContent = partial
+      ? `Invested and gain leave out ${nc.length} holding${nc.length === 1 ? '' : 's'} worth ${F.inr(ncVal)} whose purchase cost isn't known yet: ${nc.map((x) => x.name).join(', ')}.`
+      : '';
     for (const [g, v, d] of [['stocks', ['ts-v', 'ls-v'], ['ts-d', 'ls-d']], ['funds', ['tf-v', 'lf-v'], ['tf-d', 'lf-d']]]) {
       const t = totals(g);
       v.forEach((id) => { $(id).textContent = F.inr(t.value); });
@@ -668,7 +678,7 @@ ${JSON.stringify(context())}`;
       else o[p.section] = p.text;
     }
     return {
-      summary: { as_of: r.as_of, total_value: r.total_value, day_change_inr: r.day_inr, day_change_pct: r.day_pct, nifty_50_change_pct: r.nifty_pct, invested_known_cost: r.invested, gain_on_known_cost_inr: r.gain_inr, gain_pct: r.gain_pct, cost_known_for_pct_of_value: r.cost_coverage_pct, volatility_pct: r.volatility_pct, beta: r.beta, max_drawdown_pct: r.max_drawdown_pct, effective_holdings: r.effective_holdings, top5_pct: r.top5_pct, market_wrap: r.market_wrap },
+      summary: { as_of: r.as_of, total_value: r.total_value, day_change_inr: r.day_inr, day_change_pct: r.day_pct, nifty_50_change_pct: r.nifty_pct, invested_known_cost: r.invested, gain_on_known_cost_inr: r.gain_inr, gain_pct: r.gain_pct, cost_known_for_pct_of_value: r.cost_coverage_pct, value_of_holdings_with_known_cost: r.value_with_cost, holdings_without_cost: r.no_cost, volatility_pct: r.volatility_pct, beta: r.beta, max_drawdown_pct: r.max_drawdown_pct, effective_holdings: r.effective_holdings, top5_pct: r.top5_pct, market_wrap: r.market_wrap },
       holdings: S.holdings.map((h) => ({ name: h.name, type: h.kind, category: h.category, cap: h.cap || undefined, value: h.value, weight_pct: h.weight_pct, quantity: h.quantity, avg_cost: h.avg_cost, price: h.price, price_date: h.price_date, day_pct: h.day_pct, day_inr: h.day_inr, gain_inr: h.gain_inr, gain_pct: h.gain_pct, high_52w: h.high_52w, low_52w: h.low_52w, why_moved_today: h.reason || undefined })),
       profiles: prof,
       allocation: S.allocation.map((a) => ({ dimension: a.dimension, name: a.name, pct: a.pct })),
