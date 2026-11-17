@@ -3,42 +3,216 @@
   "run": {
     "date": "2026-11-17",
     "mode": "close",
-    "generated_at": "2026-11-17T01:59:56+05:30",
-    "market_open_today": false,
+    "generated_at": "2026-11-17T15:53:22+05:30",
+    "market_open_today": true,
     "mf_status": "ok"
   },
   "summary": {
-    "total_value": 611623.4887,
-    "day_change_inr": 0.0,
-    "day_change_pct": 0.0,
+    "total_value": 602436.7929,
+    "day_change_inr": -185.0896,
+    "day_change_pct": -0.0307,
     "total_cost": 416752.86,
-    "total_gain_inr": -11604.8382,
-    "total_gain_pct": -2.7846,
-    "cost_coverage_pct": 66.2414,
+    "total_gain_inr": -15305.6979,
+    "total_gain_pct": -3.6726,
+    "cost_coverage_pct": 66.6372,
     "benchmark": "^NSEI",
-    "benchmark_change_pct": -0.6129,
-    "vs_benchmark_pct": 0.6129,
+    "benchmark_change_pct": 0.3808,
+    "vs_benchmark_pct": -0.4115,
     "by_type": [
       {
         "type": "mf",
-        "value": 512039.0479,
-        "prev": 512039.0479,
+        "value": 506646.8632,
+        "prev": 506646.8632,
         "change_inr": 0.0,
         "change_pct": 0.0
       },
       {
         "type": "stock",
-        "value": 99584.4408,
-        "prev": 99584.4408,
-        "change_inr": 0.0,
-        "change_pct": 0.0
+        "value": 95789.9297,
+        "prev": 95975.0193,
+        "change_inr": -185.0896,
+        "change_pct": -0.1929
       }
     ]
   },
   "movers": {
-    "gainers": [],
-    "losers": [],
-    "to_explain": []
+    "gainers": [
+      {
+        "isin": "INE138Y01010",
+        "name": "KFin Technologies Limited",
+        "type": "stock",
+        "day_change_pct": 2.8456,
+        "day_change_inr": 133.5001,
+        "contribution_pct": 0.0222,
+        "market_value": 4825.0
+      },
+      {
+        "isin": "INF204KC1402",
+        "name": "Nippon India Silver ETF",
+        "type": "stock",
+        "day_change_pct": 0.0872,
+        "day_change_inr": 22.6799,
+        "contribution_pct": 0.0038,
+        "market_value": 26041.5
+      },
+      {
+        "isin": "INE531E01026",
+        "name": "Hindustan Copper Limited",
+        "type": "stock",
+        "day_change_pct": 0.3252,
+        "day_change_inr": 22.4004,
+        "contribution_pct": 0.0037,
+        "market_value": 6911.2002
+      }
+    ],
+    "losers": [
+      {
+        "isin": "INE1EEM01017",
+        "name": "Behari Lal Engineering Limited",
+        "type": "stock",
+        "day_change_pct": -2.0227,
+        "day_change_inr": -172.9999,
+        "contribution_pct": -0.0287,
+        "market_value": 8380.0
+      },
+      {
+        "isin": "INE0Q3J01015",
+        "name": "KRN Heat Exchanger and Refrigeration Limited",
+        "type": "stock",
+        "day_change_pct": -2.469,
+        "day_change_inr": -72.2999,
+        "contribution_pct": -0.012,
+        "market_value": 2856.0
+      },
+      {
+        "isin": "INE0ATZ01017",
+        "name": "Kronox Lab Sciences Limited",
+        "type": "stock",
+        "day_change_pct": -0.9444,
+        "day_change_inr": -62.2798,
+        "contribution_pct": -0.0103,
+        "market_value": 6532.5602
+      },
+      {
+        "isin": "INF204KB17I5",
+        "name": "Nippon India ETF Gold BeES",
+        "type": "stock",
+        "day_change_pct": -0.1272,
+        "day_change_inr": -22.5399,
+        "contribution_pct": -0.0037,
+        "market_value": 17697.1197
+      },
+      {
+        "isin": "INE419U01012",
+        "name": "Happiest Minds Technologies Limited",
+        "type": "stock",
+        "day_change_pct": -0.3079,
+        "day_change_inr": -14.2502,
+        "contribution_pct": -0.0024,
+        "market_value": 4613.2498
+      }
+    ],
+    "to_explain": [
+      {
+        "isin": "INE1EEM01017",
+        "symbol": "BLEL",
+        "name": "Behari Lal Engineering Limited",
+        "type": "stock",
+        "sector": "Basic Materials",
+        "market_cap_bucket": null,
+        "quantity": 20.0,
+        "avg_cost": 522.9,
+        "price": 419.0,
+        "price_date": "2026-11-17",
+        "market_value": 8380.0,
+        "weight_pct": 1.391,
+        "day_change_pct": -2.0227,
+        "day_change_inr": -172.9999,
+        "contribution_pct": -0.0287,
+        "high_52w": 548.0,
+        "low_52w": 415.0,
+        "gain_inr": -2078.0,
+        "gain_pct": -19.87,
+        "xirr_pct": null,
+        "attribution": {
+          "market_pct": 0.381,
+          "sector_pct": 0.188,
+          "stock_specific_pct": -2.592,
+          "driver": "stock_specific",
+          "sector_index": "^CNXMETAL",
+          "sector_move_pct": 0.5775,
+          "beta": null
+        },
+        "significant_mover": true,
+        "units_source": "groww"
+      },
+      {
+        "isin": "INE138Y01010",
+        "symbol": "KFINTECH",
+        "name": "KFin Technologies Limited",
+        "type": "stock",
+        "sector": "Technology",
+        "market_cap_bucket": "Small",
+        "quantity": 5.0,
+        "avg_cost": 976.55,
+        "price": 965.0,
+        "price_date": "2026-11-17",
+        "market_value": 4825.0,
+        "weight_pct": 0.8009,
+        "day_change_pct": 2.8456,
+        "day_change_inr": 133.5001,
+        "contribution_pct": 0.0222,
+        "high_52w": 1126.4,
+        "low_52w": 784.0,
+        "gain_inr": -57.75,
+        "gain_pct": -1.1827,
+        "xirr_pct": null,
+        "attribution": {
+          "market_pct": 0.476,
+          "sector_pct": -0.148,
+          "stock_specific_pct": 2.517,
+          "driver": "stock_specific",
+          "sector_index": "^CNXIT",
+          "sector_move_pct": -0.8984,
+          "beta": 1.2503
+        },
+        "significant_mover": true,
+        "units_source": "groww"
+      },
+      {
+        "isin": "INE0Q3J01015",
+        "symbol": "KRN",
+        "name": "KRN Heat Exchanger and Refrigeration Limited",
+        "type": "stock",
+        "sector": "Technology",
+        "market_cap_bucket": "Small",
+        "quantity": 3.0,
+        "avg_cost": 1517.7,
+        "price": 952.0,
+        "price_date": "2026-11-17",
+        "market_value": 2856.0,
+        "weight_pct": 0.4741,
+        "day_change_pct": -2.469,
+        "day_change_inr": -72.2999,
+        "contribution_pct": -0.012,
+        "high_52w": 1687.0,
+        "low_52w": 589.8,
+        "gain_inr": -1697.1,
+        "gain_pct": -37.2735,
+        "xirr_pct": null,
+        "attribution": {
+          "market_pct": 0.387,
+          "sector_pct": -0.0,
+          "stock_specific_pct": -2.856,
+          "driver": "stock_specific",
+          "sector_index": "^CNXIT",
+          "sector_move_pct": -0.8984,
+          "beta": 1.0168
+        },
+        "significant_mover": true,
+        "units_source": "groww"
+      }
+    ]
   },
   "holdings": [
     {
@@ -50,42 +224,17 @@
       "market_cap_bucket": null,
       "quantity": 416.295,
       "avg_cost": 208.9864,
-      "price": 210.08,
-      "price_date": "2026-11-12",
-      "market_value": 87455.2536,
-      "weight_pct": 14.2989,
+      "price": 210.18,
+      "price_date": "2026-11-13",
+      "market_value": 87496.8831,
+      "weight_pct": 14.5238,
       "day_change_pct": 0.0,
       "day_change_inr": 0.0,
       "contribution_pct": 0.0,
       "high_52w": 240.34,
       "low_52w": 180.05,
-      "gain_inr": 455.2536,
-      "gain_pct": 0.5233,
-      "xirr_pct": null,
-      "attribution": null,
-      "significant_mover": false,
-      "units_source": "cas"
-    },
-    {
-      "isin": "INF204K01K15",
-      "symbol": "118778",
-      "name": "Nippon India Small Cap Fund",
-      "type": "mf",
-      "sector": "Equity Scheme - Small Cap Fund",
-      "market_cap_bucket": "Small",
-      "quantity": 315.839,
-      "avg_cost": 183.6379,
-      "price": 204.2367,
-      "price_date": "2026-11-13",
-      "market_value": 64505.9151,
-      "weight_pct": 10.5467,
-      "day_change_pct": 0.0,
-      "day_change_inr": 0.0,
-      "contribution_pct": 0.0,
-      "high_52w": 211.077,
-      "low_52w": 165.176,
-      "gain_inr": 6505.9151,
-      "gain_pct": 11.2171,
+      "gain_inr": 496.8831,
+      "gain_pct": 0.5711,
       "xirr_pct": null,
       "attribution": null,
       "significant_mover": false,
@@ -100,17 +249,42 @@
       "market_cap_bucket": "Large",
       "quantity": 616.84,
       "avg_cost": 100.5123,
-      "price": 104.1169,
-      "price_date": "2026-11-13",
-      "market_value": 64223.4686,
-      "weight_pct": 10.5005,
+      "price": 104.4958,
+      "price_date": "2026-11-16",
+      "market_value": 64457.1893,
+      "weight_pct": 10.6994,
       "day_change_pct": 0.0,
       "day_change_inr": 0.0,
       "contribution_pct": 0.0,
       "high_52w": 106.1272,
       "low_52w": 91.4539,
-      "gain_inr": 2223.4686,
-      "gain_pct": 3.5862,
+      "gain_inr": 2457.1893,
+      "gain_pct": 3.9632,
+      "xirr_pct": null,
+      "attribution": null,
+      "significant_mover": false,
+      "units_source": "cas"
+    },
+    {
+      "isin": "INF204K01K15",
+      "symbol": "118778",
+      "name": "Nippon India Small Cap Fund",
+      "type": "mf",
+      "sector": "Equity Scheme - Small Cap Fund",
+      "market_cap_bucket": "Small",
+      "quantity": 315.839,
+      "avg_cost": 183.6379,
+      "price": 203.331,
+      "price_date": "2026-11-16",
+      "market_value": 64219.8597,
+      "weight_pct": 10.66,
+      "day_change_pct": 0.0,
+      "day_change_inr": 0.0,
+      "contribution_pct": 0.0,
+      "high_52w": 211.077,
+      "low_52w": 165.176,
+      "gain_inr": 6219.8597,
+      "gain_pct": 10.7239,
       "xirr_pct": null,
       "attribution": null,
       "significant_mover": false,
@@ -125,10 +299,10 @@
       "market_cap_bucket": "Mid",
       "quantity": 501.393,
       "avg_cost": null,
-      "price": 123.0732,
-      "price_date": "2026-11-13",
-      "market_value": 61708.041,
-      "weight_pct": 10.0892,
+      "price": 122.6376,
+      "price_date": "2026-11-16",
+      "market_value": 61489.6342,
+      "weight_pct": 10.2068,
       "day_change_pct": 0.0,
       "day_change_inr": 0.0,
       "contribution_pct": 0.0,
@@ -150,17 +324,17 @@
       "market_cap_bucket": "Mid",
       "quantity": 167.041,
       "avg_cost": 215.516,
-      "price": 229.697,
-      "price_date": "2026-11-13",
-      "market_value": 38368.8166,
-      "weight_pct": 6.2733,
+      "price": 230.304,
+      "price_date": "2026-11-16",
+      "market_value": 38470.2105,
+      "weight_pct": 6.3858,
       "day_change_pct": 0.0,
       "day_change_inr": 0.0,
       "contribution_pct": 0.0,
       "high_52w": 237.629,
       "low_52w": 198.616,
-      "gain_inr": 2368.8166,
-      "gain_pct": 6.58,
+      "gain_inr": 2470.2105,
+      "gain_pct": 6.8617,
       "xirr_pct": null,
       "attribution": null,
       "significant_mover": false,
@@ -175,10 +349,10 @@
       "market_cap_bucket": null,
       "quantity": 1227.11,
       "avg_cost": null,
-      "price": 30.3313,
-      "price_date": "2026-11-13",
-      "market_value": 37219.8415,
-      "weight_pct": 6.0854,
+      "price": 28.939,
+      "price_date": "2026-11-16",
+      "market_value": 35511.3363,
+      "weight_pct": 5.8946,
       "day_change_pct": 0.0,
       "day_change_inr": 0.0,
       "contribution_pct": 0.0,
@@ -200,40 +374,15 @@
       "market_cap_bucket": null,
       "quantity": 1380.156,
       "avg_cost": null,
-      "price": 26.8792,
-      "price_date": "2026-11-13",
-      "market_value": 37097.4892,
-      "weight_pct": 6.0654,
+      "price": 25.5809,
+      "price_date": "2026-11-16",
+      "market_value": 35305.6326,
+      "weight_pct": 5.8605,
       "day_change_pct": 0.0,
       "day_change_inr": 0.0,
       "contribution_pct": 0.0,
       "high_52w": 56.4363,
-      "low_52w": 22.8107,
-      "gain_inr": null,
-      "gain_pct": null,
-      "xirr_pct": null,
-      "attribution": null,
-      "significant_mover": false,
-      "units_source": "cas"
-    },
-    {
-      "isin": "INF179KC1DU7",
-      "symbol": "150737",
-      "name": "HDFC Silver ETF Fund of Fund",
-      "type": "mf",
-      "sector": "Other Scheme - FoF Domestic",
-      "market_cap_bucket": null,
-      "quantity": 1015.8,
-      "avg_cost": null,
-      "price": 29.1152,
-      "price_date": "2026-11-13",
-      "market_value": 29575.2202,
-      "weight_pct": 4.8355,
-      "day_change_pct": 0.0,
-      "day_change_inr": 0.0,
-      "contribution_pct": 0.0,
-      "high_52w": 61.3938,
-      "low_52w": 24.6678,
+      "low_52w": 23.2308,
       "gain_inr": null,
       "gain_pct": null,
       "xirr_pct": null,
@@ -250,17 +399,42 @@
       "market_cap_bucket": null,
       "quantity": 438.132,
       "avg_cost": 63.9077,
-      "price": 67.442,
-      "price_date": "2026-11-13",
-      "market_value": 29548.4983,
-      "weight_pct": 4.8312,
+      "price": 67.4468,
+      "price_date": "2026-11-16",
+      "market_value": 29550.6014,
+      "weight_pct": 4.9052,
       "day_change_pct": 0.0,
       "day_change_inr": 0.0,
       "contribution_pct": 0.0,
       "high_52w": 67.5485,
-      "low_52w": 64.4879,
-      "gain_inr": 1548.4983,
-      "gain_pct": 5.5304,
+      "low_52w": 64.5372,
+      "gain_inr": 1550.6014,
+      "gain_pct": 5.5379,
+      "xirr_pct": null,
+      "attribution": null,
+      "significant_mover": false,
+      "units_source": "cas"
+    },
+    {
+      "isin": "INF179KC1DU7",
+      "symbol": "150737",
+      "name": "HDFC Silver ETF Fund of Fund",
+      "type": "mf",
+      "sector": "Other Scheme - FoF Domestic",
+      "market_cap_bucket": null,
+      "quantity": 1015.8,
+      "avg_cost": null,
+      "price": 27.687,
+      "price_date": "2026-11-16",
+      "market_value": 28124.4546,
+      "weight_pct": 4.6684,
+      "day_change_pct": 0.0,
+      "day_change_inr": 0.0,
+      "contribution_pct": 0.0,
+      "high_52w": 61.3938,
+      "low_52w": 25.1286,
+      "gain_inr": null,
+      "gain_pct": null,
       "xirr_pct": null,
       "attribution": null,
       "significant_mover": false,
@@ -275,26 +449,26 @@
       "market_cap_bucket": null,
       "quantity": 162.0,
       "avg_cost": 284.82,
-      "price": 168.76,
-      "price_date": "2026-11-13",
-      "market_value": 27339.1191,
-      "weight_pct": 4.4699,
-      "day_change_pct": 0.0,
-      "day_change_inr": 0.0,
-      "contribution_pct": 0.0,
+      "price": 160.75,
+      "price_date": "2026-11-17",
+      "market_value": 26041.5,
+      "weight_pct": 4.3227,
+      "day_change_pct": 0.0872,
+      "day_change_inr": 22.6799,
+      "contribution_pct": 0.0038,
       "high_52w": 360.0,
-      "low_52w": 140.77,
-      "gain_inr": -18801.7209,
-      "gain_pct": -40.7485,
+      "low_52w": 143.65,
+      "gain_inr": -20099.34,
+      "gain_pct": -43.5608,
       "xirr_pct": null,
       "attribution": {
-        "market_pct": -0.773,
+        "market_pct": 0.473,
         "sector_pct": 0.0,
-        "stock_specific_pct": 0.773,
+        "stock_specific_pct": -0.386,
         "driver": "market",
         "sector_index": null,
         "sector_move_pct": null,
-        "beta": 1.2614
+        "beta": 1.2419
       },
       "significant_mover": false,
       "units_source": "groww"
@@ -308,17 +482,17 @@
       "market_cap_bucket": null,
       "quantity": 296.46,
       "avg_cost": 67.4627,
-      "price": 72.393,
-      "price_date": "2026-11-13",
-      "market_value": 21461.6288,
-      "weight_pct": 3.509,
+      "price": 72.3959,
+      "price_date": "2026-11-16",
+      "market_value": 21462.4885,
+      "weight_pct": 3.5626,
       "day_change_pct": 0.0,
       "day_change_inr": 0.0,
       "contribution_pct": 0.0,
       "high_52w": 72.5711,
-      "low_52w": 68.4122,
-      "gain_inr": 1461.6288,
-      "gain_pct": 7.3081,
+      "low_52w": 68.4418,
+      "gain_inr": 1462.4885,
+      "gain_pct": 7.3124,
       "xirr_pct": null,
       "attribution": null,
       "significant_mover": false,
@@ -333,10 +507,10 @@
       "market_cap_bucket": "Small",
       "quantity": 369.063,
       "avg_cost": null,
-      "price": 56.51,
-      "price_date": "2026-11-13",
-      "market_value": 20855.7501,
-      "weight_pct": 3.4099,
+      "price": 56.06,
+      "price_date": "2026-11-16",
+      "market_value": 20689.6718,
+      "weight_pct": 3.4343,
       "day_change_pct": 0.0,
       "day_change_inr": 0.0,
       "contribution_pct": 0.0,
@@ -358,10 +532,10 @@
       "market_cap_bucket": "Small",
       "quantity": 349.15,
       "avg_cost": null,
-      "price": 57.075,
-      "price_date": "2026-11-13",
-      "market_value": 19927.7362,
-      "weight_pct": 3.2582,
+      "price": 56.644,
+      "price_date": "2026-11-16",
+      "market_value": 19777.2526,
+      "weight_pct": 3.2829,
       "day_change_pct": 0.0,
       "day_change_inr": 0.0,
       "contribution_pct": 0.0,
@@ -383,26 +557,26 @@
       "market_cap_bucket": null,
       "quantity": 161.0,
       "avg_cost": 78.68,
-      "price": 111.91,
-      "price_date": "2026-11-13",
-      "market_value": 18017.5106,
-      "weight_pct": 2.9459,
-      "day_change_pct": 0.0,
-      "day_change_inr": 0.0,
-      "contribution_pct": 0.0,
+      "price": 109.92,
+      "price_date": "2026-11-17",
+      "market_value": 17697.1197,
+      "weight_pct": 2.9376,
+      "day_change_pct": -0.1272,
+      "day_change_inr": -22.5399,
+      "contribution_pct": -0.0037,
       "high_52w": 148.14,
-      "low_52w": 99.33,
-      "gain_inr": 5350.0306,
-      "gain_pct": 42.2344,
+      "low_52w": 100.01,
+      "gain_inr": 5029.6397,
+      "gain_pct": 39.7051,
       "xirr_pct": null,
       "attribution": {
-        "market_pct": -0.378,
+        "market_pct": 0.231,
         "sector_pct": 0.0,
-        "stock_specific_pct": 0.378,
-        "driver": "market",
+        "stock_specific_pct": -0.358,
+        "driver": "stock_specific",
         "sector_index": null,
         "sector_move_pct": null,
-        "beta": 0.6164
+        "beta": 0.6063
       },
       "significant_mover": false,
       "units_source": "groww"
@@ -416,28 +590,28 @@
       "market_cap_bucket": null,
       "quantity": 20.0,
       "avg_cost": 522.9,
-      "price": 453.15,
-      "price_date": "2026-11-13",
-      "market_value": 9062.9999,
-      "weight_pct": 1.4818,
-      "day_change_pct": 0.0,
-      "day_change_inr": 0.0,
-      "contribution_pct": 0.0,
+      "price": 419.0,
+      "price_date": "2026-11-17",
+      "market_value": 8380.0,
+      "weight_pct": 1.391,
+      "day_change_pct": -2.0227,
+      "day_change_inr": -172.9999,
+      "contribution_pct": -0.0287,
       "high_52w": 548.0,
       "low_52w": 415.0,
-      "gain_inr": -1395.0001,
-      "gain_pct": -13.3391,
+      "gain_inr": -2078.0,
+      "gain_pct": -19.87,
       "xirr_pct": null,
       "attribution": {
-        "market_pct": -0.613,
-        "sector_pct": -0.346,
-        "stock_specific_pct": 0.959,
+        "market_pct": 0.381,
+        "sector_pct": 0.188,
+        "stock_specific_pct": -2.592,
         "driver": "stock_specific",
         "sector_index": "^CNXMETAL",
-        "sector_move_pct": -0.9763,
+        "sector_move_pct": 0.5775,
         "beta": null
       },
-      "significant_mover": false,
+      "significant_mover": true,
       "units_source": "groww"
     },
     {
@@ -449,26 +623,26 @@
       "market_cap_bucket": "Small",
       "quantity": 2.0,
       "avg_cost": 5613.7,
-      "price": 4196.2002,
-      "price_date": "2026-11-13",
-      "market_value": 8392.4004,
-      "weight_pct": 1.3722,
-      "day_change_pct": 0.0,
-      "day_change_inr": 0.0,
-      "contribution_pct": 0.0,
+      "price": 4053.3999,
+      "price_date": "2026-11-17",
+      "market_value": 8106.7998,
+      "weight_pct": 1.3457,
+      "day_change_pct": -0.138,
+      "day_change_inr": -11.2002,
+      "contribution_pct": -0.0019,
       "high_52w": 5813.0,
       "low_52w": 2920.0,
-      "gain_inr": -2834.9996,
-      "gain_pct": -25.2507,
+      "gain_inr": -3120.6002,
+      "gain_pct": -27.7945,
       "xirr_pct": null,
       "attribution": {
-        "market_pct": -0.499,
+        "market_pct": 0.303,
         "sector_pct": -0.0,
-        "stock_specific_pct": 0.499,
-        "driver": "market",
+        "stock_specific_pct": -0.441,
+        "driver": "stock_specific",
         "sector_index": "^CNXIT",
-        "sector_move_pct": -0.7226,
-        "beta": 0.8148
+        "sector_move_pct": -0.8984,
+        "beta": 0.7952
       },
       "significant_mover": false,
       "units_source": "groww"
@@ -482,26 +656,26 @@
       "market_cap_bucket": "Mid",
       "quantity": 16.0,
       "avg_cost": 620.6,
-      "price": 439.85,
-      "price_date": "2026-11-13",
-      "market_value": 7037.6001,
-      "weight_pct": 1.1506,
-      "day_change_pct": 0.0,
-      "day_change_inr": 0.0,
-      "contribution_pct": 0.0,
+      "price": 431.95,
+      "price_date": "2026-11-17",
+      "market_value": 6911.2002,
+      "weight_pct": 1.1472,
+      "day_change_pct": 0.3252,
+      "day_change_inr": 22.4004,
+      "contribution_pct": 0.0037,
       "high_52w": 760.05,
       "low_52w": 308.5,
-      "gain_inr": -2891.9999,
-      "gain_pct": -29.125,
+      "gain_inr": -3018.3998,
+      "gain_pct": -30.398,
       "xirr_pct": null,
       "attribution": {
-        "market_pct": -0.83,
-        "sector_pct": -0.346,
-        "stock_specific_pct": 1.176,
-        "driver": "stock_specific",
+        "market_pct": 0.507,
+        "sector_pct": 0.188,
+        "stock_specific_pct": -0.37,
+        "driver": "market",
         "sector_index": "^CNXMETAL",
-        "sector_move_pct": -0.9763,
-        "beta": 1.3539
+        "sector_move_pct": 0.5775,
+        "beta": 1.3325
       },
       "significant_mover": false,
       "units_source": "groww"
@@ -515,26 +689,26 @@
       "market_cap_bucket": "Small",
       "quantity": 36.0,
       "avg_cost": 219.29,
-      "price": 192.71,
-      "price_date": "2026-11-13",
-      "market_value": 6937.5602,
-      "weight_pct": 1.1343,
-      "day_change_pct": 0.0,
-      "day_change_inr": 0.0,
-      "contribution_pct": 0.0,
+      "price": 181.46,
+      "price_date": "2026-11-17",
+      "market_value": 6532.5602,
+      "weight_pct": 1.0844,
+      "day_change_pct": -0.9444,
+      "day_change_inr": -62.2798,
+      "contribution_pct": -0.0103,
       "high_52w": 227.74,
       "low_52w": 96.0,
-      "gain_inr": -956.8798,
-      "gain_pct": -12.1209,
+      "gain_inr": -1361.8798,
+      "gain_pct": -17.2511,
       "xirr_pct": null,
       "attribution": {
-        "market_pct": -0.739,
-        "sector_pct": -0.052,
-        "stock_specific_pct": 0.791,
+        "market_pct": 0.452,
+        "sector_pct": 0.035,
+        "stock_specific_pct": -1.432,
         "driver": "stock_specific",
         "sector_index": "^CNXMETAL",
-        "sector_move_pct": -0.9763,
-        "beta": 1.206
+        "sector_move_pct": 0.5775,
+        "beta": 1.1867
       },
       "significant_mover": false,
       "units_source": "groww"
@@ -548,26 +722,26 @@
       "market_cap_bucket": "Small",
       "quantity": 3.0,
       "avg_cost": 1953.0,
-      "price": 1984.1,
-      "price_date": "2026-11-13",
-      "market_value": 5952.2999,
-      "weight_pct": 0.9732,
-      "day_change_pct": 0.0,
-      "day_change_inr": 0.0,
-      "contribution_pct": 0.0,
+      "price": 1877.9,
+      "price_date": "2026-11-17",
+      "market_value": 5633.7001,
+      "weight_pct": 0.9352,
+      "day_change_pct": -0.0585,
+      "day_change_inr": -3.2999,
+      "contribution_pct": -0.0005,
       "high_52w": 2161.0,
       "low_52w": 1060.6,
-      "gain_inr": 93.2999,
-      "gain_pct": 1.5924,
+      "gain_inr": -225.2999,
+      "gain_pct": -3.8454,
       "xirr_pct": null,
       "attribution": {
-        "market_pct": -0.843,
-        "sector_pct": 0.0,
-        "stock_specific_pct": 0.843,
-        "driver": "market",
+        "market_pct": 0.526,
+        "sector_pct": -0.0,
+        "stock_specific_pct": -0.585,
+        "driver": "stock_specific",
         "sector_index": "^CNXFMCG",
-        "sector_move_pct": -0.0106,
-        "beta": 1.3752
+        "sector_move_pct": -0.2023,
+        "beta": 1.382
       },
       "significant_mover": false,
       "units_source": "groww"
@@ -581,28 +755,28 @@
       "market_cap_bucket": "Small",
       "quantity": 5.0,
       "avg_cost": 976.55,
-      "price": 950.9,
-      "price_date": "2026-11-13",
-      "market_value": 4754.5001,
-      "weight_pct": 0.7774,
-      "day_change_pct": 0.0,
-      "day_change_inr": 0.0,
-      "contribution_pct": 0.0,
+      "price": 965.0,
+      "price_date": "2026-11-17",
+      "market_value": 4825.0,
+      "weight_pct": 0.8009,
+      "day_change_pct": 2.8456,
+      "day_change_inr": 133.5001,
+      "contribution_pct": 0.0222,
       "high_52w": 1126.4,
       "low_52w": 784.0,
-      "gain_inr": -128.2499,
-      "gain_pct": -2.6266,
+      "gain_inr": -57.75,
+      "gain_pct": -1.1827,
       "xirr_pct": null,
       "attribution": {
-        "market_pct": -0.767,
-        "sector_pct": -0.03,
-        "stock_specific_pct": 0.797,
+        "market_pct": 0.476,
+        "sector_pct": -0.148,
+        "stock_specific_pct": 2.517,
         "driver": "stock_specific",
         "sector_index": "^CNXIT",
-        "sector_move_pct": -0.7226,
-        "beta": 1.2509
+        "sector_move_pct": -0.8984,
+        "beta": 1.2503
       },
-      "significant_mover": false,
+      "significant_mover": true,
       "units_source": "groww"
     },
     {
@@ -614,26 +788,26 @@
       "market_cap_bucket": "Small",
       "quantity": 15.0,
       "avg_cost": 439.35,
-      "price": 313.45,
-      "price_date": "2026-11-13",
-      "market_value": 4701.7502,
-      "weight_pct": 0.7687,
-      "day_change_pct": 0.0,
-      "day_change_inr": 0.0,
-      "contribution_pct": 0.0,
+      "price": 307.55,
+      "price_date": "2026-11-17",
+      "market_value": 4613.2498,
+      "weight_pct": 0.7658,
+      "day_change_pct": -0.3079,
+      "day_change_inr": -14.2502,
+      "contribution_pct": -0.0024,
       "high_52w": 519.9,
       "low_52w": 295.1,
-      "gain_inr": -1888.4998,
-      "gain_pct": -28.656,
+      "gain_inr": -1977.0002,
+      "gain_pct": -29.9989,
       "xirr_pct": null,
       "attribution": {
-        "market_pct": -0.733,
-        "sector_pct": -0.079,
-        "stock_specific_pct": 0.812,
-        "driver": "stock_specific",
+        "market_pct": 0.453,
+        "sector_pct": -0.359,
+        "stock_specific_pct": -0.402,
+        "driver": "market",
         "sector_index": "^CNXIT",
-        "sector_move_pct": -0.7226,
-        "beta": 1.1967
+        "sector_move_pct": -0.8984,
+        "beta": 1.1896
       },
       "significant_mover": false,
       "units_source": "groww"
@@ -647,26 +821,26 @@
       "market_cap_bucket": "Small",
       "quantity": 30.0,
       "avg_cost": 185.0,
-      "price": 143.85,
-      "price_date": "2026-11-13",
-      "market_value": 4315.5002,
-      "weight_pct": 0.7056,
-      "day_change_pct": 0.0,
-      "day_change_inr": 0.0,
-      "contribution_pct": 0.0,
-      "high_52w": 324.15,
+      "price": 139.76,
+      "price_date": "2026-11-17",
+      "market_value": 4192.7998,
+      "weight_pct": 0.696,
+      "day_change_pct": -0.1144,
+      "day_change_inr": -4.8001,
+      "contribution_pct": -0.0008,
+      "high_52w": 323.5,
       "low_52w": 124.5,
-      "gain_inr": -1234.4998,
-      "gain_pct": -22.2432,
+      "gain_inr": -1357.2002,
+      "gain_pct": -24.4541,
       "xirr_pct": null,
       "attribution": {
-        "market_pct": -0.732,
+        "market_pct": 0.448,
         "sector_pct": -0.0,
-        "stock_specific_pct": 0.732,
-        "driver": "market",
+        "stock_specific_pct": -0.562,
+        "driver": "stock_specific",
         "sector_index": "^CNXIT",
-        "sector_move_pct": -0.7226,
-        "beta": 1.1945
+        "sector_move_pct": -0.8984,
+        "beta": 1.1756
       },
       "significant_mover": false,
       "units_source": "groww"
@@ -680,28 +854,28 @@
       "market_cap_bucket": "Small",
       "quantity": 3.0,
       "avg_cost": 1517.7,
-      "price": 1024.4,
-      "price_date": "2026-11-13",
-      "market_value": 3073.2001,
-      "weight_pct": 0.5025,
-      "day_change_pct": 0.0,
-      "day_change_inr": 0.0,
-      "contribution_pct": 0.0,
+      "price": 952.0,
+      "price_date": "2026-11-17",
+      "market_value": 2856.0,
+      "weight_pct": 0.4741,
+      "day_change_pct": -2.469,
+      "day_change_inr": -72.2999,
+      "contribution_pct": -0.012,
       "high_52w": 1687.0,
       "low_52w": 589.8,
-      "gain_inr": -1479.8999,
-      "gain_pct": -32.5031,
+      "gain_inr": -1697.1,
+      "gain_pct": -37.2735,
       "xirr_pct": null,
       "attribution": {
-        "market_pct": -0.628,
+        "market_pct": 0.387,
         "sector_pct": -0.0,
-        "stock_specific_pct": 0.628,
-        "driver": "market",
+        "stock_specific_pct": -2.856,
+        "driver": "stock_specific",
         "sector_index": "^CNXIT",
-        "sector_move_pct": -0.7226,
-        "beta": 1.0239
+        "sector_move_pct": -0.8984,
+        "beta": 1.0168
       },
-      "significant_mover": false,
+      "significant_mover": true,
       "units_source": "groww"
     },
     {
@@ -713,10 +887,10 @@
       "market_cap_bucket": null,
       "quantity": 1.0,
       "avg_cost": null,
-      "price": 91.3887,
-      "price_date": "2026-11-13",
-      "market_value": 91.3887,
-      "weight_pct": 0.0149,
+      "price": 91.6487,
+      "price_date": "2026-11-16",
+      "market_value": 91.6487,
+      "weight_pct": 0.0152,
       "day_change_pct": 0.0,
       "day_change_inr": 0.0,
       "contribution_pct": 0.0,
@@ -732,316 +906,316 @@
   ],
   "indices": {
     "^CNXFMCG": {
-      "close": 46833.5508,
-      "day_change_pct": -0.0106,
-      "date": "2026-11-13"
+      "close": 47611.6016,
+      "day_change_pct": -0.2023,
+      "date": "2026-11-17"
     },
     "^CNXIT": {
-      "close": 31931.1504,
-      "day_change_pct": -0.7226,
-      "date": "2026-11-13"
+      "close": 31654.0996,
+      "day_change_pct": -0.8984,
+      "date": "2026-11-17"
     },
     "^CNXMETAL": {
-      "close": 12647.9004,
-      "day_change_pct": -0.9763,
-      "date": "2026-11-13"
+      "close": 12530.2998,
+      "day_change_pct": 0.5775,
+      "date": "2026-11-17"
     },
     "^CRSLDX": {
-      "close": 23734.1992,
-      "day_change_pct": -0.5514,
-      "date": "2026-11-13"
+      "close": 23822.3008,
+      "day_change_pct": 0.2943,
+      "date": "2026-11-17"
     },
     "^NSEI": {
-      "close": 25144.3008,
-      "day_change_pct": -0.6129,
-      "date": "2026-11-13"
+      "close": 25387.4004,
+      "day_change_pct": 0.3808,
+      "date": "2026-11-17"
     }
   },
   "risk": {
     "metrics": {
       "observations": 364,
-      "annual_return_pct": 16.76,
-      "annual_volatility_pct": 18.69,
-      "sharpe": 0.55,
-      "sortino": 0.6,
-      "max_drawdown_pct": -20.6,
-      "beta": 0.88
+      "annual_return_pct": 13.84,
+      "annual_volatility_pct": 18.5,
+      "sharpe": 0.4,
+      "sortino": 0.43,
+      "max_drawdown_pct": -20.45,
+      "beta": 0.87
     },
     "scenarios": [
       {
         "nifty_move_pct": -5,
-        "portfolio_move_pct": -4.51,
-        "impact_inr": -27613
+        "portfolio_move_pct": -4.43,
+        "impact_inr": -26676
       },
       {
         "nifty_move_pct": -10,
-        "portfolio_move_pct": -9.03,
-        "impact_inr": -55226
+        "portfolio_move_pct": -8.86,
+        "impact_inr": -53353
       },
       {
         "nifty_move_pct": -20,
-        "portfolio_move_pct": -18.06,
-        "impact_inr": -110453
+        "portfolio_move_pct": -17.71,
+        "impact_inr": -106705
       }
     ]
   },
   "diversification": {
-    "total_value": 611623.4887,
+    "total_value": 602436.7929,
     "by_holding_type": [
       {
         "name": "Mutual funds",
-        "value": 512039.0479,
-        "pct": 83.72
+        "value": 506646.8632,
+        "pct": 84.1
       },
       {
         "name": "Direct stocks",
-        "value": 99584.4408,
-        "pct": 16.28
+        "value": 95789.9297,
+        "pct": 15.9
       }
     ],
     "by_asset_class": [
       {
         "name": "Equity",
-        "value": 411364.181,
-        "pct": 67.26
+        "value": 408743.6598,
+        "pct": 67.85
       },
       {
         "name": "Gold & Silver",
-        "value": 149249.1806,
-        "pct": 24.4
+        "value": 142680.0432,
+        "pct": 23.68
       },
       {
         "name": "Debt",
-        "value": 29548.4983,
-        "pct": 4.83
+        "value": 29550.6014,
+        "pct": 4.91
       },
       {
         "name": "Hybrid",
-        "value": 21461.6288,
-        "pct": 3.51
+        "value": 21462.4885,
+        "pct": 3.56
       }
     ],
     "by_market_cap": [
       {
         "name": "Small",
-        "value": 143416.6126,
-        "pct": 34.86
+        "value": 141446.8939,
+        "pct": 34.61
       },
       {
         "name": "Mid",
-        "value": 107114.4576,
-        "pct": 26.04
+        "value": 106871.0448,
+        "pct": 26.15
       },
       {
         "name": "Unclassified",
-        "value": 96609.6422,
-        "pct": 23.49
+        "value": 95968.5318,
+        "pct": 23.48
       },
       {
         "name": "Large",
-        "value": 64223.4686,
-        "pct": 15.61
+        "value": 64457.1893,
+        "pct": 15.77
       }
     ],
     "by_fund_category": [
       {
         "name": "Equity Scheme - Mid Cap Fund",
-        "value": 100076.8575,
-        "pct": 16.36
-      },
-      {
-        "name": "Other Scheme - FoF Domestic",
-        "value": 88134.3381,
-        "pct": 14.41
+        "value": 99959.8446,
+        "pct": 16.59
       },
       {
         "name": "Equity Scheme - Sectoral/ Thematic",
-        "value": 87455.2536,
-        "pct": 14.3
+        "value": 87496.8831,
+        "pct": 14.52
+      },
+      {
+        "name": "Other Scheme - FoF Domestic",
+        "value": 84892.5757,
+        "pct": 14.09
       },
       {
         "name": "Equity Scheme - Small Cap Fund",
-        "value": 84433.6513,
-        "pct": 13.8
+        "value": 83997.1123,
+        "pct": 13.94
       },
       {
         "name": "Equity Scheme - Large Cap Fund",
-        "value": 64223.4686,
-        "pct": 10.5
+        "value": 64457.1893,
+        "pct": 10.7
       },
       {
         "name": "Fund of Funds Scheme (Domestic) - Fund of Funds Scheme (Domestic)",
-        "value": 37219.8415,
-        "pct": 6.09
+        "value": 35511.3363,
+        "pct": 5.89
       },
       {
         "name": "Debt Scheme - Corporate Bond Fund",
-        "value": 29548.4983,
-        "pct": 4.83
+        "value": 29550.6014,
+        "pct": 4.91
       },
       {
         "name": "Equity Schemes - Small Cap Fund",
-        "value": 20855.7501,
-        "pct": 3.41
+        "value": 20689.6718,
+        "pct": 3.43
       },
       {
         "name": "Other Scheme - Other  ETFs",
-        "value": 91.3887,
-        "pct": 0.01
+        "value": 91.6487,
+        "pct": 0.02
       }
     ],
     "by_sector": [
       {
         "name": "Equity Scheme - Mid Cap Fund",
-        "value": 100076.8575,
-        "pct": 16.36
-      },
-      {
-        "name": "Other Scheme - FoF Domestic",
-        "value": 88134.3381,
-        "pct": 14.41
+        "value": 99959.8446,
+        "pct": 16.59
       },
       {
         "name": "Equity Scheme - Sectoral/ Thematic",
-        "value": 87455.2536,
-        "pct": 14.3
+        "value": 87496.8831,
+        "pct": 14.52
+      },
+      {
+        "name": "Other Scheme - FoF Domestic",
+        "value": 84892.5757,
+        "pct": 14.09
       },
       {
         "name": "Equity Scheme - Small Cap Fund",
-        "value": 84433.6513,
-        "pct": 13.8
+        "value": 83997.1123,
+        "pct": 13.94
       },
       {
         "name": "Equity Scheme - Large Cap Fund",
-        "value": 64223.4686,
-        "pct": 10.5
+        "value": 64457.1893,
+        "pct": 10.7
       },
       {
         "name": "Gold & Silver",
-        "value": 45356.6297,
-        "pct": 7.42
+        "value": 43738.6197,
+        "pct": 7.26
       },
       {
         "name": "Fund of Funds Scheme (Domestic) - Fund of Funds Scheme (Domestic)",
-        "value": 37219.8415,
-        "pct": 6.09
+        "value": 35511.3363,
+        "pct": 5.89
       },
       {
         "name": "Debt Scheme - Corporate Bond Fund",
-        "value": 29548.4983,
-        "pct": 4.83
+        "value": 29550.6014,
+        "pct": 4.91
       },
       {
         "name": "Technology",
-        "value": 25237.351,
-        "pct": 4.13
+        "value": 24593.8495,
+        "pct": 4.08
       },
       {
         "name": "Basic Materials",
-        "value": 23038.1602,
-        "pct": 3.77
+        "value": 21823.7604,
+        "pct": 3.62
       },
       {
         "name": "Equity Schemes - Small Cap Fund",
-        "value": 20855.7501,
-        "pct": 3.41
+        "value": 20689.6718,
+        "pct": 3.43
       },
       {
         "name": "Consumer Defensive",
-        "value": 5952.2999,
-        "pct": 0.97
+        "value": 5633.7001,
+        "pct": 0.94
       },
       {
         "name": "Other Scheme - Other  ETFs",
-        "value": 91.3887,
-        "pct": 0.01
+        "value": 91.6487,
+        "pct": 0.02
       }
     ],
     "top_exposures": [
       {
         "name": "ICICI Prudential Technology Fund",
-        "pct": 14.3,
-        "value": 87455.2536,
-        "via": [
-          "fund (no breakdown yet)"
-        ]
-      },
-      {
-        "name": "Nippon India Small Cap Fund",
-        "pct": 10.55,
-        "value": 64505.9151,
+        "pct": 14.52,
+        "value": 87496.8831,
         "via": [
           "fund (no breakdown yet)"
         ]
       },
       {
         "name": "Nippon India Large Cap Fund",
-        "pct": 10.5,
-        "value": 64223.4686,
+        "pct": 10.7,
+        "value": 64457.1893,
+        "via": [
+          "fund (no breakdown yet)"
+        ]
+      },
+      {
+        "name": "Nippon India Small Cap Fund",
+        "pct": 10.66,
+        "value": 64219.8597,
         "via": [
           "fund (no breakdown yet)"
         ]
       },
       {
         "name": "Motilal Oswal Midcap Fund",
-        "pct": 10.09,
-        "value": 61708.041,
+        "pct": 10.21,
+        "value": 61489.6342,
         "via": [
           "fund (no breakdown yet)"
         ]
       },
       {
         "name": "HDFC Mid Cap Fund",
-        "pct": 6.27,
-        "value": 38368.8166,
+        "pct": 6.39,
+        "value": 38470.2105,
         "via": [
           "fund (no breakdown yet)"
         ]
       },
       {
         "name": "Axis Silver Fund of Fund",
-        "pct": 6.09,
-        "value": 37219.8415,
+        "pct": 5.89,
+        "value": 35511.3363,
         "via": [
           "fund (no breakdown yet)"
         ]
       },
       {
         "name": "Nippon India Silver ETF FOF",
-        "pct": 6.07,
-        "value": 37097.4892,
-        "via": [
-          "fund (no breakdown yet)"
-        ]
-      },
-      {
-        "name": "HDFC Silver ETF Fund of Fund",
-        "pct": 4.84,
-        "value": 29575.2202,
+        "pct": 5.86,
+        "value": 35305.6326,
         "via": [
           "fund (no breakdown yet)"
         ]
       },
       {
         "name": "Nippon India Corporate Bond Fund",
-        "pct": 4.83,
-        "value": 29548.4983,
+        "pct": 4.91,
+        "value": 29550.6014,
+        "via": [
+          "fund (no breakdown yet)"
+        ]
+      },
+      {
+        "name": "HDFC Silver ETF Fund of Fund",
+        "pct": 4.67,
+        "value": 28124.4546,
         "via": [
           "fund (no breakdown yet)"
         ]
       },
       {
         "name": "Nippon India Silver ETF",
-        "pct": 4.47,
-        "value": 27339.1191,
+        "pct": 4.32,
+        "value": 26041.5,
         "via": [
           "direct"
         ]
       }
     ],
-    "effective_holdings": 13.2,
-    "hhi": 0.076,
-    "top5_pct": 51.7,
+    "effective_holdings": 13.0,
+    "hhi": 0.0771,
+    "top5_pct": 52.5,
     "fund_overlap": [],
     "flags": [
       "Top 5 positions make up 52% of the portfolio."
@@ -1049,14 +1223,14 @@
     "suggestions": [],
     "funds_without_breakdown": [
       "ICICI Prudential Technology Fund",
-      "Nippon India Small Cap Fund",
       "Nippon India Large Cap Fund",
+      "Nippon India Small Cap Fund",
       "Motilal Oswal Midcap Fund",
       "HDFC Mid Cap Fund",
       "Axis Silver Fund of Fund",
       "Nippon India Silver ETF FOF",
-      "HDFC Silver ETF Fund of Fund",
       "Nippon India Corporate Bond Fund",
+      "HDFC Silver ETF Fund of Fund",
       "ICICI Prudential Income plus Arbitrage Omni FOF",
       "Invesco India Small Cap Fund",
       "BANDHAN Small Cap Fund",
@@ -1081,7 +1255,7 @@
     },
     {
       "date": "2026-11-17",
-      "value": 611623.4887,
+      "value": 606231.304,
       "cost": 416752.86
     }
   ],
@@ -1094,8 +1268,7 @@
   },
   "health": {
     "notes": [
-      "Market closed today (no Nifty bar for today); stock prices are from the last trading day.",
-      "Purchase cost unknown for 7 holdings (34% of value); total gain covers the rest only."
+      "Purchase cost unknown for 7 holdings (33% of value); total gain covers the rest only."
     ],
     "price_source": "yahoo",
     "last_cas": {
