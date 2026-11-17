@@ -1,18 +1,18 @@
 [
  {
   "as_of": "2026-11-17",
-  "mode": "close",
-  "generated_at": "2026-11-17T15:53:22+05:30",
-  "total_value": 602436.79,
-  "day_inr": -185.09,
-  "day_pct": -0.03,
+  "mode": "night",
+  "generated_at": "2026-11-17T21:46:12+05:30",
+  "total_value": 602411.82,
+  "day_inr": -5643.88,
+  "day_pct": -0.93,
   "nifty_pct": 0.38,
-  "vs_nifty_pct": -0.41,
+  "vs_nifty_pct": -1.31,
   "invested": 416752.86,
-  "gain_inr": -15305.7,
-  "gain_pct": -3.67,
+  "gain_inr": -15330.68,
+  "gain_pct": -3.68,
   "cost_coverage_pct": 67.0,
-  "value_with_cost": 401447.16,
+  "value_with_cost": 401422.19,
   "no_cost": [
    {
     "name": "Motilal Oswal Midcap Fund",
@@ -48,13 +48,13 @@
   "funds_count": 15,
   "effective_holdings": 13.0,
   "top5_pct": 52.5,
-  "volatility_pct": 18.5,
+  "volatility_pct": 18.49,
   "beta": 0.87,
   "max_drawdown_pct": -20.45,
-  "sharpe": 0.4,
-  "one_year_return_pct": 13.84,
-  "movers_count": 3,
-  "market_wrap": "The Nifty 50 rose 0.38% today, while your portfolio was almost flat (−0.03%) at the close. Your large silver and gold holdings barely moved, and gains in KFin were offset by falls in Behari Lal and KRN. Mutual fund NAVs for today are added in the evening update.",
-  "market_wrap_source": ""
+  "sharpe": 0.41,
+  "one_year_return_pct": 14.03,
+  "movers_count": 6,
+  "market_wrap": "Nifty rose 0.38% to 25,387 as banks led (Bank Nifty hit a record high), helped by easing crude oil and foreign fund inflows; IT fell 0.9% on a global tech sell-off. Your portfolio fell 0.93% for the day once fund NAVs came in, mainly because the three silver funds reported Monday's sharp silver fall.",
+  "market_wrap_source": "https://www.indiainfoline.com/news/markets/closing-bell-nifty-gains-to-25387-as-bank-nifty-hits-record-high-crude-eases-near-92"
  }
 ]

@@ -1,11 +1,11 @@
 [
  {
   "theme": "Silver",
-  "view": "Long-term views cite steady industrial demand from solar panels, electronics and EVs, but near-term prices are pressured by rising US rates and a firm dollar.",
-  "watch": "The next US Fed decision and the dollar.",
+  "view": "Silver is at a one-year low, far below its peak, as expected US rate rises and a firm dollar outweigh steady industrial demand from solar panels and electronics.",
+  "watch": "US Fed decision on 9 December and the dollar.",
   "tone": "cautious",
-  "source_name": "Analytics Insight",
-  "source_url": "https://www.analyticsinsight.net/news/silver-price-falls-46-from-peak-as-rally-reverses-in-india"
+  "source_name": "Univest",
+  "source_url": "https://univest.in/blogs/mcx-gold-price-today-gold-silver-fall-fed-hike-bets-wedding-season-16-november-2026"
  },
  {
   "theme": "Small & mid caps",
@@ -17,11 +17,11 @@
  },
  {
   "theme": "Technology",
-  "view": "AI demand is lifting hardware makers like Netweb, while IT services growth is steadier; the IT index fell 0.41% today.",
+  "view": "AI demand is lifting hardware makers like Netweb, but a global sell-off in AI stocks hit Indian IT today (Nifty IT −0.9%).",
   "watch": "December-quarter results from January.",
   "tone": "mixed",
-  "source_name": "Free Press Journal",
-  "source_url": "https://www.freepressjournal.in/business/netweb-technologies-reports-strong-q2-fy27-pat-up-3348-to-1367-crore-revenue-grows-3357"
+  "source_name": "India Infoline closing bell",
+  "source_url": "https://www.indiainfoline.com/news/markets/closing-bell-nifty-gains-to-25387-as-bank-nifty-hits-record-high-crude-eases-near-92"
  },
  {
   "theme": "Copper & metals",

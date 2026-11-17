@@ -1,5 +1,38 @@
 [
  {
+  "date": "2026-11-16",
+  "holding": "Silver funds",
+  "headline": "Silver hits a one-year low on Fed rate-rise bets",
+  "summary": "MCX silver fell more than 3% on Monday as markets priced a high chance of a December US rate rise; gold also slipped to multi-month lows.",
+  "impact": "negative",
+  "source_name": "Univest",
+  "source_url": "https://univest.in/blogs/mcx-gold-price-today-gold-silver-fall-fed-hike-bets-wedding-season-16-november-2026",
+  "isins": "INF846K015J4,INF204KC1378,INF179KC1DU7,INF204KC1402",
+  "scope": "holding"
+ },
+ {
+  "date": "2026-11-14",
+  "holding": "Vikram Solar",
+  "headline": "September-quarter profit falls 95%",
+  "summary": "Net profit dropped to ₹5.9 crore from ₹128.5 crore a year earlier and income slipped 3% to ₹1,091 crore; higher depreciation and finance costs squeezed earnings.",
+  "impact": "negative",
+  "source_name": "Multibagg",
+  "source_url": "https://www.multibagg.ai/market-pulse/articles/vikram-solar-q2-profit-fall-cmwgo8y7c00is2rpbxxef173a",
+  "isins": "INE078V01014",
+  "scope": "holding"
+ },
+ {
+  "date": "2026-11-14",
+  "holding": "Behari Lal Engineering",
+  "headline": "First results as a listed company: profit down 9% on the quarter",
+  "summary": "Revenue rose 1.6% from the June quarter to ₹154 crore, but operating profit fell 13% and net profit 9% to ₹17.4 crore.",
+  "impact": "negative",
+  "source_name": "Univest",
+  "source_url": "https://univest.in/blogs/behari-lal-engineering-l-q2-results-fy27-pat-17-crore",
+  "isins": "INE1EEM01017",
+  "scope": "holding"
+ },
+ {
   "date": "2026-11-12",
   "holding": "Manorama Industries",
   "headline": "September-quarter profit up 52%",

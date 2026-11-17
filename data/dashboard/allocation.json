@@ -2,7 +2,7 @@
  {
   "dimension": "Asset class",
   "name": "Equity",
-  "value": 408743.66,
+  "value": 408718.68,
   "pct": 67.85
  },
  {
@@ -38,8 +38,8 @@
  {
   "dimension": "Market cap (equity only)",
   "name": "Thematic / other",
-  "value": 95968.53,
-  "pct": 23.48
+  "value": 95943.55,
+  "pct": 23.47
  },
  {
   "dimension": "Market cap (equity only)",
@@ -68,7 +68,7 @@
  {
   "dimension": "Category",
   "name": "Sector / thematic",
-  "value": 87496.88,
+  "value": 87471.91,
   "pct": 14.52
  },
  {

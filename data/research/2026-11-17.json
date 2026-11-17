@@ -1,20 +1,181 @@
 {
   "date": "2026-11-17",
   "market_wrap": {
-    "text": "The Nifty 50 rose 0.38% today, while your portfolio was almost flat (−0.03%) at the close. Your large silver and gold holdings barely moved, and gains in KFin were offset by falls in Behari Lal and KRN. Mutual fund NAVs for today are added in the evening update.",
-    "source_name": "",
-    "source_url": ""
+    "text": "Nifty rose 0.38% to 25,387 as banks led (Bank Nifty hit a record high), helped by easing crude oil and foreign fund inflows; IT fell 0.9% on a global tech sell-off. Your portfolio fell 0.93% for the day once fund NAVs came in, mainly because the three silver funds reported Monday's sharp silver fall.",
+    "source_name": "India Infoline closing bell",
+    "source_url": "https://www.indiainfoline.com/news/markets/closing-bell-nifty-gains-to-25387-as-bank-nifty-hits-record-high-crude-eases-near-92"
   },
   "reasons": [
-    {"match": ["KFINTECH"], "driver": "Company / other",
-     "reason": "No company announcement or news found today. The rise was well above the market's, so it was likely stock-specific buying; its last results (27 Oct) showed revenue up 29.9%.",
-     "sentiment": "neutral", "sources": []},
-    {"match": ["KRN"], "driver": "Company / other",
-     "reason": "No company news found today. The stock has been volatile: on 5 Nov the exchange asked the company about unusual trading volume, and it said there was no undisclosed information behind it.",
-     "sentiment": "neutral",
-     "sources": [{"name": "Screener (exchange filings)", "url": "https://www.screener.in/company/KRN/"}]},
-    {"match": ["BLEL"], "driver": "Company / other",
-     "reason": "No company news found today. As a recently listed small company with few shares traded, it often moves 2% or more on ordinary trading.",
-     "sentiment": "neutral", "sources": []}
+    {
+      "match": [
+        "150615",
+        "149760",
+        "150737"
+      ],
+      "theme": "Silver",
+      "driver": "Commodity",
+      "reason": "These fund-of-funds report with a one-day lag, so today's NAVs carry Monday's (16 Nov) silver slide: MCX silver fell over 3% to a one-year low as markets priced in a likely US Fed rate rise in December and the dollar firmed. The silver ETF you hold directly was flat today.",
+      "sentiment": "negative",
+      "sources": [
+        {
+          "name": "Univest MCX gold & silver",
+          "url": "https://univest.in/blogs/mcx-gold-price-today-gold-silver-fall-fed-hike-bets-wedding-season-16-november-2026"
+        }
+      ]
+    },
+    {
+      "match": [
+        "KFINTECH"
+      ],
+      "driver": "Company / other",
+      "reason": "No company announcement or news found today. The rise was well above the market's, so it was likely stock-specific buying; its last results (27 Oct) showed revenue up 29.9%.",
+      "sentiment": "neutral",
+      "sources": []
+    },
+    {
+      "match": [
+        "KRN"
+      ],
+      "driver": "Company / other",
+      "reason": "No company news found today. The stock has been volatile: on 5 Nov the exchange asked the company about unusual trading volume, and it said there was no undisclosed information behind it.",
+      "sentiment": "neutral",
+      "sources": [
+        {
+          "name": "Screener (exchange filings)",
+          "url": "https://www.screener.in/company/KRN/"
+        }
+      ]
+    },
+    {
+      "match": [
+        "BLEL"
+      ],
+      "driver": "Company / other",
+      "reason": "No company news today. Its September-quarter results (14 Nov) showed revenue up 1.6% from the previous quarter but profit down 9%, which may still be weighing on the thinly traded stock.",
+      "sentiment": "negative",
+      "sources": [
+        {
+          "name": "Univest",
+          "url": "https://univest.in/blogs/behari-lal-engineering-l-q2-results-fy27-pat-17-crore"
+        }
+      ]
+    }
+  ],
+  "news": [
+    {
+      "date": "2026-11-14",
+      "holding": "Vikram Solar",
+      "match": [
+        "VIKRAMSOLR"
+      ],
+      "headline": "September-quarter profit falls 95%",
+      "summary": "Net profit dropped to ₹5.9 crore from ₹128.5 crore a year earlier and income slipped 3% to ₹1,091 crore; higher depreciation and finance costs squeezed earnings.",
+      "impact": "negative",
+      "source_name": "Multibagg",
+      "source_url": "https://www.multibagg.ai/market-pulse/articles/vikram-solar-q2-profit-fall-cmwgo8y7c00is2rpbxxef173a"
+    },
+    {
+      "date": "2026-11-14",
+      "holding": "Behari Lal Engineering",
+      "match": [
+        "BLEL"
+      ],
+      "headline": "First results as a listed company: profit down 9% on the quarter",
+      "summary": "Revenue rose 1.6% from the June quarter to ₹154 crore, but operating profit fell 13% and net profit 9% to ₹17.4 crore.",
+      "impact": "negative",
+      "source_name": "Univest",
+      "source_url": "https://univest.in/blogs/behari-lal-engineering-l-q2-results-fy27-pat-17-crore"
+    },
+    {
+      "date": "2026-11-16",
+      "holding": "Silver funds",
+      "match": [
+        "SILVERBEES",
+        "150615",
+        "149760",
+        "150737"
+      ],
+      "headline": "Silver hits a one-year low on Fed rate-rise bets",
+      "summary": "MCX silver fell more than 3% on Monday as markets priced a high chance of a December US rate rise; gold also slipped to multi-month lows.",
+      "impact": "negative",
+      "source_name": "Univest",
+      "source_url": "https://univest.in/blogs/mcx-gold-price-today-gold-silver-fall-fed-hike-bets-wedding-season-16-november-2026"
+    }
+  ],
+  "events": [
+    {
+      "date": "2026-12-04",
+      "event": "RBI interest-rate decision",
+      "detail": "Meeting runs 2–4 December. The RBI raised rates in October; another rise would weigh on your bond fund and on small and mid caps.",
+      "affects": "Bond fund, small & mid caps",
+      "source_name": "5paisa",
+      "source_url": "https://www.5paisa.com/blog/rbi-mpc-meeting-schedule"
+    },
+    {
+      "date": "2026-12-09",
+      "event": "US Federal Reserve rate decision",
+      "detail": "Meeting runs 8–9 December; markets expect a rate rise, the main pressure on silver and gold lately.",
+      "affects": "Silver and gold funds (about 30% of the portfolio)",
+      "source_name": "FedRateCalc",
+      "source_url": "https://fedratecalc.com/fomc-meeting-schedule/december-2026/"
+    },
+    {
+      "date": "2027-01-15",
+      "event": "December-quarter results season begins (approx.)",
+      "detail": "Companies usually report from mid-January to mid-February; results moved Manorama, Hindustan Copper and KRN this quarter.",
+      "affects": "All 9 stocks",
+      "source_name": "",
+      "source_url": ""
+    },
+    {
+      "date": "2027-02-05",
+      "event": "Next RBI decision after December",
+      "detail": "Meeting runs 3–5 February 2027.",
+      "affects": "Bond fund, rate-sensitive holdings",
+      "source_name": "5paisa",
+      "source_url": "https://www.5paisa.com/blog/rbi-mpc-meeting-schedule"
+    }
+  ],
+  "outlook": [
+    {
+      "theme": "Silver",
+      "view": "Silver is at a one-year low, far below its peak, as expected US rate rises and a firm dollar outweigh steady industrial demand from solar panels and electronics.",
+      "watch": "US Fed decision on 9 December and the dollar.",
+      "tone": "cautious",
+      "source_name": "Univest",
+      "source_url": "https://univest.in/blogs/mcx-gold-price-today-gold-silver-fall-fed-hike-bets-wedding-season-16-november-2026"
+    },
+    {
+      "theme": "Small & mid caps",
+      "view": "They led today and have outperformed large caps this year, but they fall harder when rates rise or foreign investors sell.",
+      "watch": "RBI decision on 4 December and foreign investor flows.",
+      "tone": "mixed",
+      "source_name": "Kotak Neo market wrap",
+      "source_url": "https://www.kotakneo.com/news/market-news/sensex-and-nifty-close-higher-after-a-volatile-session/"
+    },
+    {
+      "theme": "Technology",
+      "view": "AI demand is lifting hardware makers like Netweb, but a global sell-off in AI stocks hit Indian IT today (Nifty IT −0.9%).",
+      "watch": "December-quarter results from January.",
+      "tone": "mixed",
+      "source_name": "India Infoline closing bell",
+      "source_url": "https://www.indiainfoline.com/news/markets/closing-bell-nifty-gains-to-25387-as-bank-nifty-hits-record-high-crude-eases-near-92"
+    },
+    {
+      "theme": "Copper & metals",
+      "view": "Record copper prices drove Hindustan Copper's profit surge; its earnings move closely with the copper price.",
+      "watch": "Global copper prices and the mining expansion.",
+      "tone": "positive",
+      "source_name": "Compounding AI",
+      "source_url": "https://compoundingai.in/market-news/hindcopper-q2-fy27-earnings-preview"
+    },
+    {
+      "theme": "Interest rates",
+      "view": "The RBI is in a tightening phase, which tends to lower bond prices in the short term and raise yields on new bonds.",
+      "watch": "RBI decision on 4 December.",
+      "tone": "cautious",
+      "source_name": "5paisa",
+      "source_url": "https://www.5paisa.com/blog/rbi-mpc-meeting-schedule"
+    }
   ]
 }
