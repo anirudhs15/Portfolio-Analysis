@@ -1,11 +1,11 @@
 [
  {
   "theme": "Silver",
-  "view": "Silver is at a one-year low, far below its peak, as expected US rate rises and a firm dollar outweigh steady industrial demand from solar panels and electronics.",
+  "view": "Gold fell below $3,800 to a 14-month low and silver lost about 3% as markets put roughly 96% odds on a December US rate rise; the Silver Institute still projects a sixth straight annual supply deficit.",
   "watch": "US Fed decision on 9 December and the dollar.",
   "tone": "cautious",
-  "source_name": "Univest",
-  "source_url": "https://univest.in/blogs/mcx-gold-price-today-gold-silver-fall-fed-hike-bets-wedding-season-16-november-2026"
+  "source_name": "USAGOLD",
+  "source_url": "https://www.usagold.com/daily-precious-metals-market-report-november-18-2026/"
  },
  {
   "theme": "Small & mid caps",
@@ -25,11 +25,11 @@
  },
  {
   "theme": "Copper & metals",
-  "view": "Record copper prices drove Hindustan Copper's profit surge; its earnings move closely with the copper price.",
-  "watch": "Global copper prices and the mining expansion.",
-  "tone": "positive",
-  "source_name": "Compounding AI",
-  "source_url": "https://compoundingai.in/market-news/hindcopper-q2-fy27-earnings-preview"
+  "view": "Record copper prices drove Hindustan Copper's profit surge, but copper has since slipped to a five-month low on a strong dollar and weak China data, dragging metal stocks.",
+  "watch": "Global copper prices and the dollar.",
+  "tone": "mixed",
+  "source_name": "Business Standard",
+  "source_url": "https://www.business-standard.com/markets/news/hindustan-copper-shares-fall-3-as-copper-prices-hit-5-month-low-126111800284_1.html"
  },
  {
   "theme": "Interest rates",
