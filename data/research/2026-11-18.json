@@ -1,0 +1,61 @@
+{
+  "date": "2026-11-18",
+  "market_wrap": {
+    "text": "Nifty fell 0.63% to 25,228 and the Sensex lost about 500 points, with metals, IT and FMCG the weakest sectors and mid caps down nearly 1%; a dollar near a 19-month high and rising bets on a US Fed rate rise in December weighed on sentiment even as crude eased. Your stocks and ETFs fell 1.5%, mostly because silver and gold slid again; mutual-fund NAVs come in tonight.",
+    "source_name": "Business Standard market close",
+    "source_url": "https://www.business-standard.com/markets/news/stock-market-live-november-18-nse-bse-sensex-today-nifty50-gift-nifty-crude-oil-prices-bond-yields-hero-motocorp-share-price-hcltech-stock-price-today-ipo-today-126111800134_1.html"
+  },
+  "reasons": [
+    {
+      "match": [
+        "SILVERBEES",
+        "GOLDBEES"
+      ],
+      "theme": "Gold & silver",
+      "driver": "Commodity",
+      "reason": "Silver fell over 3% on MCX and below $46 an ounce globally, its lowest in more than a year, while gold dropped about 2%, as the dollar hit a 19-month high and markets priced in a near-certain US Fed rate rise in December ahead of the Fed's meeting minutes. A firmer rupee pushed domestic prices down further.",
+      "sentiment": "negative",
+      "sources": [
+        {
+          "name": "Deccan Chronicle",
+          "url": "https://www.deccanchronicle.com/business/economics/gold-prices-crash-futures-fall-rs-3016-silver-sinks-rs-5872-on-mcx-2005514"
+        },
+        {
+          "name": "Financial Express",
+          "url": "https://www.financialexpress.com/market/gold-pulse/why-are-silver-prices-falling-sharply-3-key-reasons-explained/4387639/"
+        }
+      ]
+    },
+    {
+      "match": [
+        "HINDCOPPER"
+      ],
+      "theme": "Metals",
+      "driver": "Sector",
+      "reason": "Metal stocks were the worst sector today (Nifty Metal down about 2.5%) as copper hit a five-month low on a strong dollar, Fed rate-rise expectations, weak China data and doubts over AI-related demand. No company-specific news.",
+      "sentiment": "negative",
+      "sources": [
+        {
+          "name": "Business Standard",
+          "url": "https://www.business-standard.com/markets/news/hindustan-copper-shares-fall-3-as-copper-prices-hit-5-month-low-126111800284_1.html"
+        }
+      ]
+    },
+    {
+      "match": [
+        "KFINTECH"
+      ],
+      "theme": "Capital markets",
+      "driver": "Company / other",
+      "reason": "No company news found today. Capital-market stocks fell as a group (KFin was the biggest loser, CAMS and Nippon AMC also down about 3%) after SEBI's chairman reportedly said the regulator is reviewing margin-trading limits; this also gave back part of Tuesday's 2.9% jump.",
+      "sentiment": "negative",
+      "sources": [
+        {
+          "name": "Capital Market",
+          "url": "https://www.capitalmarket.com/markets/news/live-news/sensex-drops-678-points-nifty-slips-below-25-200;-capital-market-stocks-tumble/1751149"
+        }
+      ]
+    }
+  ],
+  "news": []
+}

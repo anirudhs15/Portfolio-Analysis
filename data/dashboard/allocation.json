@@ -2,116 +2,116 @@
  {
   "dimension": "Asset class",
   "name": "Equity",
-  "value": 408718.68,
-  "pct": 67.85
+  "value": 408442.1,
+  "pct": 67.96
  },
  {
   "dimension": "Asset class",
   "name": "Gold & Silver",
-  "value": 142680.04,
-  "pct": 23.68
+  "value": 141536.77,
+  "pct": 23.55
  },
  {
   "dimension": "Asset class",
   "name": "Debt",
   "value": 29550.6,
-  "pct": 4.91
+  "pct": 4.92
  },
  {
   "dimension": "Asset class",
   "name": "Hybrid",
   "value": 21462.49,
-  "pct": 3.56
+  "pct": 3.57
  },
  {
   "dimension": "Market cap (equity only)",
   "name": "Small",
-  "value": 141446.89,
-  "pct": 34.61
+  "value": 141432.31,
+  "pct": 34.63
  },
  {
   "dimension": "Market cap (equity only)",
   "name": "Mid",
-  "value": 106871.04,
-  "pct": 26.15
+  "value": 106667.04,
+  "pct": 26.12
  },
  {
   "dimension": "Market cap (equity only)",
   "name": "Thematic / other",
-  "value": 95943.55,
-  "pct": 23.47
+  "value": 95885.55,
+  "pct": 23.48
  },
  {
   "dimension": "Market cap (equity only)",
   "name": "Large",
   "value": 64457.19,
-  "pct": 15.77
+  "pct": 15.78
  },
  {
   "dimension": "Category",
   "name": "Silver",
-  "value": 124982.92,
-  "pct": 20.75
+  "value": 124172.92,
+  "pct": 20.66
  },
  {
   "dimension": "Category",
   "name": "Small Cap",
   "value": 104686.78,
-  "pct": 17.38
+  "pct": 17.42
  },
  {
   "dimension": "Category",
   "name": "Mid Cap",
   "value": 99959.84,
-  "pct": 16.59
+  "pct": 16.63
  },
  {
   "dimension": "Category",
   "name": "Sector / thematic",
   "value": 87471.91,
-  "pct": 14.52
+  "pct": 14.55
  },
  {
   "dimension": "Category",
   "name": "Large Cap",
   "value": 64457.19,
-  "pct": 10.7
+  "pct": 10.73
  },
  {
   "dimension": "Category",
   "name": "Corporate Bond",
   "value": 29550.6,
-  "pct": 4.91
+  "pct": 4.92
  },
  {
   "dimension": "Category",
   "name": "Technology",
-  "value": 24593.85,
+  "value": 24492.45,
   "pct": 4.08
  },
  {
   "dimension": "Category",
   "name": "Basic Materials",
-  "value": 21823.76,
-  "pct": 3.62
+  "value": 21668.68,
+  "pct": 3.61
  },
  {
   "dimension": "Category",
   "name": "Arbitrage (hybrid)",
   "value": 21462.49,
-  "pct": 3.56
+  "pct": 3.57
  },
  {
   "dimension": "Category",
   "name": "Gold",
-  "value": 17697.12,
-  "pct": 2.94
+  "value": 17363.85,
+  "pct": 2.89
  },
  {
   "dimension": "Category",
   "name": "Consumer Defensive",
-  "value": 5633.7,
-  "pct": 0.94
+  "value": 5613.6,
+  "pct": 0.93
  },
  {
   "dimension": "Category",
