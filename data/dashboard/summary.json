@@ -8,36 +8,12 @@
   "day_pct": -0.29,
   "nifty_pct": -0.63,
   "vs_nifty_pct": 0.34,
-  "invested": 416752.86,
-  "gain_inr": -17150.21,
-  "gain_pct": -4.12,
-  "cost_coverage_pct": 67.0,
-  "value_with_cost": 399602.66,
+  "invested": 655740.88,
+  "gain_inr": -55174.71,
+  "gain_pct": -8.41,
+  "cost_coverage_pct": 100.0,
+  "value_with_cost": 600566.18,
   "no_cost": [
-   {
-    "name": "Motilal Oswal Midcap Fund",
-    "value": 61365.79
-   },
-   {
-    "name": "Axis Silver Fund of Fund",
-    "value": 35488.02
-   },
-   {
-    "name": "Nippon India Silver ETF FOF",
-    "value": 35336.27
-   },
-   {
-    "name": "HDFC Silver ETF Fund of Fund",
-    "value": 28166.41
-   },
-   {
-    "name": "Invesco India Small Cap Fund",
-    "value": 20781.94
-   },
-   {
-    "name": "BANDHAN Small Cap Fund",
-    "value": 19825.09
-   },
    {
     "name": "CPSE ETF",
     "value": 90.85
