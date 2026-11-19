@@ -1,0 +1,42 @@
+{
+  "date": "2026-11-19",
+  "market_wrap": {
+    "text": "Nifty rebounded 1.14% to 25,514 and the Sensex added about 990 points in a broad-based rally led by autos (Maruti up 7.6%) and banks, with Nifty Bank closing above 63,000 for the first time; IT was the one weak spot, falling for a third session as TCS and Infosys slipped. Your stocks and ETFs fell 0.4% despite the rally because silver and gold dropped again; mutual-fund NAVs for today come out tonight, so fund values still reflect 17 November (18 November NAVs had not been picked up yet).",
+    "source_name": "Zee Business closing bell",
+    "source_url": "https://www.zeebiz.com/market-news/news-sensex-nifty50-niftybank-share-market-closing-bell-update-nov-19-2026-405765"
+  },
+  "reasons": [
+    {
+      "match": ["NETWEB"],
+      "theme": "Technology",
+      "driver": "Company / other",
+      "reason": "No company news found today. Netweb rose even as Nifty IT fell; it had filed that management would meet a group of investors today, and the stock has been recovering from its 6 November low after a strong September quarter.",
+      "sentiment": "positive",
+      "sources": [
+        {"name": "BSE filing (investor meet)", "url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/af82d4c5-e9f0-4f5e-8920-81afe2e8742f.pdf"},
+        {"name": "Business Today", "url": "https://www.businesstoday.in/markets/stocks/story/netweb-tech-shares-multibagger-stock-down-27-since-august-high-levels-to-watch-568104-2026-11-18"}
+      ]
+    },
+    {
+      "match": ["KRN"],
+      "theme": "HVAC / consumer durables",
+      "driver": "Company / other",
+      "reason": "No company news found today. The gain came on a strong day for small caps and air-conditioning names (Voltas jumped about 9%), after KRN had slid for several sessions to well below its recent highs.",
+      "sentiment": "positive",
+      "sources": [
+        {"name": "Business Standard market close", "url": "https://www.business-standard.com/amp/markets/news/stock-market-live-november-19-nse-bse-sensex-today-nifty50-gift-nifty-crude-oil-prices-mahanadi-coalfields-ipo-today-126111900101_1.html"}
+      ]
+    },
+    {
+      "match": ["HINDCOPPER"],
+      "theme": "Metals",
+      "driver": "Market",
+      "reason": "Moved with the broad market rally (Nifty Metal up about 0.6% by the snapshot's data), recovering part of yesterday's fall when copper hit a five-month low. No company-specific news.",
+      "sentiment": "positive",
+      "sources": [
+        {"name": "Zee Business closing bell", "url": "https://www.zeebiz.com/market-news/news-sensex-nifty50-niftybank-share-market-closing-bell-update-nov-19-2026-405765"}
+      ]
+    }
+  ],
+  "news": []
+}

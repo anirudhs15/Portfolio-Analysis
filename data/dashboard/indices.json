@@ -2,31 +2,31 @@
  {
   "symbol": "^CNXFMCG",
   "name": "Nifty FMCG",
-  "close": 47569.1,
-  "day_pct": -0.09
+  "close": 48564.25,
+  "day_pct": 2.09
  },
  {
   "symbol": "^CNXIT",
   "name": "Nifty IT",
-  "close": 31262.3,
-  "day_pct": -1.24
+  "close": 30919.45,
+  "day_pct": -1.1
  },
  {
   "symbol": "^CNXMETAL",
   "name": "Nifty Metal",
-  "close": 12222.3,
-  "day_pct": -2.46
+  "close": 12299.75,
+  "day_pct": 0.63
  },
  {
   "symbol": "^CRSLDX",
   "name": "Nifty 500",
-  "close": 23630.25,
-  "day_pct": -0.81
+  "close": 23897.15,
+  "day_pct": 1.13
  },
  {
   "symbol": "^NSEI",
   "name": "Nifty 50",
-  "close": 25227.95,
-  "day_pct": -0.63
+  "close": 25514.3,
+  "day_pct": 1.14
  }
 ]
