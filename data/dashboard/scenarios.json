@@ -1,17 +1,17 @@
 [
  {
   "nifty_move_pct": -5,
-  "portfolio_move_pct": -4.42,
-  "impact_inr": -26560
+  "portfolio_move_pct": -4.43,
+  "impact_inr": -26293
  },
  {
   "nifty_move_pct": -10,
-  "portfolio_move_pct": -8.85,
-  "impact_inr": -53121
+  "portfolio_move_pct": -8.86,
+  "impact_inr": -52586
  },
  {
   "nifty_move_pct": -20,
-  "portfolio_move_pct": -17.7,
-  "impact_inr": -106242
+  "portfolio_move_pct": -17.71,
+  "impact_inr": -105171
  }
 ]

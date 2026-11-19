@@ -1,5 +1,16 @@
 [
  {
+  "date": "2026-11-19",
+  "holding": "Gold & silver holdings",
+  "headline": "Gold at lowest since September 2025 after hawkish Fed minutes",
+  "summary": "Minutes of the Fed's October meeting showed concern over sticky inflation and a governor floated a 50 bp rise; markets now price about a 90% chance of a December hike, pushing gold to a 14-month low and silver below $45.",
+  "impact": "negative",
+  "source_name": "Business Today",
+  "source_url": "https://www.businesstoday.in/markets/stocks/story/gold-hits-september-2025-lows-silver-also-declines-amid-rising-fed-rate-hike-fears-568384-2026-11-19",
+  "isins": "INF846K015J4,INF204KC1378,INF179KC1DU7,INF204KC1402,INF204KB17I5",
+  "scope": "holding"
+ },
+ {
   "date": "2026-11-17",
   "holding": "Kronox Lab Sciences",
   "headline": "Promoter Indo Borax pledges its entire 64% stake",

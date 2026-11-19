@@ -1,42 +1,182 @@
 {
   "date": "2026-11-19",
   "market_wrap": {
-    "text": "Nifty rebounded 1.14% to 25,514 and the Sensex added about 990 points in a broad-based rally led by autos (Maruti up 7.6%) and banks, with Nifty Bank closing above 63,000 for the first time; IT was the one weak spot, falling for a third session as TCS and Infosys slipped. Your stocks and ETFs fell 0.4% despite the rally because silver and gold dropped again; mutual-fund NAVs for today come out tonight, so fund values still reflect 17 November (18 November NAVs had not been picked up yet).",
+    "text": "Nifty rebounded 1.14% to 25,514 and the Sensex added about 990 points in a broad-based rally led by autos (Maruti up 7.6%) and banks, with Nifty Bank closing above 63,000 for the first time; IT was the one weak spot, falling for a third session as TCS and Infosys slipped. Your stocks and ETFs fell 0.4% despite the rally because silver and gold dropped again. Today's mutual-fund NAVs were still not on AMFI at 10:07 PM IST, so fund values (and most of the day's ₹6,807 fall) reflect 18 November, when silver and mid caps slid.",
     "source_name": "Zee Business closing bell",
     "source_url": "https://www.zeebiz.com/market-news/news-sensex-nifty50-niftybank-share-market-closing-bell-update-nov-19-2026-405765"
   },
   "reasons": [
     {
-      "match": ["NETWEB"],
+      "match": [
+        "150615",
+        "149760",
+        "150737"
+      ],
+      "theme": "Silver",
+      "driver": "Commodity",
+      "reason": "These NAVs are for 18 November, when MCX silver fell by about ₹9,000 a kg as investors unwound positions on a strong dollar and bets on a December US Fed rate rise. Silver slipped further on 19 November (below $45 an ounce) after hawkish Fed minutes, so the next NAVs may also be weak.",
+      "sentiment": "negative",
+      "sources": [
+        {
+          "name": "Business Standard (bullion, 19 Nov)",
+          "url": "https://www.business-standard.com/markets/commodities/gold-silver-fall-as-strong-dollar-fed-rate-outlook-weigh-on-bullion-126111900318_1.html"
+        },
+        {
+          "name": "Business Today",
+          "url": "https://www.businesstoday.in/markets/stocks/story/gold-hits-september-2025-lows-silver-also-declines-amid-rising-fed-rate-hike-fears-568384-2026-11-19"
+        }
+      ]
+    },
+    {
+      "match": [
+        "NETWEB"
+      ],
       "theme": "Technology",
       "driver": "Company / other",
       "reason": "No company news found today. Netweb rose even as Nifty IT fell; it had filed that management would meet a group of investors today, and the stock has been recovering from its 6 November low after a strong September quarter.",
       "sentiment": "positive",
       "sources": [
-        {"name": "BSE filing (investor meet)", "url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/af82d4c5-e9f0-4f5e-8920-81afe2e8742f.pdf"},
-        {"name": "Business Today", "url": "https://www.businesstoday.in/markets/stocks/story/netweb-tech-shares-multibagger-stock-down-27-since-august-high-levels-to-watch-568104-2026-11-18"}
+        {
+          "name": "BSE filing (investor meet)",
+          "url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/af82d4c5-e9f0-4f5e-8920-81afe2e8742f.pdf"
+        },
+        {
+          "name": "Business Today",
+          "url": "https://www.businesstoday.in/markets/stocks/story/netweb-tech-shares-multibagger-stock-down-27-since-august-high-levels-to-watch-568104-2026-11-18"
+        }
       ]
     },
     {
-      "match": ["KRN"],
+      "match": [
+        "KRN"
+      ],
       "theme": "HVAC / consumer durables",
       "driver": "Company / other",
       "reason": "No company news found today. The gain came on a strong day for small caps and air-conditioning names (Voltas jumped about 9%), after KRN had slid for several sessions to well below its recent highs.",
       "sentiment": "positive",
       "sources": [
-        {"name": "Business Standard market close", "url": "https://www.business-standard.com/amp/markets/news/stock-market-live-november-19-nse-bse-sensex-today-nifty50-gift-nifty-crude-oil-prices-mahanadi-coalfields-ipo-today-126111900101_1.html"}
+        {
+          "name": "Business Standard market close",
+          "url": "https://www.business-standard.com/amp/markets/news/stock-market-live-november-19-nse-bse-sensex-today-nifty50-gift-nifty-crude-oil-prices-mahanadi-coalfields-ipo-today-126111900101_1.html"
+        }
       ]
     },
     {
-      "match": ["HINDCOPPER"],
+      "match": [
+        "HINDCOPPER"
+      ],
       "theme": "Metals",
       "driver": "Market",
       "reason": "Moved with the broad market rally (Nifty Metal up about 0.6% by the snapshot's data), recovering part of yesterday's fall when copper hit a five-month low. No company-specific news.",
       "sentiment": "positive",
       "sources": [
-        {"name": "Zee Business closing bell", "url": "https://www.zeebiz.com/market-news/news-sensex-nifty50-niftybank-share-market-closing-bell-update-nov-19-2026-405765"}
+        {
+          "name": "Zee Business closing bell",
+          "url": "https://www.zeebiz.com/market-news/news-sensex-nifty50-niftybank-share-market-closing-bell-update-nov-19-2026-405765"
+        }
       ]
     }
   ],
-  "news": []
+  "news": [
+    {
+      "date": "2026-11-19",
+      "holding": "Gold & silver holdings",
+      "match": [
+        "SILVERBEES",
+        "GOLDBEES",
+        "150615",
+        "149760",
+        "150737"
+      ],
+      "headline": "Gold at lowest since September 2025 after hawkish Fed minutes",
+      "summary": "Minutes of the Fed's October meeting showed concern over sticky inflation and a governor floated a 50 bp rise; markets now price about a 90% chance of a December hike, pushing gold to a 14-month low and silver below $45.",
+      "impact": "negative",
+      "source_name": "Business Today",
+      "source_url": "https://www.businesstoday.in/markets/stocks/story/gold-hits-september-2025-lows-silver-also-declines-amid-rising-fed-rate-hike-fears-568384-2026-11-19"
+    }
+  ],
+  "events": [
+    {
+      "date": "2026-11-20",
+      "event": "Manorama Industries postal-ballot cut-off",
+      "detail": "Shareholders vote on the new Chairman (Mudit Kumar Singh) and Managing Director (Deep Saraf); the e-voting cut-off date is 20 November.",
+      "affects": "Manorama Industries",
+      "source_name": "Investywise",
+      "source_url": "https://investywise.com/manorama-industries-limited-board-meeting-outcomes-key-management-changes"
+    },
+    {
+      "date": "2026-12-04",
+      "event": "RBI interest-rate decision",
+      "detail": "Meeting runs 2–4 December. The RBI raised rates in October; another rise would weigh on your bond fund and on small and mid caps.",
+      "affects": "Bond fund, small & mid caps",
+      "source_name": "5paisa",
+      "source_url": "https://www.5paisa.com/blog/rbi-mpc-meeting-schedule"
+    },
+    {
+      "date": "2026-12-09",
+      "event": "US Federal Reserve rate decision",
+      "detail": "Meeting runs 8–9 December; markets expect a rate rise, the main pressure on silver and gold lately.",
+      "affects": "Silver and gold funds (about 30% of the portfolio)",
+      "source_name": "FedRateCalc",
+      "source_url": "https://fedratecalc.com/fomc-meeting-schedule/december-2026/"
+    },
+    {
+      "date": "2027-01-15",
+      "event": "December-quarter results season begins (approx.)",
+      "detail": "Companies usually report from mid-January to mid-February; results moved Manorama, Hindustan Copper and KRN this quarter.",
+      "affects": "All 9 stocks",
+      "source_name": "",
+      "source_url": ""
+    },
+    {
+      "date": "2027-02-05",
+      "event": "Next RBI decision after December",
+      "detail": "Meeting runs 3–5 February 2027.",
+      "affects": "Bond fund, rate-sensitive holdings",
+      "source_name": "5paisa",
+      "source_url": "https://www.5paisa.com/blog/rbi-mpc-meeting-schedule"
+    }
+  ],
+  "outlook": [
+    {
+      "theme": "Silver",
+      "view": "Gold fell below $3,800 to a 14-month low and silver lost about 3% as markets put roughly 96% odds on a December US rate rise; the Silver Institute still projects a sixth straight annual supply deficit.",
+      "watch": "The 8–9 December US Fed decision (about 90% priced for a hike) and the dollar.",
+      "tone": "cautious",
+      "source_name": "USAGOLD",
+      "source_url": "https://www.usagold.com/daily-precious-metals-market-report-november-18-2026/"
+    },
+    {
+      "theme": "Small & mid caps",
+      "view": "They led today and have outperformed large caps this year, but they fall harder when rates rise or foreign investors sell.",
+      "watch": "RBI decision on 4 December and foreign investor flows.",
+      "tone": "mixed",
+      "source_name": "Kotak Neo market wrap",
+      "source_url": "https://www.kotakneo.com/news/market-news/sensex-and-nifty-close-higher-after-a-volatile-session/"
+    },
+    {
+      "theme": "Technology",
+      "view": "AI demand is lifting hardware makers like Netweb, but a global sell-off in AI stocks hit Indian IT today (Nifty IT −0.9%).",
+      "watch": "December-quarter results from January.",
+      "tone": "mixed",
+      "source_name": "India Infoline closing bell",
+      "source_url": "https://www.indiainfoline.com/news/markets/closing-bell-nifty-gains-to-25387-as-bank-nifty-hits-record-high-crude-eases-near-92"
+    },
+    {
+      "theme": "Copper & metals",
+      "view": "Record copper prices drove Hindustan Copper's profit surge, but copper has since slipped to a five-month low on a strong dollar and weak China data, dragging metal stocks.",
+      "watch": "Global copper prices and the dollar.",
+      "tone": "mixed",
+      "source_name": "Business Standard",
+      "source_url": "https://www.business-standard.com/markets/news/hindustan-copper-shares-fall-3-as-copper-prices-hit-5-month-low-126111800284_1.html"
+    },
+    {
+      "theme": "Interest rates",
+      "view": "The RBI is in a tightening phase, which tends to lower bond prices in the short term and raise yields on new bonds.",
+      "watch": "RBI decision on 4 December.",
+      "tone": "cautious",
+      "source_name": "5paisa",
+      "source_url": "https://www.5paisa.com/blog/rbi-mpc-meeting-schedule"
+    }
+  ]
 }
