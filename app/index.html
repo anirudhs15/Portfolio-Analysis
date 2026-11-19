@@ -64,6 +64,9 @@ a { color: inherit; }
 .hero .value { font-family: var(--f-display); font-weight: 700; font-size: 2.3rem; line-height: 1.1; margin: 4px 0 6px; font-variant-numeric: tabular-nums; letter-spacing: -.02em; }
 .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 16px; padding-top: 14px; border-top: 1px solid var(--line); }
 .stat .v { font-variant-numeric: tabular-nums; font-weight: 600; margin-top: 2px; }
+.sec-stats { max-width: 460px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-top: 12px; padding: 12px 14px; border: 1px solid var(--line); border-radius: 12px; }
+.sec-stats .note { grid-column: 1 / -1; }
+.stat .sub.up { color: var(--up); } .stat .sub.down { color: var(--down); }
 .stat .sub { font-size: 12px; color: var(--muted); font-variant-numeric: tabular-nums; margin-top: 2px; }
 
 .split { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
@@ -83,6 +86,7 @@ a { color: inherit; }
 .mover .p { font-variant-numeric: tabular-nums; font-weight: 600; font-size: 1.05rem; }
 
 /* Lists */
+.list-head > div:first-child { flex: 1 1 280px; min-width: 0; }
 .list-head { display: flex; justify-content: space-between; align-items: end; gap: 12px; flex-wrap: wrap; }
 .big { font-family: var(--f-display); font-weight: 700; font-size: 1.7rem; font-variant-numeric: tabular-nums; }
 .pills { display: flex; gap: 6px; flex-wrap: wrap; }
@@ -258,7 +262,7 @@ a { color: inherit; }
 
   <section class="screen" id="stocks" data-screen-id="stocks" hidden>
     <div class="list-head">
-      <div><div class="label">Stocks &amp; ETFs</div><div class="big" id="ls-v">—</div><div class="small" id="ls-d">—</div></div>
+      <div><div class="label">Stocks &amp; ETFs</div><div class="big" id="ls-v">—</div><div class="small" id="ls-d">—</div><div class="sec-stats" id="ls-s" hidden></div></div>
       <div class="pills" id="pills-stocks"></div>
     </div>
     <div class="rows" id="rows-stocks"></div>
@@ -266,7 +270,7 @@ a { color: inherit; }
 
   <section class="screen" id="funds" data-screen-id="funds" hidden>
     <div class="list-head">
-      <div><div class="label">Mutual funds</div><div class="big" id="lf-v">—</div><div class="small" id="lf-d">—</div></div>
+      <div><div class="label">Mutual funds</div><div class="big" id="lf-v">—</div><div class="small" id="lf-d">—</div><div class="sec-stats" id="lf-s" hidden></div></div>
       <div class="pills" id="pills-funds"></div>
     </div>
     <div class="rows" id="rows-funds"></div>
@@ -371,7 +375,12 @@ a { color: inherit; }
   const totals = (g) => {
     const rows = S.holdings.filter((h) => groupOf(h) === g);
     const value = rows.reduce((a, h) => a + (+h.value || 0), 0), day = rows.reduce((a, h) => a + (+h.day_inr || 0), 0);
-    return { count: rows.length, value, day, pct: value - day ? day / (value - day) * 100 : 0 };
+    const costed = rows.filter((h) => h.avg_cost != null && h.quantity != null);
+    const invested = costed.reduce((a, h) => a + (h.invested ?? h.avg_cost * h.quantity), 0);
+    const costedValue = costed.reduce((a, h) => a + (+h.value || 0), 0);
+    const pnl = costed.length ? costedValue - invested : null;
+    return { count: rows.length, value, day, pct: value - day ? day / (value - day) * 100 : 0,
+      invested, pnl, pnlPct: invested ? pnl / invested * 100 : null, missing: rows.filter((h) => !costed.includes(h)) };
   };
 
   // ---------- navigation
@@ -427,6 +436,14 @@ a { color: inherit; }
       const t = totals(g);
       v.forEach((id) => { $(id).textContent = F.inr(t.value); });
       d.forEach((id) => { const e = $(id); e.replaceChildren(el('span', F.cls(t.day), `${F.sinr(t.day)} (${F.pct(t.pct)})`), el('span', 'muted', ` today · ${t.count} holdings`)); });
+      const box = $(g === 'stocks' ? 'ls-s' : 'lf-s');
+      box.hidden = t.pnl == null;
+      if (t.pnl != null) {
+        const stat = (label, v, sub, cls) => { const x = el('div', 'stat'); x.append(el('div', 'label', label), el('div', 'v ' + (cls || ''), v)); if (sub) x.append(el('div', 'sub ' + (cls || ''), sub)); return x; };
+        const kids = [stat('Invested', F.inr(t.invested)), stat(`Net ${F.gl(t.pnl)}`, F.ainr(t.pnl), F.apct(t.pnlPct), F.cls(t.pnl))];
+        if (t.missing.length) kids.push(el('div', 'note muted xs', `Leaves out ${t.missing.map((h) => F.clean(h.name)).join(', ')} (${F.inr(t.missing.reduce((a, h) => a + (+h.value || 0), 0))}): purchase cost not known.`));
+        box.replaceChildren(...kids);
+      }
     }
     $('wrap').textContent = r.market_wrap || 'Market summary not available.';
     $('wrap-src').replaceChildren(...(r.market_wrap_source ? srcLink(r.market_wrap_source).childNodes : []));

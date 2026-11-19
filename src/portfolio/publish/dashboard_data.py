@@ -113,7 +113,7 @@ def build(mode: str | None = None) -> dict[str, list]:
         holdings.append({
             "isin": h["isin"], "symbol": h["symbol"], "name": h["name"], "kind": _kind(h),
             "category": _category(h, h), "cap": h.get("market_cap_bucket") or "",
-            "quantity": _r(h["quantity"], 3), "avg_cost": _r(h.get("avg_cost")), "price": _r(h["price"]),
+            "quantity": _r(h["quantity"], 3), "avg_cost": _r(h.get("avg_cost")), "invested": _r(h.get("cost_value") if h.get("cost_value") == h.get("cost_value") and h.get("cost_value") else (h["avg_cost"] * h["quantity"] if h.get("avg_cost") else None)), "price": _r(h["price"]),
             "price_date": h["price_date"], "value": _r(h["market_value"]), "weight_pct": _r(h["weight_pct"]),
             "day_pct": _r(h["day_change_pct"]), "day_inr": _r(h["day_change_inr"]),
             "contribution_pct": _r(h.get("contribution_pct"), 4),
