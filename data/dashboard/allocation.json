@@ -2,97 +2,97 @@
  {
   "dimension": "Asset class",
   "name": "Equity",
-  "value": 404027.35,
-  "pct": 68.33
+  "value": 405659.24,
+  "pct": 68.63
  },
  {
   "dimension": "Asset class",
   "name": "Gold & Silver",
-  "value": 136230.88,
-  "pct": 23.04
+  "value": 134366.54,
+  "pct": 22.73
  },
  {
   "dimension": "Asset class",
   "name": "Debt",
-  "value": 29571.76,
+  "value": 29566.24,
   "pct": 5.0
  },
  {
   "dimension": "Asset class",
   "name": "Hybrid",
-  "value": 21478.59,
+  "value": 21484.81,
   "pct": 3.63
  },
  {
   "dimension": "Market cap (equity only)",
   "name": "Small",
-  "value": 140235.98,
-  "pct": 34.71
+  "value": 141152.86,
+  "pct": 34.8
  },
  {
   "dimension": "Market cap (equity only)",
   "name": "Mid",
-  "value": 105326.04,
-  "pct": 26.07
+  "value": 105570.63,
+  "pct": 26.02
  },
  {
   "dimension": "Market cap (equity only)",
   "name": "Thematic / other",
-  "value": 94193.32,
-  "pct": 23.31
+  "value": 93890.71,
+  "pct": 23.15
  },
  {
   "dimension": "Market cap (equity only)",
   "name": "Large",
-  "value": 64272.01,
-  "pct": 15.91
+  "value": 65045.04,
+  "pct": 16.03
  },
  {
   "dimension": "Category",
   "name": "Silver",
-  "value": 119775.08,
-  "pct": 20.26
+  "value": 117910.72,
+  "pct": 19.95
  },
  {
   "dimension": "Category",
   "name": "Small Cap",
-  "value": 103899.5,
-  "pct": 17.57
+  "value": 104816.38,
+  "pct": 17.73
  },
  {
   "dimension": "Category",
   "name": "Mid Cap",
-  "value": 98621.24,
-  "pct": 16.68
+  "value": 98865.83,
+  "pct": 16.73
  },
  {
   "dimension": "Category",
   "name": "Sector / thematic",
-  "value": 85935.78,
-  "pct": 14.53
+  "value": 85631.88,
+  "pct": 14.49
  },
  {
   "dimension": "Category",
   "name": "Large Cap",
-  "value": 64272.01,
-  "pct": 10.87
+  "value": 65045.04,
+  "pct": 11.0
  },
  {
   "dimension": "Category",
   "name": "Corporate Bond",
-  "value": 29571.76,
+  "value": 29566.24,
   "pct": 5.0
  },
  {
   "dimension": "Category",
   "name": "Technology",
   "value": 24327.3,
-  "pct": 4.11
+  "pct": 4.12
  },
  {
   "dimension": "Category",
   "name": "Arbitrage (hybrid)",
-  "value": 21478.59,
+  "value": 21484.81,
   "pct": 3.63
  },
  {
@@ -116,7 +116,7 @@
  {
   "dimension": "Category",
   "name": "Other ETFs",
-  "value": 90.55,
+  "value": 91.83,
   "pct": 0.02
  }
 ]
