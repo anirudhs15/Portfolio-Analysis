@@ -1,0 +1,193 @@
+{
+  "date": "2026-11-20",
+  "market_wrap": {
+    "text": "Nifty rose 1.12% to 25,801 and the Sensex gained about 898 points for a second straight up day, led by private and PSU banks as foreign funds turned buyers; India held up while Asian markets slumped on a global sell-off in AI stocks, helped by softer crude. Breadth was weak, though: the Nifty Smallcap 100 slipped 0.13%. Your stocks and ETFs fell 2.7% (about ₹2,541) because gold and silver crashed again on US rate-hike bets; mutual-fund NAVs for today are not out yet, so fund values are unchanged.",
+    "source_name": "Business Standard market close",
+    "source_url": "https://www.business-standard.com/markets/news/stock-market-live-november-20-nse-bse-sensex-today-nifty50-gift-nifty-crude-oil-prices-126112000118_1.html"
+  },
+  "reasons": [
+    {
+      "match": [
+        "SILVERBEES",
+        "GOLDBEES"
+      ],
+      "theme": "Gold & silver",
+      "driver": "Commodity",
+      "reason": "Gold and silver slumped again as a near-19-month high in the dollar, elevated US bond yields and about a 97% market-implied chance of a December Fed rate rise hit bullion; MCX silver fell about 6% and gold about 4% in early trade. Silver ETFs were down as much as 7.5% in the morning before recovering part of the fall.",
+      "sentiment": "negative",
+      "sources": [
+        {
+          "name": "Moneycontrol (gold & silver ETFs)",
+          "url": "https://www.moneycontrol.com/news/business/markets/gold-silver-etfs-crash-up-to-7-5-as-bullion-prices-plunge-gold-heads-for-biggest-weekly-fall-since-march-14085418.html"
+        },
+        {
+          "name": "NDTV Profit",
+          "url": "https://www.ndtvprofit.com/markets/gold-prices-today-three-reasons-why-gold-crash-yellow-metal-today-mcx-gold-silver-prices-crash-commodity-prices-markets-today-12352531"
+        }
+      ]
+    },
+    {
+      "match": [
+        "NETWEB"
+      ],
+      "theme": "Technology / AI servers",
+      "driver": "Company / other",
+      "reason": "No company news found today. Netweb, an AI-server maker, slipped as AI hardware stocks sold off across Asia (Taiwan's index fell 6.2% and Korea's over 5%), even though Indian IT services stocks rose.",
+      "sentiment": "negative",
+      "sources": [
+        {
+          "name": "Moneycontrol (markets, 20 Nov)",
+          "url": "https://www.moneycontrol.com/news/business/markets/sensex-nifty-inching-towards-all-time-high-india-decouples-from-global-rout-only-major-market-in-the-green-14085693.html"
+        }
+      ]
+    },
+    {
+      "match": [
+        "KRONOX"
+      ],
+      "theme": "Specialty chemicals",
+      "driver": "Company / other",
+      "reason": "Today was the last day of Indo Borax's open offer for Kronox shares at ₹157.27, well below the market price, and a filing disclosed that Indo Borax has now pledged its entire 64.26% stake to lenders for the acquisition loan. No other company news found today.",
+      "sentiment": "negative",
+      "sources": [
+        {
+          "name": "ScanX (pledge disclosure)",
+          "url": "https://scanx.trade/stock-market-news/companies/kronox-lab-sciences-pledges-50-26-stake-poonawalla-fincorp-trustee/56702572"
+        },
+        {
+          "name": "BSE notice (open offer schedule)",
+          "url": "https://www.bseindia.com/downloads/UploadDocs/Notices/20261106-1/20261106-1.pdf"
+        }
+      ]
+    },
+    {
+      "match": [
+        "KRN"
+      ],
+      "theme": "HVAC / consumer durables",
+      "driver": "Company / other",
+      "reason": "No company news found today. Small caps lagged the large-cap rally (Nifty Smallcap 100 down 0.13%), and KRN gave back part of Thursday's gain.",
+      "sentiment": "negative",
+      "sources": [
+        {
+          "name": "Business Standard market close",
+          "url": "https://www.business-standard.com/markets/news/stock-market-live-november-20-nse-bse-sensex-today-nifty50-gift-nifty-crude-oil-prices-126112000118_1.html"
+        }
+      ]
+    }
+  ],
+  "news": [
+    {
+      "date": "2026-11-20",
+      "holding": "Kronox Lab Sciences",
+      "match": [
+        "KRONOX"
+      ],
+      "headline": "Promoter's entire 64.26% Kronox stake now pledged",
+      "summary": "Indo Borax disclosed a further pledge of 50.26% of Kronox's shares (created 17 November), so all of its 64.26% holding now secures the roughly ₹225 crore loan used to buy the stake. The ₹157.27 open offer closed today.",
+      "impact": "negative",
+      "source_name": "ScanX",
+      "source_url": "https://scanx.trade/stock-market-news/companies/kronox-lab-sciences-pledges-50-26-stake-poonawalla-fincorp-trustee/56702572"
+    },
+    {
+      "date": "2026-11-20",
+      "holding": "Gold & silver holdings",
+      "match": [
+        "SILVERBEES",
+        "GOLDBEES",
+        "150615",
+        "149760",
+        "150737"
+      ],
+      "headline": "Gold heads for biggest weekly fall since March; silver at lowest since Sep 2025",
+      "summary": "MCX gold has fallen about 9% in three sessions and silver about 13%, as Fed officials signal further rate rises, US 10-year yields stay above 5% and the dollar strengthens.",
+      "impact": "negative",
+      "source_name": "NDTV Profit",
+      "source_url": "https://www.ndtvprofit.com/markets/gold-prices-today-three-reasons-why-gold-crash-yellow-metal-today-mcx-gold-silver-prices-crash-commodity-prices-markets-today-12352531"
+    }
+  ],
+  "events": [
+    {
+      "date": "2026-11-20",
+      "event": "Manorama Industries postal-ballot cut-off",
+      "detail": "Shareholders vote on the new Chairman (Mudit Kumar Singh) and Managing Director (Deep Saraf); the e-voting cut-off date is 20 November.",
+      "affects": "Manorama Industries",
+      "source_name": "Investywise",
+      "source_url": "https://investywise.com/manorama-industries-limited-board-meeting-outcomes-key-management-changes"
+    },
+    {
+      "date": "2026-12-04",
+      "event": "RBI interest-rate decision",
+      "detail": "Meeting runs 2–4 December. The RBI raised rates in October; another rise would weigh on your bond fund and on small and mid caps.",
+      "affects": "Bond fund, small & mid caps",
+      "source_name": "5paisa",
+      "source_url": "https://www.5paisa.com/blog/rbi-mpc-meeting-schedule"
+    },
+    {
+      "date": "2026-12-09",
+      "event": "US Federal Reserve rate decision",
+      "detail": "Meeting runs 8–9 December; markets expect a rate rise, the main pressure on silver and gold lately.",
+      "affects": "Silver and gold funds (about 30% of the portfolio)",
+      "source_name": "FedRateCalc",
+      "source_url": "https://fedratecalc.com/fomc-meeting-schedule/december-2026/"
+    },
+    {
+      "date": "2027-01-15",
+      "event": "December-quarter results season begins (approx.)",
+      "detail": "Companies usually report from mid-January to mid-February; results moved Manorama, Hindustan Copper and KRN this quarter.",
+      "affects": "All 9 stocks",
+      "source_name": "",
+      "source_url": ""
+    },
+    {
+      "date": "2027-02-05",
+      "event": "Next RBI decision after December",
+      "detail": "Meeting runs 3–5 February 2027.",
+      "affects": "Bond fund, rate-sensitive holdings",
+      "source_name": "5paisa",
+      "source_url": "https://www.5paisa.com/blog/rbi-mpc-meeting-schedule"
+    }
+  ],
+  "outlook": [
+    {
+      "theme": "Silver",
+      "view": "Gold fell below $3,800 to a 14-month low and silver lost about 3% as markets put roughly 96% odds on a December US rate rise; the Silver Institute still projects a sixth straight annual supply deficit.",
+      "watch": "The 8–9 December US Fed decision (about 90% priced for a hike) and the dollar.",
+      "tone": "cautious",
+      "source_name": "USAGOLD",
+      "source_url": "https://www.usagold.com/daily-precious-metals-market-report-november-18-2026/"
+    },
+    {
+      "theme": "Small & mid caps",
+      "view": "They led today and have outperformed large caps this year, but they fall harder when rates rise or foreign investors sell.",
+      "watch": "RBI decision on 4 December and foreign investor flows.",
+      "tone": "mixed",
+      "source_name": "Kotak Neo market wrap",
+      "source_url": "https://www.kotakneo.com/news/market-news/sensex-and-nifty-close-higher-after-a-volatile-session/"
+    },
+    {
+      "theme": "Technology",
+      "view": "AI demand is lifting hardware makers like Netweb, but a global sell-off in AI stocks hit Indian IT today (Nifty IT −0.9%).",
+      "watch": "December-quarter results from January.",
+      "tone": "mixed",
+      "source_name": "India Infoline closing bell",
+      "source_url": "https://www.indiainfoline.com/news/markets/closing-bell-nifty-gains-to-25387-as-bank-nifty-hits-record-high-crude-eases-near-92"
+    },
+    {
+      "theme": "Copper & metals",
+      "view": "Record copper prices drove Hindustan Copper's profit surge, but copper has since slipped to a five-month low on a strong dollar and weak China data, dragging metal stocks.",
+      "watch": "Global copper prices and the dollar.",
+      "tone": "mixed",
+      "source_name": "Business Standard",
+      "source_url": "https://www.business-standard.com/markets/news/hindustan-copper-shares-fall-3-as-copper-prices-hit-5-month-low-126111800284_1.html"
+    },
+    {
+      "theme": "Interest rates",
+      "view": "The RBI is in a tightening phase, which tends to lower bond prices in the short term and raise yields on new bonds.",
+      "watch": "RBI decision on 4 December.",
+      "tone": "cautious",
+      "source_name": "5paisa",
+      "source_url": "https://www.5paisa.com/blog/rbi-mpc-meeting-schedule"
+    }
+  ]
+}

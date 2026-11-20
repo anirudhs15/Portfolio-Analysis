@@ -1,5 +1,27 @@
 [
  {
+  "date": "2026-11-20",
+  "holding": "Kronox Lab Sciences",
+  "headline": "Promoter's entire 64.26% Kronox stake now pledged",
+  "summary": "Indo Borax disclosed a further pledge of 50.26% of Kronox's shares (created 17 November), so all of its 64.26% holding now secures the roughly ₹225 crore loan used to buy the stake. The ₹157.27 open offer closed today.",
+  "impact": "negative",
+  "source_name": "ScanX",
+  "source_url": "https://scanx.trade/stock-market-news/companies/kronox-lab-sciences-pledges-50-26-stake-poonawalla-fincorp-trustee/56702572",
+  "isins": "INE0ATZ01017",
+  "scope": "holding"
+ },
+ {
+  "date": "2026-11-20",
+  "holding": "Gold & silver holdings",
+  "headline": "Gold heads for biggest weekly fall since March; silver at lowest since Sep 2025",
+  "summary": "MCX gold has fallen about 9% in three sessions and silver about 13%, as Fed officials signal further rate rises, US 10-year yields stay above 5% and the dollar strengthens.",
+  "impact": "negative",
+  "source_name": "NDTV Profit",
+  "source_url": "https://www.ndtvprofit.com/markets/gold-prices-today-three-reasons-why-gold-crash-yellow-metal-today-mcx-gold-silver-prices-crash-commodity-prices-markets-today-12352531",
+  "isins": "INF846K015J4,INF204KC1378,INF179KC1DU7,INF204KC1402,INF204KB17I5",
+  "scope": "holding"
+ },
+ {
   "date": "2026-11-19",
   "holding": "Gold & silver holdings",
   "headline": "Gold at lowest since September 2025 after hawkish Fed minutes",
@@ -8,17 +30,6 @@
   "source_name": "Business Today",
   "source_url": "https://www.businesstoday.in/markets/stocks/story/gold-hits-september-2025-lows-silver-also-declines-amid-rising-fed-rate-hike-fears-568384-2026-11-19",
   "isins": "INF846K015J4,INF204KC1378,INF179KC1DU7,INF204KC1402,INF204KB17I5",
-  "scope": "holding"
- },
- {
-  "date": "2026-11-17",
-  "holding": "Kronox Lab Sciences",
-  "headline": "Promoter Indo Borax pledges its entire 64% stake",
-  "summary": "Indo Borax pledged all 2.38 crore Kronox shares it holds as added security for a roughly ₹225 crore loan taken to buy the stake; it says ownership and control are unchanged.",
-  "impact": "negative",
-  "source_name": "Multibagg",
-  "source_url": "https://www.multibagg.ai/market-pulse/articles/indo-borax-kronox-stake-pledge-announcement-cmwkr1646000o2nmu5ovposl5",
-  "isins": "INE0ATZ01017",
   "scope": "holding"
  }
 ]
