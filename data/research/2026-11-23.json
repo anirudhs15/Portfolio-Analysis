@@ -6,28 +6,223 @@
     "source_url": "https://www.indiainfoline.com/news/markets/nifty-crashes-by-350-points-sensex-down-1-35-why-is-the-market-down-today"
   },
   "reasons": [
-    {"match": ["BLEL"], "theme": "Metals", "driver": "Sector",
-     "reason": "No company news found today. Steel and metal stocks were the day's worst sector (Nifty Metal −3.7%) as Tata Steel slumped about 8% on its ₹28,000 crore tubes-business sale and APL Apollo stake purchase, and BLEL closed at a fresh 52-week low.",
-     "sentiment": "negative",
-     "sources": [{"name": "The Hindu BusinessLine", "url": "https://www.thehindubusinessline.com/markets/stock-markets/tata-steel-dips-7-as-apl-apollo-tumbles-on-28000-crore-deal-hindalco-also-under-pressure/article71733581.ece"},
-                 {"name": "Univest (52-week-low streak)", "url": "https://univest.in/blogs/why-behari-lal-engineering-l-share-near-52-week-consecutive-low-2026"}]},
-    {"match": ["NETWEB"], "theme": "AI sell-off", "driver": "Global tech",
-     "reason": "No company news found today. Indian AI-linked stocks including Netweb fell as the global AI sell-off deepened after the Nasdaq dropped over 5% on Friday; Indian IT services stocks rose, but Netweb trades with the AI-hardware theme rather than with them.",
-     "sentiment": "negative",
-     "sources": [{"name": "Flipit", "url": "https://flipit.money/flips/nasdaq-drops-5-as-e2e-networks-esds-software-and-ai-stocks-decline-sharply"},
-                 {"name": "Business Standard", "url": "https://www.business-standard.com/amp/markets/news/stock-market-live-november-23-nse-bse-sensex-today-nifty50-gift-nifty-crude-oil-prices-ipo-today-126112300084_1.html"}]},
-    {"match": ["VIKRAMSOLR"], "theme": "Broad market", "driver": "Market",
-     "reason": "No company news found today; it fell with the broad market sell-off (Nifty −1.75%).",
-     "sentiment": "negative",
-     "sources": [{"name": "Zee Business closing bell", "url": "https://www.zeebiz.com/market-news/news-stock-market-closing-bell-sensex-tumbles-1484-points-nifty-slips-below-25350-405902"}]},
-    {"match": ["KRN"], "theme": "Broad market", "driver": "Market",
-     "reason": "No company news found today; it fell roughly in line with the broad market (Nifty −1.75%).",
-     "sentiment": "negative",
-     "sources": [{"name": "Zee Business closing bell", "url": "https://www.zeebiz.com/market-news/news-stock-market-closing-bell-sensex-tumbles-1484-points-nifty-slips-below-25350-405902"}]},
-    {"match": ["MANORAMA"], "theme": "Broad market", "driver": "Market",
-     "reason": "No company news found today; it fell less than the Nifty (−1.75%) in the broad sell-off.",
-     "sentiment": "neutral",
-     "sources": [{"name": "Zee Business closing bell", "url": "https://www.zeebiz.com/market-news/news-stock-market-closing-bell-sensex-tumbles-1484-points-nifty-slips-below-25350-405902"}]}
+    {
+      "match": [
+        "149760",
+        "150615",
+        "150737"
+      ],
+      "theme": "Silver",
+      "driver": "Commodity",
+      "reason": "These are Friday 20 November NAVs (today's had not been published by about 10 pm IST); they reflect Friday's slump in silver, which capped bullion's steepest weekly fall in eight months on a strong dollar and bets on a December US Fed rate rise. Silver bounced about 3% on Monday from its lowest level since September 2025.",
+      "sentiment": "negative",
+      "sources": [
+        {
+          "name": "Goodreturns (bullion, 23 Nov)",
+          "url": "https://www.goodreturns.in/news/gold-rates-silver-rates-today-23-11-2026-live-updates-mcx-gold-silver-price-24k-22k-18k-gold-prices-1548905.html"
+        },
+        {
+          "name": "Capital Street FX commodity report",
+          "url": "https://www.capitalstreetfx.com/market-analysis/daily-commodity-report-23-nov-2026/"
+        }
+      ]
+    },
+    {
+      "match": [
+        "BLEL"
+      ],
+      "theme": "Metals",
+      "driver": "Sector",
+      "reason": "No company news found today. Steel and metal stocks were the day's worst sector (Nifty Metal −3.7%) as Tata Steel slumped about 8% on its ₹28,000 crore tubes-business sale and APL Apollo stake purchase, and BLEL closed at a fresh 52-week low.",
+      "sentiment": "negative",
+      "sources": [
+        {
+          "name": "The Hindu BusinessLine",
+          "url": "https://www.thehindubusinessline.com/markets/stock-markets/tata-steel-dips-7-as-apl-apollo-tumbles-on-28000-crore-deal-hindalco-also-under-pressure/article71733581.ece"
+        },
+        {
+          "name": "Univest (52-week-low streak)",
+          "url": "https://univest.in/blogs/why-behari-lal-engineering-l-share-near-52-week-consecutive-low-2026"
+        }
+      ]
+    },
+    {
+      "match": [
+        "NETWEB"
+      ],
+      "theme": "AI sell-off",
+      "driver": "Global tech",
+      "reason": "No company news found today. Indian AI-linked stocks including Netweb fell as the global AI sell-off deepened after the Nasdaq dropped over 5% on Friday; Indian IT services stocks rose, but Netweb trades with the AI-hardware theme rather than with them.",
+      "sentiment": "negative",
+      "sources": [
+        {
+          "name": "Flipit",
+          "url": "https://flipit.money/flips/nasdaq-drops-5-as-e2e-networks-esds-software-and-ai-stocks-decline-sharply"
+        },
+        {
+          "name": "Business Standard",
+          "url": "https://www.business-standard.com/amp/markets/news/stock-market-live-november-23-nse-bse-sensex-today-nifty50-gift-nifty-crude-oil-prices-ipo-today-126112300084_1.html"
+        }
+      ]
+    },
+    {
+      "match": [
+        "VIKRAMSOLR"
+      ],
+      "theme": "Broad market",
+      "driver": "Market",
+      "reason": "No company news found today; it fell with the broad market sell-off (Nifty −1.75%).",
+      "sentiment": "negative",
+      "sources": [
+        {
+          "name": "Zee Business closing bell",
+          "url": "https://www.zeebiz.com/market-news/news-stock-market-closing-bell-sensex-tumbles-1484-points-nifty-slips-below-25350-405902"
+        }
+      ]
+    },
+    {
+      "match": [
+        "KRN"
+      ],
+      "theme": "Broad market",
+      "driver": "Market",
+      "reason": "No company news found today; it fell roughly in line with the broad market (Nifty −1.75%).",
+      "sentiment": "negative",
+      "sources": [
+        {
+          "name": "Zee Business closing bell",
+          "url": "https://www.zeebiz.com/market-news/news-stock-market-closing-bell-sensex-tumbles-1484-points-nifty-slips-below-25350-405902"
+        }
+      ]
+    },
+    {
+      "match": [
+        "MANORAMA"
+      ],
+      "theme": "Broad market",
+      "driver": "Market",
+      "reason": "No company news found today; it fell less than the Nifty (−1.75%) in the broad sell-off.",
+      "sentiment": "neutral",
+      "sources": [
+        {
+          "name": "Zee Business closing bell",
+          "url": "https://www.zeebiz.com/market-news/news-stock-market-closing-bell-sensex-tumbles-1484-points-nifty-slips-below-25350-405902"
+        }
+      ]
+    }
   ],
-  "news": []
+  "news": [
+    {
+      "date": "2026-11-23",
+      "holding": "Gold & silver holdings",
+      "match": [
+        "SILVERBEES",
+        "GOLDBEES",
+        "150615",
+        "149760",
+        "150737"
+      ],
+      "headline": "Gold and silver rebound 2–3% after last week's crash",
+      "summary": "Spot gold rose about 2% and silver about 3% on Monday as the dollar and crude eased, after last week's steepest weekly fall in eight months; a December Fed rate rise is still about 97% priced and US PCE inflation data is due this week.",
+      "impact": "positive",
+      "source_name": "Goodreturns (bullion, 23 Nov)",
+      "source_url": "https://www.goodreturns.in/news/gold-rates-silver-rates-today-23-11-2026-live-updates-mcx-gold-silver-price-24k-22k-18k-gold-prices-1548905.html"
+    },
+    {
+      "date": "2026-11-23",
+      "holding": "Happiest Minds Technologies",
+      "match": [
+        "HAPPSTMNDS"
+      ],
+      "headline": "Happiest Minds hits 52-week low after eight straight falls",
+      "summary": "The stock touched ₹291.15, down about 8% over eight sessions and about 41% over a year; the report notes higher debt and interest costs in the half-year and promoter pledging of about 25%.",
+      "impact": "negative",
+      "source_name": "MarketsMojo",
+      "source_url": "https://marketsmojo.com/news/stocks-in-action/happiest-minds-technologies-ltd-falls-to-52-week-low-of-rs29115-4271828"
+    }
+  ],
+  "events": [
+    {
+      "date": "2026-11-25",
+      "event": "US PCE inflation data",
+      "detail": "The Fed's preferred inflation gauge; firm readings would reinforce bets on a December rate rise, which has been the main pressure on silver and gold.",
+      "affects": "Silver and gold funds",
+      "source_name": "Capital Street FX commodity report",
+      "source_url": "https://www.capitalstreetfx.com/market-analysis/daily-commodity-report-23-nov-2026/"
+    },
+    {
+      "date": "2026-12-04",
+      "event": "RBI interest-rate decision",
+      "detail": "Meeting runs 2–4 December. The RBI raised rates in October; another rise would weigh on your bond fund and on small and mid caps.",
+      "affects": "Bond fund, small & mid caps",
+      "source_name": "5paisa",
+      "source_url": "https://www.5paisa.com/blog/rbi-mpc-meeting-schedule"
+    },
+    {
+      "date": "2026-12-09",
+      "event": "US Federal Reserve rate decision",
+      "detail": "Meeting runs 8–9 December; markets expect a rate rise, the main pressure on silver and gold lately.",
+      "affects": "Silver and gold funds (about 30% of the portfolio)",
+      "source_name": "FedRateCalc",
+      "source_url": "https://fedratecalc.com/fomc-meeting-schedule/december-2026/"
+    },
+    {
+      "date": "2027-01-15",
+      "event": "December-quarter results season begins (approx.)",
+      "detail": "Companies usually report from mid-January to mid-February; results moved Manorama, Hindustan Copper and KRN this quarter.",
+      "affects": "All 9 stocks",
+      "source_name": "",
+      "source_url": ""
+    },
+    {
+      "date": "2027-02-05",
+      "event": "Next RBI decision after December",
+      "detail": "Meeting runs 3–5 February 2027.",
+      "affects": "Bond fund, rate-sensitive holdings",
+      "source_name": "5paisa",
+      "source_url": "https://www.5paisa.com/blog/rbi-mpc-meeting-schedule"
+    }
+  ],
+  "outlook": [
+    {
+      "theme": "Silver",
+      "view": "Gold and silver bounced 2–3% on 23 November from their lowest levels since September 2025 after the steepest weekly fall in eight months; the dollar near 104 and a roughly 97%-priced December US rate rise still weigh on bullion.",
+      "watch": "US PCE inflation (25 Nov) and the 8–9 December Fed decision.",
+      "tone": "cautious",
+      "source_name": "Capital Street FX commodity report",
+      "source_url": "https://www.capitalstreetfx.com/market-analysis/daily-commodity-report-23-nov-2026/"
+    },
+    {
+      "theme": "Small & mid caps",
+      "view": "They have outperformed large caps this year, but lagged today's bank-led rally (Nifty Smallcap 100 −0.13%) and tend to fall harder when rates rise or foreign investors sell.",
+      "watch": "RBI decision on 4 December and foreign investor flows.",
+      "tone": "mixed",
+      "source_name": "Business Standard market close",
+      "source_url": "https://www.business-standard.com/markets/news/stock-market-live-november-20-nse-bse-sensex-today-nifty50-gift-nifty-crude-oil-prices-126112000118_1.html"
+    },
+    {
+      "theme": "Technology",
+      "view": "A global sell-off in AI stocks hit Asian hardware names today (Taiwan −6.2%, Korea over 5%), weighing on AI-server maker Netweb, while Indian IT services stocks rose (Nifty IT +1.3%).",
+      "watch": "December-quarter results from January.",
+      "tone": "mixed",
+      "source_name": "Moneycontrol (markets, 20 Nov)",
+      "source_url": "https://www.moneycontrol.com/news/business/markets/sensex-nifty-inching-towards-all-time-high-india-decouples-from-global-rout-only-major-market-in-the-green-14085693.html"
+    },
+    {
+      "theme": "Copper & metals",
+      "view": "Record copper prices drove Hindustan Copper's profit surge, but copper has since slipped to a five-month low on a strong dollar and weak China data, dragging metal stocks.",
+      "watch": "Global copper prices and the dollar.",
+      "tone": "mixed",
+      "source_name": "Business Standard",
+      "source_url": "https://www.business-standard.com/markets/news/hindustan-copper-shares-fall-3-as-copper-prices-hit-5-month-low-126111800284_1.html"
+    },
+    {
+      "theme": "Interest rates",
+      "view": "The RBI is in a tightening phase, which tends to lower bond prices in the short term and raise yields on new bonds.",
+      "watch": "RBI decision on 4 December.",
+      "tone": "cautious",
+      "source_name": "5paisa",
+      "source_url": "https://www.5paisa.com/blog/rbi-mpc-meeting-schedule"
+    }
+  ]
 }

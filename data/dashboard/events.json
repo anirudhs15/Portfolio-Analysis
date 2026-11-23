@@ -1,5 +1,13 @@
 [
  {
+  "date": "2026-11-25",
+  "event": "US PCE inflation data",
+  "detail": "The Fed's preferred inflation gauge; firm readings would reinforce bets on a December rate rise, which has been the main pressure on silver and gold.",
+  "affects": "Silver and gold funds",
+  "source_name": "Capital Street FX commodity report",
+  "source_url": "https://www.capitalstreetfx.com/market-analysis/daily-commodity-report-23-nov-2026/"
+ },
+ {
   "date": "2026-12-04",
   "event": "RBI interest-rate decision",
   "detail": "Meeting runs 2–4 December. The RBI raised rates in October; another rise would weigh on your bond fund and on small and mid caps.",
