@@ -1,0 +1,33 @@
+{
+  "date": "2026-11-23",
+  "market_wrap": {
+    "text": "Nifty fell 1.75% to 25,350 (Sensex −1,484 points) after a gap-up open reversed into broad selling. Profit-taking after a strong November rally, a roughly 93% market-implied chance of a December US Fed rate rise, a rupee near 93 per dollar and the global AI-stock sell-off weighed; banks and metals led the fall, with Tata Steel down about 8.5% on its APL Apollo deal, while IT stocks rose.",
+    "source_name": "India Infoline",
+    "source_url": "https://www.indiainfoline.com/news/markets/nifty-crashes-by-350-points-sensex-down-1-35-why-is-the-market-down-today"
+  },
+  "reasons": [
+    {"match": ["BLEL"], "theme": "Metals", "driver": "Sector",
+     "reason": "No company news found today. Steel and metal stocks were the day's worst sector (Nifty Metal −3.7%) as Tata Steel slumped about 8% on its ₹28,000 crore tubes-business sale and APL Apollo stake purchase, and BLEL closed at a fresh 52-week low.",
+     "sentiment": "negative",
+     "sources": [{"name": "The Hindu BusinessLine", "url": "https://www.thehindubusinessline.com/markets/stock-markets/tata-steel-dips-7-as-apl-apollo-tumbles-on-28000-crore-deal-hindalco-also-under-pressure/article71733581.ece"},
+                 {"name": "Univest (52-week-low streak)", "url": "https://univest.in/blogs/why-behari-lal-engineering-l-share-near-52-week-consecutive-low-2026"}]},
+    {"match": ["NETWEB"], "theme": "AI sell-off", "driver": "Global tech",
+     "reason": "No company news found today. Indian AI-linked stocks including Netweb fell as the global AI sell-off deepened after the Nasdaq dropped over 5% on Friday; Indian IT services stocks rose, but Netweb trades with the AI-hardware theme rather than with them.",
+     "sentiment": "negative",
+     "sources": [{"name": "Flipit", "url": "https://flipit.money/flips/nasdaq-drops-5-as-e2e-networks-esds-software-and-ai-stocks-decline-sharply"},
+                 {"name": "Business Standard", "url": "https://www.business-standard.com/amp/markets/news/stock-market-live-november-23-nse-bse-sensex-today-nifty50-gift-nifty-crude-oil-prices-ipo-today-126112300084_1.html"}]},
+    {"match": ["VIKRAMSOLR"], "theme": "Broad market", "driver": "Market",
+     "reason": "No company news found today; it fell with the broad market sell-off (Nifty −1.75%).",
+     "sentiment": "negative",
+     "sources": [{"name": "Zee Business closing bell", "url": "https://www.zeebiz.com/market-news/news-stock-market-closing-bell-sensex-tumbles-1484-points-nifty-slips-below-25350-405902"}]},
+    {"match": ["KRN"], "theme": "Broad market", "driver": "Market",
+     "reason": "No company news found today; it fell roughly in line with the broad market (Nifty −1.75%).",
+     "sentiment": "negative",
+     "sources": [{"name": "Zee Business closing bell", "url": "https://www.zeebiz.com/market-news/news-stock-market-closing-bell-sensex-tumbles-1484-points-nifty-slips-below-25350-405902"}]},
+    {"match": ["MANORAMA"], "theme": "Broad market", "driver": "Market",
+     "reason": "No company news found today; it fell less than the Nifty (−1.75%) in the broad sell-off.",
+     "sentiment": "neutral",
+     "sources": [{"name": "Zee Business closing bell", "url": "https://www.zeebiz.com/market-news/news-stock-market-closing-bell-sensex-tumbles-1484-points-nifty-slips-below-25350-405902"}]}
+  ],
+  "news": []
+}

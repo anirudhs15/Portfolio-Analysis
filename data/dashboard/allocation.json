@@ -2,116 +2,116 @@
  {
   "dimension": "Asset class",
   "name": "Equity",
-  "value": 405659.24,
-  "pct": 68.63
+  "value": 404706.41,
+  "pct": 68.57
  },
  {
   "dimension": "Asset class",
   "name": "Gold & Silver",
-  "value": 134366.54,
-  "pct": 22.73
+  "value": 134436.98,
+  "pct": 22.78
  },
  {
   "dimension": "Asset class",
   "name": "Debt",
   "value": 29566.24,
-  "pct": 5.0
+  "pct": 5.01
  },
  {
   "dimension": "Asset class",
   "name": "Hybrid",
   "value": 21484.81,
-  "pct": 3.63
+  "pct": 3.64
  },
  {
   "dimension": "Market cap (equity only)",
   "name": "Small",
-  "value": 141152.86,
-  "pct": 34.8
+  "value": 140671.83,
+  "pct": 34.76
  },
  {
   "dimension": "Market cap (equity only)",
   "name": "Mid",
-  "value": 105570.63,
-  "pct": 26.02
+  "value": 105445.83,
+  "pct": 26.05
  },
  {
   "dimension": "Market cap (equity only)",
   "name": "Thematic / other",
-  "value": 93890.71,
-  "pct": 23.15
+  "value": 93543.71,
+  "pct": 23.11
  },
  {
   "dimension": "Market cap (equity only)",
   "name": "Large",
   "value": 65045.04,
-  "pct": 16.03
+  "pct": 16.07
  },
  {
   "dimension": "Category",
   "name": "Silver",
-  "value": 117910.72,
-  "pct": 19.95
+  "value": 117845.92,
+  "pct": 19.97
  },
  {
   "dimension": "Category",
   "name": "Small Cap",
   "value": 104816.38,
-  "pct": 17.73
+  "pct": 17.76
  },
  {
   "dimension": "Category",
   "name": "Mid Cap",
   "value": 98865.83,
-  "pct": 16.73
+  "pct": 16.75
  },
  {
   "dimension": "Category",
   "name": "Sector / thematic",
   "value": 85631.88,
-  "pct": 14.49
+  "pct": 14.51
  },
  {
   "dimension": "Category",
   "name": "Large Cap",
   "value": 65045.04,
-  "pct": 11.0
+  "pct": 11.02
  },
  {
   "dimension": "Category",
   "name": "Corporate Bond",
   "value": 29566.24,
-  "pct": 5.0
+  "pct": 5.01
  },
  {
   "dimension": "Category",
   "name": "Technology",
-  "value": 24327.3,
-  "pct": 4.12
+  "value": 23875.25,
+  "pct": 4.05
  },
  {
   "dimension": "Category",
   "name": "Arbitrage (hybrid)",
   "value": 21484.81,
-  "pct": 3.63
+  "pct": 3.64
  },
  {
   "dimension": "Category",
   "name": "Basic Materials",
-  "value": 21262.88,
-  "pct": 3.6
+  "value": 20853.0,
+  "pct": 3.53
  },
  {
   "dimension": "Category",
   "name": "Gold",
-  "value": 16455.81,
-  "pct": 2.78
+  "value": 16591.05,
+  "pct": 2.81
  },
  {
   "dimension": "Category",
   "name": "Consumer Defensive",
-  "value": 5618.1,
-  "pct": 0.95
+  "value": 5527.2,
+  "pct": 0.94
  },
  {
   "dimension": "Category",
