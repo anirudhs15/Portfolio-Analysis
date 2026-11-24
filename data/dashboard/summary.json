@@ -1,36 +1,36 @@
 [
  {
   "as_of": "2026-11-24",
-  "mode": "close",
-  "generated_at": "2026-11-24T15:42:25+05:30",
-  "total_value": 588069.81,
-  "day_inr": 0.0,
-  "day_pct": 0.0,
+  "mode": "night",
+  "generated_at": "2026-11-24T21:46:03+05:30",
+  "total_value": 586524.47,
+  "day_inr": -2427.72,
+  "day_pct": -0.41,
   "nifty_pct": -1.75,
-  "vs_nifty_pct": 1.75,
+  "vs_nifty_pct": 1.34,
   "invested": 655740.86,
-  "gain_inr": -67762.75,
-  "gain_pct": -10.33,
+  "gain_inr": -69306.64,
+  "gain_pct": -10.57,
   "cost_coverage_pct": 100.0,
-  "value_with_cost": 587978.1,
+  "value_with_cost": 586434.22,
   "no_cost": [
    {
     "name": "CPSE ETF",
-    "value": 91.7
+    "value": 90.25
    }
   ],
   "holdings_count": 24,
   "stocks_count": 9,
   "funds_count": 15,
   "effective_holdings": 12.8,
-  "top5_pct": 53.7,
-  "volatility_pct": 18.0,
+  "top5_pct": 53.6,
+  "volatility_pct": 18.01,
   "beta": 0.85,
-  "max_drawdown_pct": -19.98,
-  "sharpe": 0.28,
-  "one_year_return_pct": 11.56,
-  "movers_count": 0,
-  "market_wrap": "Indian stock markets were closed today for a trading holiday, so prices and the portfolio are unchanged from the previous close.",
-  "market_wrap_source": ""
+  "max_drawdown_pct": -20.0,
+  "sharpe": 0.31,
+  "one_year_return_pct": 12.0,
+  "movers_count": 5,
+  "market_wrap": "NSE and BSE were closed today for Guru Nanak Jayanti; trading resumes on Wednesday 25 November. Tonight's change reflects Monday's session, when the Nifty fell 1.75% to 25,350, now with Monday's mutual fund NAVs, which were not out at last night's update.",
+  "market_wrap_source": "https://www.thehindubusinessline.com/markets/stock-market-holiday-today-are-bse-nse-closed-on-november-24-what-to-expect-when-markets-reopen/article71737549.ece"
  }
 ]

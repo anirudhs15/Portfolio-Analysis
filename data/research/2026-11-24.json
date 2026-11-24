@@ -1,10 +1,151 @@
 {
   "date": "2026-11-24",
   "market_wrap": {
-    "text": "Indian stock markets were closed today for a trading holiday, so prices and the portfolio are unchanged from the previous close.",
-    "source_name": "",
-    "source_url": ""
+    "text": "NSE and BSE were closed today for Guru Nanak Jayanti; trading resumes on Wednesday 25 November. Tonight's change reflects Monday's session, when the Nifty fell 1.75% to 25,350, now with Monday's mutual fund NAVs, which were not out at last night's update.",
+    "source_name": "The Hindu BusinessLine",
+    "source_url": "https://www.thehindubusinessline.com/markets/stock-market-holiday-today-are-bse-nse-closed-on-november-24-what-to-expect-when-markets-reopen/article71737549.ece"
   },
-  "reasons": [],
+  "reasons": [
+    {
+      "match": [
+        "BLEL"
+      ],
+      "theme": "Metals",
+      "driver": "Sector",
+      "reason": "Monday's move (markets shut today). No company news found. Steel and metal stocks were the day's worst sector (Nifty Metal −3.7%) as Tata Steel slumped about 8% on its ₹28,000 crore tubes-business sale and APL Apollo stake purchase, and BLEL closed at a fresh 52-week low.",
+      "sentiment": "negative",
+      "sources": [
+        {
+          "name": "The Hindu BusinessLine",
+          "url": "https://www.thehindubusinessline.com/markets/stock-markets/tata-steel-dips-7-as-apl-apollo-tumbles-on-28000-crore-deal-hindalco-also-under-pressure/article71733581.ece"
+        },
+        {
+          "name": "Univest (52-week-low streak)",
+          "url": "https://univest.in/blogs/why-behari-lal-engineering-l-share-near-52-week-consecutive-low-2026"
+        }
+      ]
+    },
+    {
+      "match": [
+        "NETWEB"
+      ],
+      "theme": "AI sell-off",
+      "driver": "Global tech",
+      "reason": "Monday's move (markets shut today). No company news found. Indian AI-linked stocks including Netweb fell as the global AI sell-off deepened after the Nasdaq dropped over 5% on Friday; Indian IT services stocks rose, but Netweb trades with the AI-hardware theme rather than with them.",
+      "sentiment": "negative",
+      "sources": [
+        {
+          "name": "Flipit",
+          "url": "https://flipit.money/flips/nasdaq-drops-5-as-e2e-networks-esds-software-and-ai-stocks-decline-sharply"
+        },
+        {
+          "name": "Business Standard",
+          "url": "https://www.business-standard.com/amp/markets/news/stock-market-live-november-23-nse-bse-sensex-today-nifty50-gift-nifty-crude-oil-prices-ipo-today-126112300084_1.html"
+        }
+      ]
+    },
+    {
+      "match": [
+        "VIKRAMSOLR"
+      ],
+      "theme": "Broad market",
+      "driver": "Market",
+      "reason": "Monday's move (markets shut today). No company news found; it fell with the broad market sell-off (Nifty −1.75%).",
+      "sentiment": "negative",
+      "sources": [
+        {
+          "name": "Zee Business closing bell",
+          "url": "https://www.zeebiz.com/market-news/news-stock-market-closing-bell-sensex-tumbles-1484-points-nifty-slips-below-25350-405902"
+        }
+      ]
+    },
+    {
+      "match": [
+        "KRN"
+      ],
+      "theme": "Broad market",
+      "driver": "Market",
+      "reason": "Monday's move (markets shut today). No company news found; it fell roughly in line with the broad market (Nifty −1.75%).",
+      "sentiment": "negative",
+      "sources": [
+        {
+          "name": "Zee Business closing bell",
+          "url": "https://www.zeebiz.com/market-news/news-stock-market-closing-bell-sensex-tumbles-1484-points-nifty-slips-below-25350-405902"
+        }
+      ]
+    },
+    {
+      "match": [
+        "MANORAMA"
+      ],
+      "theme": "Broad market",
+      "driver": "Market",
+      "reason": "Monday's move (markets shut today). No company news found; it fell less than the Nifty (−1.75%) in the broad sell-off.",
+      "sentiment": "neutral",
+      "sources": [
+        {
+          "name": "Zee Business closing bell",
+          "url": "https://www.zeebiz.com/market-news/news-stock-market-closing-bell-sensex-tumbles-1484-points-nifty-slips-below-25350-405902"
+        }
+      ]
+    },
+    {
+      "match": [
+        "118632",
+        "118778",
+        "147946",
+        "118989",
+        "145137",
+        "127042",
+        "140107"
+      ],
+      "theme": "Equity funds",
+      "driver": "Market",
+      "reason": "These are Monday 23 November NAVs, published after last night's run; they reflect Monday's sell-off (Nifty −1.75%, Bank Nifty −3.2%), led by banks, financials and metals. The large-cap fund fell most because banks are a big part of it; small and mid-cap funds fell less.",
+      "sentiment": "negative",
+      "sources": [
+        {
+          "name": "The Hindu BusinessLine (24 Nov)",
+          "url": "https://www.thehindubusinessline.com/markets/stock-market-holiday-today-are-bse-nse-closed-on-november-24-what-to-expect-when-markets-reopen/article71737549.ece"
+        },
+        {
+          "name": "Zee Business closing bell (23 Nov)",
+          "url": "https://www.zeebiz.com/market-news/news-stock-market-closing-bell-sensex-tumbles-1484-points-nifty-slips-below-25350-405902"
+        }
+      ]
+    },
+    {
+      "match": [
+        "120594"
+      ],
+      "theme": "IT",
+      "driver": "Sector",
+      "reason": "Monday NAV: IT stocks bucked the sell-off (Nifty IT about +1.7%, TCS +3.7%), lifting the technology fund.",
+      "sentiment": "positive",
+      "sources": [
+        {
+          "name": "Zee Business closing bell (23 Nov)",
+          "url": "https://www.zeebiz.com/market-news/news-stock-market-closing-bell-sensex-tumbles-1484-points-nifty-slips-below-25350-405902"
+        }
+      ]
+    },
+    {
+      "match": [
+        "149760",
+        "150615",
+        "150737"
+      ],
+      "theme": "Silver",
+      "driver": "Commodity",
+      "reason": "Monday NAVs, which caught part of silver's roughly 3% bounce from its lowest level since September 2025; the three funds moved slightly differently because of timing of their underlying ETF prices.",
+      "sentiment": "neutral",
+      "sources": [
+        {
+          "name": "Goodreturns (bullion, 23 Nov)",
+          "url": "https://www.goodreturns.in/news/gold-rates-silver-rates-today-23-11-2026-live-updates-mcx-gold-silver-price-24k-22k-18k-gold-prices-1548905.html"
+        }
+      ]
+    }
+  ],
   "news": []
 }
