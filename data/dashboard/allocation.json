@@ -2,7 +2,7 @@
  {
   "dimension": "Asset class",
   "name": "Equity",
-  "value": 404710.17,
+  "value": 404751.07,
   "pct": 69.25
  },
  {
@@ -20,14 +20,14 @@
  {
   "dimension": "Asset class",
   "name": "Hybrid",
-  "value": 21517.22,
-  "pct": 3.68
+  "value": 21546.53,
+  "pct": 3.69
  },
  {
   "dimension": "Market cap (equity only)",
   "name": "Small",
-  "value": 140312.9,
-  "pct": 34.67
+  "value": 140353.8,
+  "pct": 34.68
  },
  {
   "dimension": "Market cap (equity only)",
@@ -39,7 +39,7 @@
   "dimension": "Market cap (equity only)",
   "name": "Thematic / other",
   "value": 94361.29,
-  "pct": 23.32
+  "pct": 23.31
  },
  {
   "dimension": "Market cap (equity only)",
@@ -51,7 +51,7 @@
   "dimension": "Category",
   "name": "Silver",
   "value": 112474.29,
-  "pct": 19.25
+  "pct": 19.24
  },
  {
   "dimension": "Category",
@@ -69,7 +69,7 @@
   "dimension": "Category",
   "name": "Sector / thematic",
   "value": 86760.04,
-  "pct": 14.85
+  "pct": 14.84
  },
  {
   "dimension": "Category",
@@ -86,14 +86,14 @@
  {
   "dimension": "Category",
   "name": "Technology",
-  "value": 24133.95,
-  "pct": 4.13
+  "value": 24175.15,
+  "pct": 4.14
  },
  {
   "dimension": "Category",
   "name": "Arbitrage (hybrid)",
-  "value": 21517.22,
-  "pct": 3.68
+  "value": 21546.53,
+  "pct": 3.69
  },
  {
   "dimension": "Category",
@@ -110,7 +110,7 @@
  {
   "dimension": "Category",
   "name": "Consumer Defensive",
-  "value": 5579.7,
+  "value": 5579.4,
   "pct": 0.95
  },
  {

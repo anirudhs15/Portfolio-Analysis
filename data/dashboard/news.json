@@ -1,1 +1,13 @@
-[]
+[
+ {
+  "date": "2026-11-25",
+  "holding": "Gold & silver holdings",
+  "headline": "US core PCE inflation 3.3% in October, above the 3.2% expected",
+  "summary": "Headline PCE rose to 3.8%. The report makes a quarter-point Fed rate rise on 9 December look all but certain, a headwind for silver and gold.",
+  "impact": "negative",
+  "source_name": "StockAnalysis",
+  "source_url": "https://stockanalysis.com/news/us-pce-inflation-october-2026/",
+  "isins": "INF846K015J4,INF204KC1378,INF179KC1DU7,INF204KC1402,INF204KB17I5",
+  "scope": "holding"
+ }
+]
