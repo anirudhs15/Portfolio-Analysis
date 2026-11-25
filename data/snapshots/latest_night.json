@@ -3,35 +3,35 @@
   "run": {
     "date": "2026-11-25",
     "mode": "night",
-    "generated_at": "2026-11-25T21:51:39+05:30",
+    "generated_at": "2026-11-25T22:13:04+05:30",
     "market_open_today": true,
     "mf_status": "ok"
   },
   "summary": {
-    "total_value": 584468.4484,
-    "day_change_inr": -3601.3575,
-    "day_change_pct": -0.6124,
+    "total_value": 584497.4684,
+    "day_change_inr": -3569.0722,
+    "day_change_pct": -0.6069,
     "total_cost": 655740.86,
-    "total_gain_inr": -71362.6589,
-    "total_gain_pct": -10.8828,
+    "total_gain_inr": -71333.6389,
+    "total_gain_pct": -10.8783,
     "cost_coverage_pct": 99.9846,
     "benchmark": "^NSEI",
     "benchmark_change_pct": 1.8525,
-    "vs_benchmark_pct": -2.4649,
+    "vs_benchmark_pct": -2.4594,
     "by_type": [
       {
         "type": "mf",
-        "value": 495964.4095,
-        "prev": 497509.7448,
-        "change_inr": -1545.3352,
-        "change_pct": -0.3106
+        "value": 495993.7294,
+        "prev": 497509.3297,
+        "change_inr": -1515.6003,
+        "change_pct": -0.3046
       },
       {
         "type": "stock",
-        "value": 88504.0389,
-        "prev": 90560.0611,
-        "change_inr": -2056.0222,
-        "change_pct": -2.2703
+        "value": 88503.739,
+        "prev": 90557.2109,
+        "change_inr": -2053.4719,
+        "change_pct": -2.2676
       }
     ]
   },
@@ -143,7 +143,7 @@
         "price": 138.4,
         "price_date": "2026-11-25",
         "market_value": 22420.799,
-        "weight_pct": 3.8361,
+        "weight_pct": 3.8359,
         "day_change_pct": -5.4516,
         "day_change_inr": -1292.7618,
         "contribution_pct": -0.2198,
@@ -176,7 +176,7 @@
         "price": 100.11,
         "price_date": "2026-11-25",
         "market_value": 16117.7101,
-        "weight_pct": 2.7577,
+        "weight_pct": 2.7575,
         "day_change_pct": -2.853,
         "day_change_inr": -473.3404,
         "contribution_pct": -0.0805,
@@ -209,7 +209,7 @@
         "price": 375.55,
         "price_date": "2026-11-25",
         "market_value": 7510.9998,
-        "weight_pct": 1.2851,
+        "weight_pct": 1.285,
         "day_change_pct": -3.9514,
         "day_change_inr": -309.0002,
         "contribution_pct": -0.0525,
@@ -242,7 +242,7 @@
         "price": 398.9,
         "price_date": "2026-11-25",
         "market_value": 6382.3999,
-        "weight_pct": 1.092,
+        "weight_pct": 1.0919,
         "day_change_pct": -3.003,
         "day_change_inr": -197.6001,
         "contribution_pct": -0.0336,
@@ -275,7 +275,7 @@
         "price": 175.48,
         "price_date": "2026-11-25",
         "market_value": 6317.2798,
-        "weight_pct": 1.0809,
+        "weight_pct": 1.0808,
         "day_change_pct": -2.1032,
         "day_change_inr": -135.7202,
         "contribution_pct": -0.0231,
@@ -377,7 +377,7 @@
       "price": 208.41,
       "price_date": "2026-11-23",
       "market_value": 86760.0409,
-      "weight_pct": 14.8443,
+      "weight_pct": 14.8435,
       "day_change_pct": 0.4531,
       "day_change_inr": 391.3173,
       "contribution_pct": 0.0665,
@@ -402,7 +402,7 @@
       "price": 104.9228,
       "price_date": "2026-11-23",
       "market_value": 64720.58,
-      "weight_pct": 11.0734,
+      "weight_pct": 11.0729,
       "day_change_pct": -1.4822,
       "day_change_inr": -973.7436,
       "contribution_pct": -0.1656,
@@ -427,7 +427,7 @@
       "price": 202.0061,
       "price_date": "2026-11-23",
       "market_value": 63801.4046,
-      "weight_pct": 10.9161,
+      "weight_pct": 10.9156,
       "day_change_pct": -0.7214,
       "day_change_inr": -463.6201,
       "contribution_pct": -0.0788,
@@ -452,7 +452,7 @@
       "price": 120.2408,
       "price_date": "2026-11-23",
       "market_value": 60287.8954,
-      "weight_pct": 10.315,
+      "weight_pct": 10.3145,
       "day_change_pct": -0.2442,
       "day_change_inr": -147.56,
       "contribution_pct": -0.0251,
@@ -477,7 +477,7 @@
       "price": 231.351,
       "price_date": "2026-11-23",
       "market_value": 38645.1024,
-      "weight_pct": 6.612,
+      "weight_pct": 6.6117,
       "day_change_pct": -0.5015,
       "day_change_inr": -194.7698,
       "contribution_pct": -0.0331,
@@ -502,7 +502,7 @@
       "price": 26.3057,
       "price_date": "2026-11-23",
       "market_value": 32279.9875,
-      "weight_pct": 5.523,
+      "weight_pct": 5.5227,
       "day_change_pct": 0.2145,
       "day_change_inr": 69.0863,
       "contribution_pct": 0.0117,
@@ -527,7 +527,7 @@
       "price": 23.3132,
       "price_date": "2026-11-23",
       "market_value": 32175.8529,
-      "weight_pct": 5.5051,
+      "weight_pct": 5.5049,
       "day_change_pct": -0.2742,
       "day_change_inr": -88.468,
       "contribution_pct": -0.015,
@@ -552,7 +552,7 @@
       "price": 67.5775,
       "price_date": "2026-11-23",
       "market_value": 29607.8652,
-      "weight_pct": 5.0658,
+      "weight_pct": 5.0655,
       "day_change_pct": 0.0163,
       "day_change_inr": 4.8195,
       "contribution_pct": 0.0008,
@@ -577,7 +577,7 @@
       "price": 25.1995,
       "price_date": "2026-11-23",
       "market_value": 25597.6521,
-      "weight_pct": 4.3796,
+      "weight_pct": 4.3794,
       "day_change_pct": 0.4737,
       "day_change_inr": 120.677,
       "contribution_pct": 0.0205,
@@ -602,7 +602,7 @@
       "price": 138.4,
       "price_date": "2026-11-25",
       "market_value": 22420.799,
-      "weight_pct": 3.8361,
+      "weight_pct": 3.8359,
       "day_change_pct": -5.4516,
       "day_change_inr": -1292.7618,
       "contribution_pct": -0.2198,
@@ -632,17 +632,17 @@
       "market_cap_bucket": null,
       "quantity": 296.46,
       "avg_cost": 67.4627,
-      "price": 72.5805,
-      "price_date": "2026-11-23",
-      "market_value": 21517.215,
-      "weight_pct": 3.6815,
-      "day_change_pct": -0.0019,
-      "day_change_inr": -0.415,
-      "contribution_pct": -0.0001,
-      "high_52w": 72.5819,
-      "low_52w": 68.5786,
-      "gain_inr": 1517.215,
-      "gain_pct": 7.5861,
+      "price": 72.6794,
+      "price_date": "2026-11-25",
+      "market_value": 21546.5349,
+      "weight_pct": 3.6863,
+      "day_change_pct": 0.1363,
+      "day_change_inr": 29.3199,
+      "contribution_pct": 0.005,
+      "high_52w": 72.6794,
+      "low_52w": 68.5795,
+      "gain_inr": 1546.5349,
+      "gain_pct": 7.7327,
       "xirr_pct": null,
       "attribution": null,
       "significant_mover": false,
@@ -660,7 +660,7 @@
       "price": 56.71,
       "price_date": "2026-11-23",
       "market_value": 20929.5627,
-      "weight_pct": 3.581,
+      "weight_pct": 3.5808,
       "day_change_pct": -0.2813,
       "day_change_inr": -59.0501,
       "contribution_pct": -0.01,
@@ -685,7 +685,7 @@
       "price": 55.996,
       "price_date": "2026-11-23",
       "market_value": 19551.0034,
-      "weight_pct": 3.3451,
+      "weight_pct": 3.3449,
       "day_change_pct": -1.0234,
       "day_change_inr": -202.1579,
       "contribution_pct": -0.0344,
@@ -710,7 +710,7 @@
       "price": 100.11,
       "price_date": "2026-11-25",
       "market_value": 16117.7101,
-      "weight_pct": 2.7577,
+      "weight_pct": 2.7575,
       "day_change_pct": -2.853,
       "day_change_inr": -473.3404,
       "contribution_pct": -0.0805,
@@ -743,7 +743,7 @@
       "price": 4010.8,
       "price_date": "2026-11-25",
       "market_value": 8021.6001,
-      "weight_pct": 1.3725,
+      "weight_pct": 1.3724,
       "day_change_pct": 0.005,
       "day_change_inr": 0.3999,
       "contribution_pct": 0.0001,
@@ -776,7 +776,7 @@
       "price": 375.55,
       "price_date": "2026-11-25",
       "market_value": 7510.9998,
-      "weight_pct": 1.2851,
+      "weight_pct": 1.285,
       "day_change_pct": -3.9514,
       "day_change_inr": -309.0002,
       "contribution_pct": -0.0525,
@@ -809,7 +809,7 @@
       "price": 398.9,
       "price_date": "2026-11-25",
       "market_value": 6382.3999,
-      "weight_pct": 1.092,
+      "weight_pct": 1.0919,
       "day_change_pct": -3.003,
       "day_change_inr": -197.6001,
       "contribution_pct": -0.0336,
@@ -842,7 +842,7 @@
       "price": 175.48,
       "price_date": "2026-11-25",
       "market_value": 6317.2798,
-      "weight_pct": 1.0809,
+      "weight_pct": 1.0808,
       "day_change_pct": -2.1032,
       "day_change_inr": -135.7202,
       "contribution_pct": -0.0231,
@@ -872,26 +872,26 @@
       "market_cap_bucket": "Small",
       "quantity": 3.0,
       "avg_cost": 1953.0,
-      "price": 1859.9,
+      "price": 1859.8,
       "price_date": "2026-11-25",
-      "market_value": 5579.7001,
-      "weight_pct": 0.9547,
-      "day_change_pct": 0.9498,
-      "day_change_inr": 52.5,
-      "contribution_pct": 0.0089,
-      "high_52w": 2161.0,
+      "market_value": 5579.4001,
+      "weight_pct": 0.9546,
+      "day_change_pct": 0.9965,
+      "day_change_inr": 55.0503,
+      "contribution_pct": 0.0094,
+      "high_52w": 2162.5,
       "low_52w": 1060.6,
-      "gain_inr": -279.2999,
-      "gain_pct": -4.767,
+      "gain_inr": -279.5999,
+      "gain_pct": -4.7721,
       "xirr_pct": null,
       "attribution": {
-        "market_pct": 2.495,
+        "market_pct": 2.488,
         "sector_pct": 0.0,
-        "stock_specific_pct": -1.545,
+        "stock_specific_pct": -1.492,
         "driver": "market",
         "sector_index": "^CNXFMCG",
         "sector_move_pct": 3.7898,
-        "beta": 1.3466
+        "beta": 1.3433
       },
       "significant_mover": false,
       "units_source": "groww"
@@ -1084,10 +1084,10 @@
   "risk": {
     "metrics": {
       "observations": 364,
-      "annual_return_pct": 9.87,
-      "annual_volatility_pct": 17.94,
-      "sharpe": 0.19,
-      "sortino": 0.21,
+      "annual_return_pct": 10.22,
+      "annual_volatility_pct": 17.91,
+      "sharpe": 0.21,
+      "sortino": 0.23,
       "max_drawdown_pct": -19.79,
       "beta": 0.82
     },
@@ -1100,7 +1100,7 @@
       {
         "nifty_move_pct": -10,
         "portfolio_move_pct": -8.51,
-        "impact_inr": -49756
+        "impact_inr": -49755
       },
       {
         "nifty_move_pct": -20,
@@ -1110,23 +1110,23 @@
     ]
   },
   "diversification": {
-    "total_value": 584468.4484,
+    "total_value": 584497.4684,
     "by_holding_type": [
       {
         "name": "Mutual funds",
-        "value": 495964.4095,
+        "value": 495993.7294,
         "pct": 84.86
       },
       {
         "name": "Direct stocks",
-        "value": 88504.0389,
+        "value": 88503.739,
         "pct": 15.14
       }
     ],
     "by_asset_class": [
       {
         "name": "Equity",
-        "value": 404751.3666,
+        "value": 404751.0666,
         "pct": 69.25
       },
       {
@@ -1141,14 +1141,14 @@
       },
       {
         "name": "Hybrid",
-        "value": 21517.215,
-        "pct": 3.68
+        "value": 21546.5349,
+        "pct": 3.69
       }
     ],
     "by_market_cap": [
       {
         "name": "Small",
-        "value": 140354.1009,
+        "value": 140353.8009,
         "pct": 34.68
       },
       {
@@ -1185,7 +1185,7 @@
       },
       {
         "name": "Other Scheme - FoF Domestic",
-        "value": 79290.72,
+        "value": 79320.0399,
         "pct": 13.57
       },
       {
@@ -1232,7 +1232,7 @@
       },
       {
         "name": "Other Scheme - FoF Domestic",
-        "value": 79290.72,
+        "value": 79320.0399,
         "pct": 13.57
       },
       {
@@ -1272,7 +1272,7 @@
       },
       {
         "name": "Consumer Defensive",
-        "value": 5579.7001,
+        "value": 5579.4001,
         "pct": 0.95
       },
       {
@@ -1332,7 +1332,7 @@
       },
       {
         "name": "Nippon India Silver ETF FOF",
-        "pct": 5.51,
+        "pct": 5.5,
         "value": 32175.8529,
         "via": [
           "fund (no breakdown yet)"
@@ -1435,7 +1435,7 @@
     },
     {
       "date": "2026-11-25",
-      "value": 584468.4484,
+      "value": 584497.4684,
       "cost": 655740.86
     }
   ],
