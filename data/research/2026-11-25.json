@@ -1,0 +1,84 @@
+{
+  "date": "2026-11-25",
+  "market_wrap": {
+    "text": "Nifty rose 1.85% to 25,819 and the Sensex about 1,500 points as markets reopened after Tuesday's holiday and won back Monday's fall. Record foreign buying in November, Brent crude slipping to about $90 and a rupee at an eight-month high lifted banks, IT and FMCG (Nifty FMCG +3.8%); metals were the only sector to fall.",
+    "source_name": "The Week",
+    "source_url": "https://www.theweek.in/news/biz-tech/2026/11/25/indian-shares-rebound-sensex-surges.html"
+  },
+  "reasons": [
+    {
+      "match": ["SILVERBEES"],
+      "theme": "Silver",
+      "driver": "Commodity",
+      "reason": "Silver kept sliding: MCX silver futures were down about 2% in the afternoon, near ₹1.42 lakh/kg, on fears of a US Fed rate hike, a 19-month-high dollar and fund selling ahead of US PCE inflation data. The ETF fell further than the futures and closed near its 52-week low.",
+      "sentiment": "negative",
+      "sources": [
+        {"name": "Upstox gold & silver tracker", "url": "https://upstox.com/news/market-news/commodities/gold-price-tracker-nov-25-mcx-gold-prices-mcx-silver-rates-comex-gold-comex-silver-us-pce-inflation-data-in-focus-check-silver-prices-today/liveblog-203915/"},
+        {"name": "Zee Business", "url": "https://www.zeebiz.com/markets/commodities/news-gold-silver-prices-today-yellow-metal-slips-below-rs-121-lakh-grey-metal-drops-over-rs-2500-check-city-wise-rates-405972"}
+      ]
+    },
+    {
+      "match": ["GOLDBEES"],
+      "theme": "Gold",
+      "driver": "Commodity",
+      "reason": "MCX gold fell about 1.3% to around ₹1.20 lakh per 10 g on the same Fed-hike and strong-dollar worries; Gold BeES touched ₹99.90 intraday and is down more than 13% so far in November.",
+      "sentiment": "negative",
+      "sources": [
+        {"name": "Upstox gold & silver tracker", "url": "https://upstox.com/news/market-news/commodities/gold-price-tracker-nov-25-mcx-gold-prices-mcx-silver-rates-comex-gold-comex-silver-us-pce-inflation-data-in-focus-check-silver-prices-today/liveblog-203915/"}
+      ]
+    },
+    {
+      "match": ["BLEL"],
+      "theme": "Metals",
+      "driver": "Sector",
+      "reason": "No company news found today. Metals were the only sector to fall on a strong-rally day (Nifty Metal −2.0%), as a firm dollar weighed on metal prices, and BLEL slipped to a fresh 52-week low.",
+      "sentiment": "negative",
+      "sources": [
+        {"name": "The Week", "url": "https://www.theweek.in/news/biz-tech/2026/11/25/indian-shares-rebound-sensex-surges.html"},
+        {"name": "Univest", "url": "https://univest.in/blogs/sensex-and-nifty-rally-today-3-reasons-behind-the-jump-25-november-2026"}
+      ]
+    },
+    {
+      "match": ["HINDCOPPER"],
+      "theme": "Metals",
+      "driver": "Sector",
+      "reason": "No company news found today. It fell with the metal pack (Nifty Metal −2.0%), the only sector in the red, as the strong dollar kept pressure on base metals.",
+      "sentiment": "negative",
+      "sources": [
+        {"name": "The Week", "url": "https://www.theweek.in/news/biz-tech/2026/11/25/indian-shares-rebound-sensex-surges.html"},
+        {"name": "Zee Business (dollar index)", "url": "https://www.zeebiz.com/markets/commodities/news-gold-silver-prices-today-yellow-metal-slips-below-rs-121-lakh-grey-metal-drops-over-rs-2500-check-city-wise-rates-405972"}
+      ]
+    },
+    {
+      "match": ["KRONOX"],
+      "theme": "Open offer",
+      "driver": "Stock-specific",
+      "reason": "No company news found today. For context, Indo Borax's open offer at ₹157.27 a share closed for tendering on 20 November, with settlement due within about 10 working days.",
+      "sentiment": "neutral",
+      "sources": [
+        {"name": "Multibagg (open offer details)", "url": "https://www.multibagg.ai/market-pulse/articles/kronox-open-offer-tender-details-cmw3gnbke00fy2mphox8bangs"}
+      ]
+    },
+    {
+      "match": ["VIKRAMSOLR"],
+      "theme": "Broad market",
+      "driver": "Market",
+      "reason": "No company news found today; it rebounded with the broad market rally (Nifty +1.85%) after Monday's fall.",
+      "sentiment": "positive",
+      "sources": [
+        {"name": "The Week", "url": "https://www.theweek.in/news/biz-tech/2026/11/25/indian-shares-rebound-sensex-surges.html"}
+      ]
+    },
+    {
+      "match": ["KRN"],
+      "theme": "Broad market",
+      "driver": "Market",
+      "reason": "No company news found today; it rose with the broad recovery rally after Monday's sell-off.",
+      "sentiment": "positive",
+      "sources": [
+        {"name": "The Week", "url": "https://www.theweek.in/news/biz-tech/2026/11/25/indian-shares-rebound-sensex-surges.html"}
+      ]
+    }
+  ],
+  "news": []
+}
