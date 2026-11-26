@@ -7,34 +7,84 @@
   },
   "reasons": [
     {
-      "match": ["KFINTECH"],
+      "match": [
+        "KFINTECH"
+      ],
       "theme": "Capital markets",
       "driver": "Stock-specific",
       "reason": "KFintech jumped as much as 7% to about ₹1,000 on interest around the Mahanadi Coalfields IPO, for which it is the registrar; allotment finished on Wednesday and refunds and share credits began today. The move came despite a recent ₹10 lakh SEBI penalty over share-processing lapses.",
       "sentiment": "positive",
       "sources": [
-        {"name": "NewsBytes", "url": "https://www.newsbytesapp.com/news/business/kfin-technologies-jumps-over-7-amid-mahanadi-coalfields-ipo-allotment/tldr"},
-        {"name": "MarketsMojo", "url": "https://www.marketsmojo.com/news/stocks-in-action/kfin-technologies-ltd-hits-intraday-high-with-738-surge-on-26-nov-2026-4275745"}
+        {
+          "name": "NewsBytes",
+          "url": "https://www.newsbytesapp.com/news/business/kfin-technologies-jumps-over-7-amid-mahanadi-coalfields-ipo-allotment/tldr"
+        },
+        {
+          "name": "MarketsMojo",
+          "url": "https://www.marketsmojo.com/news/stocks-in-action/kfin-technologies-ltd-hits-intraday-high-with-738-surge-on-26-nov-2026-4275745"
+        }
       ]
     },
     {
-      "match": ["SILVERBEES"],
+      "match": [
+        "SILVERBEES"
+      ],
       "theme": "Silver",
       "driver": "Commodity",
       "reason": "Silver bounced back from near its 52-week low: MCX December silver was up about 3.4% to roughly ₹1.47 lakh/kg in the afternoon on value buying and steady US Treasury yields, ahead of the US Thanksgiving holiday.",
       "sentiment": "positive",
       "sources": [
-        {"name": "Upstox gold & silver tracker", "url": "https://upstox.com/news/market-news/commodities/gold-price-tracker-nov-26-mcx-gold-prices-mcx-silver-rates-comex-gold-comex-silver-us-pce-inflation-gold-prices-today-silver-price-today/liveblog-203983/"}
+        {
+          "name": "Upstox gold & silver tracker",
+          "url": "https://upstox.com/news/market-news/commodities/gold-price-tracker-nov-26-mcx-gold-prices-mcx-silver-rates-comex-gold-comex-silver-us-pce-inflation-gold-prices-today-silver-price-today/liveblog-203983/"
+        }
       ]
     },
     {
-      "match": ["HINDCOPPER"],
+      "match": [
+        "HINDCOPPER"
+      ],
       "theme": "Metals",
       "driver": "Sector",
       "reason": "No company news found today; its last exchange filings were from mid-November. Metals recovered after Wednesday's fall (Nifty Metal +1.2%) as precious metals rebounded, and the stock traded between about ₹406 and ₹414.",
       "sentiment": "positive",
       "sources": [
-        {"name": "Mirae Asset Sharekhan", "url": "https://www.sharekhan.com/stock/hindustan-copper-ltd"}
+        {
+          "name": "Mirae Asset Sharekhan",
+          "url": "https://www.sharekhan.com/stock/hindustan-copper-ltd"
+        }
+      ]
+    },
+    {
+      "match": [
+        "118632"
+      ],
+      "theme": "Large caps",
+      "driver": "Market",
+      "reason": "This is the 25 November NAV (today's NAV was not yet published). It tracks Wednesday's broad rally, when the Sensex rose about 1,500 points on record foreign buying in November and cheaper crude, led by banks and IT heavyweights such as ICICI Bank, HDFC Bank and Infosys.",
+      "sentiment": "positive",
+      "sources": [
+        {
+          "name": "The Week",
+          "url": "https://www.theweek.in/news/biz-tech/2026/11/25/indian-shares-rebound-sensex-surges.html"
+        }
+      ]
+    },
+    {
+      "match": [
+        "149760",
+        "150615",
+        "150737"
+      ],
+      "theme": "Silver",
+      "driver": "Commodity",
+      "reason": "These are 25 November NAVs (today's were not yet published), catching up with Wednesday's slide in silver on Fed rate-hike fears and a 19-month-high dollar; MCX silver futures were down about 1.75% by midday and the underlying silver ETF fell about 5.5%. Silver rebounded on 26 November (Silver BeES +2.2%), which should show up in the next NAVs.",
+      "sentiment": "negative",
+      "sources": [
+        {
+          "name": "Zee Business",
+          "url": "https://www.zeebiz.com/markets/commodities/news-gold-silver-prices-today-yellow-metal-slips-below-rs-121-lakh-grey-metal-drops-over-rs-2500-check-city-wise-rates-405972"
+        }
       ]
     }
   ],
@@ -42,7 +92,9 @@
     {
       "date": "2026-11-26",
       "holding": "KFin Technologies",
-      "match": ["KFINTECH"],
+      "match": [
+        "KFINTECH"
+      ],
       "headline": "KFintech handles Mahanadi Coalfields IPO; allotment completed",
       "summary": "Refunds and demat credits for the Mahanadi Coalfields IPO, where KFintech is registrar, began on 26 November. The company was recently fined ₹10 lakh by SEBI over share-processing issues.",
       "impact": "positive",
@@ -50,6 +102,88 @@
       "source_url": "https://www.newsbytesapp.com/news/business/kfin-technologies-jumps-over-7-amid-mahanadi-coalfields-ipo-allotment/tldr"
     }
   ],
-  "events": [],
-  "outlook": []
+  "events": [
+    {
+      "date": "2026-12-04",
+      "event": "RBI interest-rate decision",
+      "detail": "Meeting runs 2–4 December. The RBI raised rates in October; another rise would weigh on your bond fund and on small and mid caps.",
+      "affects": "Bond fund, small & mid caps",
+      "source_name": "5paisa",
+      "source_url": "https://www.5paisa.com/blog/rbi-mpc-meeting-schedule"
+    },
+    {
+      "date": "2026-12-09",
+      "event": "US Federal Reserve rate decision",
+      "detail": "Meeting runs 8–9 December; after hotter-than-expected October core inflation (25 Nov), markets fully price a quarter-point rise, the main pressure on silver and gold lately.",
+      "affects": "Silver and gold funds (about 30% of the portfolio)",
+      "source_name": "StockAnalysis (US PCE, October 2026)",
+      "source_url": "https://stockanalysis.com/news/us-pce-inflation-october-2026/"
+    },
+    {
+      "date": "2026-12-23",
+      "event": "US PCE inflation (November)",
+      "detail": "Next reading of the Fed's preferred gauge, due after the December Fed meeting.",
+      "affects": "Silver and gold funds",
+      "source_name": "StockAnalysis (US PCE, October 2026)",
+      "source_url": "https://stockanalysis.com/news/us-pce-inflation-october-2026/"
+    },
+    {
+      "date": "2027-01-15",
+      "event": "December-quarter results season begins (approx.)",
+      "detail": "Companies usually report from mid-January to mid-February; results moved Manorama, Hindustan Copper and KRN this quarter.",
+      "affects": "All 9 stocks",
+      "source_name": "",
+      "source_url": ""
+    },
+    {
+      "date": "2027-02-05",
+      "event": "Next RBI decision after December",
+      "detail": "Meeting runs 3–5 February 2027.",
+      "affects": "Bond fund, rate-sensitive holdings",
+      "source_name": "5paisa",
+      "source_url": "https://www.5paisa.com/blog/rbi-mpc-meeting-schedule"
+    }
+  ],
+  "outlook": [
+    {
+      "theme": "Silver",
+      "view": "Silver and gold fell again on 25 November (Silver BeES −5.5%, Gold BeES −2.9%) ahead of US inflation data. That data, out tonight, showed October core PCE inflation at 3.3% against 3.2% expected, cementing expectations of a December US rate rise, which has been the main pressure on bullion.",
+      "watch": "The 8–9 December Fed decision and the dollar.",
+      "tone": "cautious",
+      "source_name": "StockAnalysis (US PCE, October 2026)",
+      "source_url": "https://stockanalysis.com/news/us-pce-inflation-october-2026/"
+    },
+    {
+      "theme": "Small & mid caps",
+      "view": "They have outperformed large caps this year, but lagged today's bank-led rally (Nifty Smallcap 100 −0.13%) and tend to fall harder when rates rise or foreign investors sell.",
+      "watch": "RBI decision on 4 December and foreign investor flows.",
+      "tone": "mixed",
+      "source_name": "Business Standard market close",
+      "source_url": "https://www.business-standard.com/markets/news/stock-market-live-november-20-nse-bse-sensex-today-nifty50-gift-nifty-crude-oil-prices-126112000118_1.html"
+    },
+    {
+      "theme": "Technology",
+      "view": "A global sell-off in AI stocks hit Asian hardware names today (Taiwan −6.2%, Korea over 5%), weighing on AI-server maker Netweb, while Indian IT services stocks rose (Nifty IT +1.3%).",
+      "watch": "December-quarter results from January.",
+      "tone": "mixed",
+      "source_name": "Moneycontrol (markets, 20 Nov)",
+      "source_url": "https://www.moneycontrol.com/news/business/markets/sensex-nifty-inching-towards-all-time-high-india-decouples-from-global-rout-only-major-market-in-the-green-14085693.html"
+    },
+    {
+      "theme": "Copper & metals",
+      "view": "Record copper prices drove Hindustan Copper's profit surge, but copper has since slipped to a five-month low on a strong dollar and weak China data, dragging metal stocks.",
+      "watch": "Global copper prices and the dollar.",
+      "tone": "mixed",
+      "source_name": "Business Standard",
+      "source_url": "https://www.business-standard.com/markets/news/hindustan-copper-shares-fall-3-as-copper-prices-hit-5-month-low-126111800284_1.html"
+    },
+    {
+      "theme": "Interest rates",
+      "view": "The RBI is in a tightening phase, which tends to lower bond prices in the short term and raise yields on new bonds.",
+      "watch": "RBI decision on 4 December.",
+      "tone": "cautious",
+      "source_name": "5paisa",
+      "source_url": "https://www.5paisa.com/blog/rbi-mpc-meeting-schedule"
+    }
+  ]
 }
