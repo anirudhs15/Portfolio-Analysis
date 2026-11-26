@@ -1,0 +1,55 @@
+{
+  "date": "2026-11-26",
+  "market_wrap": {
+    "text": "Nifty rose 0.25% to about 25,885 and the Sensex about 390 points in a choppy, range-bound session. IT (Nifty IT +3.7%) and realty led, while FMCG fell about 1% after the Supreme Court called for separate warning labels for each nutrient of concern on food packaging.",
+    "source_name": "Business Standard",
+    "source_url": "https://www.business-standard.com/amp/markets/news/stock-market-live-november-26-nse-bse-sensex-today-nifty50-gift-nifty-crude-oil-prices-ipo-today-126112600049_1.html"
+  },
+  "reasons": [
+    {
+      "match": ["KFINTECH"],
+      "theme": "Capital markets",
+      "driver": "Stock-specific",
+      "reason": "KFintech jumped as much as 7% to about ₹1,000 on interest around the Mahanadi Coalfields IPO, for which it is the registrar; allotment finished on Wednesday and refunds and share credits began today. The move came despite a recent ₹10 lakh SEBI penalty over share-processing lapses.",
+      "sentiment": "positive",
+      "sources": [
+        {"name": "NewsBytes", "url": "https://www.newsbytesapp.com/news/business/kfin-technologies-jumps-over-7-amid-mahanadi-coalfields-ipo-allotment/tldr"},
+        {"name": "MarketsMojo", "url": "https://www.marketsmojo.com/news/stocks-in-action/kfin-technologies-ltd-hits-intraday-high-with-738-surge-on-26-nov-2026-4275745"}
+      ]
+    },
+    {
+      "match": ["SILVERBEES"],
+      "theme": "Silver",
+      "driver": "Commodity",
+      "reason": "Silver bounced back from near its 52-week low: MCX December silver was up about 3.4% to roughly ₹1.47 lakh/kg in the afternoon on value buying and steady US Treasury yields, ahead of the US Thanksgiving holiday.",
+      "sentiment": "positive",
+      "sources": [
+        {"name": "Upstox gold & silver tracker", "url": "https://upstox.com/news/market-news/commodities/gold-price-tracker-nov-26-mcx-gold-prices-mcx-silver-rates-comex-gold-comex-silver-us-pce-inflation-gold-prices-today-silver-price-today/liveblog-203983/"}
+      ]
+    },
+    {
+      "match": ["HINDCOPPER"],
+      "theme": "Metals",
+      "driver": "Sector",
+      "reason": "No company news found today; its last exchange filings were from mid-November. Metals recovered after Wednesday's fall (Nifty Metal +1.2%) as precious metals rebounded, and the stock traded between about ₹406 and ₹414.",
+      "sentiment": "positive",
+      "sources": [
+        {"name": "Mirae Asset Sharekhan", "url": "https://www.sharekhan.com/stock/hindustan-copper-ltd"}
+      ]
+    }
+  ],
+  "news": [
+    {
+      "date": "2026-11-26",
+      "holding": "KFin Technologies",
+      "match": ["KFINTECH"],
+      "headline": "KFintech handles Mahanadi Coalfields IPO; allotment completed",
+      "summary": "Refunds and demat credits for the Mahanadi Coalfields IPO, where KFintech is registrar, began on 26 November. The company was recently fined ₹10 lakh by SEBI over share-processing issues.",
+      "impact": "positive",
+      "source_name": "NewsBytes",
+      "source_url": "https://www.newsbytesapp.com/news/business/kfin-technologies-jumps-over-7-amid-mahanadi-coalfields-ipo-allotment/tldr"
+    }
+  ],
+  "events": [],
+  "outlook": []
+}

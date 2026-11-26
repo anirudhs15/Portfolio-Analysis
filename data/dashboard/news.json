@@ -1,5 +1,16 @@
 [
  {
+  "date": "2026-11-26",
+  "holding": "KFin Technologies",
+  "headline": "KFintech handles Mahanadi Coalfields IPO; allotment completed",
+  "summary": "Refunds and demat credits for the Mahanadi Coalfields IPO, where KFintech is registrar, began on 26 November. The company was recently fined ₹10 lakh by SEBI over share-processing issues.",
+  "impact": "positive",
+  "source_name": "NewsBytes",
+  "source_url": "https://www.newsbytesapp.com/news/business/kfin-technologies-jumps-over-7-amid-mahanadi-coalfields-ipo-allotment/tldr",
+  "isins": "INE138Y01010",
+  "scope": "holding"
+ },
+ {
   "date": "2026-11-25",
   "holding": "Gold & silver holdings",
   "headline": "US core PCE inflation 3.3% in October, above the 3.2% expected",
