@@ -3,21 +3,21 @@
   "run": {
     "date": "2026-11-26",
     "mode": "night",
-    "generated_at": "2026-11-26T21:44:47+05:30",
+    "generated_at": "2026-11-26T22:05:37+05:30",
     "market_open_today": true,
     "mf_status": "ok"
   },
   "summary": {
-    "total_value": 582889.3162,
-    "day_change_inr": -1579.9325,
-    "day_change_pct": -0.2703,
+    "total_value": 582890.9163,
+    "day_change_inr": -1577.5321,
+    "day_change_pct": -0.2699,
     "total_cost": 655740.86,
-    "total_gain_inr": -72942.5119,
-    "total_gain_pct": -11.1237,
+    "total_gain_inr": -72940.9118,
+    "total_gain_pct": -11.1234,
     "cost_coverage_pct": 99.9844,
     "benchmark": "^NSEI",
     "benchmark_change_pct": 0.2527,
-    "vs_benchmark_pct": -0.523,
+    "vs_benchmark_pct": -0.5226,
     "by_type": [
       {
         "type": "mf",
@@ -28,10 +28,10 @@
       },
       {
         "type": "stock",
-        "value": 89557.7488,
-        "prev": 88504.8392,
-        "change_inr": 1052.9096,
-        "change_pct": 1.1897
+        "value": 89559.3489,
+        "prev": 88504.0389,
+        "change_inr": 1055.31,
+        "change_pct": 1.1924
       }
     ]
   },
@@ -273,26 +273,26 @@
         "market_cap_bucket": "Mid",
         "quantity": 16.0,
         "avg_cost": 620.6,
-        "price": 411.05,
+        "price": 411.15,
         "price_date": "2026-11-26",
-        "market_value": 6576.7998,
-        "weight_pct": 1.1283,
-        "day_change_pct": 3.033,
-        "day_change_inr": 193.5996,
-        "contribution_pct": 0.0331,
+        "market_value": 6578.3999,
+        "weight_pct": 1.1286,
+        "day_change_pct": 3.0709,
+        "day_change_inr": 196.0,
+        "contribution_pct": 0.0335,
         "high_52w": 760.05,
         "low_52w": 308.5,
-        "gain_inr": -3352.8002,
-        "gain_pct": -33.7657,
+        "gain_inr": -3351.2001,
+        "gain_pct": -33.7496,
         "xirr_pct": null,
         "attribution": {
           "market_pct": 0.326,
           "sector_pct": 0.913,
-          "stock_specific_pct": 1.794,
+          "stock_specific_pct": 1.832,
           "driver": "stock_specific",
           "sector_index": "^CNXMETAL",
           "sector_move_pct": 1.166,
-          "beta": 1.2903
+          "beta": 1.2916
         },
         "significant_mover": true,
         "units_source": "groww"
@@ -420,7 +420,7 @@
       "price": 119.8178,
       "price_date": "2026-11-25",
       "market_value": 60075.8062,
-      "weight_pct": 10.3066,
+      "weight_pct": 10.3065,
       "day_change_pct": -0.3518,
       "day_change_inr": -212.0892,
       "contribution_pct": -0.0363,
@@ -774,26 +774,26 @@
       "market_cap_bucket": "Mid",
       "quantity": 16.0,
       "avg_cost": 620.6,
-      "price": 411.05,
+      "price": 411.15,
       "price_date": "2026-11-26",
-      "market_value": 6576.7998,
-      "weight_pct": 1.1283,
-      "day_change_pct": 3.033,
-      "day_change_inr": 193.5996,
-      "contribution_pct": 0.0331,
+      "market_value": 6578.3999,
+      "weight_pct": 1.1286,
+      "day_change_pct": 3.0709,
+      "day_change_inr": 196.0,
+      "contribution_pct": 0.0335,
       "high_52w": 760.05,
       "low_52w": 308.5,
-      "gain_inr": -3352.8002,
-      "gain_pct": -33.7657,
+      "gain_inr": -3351.2001,
+      "gain_pct": -33.7496,
       "xirr_pct": null,
       "attribution": {
         "market_pct": 0.326,
         "sector_pct": 0.913,
-        "stock_specific_pct": 1.794,
+        "stock_specific_pct": 1.832,
         "driver": "stock_specific",
         "sector_index": "^CNXMETAL",
         "sector_move_pct": 1.166,
-        "beta": 1.2903
+        "beta": 1.2916
       },
       "significant_mover": true,
       "units_source": "groww"
@@ -1068,17 +1068,17 @@
       {
         "nifty_move_pct": -10,
         "portfolio_move_pct": -8.34,
-        "impact_inr": -48629
+        "impact_inr": -48630
       },
       {
         "nifty_move_pct": -20,
         "portfolio_move_pct": -16.69,
-        "impact_inr": -97259
+        "impact_inr": -97261
       }
     ]
   },
   "diversification": {
-    "total_value": 582889.3162,
+    "total_value": 582890.9163,
     "by_holding_type": [
       {
         "name": "Mutual funds",
@@ -1087,14 +1087,14 @@
       },
       {
         "name": "Direct stocks",
-        "value": 89557.7488,
+        "value": 89559.3489,
         "pct": 15.36
       }
     ],
     "by_asset_class": [
       {
         "name": "Equity",
-        "value": 407403.0199,
+        "value": 407404.62,
         "pct": 69.89
       },
       {
@@ -1121,7 +1121,7 @@
       },
       {
         "name": "Mid",
-        "value": 105550.1073,
+        "value": 105551.7074,
         "pct": 25.91
       },
       {
@@ -1235,7 +1235,7 @@
       },
       {
         "name": "Basic Materials",
-        "value": 20271.6797,
+        "value": 20273.2798,
         "pct": 3.48
       },
       {
@@ -1408,7 +1408,7 @@
     },
     {
       "date": "2026-11-26",
-      "value": 582889.3162,
+      "value": 582890.9163,
       "cost": 655740.86
     }
   ],
