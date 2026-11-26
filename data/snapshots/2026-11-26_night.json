@@ -1,0 +1,1433 @@
+{
+  "schema_version": 1,
+  "run": {
+    "date": "2026-11-26",
+    "mode": "night",
+    "generated_at": "2026-11-26T21:44:47+05:30",
+    "market_open_today": true,
+    "mf_status": "ok"
+  },
+  "summary": {
+    "total_value": 582889.3162,
+    "day_change_inr": -1579.9325,
+    "day_change_pct": -0.2703,
+    "total_cost": 655740.86,
+    "total_gain_inr": -72942.5119,
+    "total_gain_pct": -11.1237,
+    "cost_coverage_pct": 99.9844,
+    "benchmark": "^NSEI",
+    "benchmark_change_pct": 0.2527,
+    "vs_benchmark_pct": -0.523,
+    "by_type": [
+      {
+        "type": "mf",
+        "value": 493331.5674,
+        "prev": 495964.4095,
+        "change_inr": -2632.8421,
+        "change_pct": -0.5309
+      },
+      {
+        "type": "stock",
+        "value": 89557.7488,
+        "prev": 88504.8392,
+        "change_inr": 1052.9096,
+        "change_pct": 1.1897
+      }
+    ]
+  },
+  "movers": {
+    "gainers": [
+      {
+        "isin": "INF204K01XI3",
+        "name": "Nippon India Large Cap Fund",
+        "type": "mf",
+        "day_change_pct": 2.2365,
+        "day_change_inr": 1447.4767,
+        "contribution_pct": 0.2477,
+        "market_value": 66168.0567
+      },
+      {
+        "isin": "INF109K01Z48",
+        "name": "ICICI Prudential Technology Fund",
+        "type": "mf",
+        "day_change_pct": 0.6286,
+        "day_change_inr": 545.3465,
+        "contribution_pct": 0.0933,
+        "market_value": 87305.3874
+      },
+      {
+        "isin": "INF204KC1402",
+        "name": "Nippon India Silver ETF",
+        "type": "stock",
+        "day_change_pct": 2.2254,
+        "day_change_inr": 498.9603,
+        "contribution_pct": 0.0854,
+        "market_value": 22919.7593
+      },
+      {
+        "isin": "INE138Y01010",
+        "name": "KFin Technologies Limited",
+        "type": "stock",
+        "day_change_pct": 6.531,
+        "day_change_inr": 305.0,
+        "contribution_pct": 0.0522,
+        "market_value": 4975.0
+      },
+      {
+        "isin": "INF179K01XQ0",
+        "name": "HDFC Mid Cap Fund",
+        "type": "mf",
+        "day_change_pct": 0.6531,
+        "day_change_inr": 252.399,
+        "contribution_pct": 0.0432,
+        "market_value": 38897.5013
+      }
+    ],
+    "losers": [
+      {
+        "isin": "INF846K015J4",
+        "name": "Axis Silver Fund of Fund",
+        "type": "mf",
+        "day_change_pct": -5.909,
+        "day_change_inr": -1907.4198,
+        "contribution_pct": -0.3264,
+        "market_value": 30372.5677
+      },
+      {
+        "isin": "INF204KC1378",
+        "name": "Nippon India Silver ETF FOF",
+        "type": "mf",
+        "day_change_pct": -5.4553,
+        "day_change_inr": -1755.2824,
+        "contribution_pct": -0.3003,
+        "market_value": 30420.5705
+      },
+      {
+        "isin": "INF179KC1DU7",
+        "name": "HDFC Silver ETF Fund of Fund",
+        "type": "mf",
+        "day_change_pct": -4.8247,
+        "day_change_inr": -1235.0096,
+        "contribution_pct": -0.2113,
+        "market_value": 24362.6425
+      },
+      {
+        "isin": "INF247L01445",
+        "name": "Motilal Oswal Midcap Fund",
+        "type": "mf",
+        "day_change_pct": -0.3518,
+        "day_change_inr": -212.0892,
+        "contribution_pct": -0.0363,
+        "market_value": 60075.8062
+      },
+      {
+        "isin": "INE1EEM01017",
+        "name": "Behari Lal Engineering Limited",
+        "type": "stock",
+        "day_change_pct": -1.105,
+        "day_change_inr": -82.9999,
+        "contribution_pct": -0.0142,
+        "market_value": 7427.9999
+      }
+    ],
+    "to_explain": [
+      {
+        "isin": "INF204K01XI3",
+        "symbol": "118632",
+        "name": "Nippon India Large Cap Fund",
+        "type": "mf",
+        "sector": "Equity Scheme - Large Cap Fund",
+        "market_cap_bucket": "Large",
+        "quantity": 616.84,
+        "avg_cost": 100.5123,
+        "price": 107.2694,
+        "price_date": "2026-11-25",
+        "market_value": 66168.0567,
+        "weight_pct": 11.3517,
+        "day_change_pct": 2.2365,
+        "day_change_inr": 1447.4767,
+        "contribution_pct": 0.2477,
+        "high_52w": 107.2694,
+        "low_52w": 91.4539,
+        "gain_inr": 4168.0567,
+        "gain_pct": 6.7227,
+        "xirr_pct": null,
+        "attribution": null,
+        "significant_mover": true,
+        "units_source": "cas"
+      },
+      {
+        "isin": "INF204KC1378",
+        "symbol": "149760",
+        "name": "Nippon India Silver ETF FOF",
+        "type": "mf",
+        "sector": "Other Scheme - FoF Domestic",
+        "market_cap_bucket": null,
+        "quantity": 1380.156,
+        "avg_cost": 36.2256,
+        "price": 22.0414,
+        "price_date": "2026-11-25",
+        "market_value": 30420.5705,
+        "weight_pct": 5.2189,
+        "day_change_pct": -5.4553,
+        "day_change_inr": -1755.2824,
+        "contribution_pct": -0.3003,
+        "high_52w": 56.4363,
+        "low_52w": 22.0414,
+        "gain_inr": -19576.4295,
+        "gain_pct": -39.1552,
+        "xirr_pct": null,
+        "attribution": null,
+        "significant_mover": true,
+        "units_source": "cas"
+      },
+      {
+        "isin": "INF846K015J4",
+        "symbol": "150615",
+        "name": "Axis Silver Fund of Fund",
+        "type": "mf",
+        "sector": "Fund of Funds Scheme (Domestic) - Fund of Funds Scheme (Domestic)",
+        "market_cap_bucket": null,
+        "quantity": 1227.11,
+        "avg_cost": 40.7445,
+        "price": 24.7513,
+        "price_date": "2026-11-25",
+        "market_value": 30372.5677,
+        "weight_pct": 5.2107,
+        "day_change_pct": -5.909,
+        "day_change_inr": -1907.4198,
+        "contribution_pct": -0.3264,
+        "high_52w": 63.9029,
+        "low_52w": 24.7513,
+        "gain_inr": -19625.4323,
+        "gain_pct": -39.2524,
+        "xirr_pct": null,
+        "attribution": null,
+        "significant_mover": true,
+        "units_source": "cas"
+      },
+      {
+        "isin": "INF179KC1DU7",
+        "symbol": "150737",
+        "name": "HDFC Silver ETF Fund of Fund",
+        "type": "mf",
+        "sector": "Other Scheme - FoF Domestic",
+        "market_cap_bucket": null,
+        "quantity": 1015.8,
+        "avg_cost": 39.3759,
+        "price": 23.9837,
+        "price_date": "2026-11-25",
+        "market_value": 24362.6425,
+        "weight_pct": 4.1796,
+        "day_change_pct": -4.8247,
+        "day_change_inr": -1235.0096,
+        "contribution_pct": -0.2113,
+        "high_52w": 61.3938,
+        "low_52w": 23.9837,
+        "gain_inr": -15635.3575,
+        "gain_pct": -39.0903,
+        "xirr_pct": null,
+        "attribution": null,
+        "significant_mover": true,
+        "units_source": "cas"
+      },
+      {
+        "isin": "INF204KC1402",
+        "symbol": "SILVERBEES",
+        "name": "Nippon India Silver ETF",
+        "type": "stock",
+        "sector": "Gold & Silver",
+        "market_cap_bucket": null,
+        "quantity": 162.0,
+        "avg_cost": 284.82,
+        "price": 141.48,
+        "price_date": "2026-11-26",
+        "market_value": 22919.7593,
+        "weight_pct": 3.9321,
+        "day_change_pct": 2.2254,
+        "day_change_inr": 498.9603,
+        "contribution_pct": 0.0854,
+        "high_52w": 360.0,
+        "low_52w": 137.6,
+        "gain_inr": -23221.0807,
+        "gain_pct": -50.3265,
+        "xirr_pct": null,
+        "attribution": {
+          "market_pct": 0.282,
+          "sector_pct": 0.0,
+          "stock_specific_pct": 1.944,
+          "driver": "stock_specific",
+          "sector_index": null,
+          "sector_move_pct": null,
+          "beta": 1.1153
+        },
+        "significant_mover": true,
+        "units_source": "groww"
+      },
+      {
+        "isin": "INE531E01026",
+        "symbol": "HINDCOPPER",
+        "name": "Hindustan Copper Limited",
+        "type": "stock",
+        "sector": "Basic Materials",
+        "market_cap_bucket": "Mid",
+        "quantity": 16.0,
+        "avg_cost": 620.6,
+        "price": 411.05,
+        "price_date": "2026-11-26",
+        "market_value": 6576.7998,
+        "weight_pct": 1.1283,
+        "day_change_pct": 3.033,
+        "day_change_inr": 193.5996,
+        "contribution_pct": 0.0331,
+        "high_52w": 760.05,
+        "low_52w": 308.5,
+        "gain_inr": -3352.8002,
+        "gain_pct": -33.7657,
+        "xirr_pct": null,
+        "attribution": {
+          "market_pct": 0.326,
+          "sector_pct": 0.913,
+          "stock_specific_pct": 1.794,
+          "driver": "stock_specific",
+          "sector_index": "^CNXMETAL",
+          "sector_move_pct": 1.166,
+          "beta": 1.2903
+        },
+        "significant_mover": true,
+        "units_source": "groww"
+      },
+      {
+        "isin": "INE138Y01010",
+        "symbol": "KFINTECH",
+        "name": "KFin Technologies Limited",
+        "type": "stock",
+        "sector": "Technology",
+        "market_cap_bucket": "Small",
+        "quantity": 5.0,
+        "avg_cost": 976.55,
+        "price": 995.0,
+        "price_date": "2026-11-26",
+        "market_value": 4975.0,
+        "weight_pct": 0.8535,
+        "day_change_pct": 6.531,
+        "day_change_inr": 305.0,
+        "contribution_pct": 0.0522,
+        "high_52w": 1115.8,
+        "low_52w": 784.0,
+        "gain_inr": 92.25,
+        "gain_pct": 1.8893,
+        "xirr_pct": null,
+        "attribution": {
+          "market_pct": 0.309,
+          "sector_pct": 0.487,
+          "stock_specific_pct": 5.734,
+          "driver": "stock_specific",
+          "sector_index": "^CNXIT",
+          "sector_move_pct": 3.6619,
+          "beta": 1.2242
+        },
+        "significant_mover": true,
+        "units_source": "groww"
+      }
+    ]
+  },
+  "holdings": [
+    {
+      "isin": "INF109K01Z48",
+      "symbol": "120594",
+      "name": "ICICI Prudential Technology Fund",
+      "type": "mf",
+      "sector": "Equity Scheme - Sectoral/ Thematic",
+      "market_cap_bucket": null,
+      "quantity": 416.295,
+      "avg_cost": 208.9864,
+      "price": 209.72,
+      "price_date": "2026-11-25",
+      "market_value": 87305.3874,
+      "weight_pct": 14.978,
+      "day_change_pct": 0.6286,
+      "day_change_inr": 545.3465,
+      "contribution_pct": 0.0933,
+      "high_52w": 240.34,
+      "low_52w": 180.05,
+      "gain_inr": 305.3874,
+      "gain_pct": 0.351,
+      "xirr_pct": null,
+      "attribution": null,
+      "significant_mover": false,
+      "units_source": "cas"
+    },
+    {
+      "isin": "INF204K01XI3",
+      "symbol": "118632",
+      "name": "Nippon India Large Cap Fund",
+      "type": "mf",
+      "sector": "Equity Scheme - Large Cap Fund",
+      "market_cap_bucket": "Large",
+      "quantity": 616.84,
+      "avg_cost": 100.5123,
+      "price": 107.2694,
+      "price_date": "2026-11-25",
+      "market_value": 66168.0567,
+      "weight_pct": 11.3517,
+      "day_change_pct": 2.2365,
+      "day_change_inr": 1447.4767,
+      "contribution_pct": 0.2477,
+      "high_52w": 107.2694,
+      "low_52w": 91.4539,
+      "gain_inr": 4168.0567,
+      "gain_pct": 6.7227,
+      "xirr_pct": null,
+      "attribution": null,
+      "significant_mover": true,
+      "units_source": "cas"
+    },
+    {
+      "isin": "INF204K01K15",
+      "symbol": "118778",
+      "name": "Nippon India Small Cap Fund",
+      "type": "mf",
+      "sector": "Equity Scheme - Small Cap Fund",
+      "market_cap_bucket": "Small",
+      "quantity": 315.839,
+      "avg_cost": 183.6379,
+      "price": 202.0944,
+      "price_date": "2026-11-25",
+      "market_value": 63829.2932,
+      "weight_pct": 10.9505,
+      "day_change_pct": 0.0437,
+      "day_change_inr": 27.8886,
+      "contribution_pct": 0.0048,
+      "high_52w": 211.077,
+      "low_52w": 165.176,
+      "gain_inr": 5829.2932,
+      "gain_pct": 10.0505,
+      "xirr_pct": null,
+      "attribution": null,
+      "significant_mover": false,
+      "units_source": "cas"
+    },
+    {
+      "isin": "INF247L01445",
+      "symbol": "127042",
+      "name": "Motilal Oswal Midcap Fund",
+      "type": "mf",
+      "sector": "Equity Scheme - Mid Cap Fund",
+      "market_cap_bucket": "Mid",
+      "quantity": 501.393,
+      "avg_cost": 117.6662,
+      "price": 119.8178,
+      "price_date": "2026-11-25",
+      "market_value": 60075.8062,
+      "weight_pct": 10.3066,
+      "day_change_pct": -0.3518,
+      "day_change_inr": -212.0892,
+      "contribution_pct": -0.0363,
+      "high_52w": 123.6743,
+      "low_52w": 92.9568,
+      "gain_inr": 1078.8062,
+      "gain_pct": 1.8286,
+      "xirr_pct": null,
+      "attribution": null,
+      "significant_mover": false,
+      "units_source": "cas"
+    },
+    {
+      "isin": "INF179K01XQ0",
+      "symbol": "118989",
+      "name": "HDFC Mid Cap Fund",
+      "type": "mf",
+      "sector": "Equity Scheme - Mid Cap Fund",
+      "market_cap_bucket": "Mid",
+      "quantity": 167.041,
+      "avg_cost": 215.516,
+      "price": 232.862,
+      "price_date": "2026-11-25",
+      "market_value": 38897.5013,
+      "weight_pct": 6.6732,
+      "day_change_pct": 0.6531,
+      "day_change_inr": 252.399,
+      "contribution_pct": 0.0432,
+      "high_52w": 237.629,
+      "low_52w": 198.616,
+      "gain_inr": 2897.5013,
+      "gain_pct": 8.0486,
+      "xirr_pct": null,
+      "attribution": null,
+      "significant_mover": false,
+      "units_source": "cas"
+    },
+    {
+      "isin": "INF204KC1378",
+      "symbol": "149760",
+      "name": "Nippon India Silver ETF FOF",
+      "type": "mf",
+      "sector": "Other Scheme - FoF Domestic",
+      "market_cap_bucket": null,
+      "quantity": 1380.156,
+      "avg_cost": 36.2256,
+      "price": 22.0414,
+      "price_date": "2026-11-25",
+      "market_value": 30420.5705,
+      "weight_pct": 5.2189,
+      "day_change_pct": -5.4553,
+      "day_change_inr": -1755.2824,
+      "contribution_pct": -0.3003,
+      "high_52w": 56.4363,
+      "low_52w": 22.0414,
+      "gain_inr": -19576.4295,
+      "gain_pct": -39.1552,
+      "xirr_pct": null,
+      "attribution": null,
+      "significant_mover": true,
+      "units_source": "cas"
+    },
+    {
+      "isin": "INF846K015J4",
+      "symbol": "150615",
+      "name": "Axis Silver Fund of Fund",
+      "type": "mf",
+      "sector": "Fund of Funds Scheme (Domestic) - Fund of Funds Scheme (Domestic)",
+      "market_cap_bucket": null,
+      "quantity": 1227.11,
+      "avg_cost": 40.7445,
+      "price": 24.7513,
+      "price_date": "2026-11-25",
+      "market_value": 30372.5677,
+      "weight_pct": 5.2107,
+      "day_change_pct": -5.909,
+      "day_change_inr": -1907.4198,
+      "contribution_pct": -0.3264,
+      "high_52w": 63.9029,
+      "low_52w": 24.7513,
+      "gain_inr": -19625.4323,
+      "gain_pct": -39.2524,
+      "xirr_pct": null,
+      "attribution": null,
+      "significant_mover": true,
+      "units_source": "cas"
+    },
+    {
+      "isin": "INF204K01C15",
+      "symbol": "118814",
+      "name": "Nippon India Corporate Bond Fund",
+      "type": "mf",
+      "sector": "Debt Scheme - Corporate Bond Fund",
+      "market_cap_bucket": null,
+      "quantity": 438.132,
+      "avg_cost": 63.9077,
+      "price": 67.5816,
+      "price_date": "2026-11-25",
+      "market_value": 29609.6616,
+      "weight_pct": 5.0798,
+      "day_change_pct": 0.0061,
+      "day_change_inr": 1.7963,
+      "contribution_pct": 0.0003,
+      "high_52w": 67.5816,
+      "low_52w": 64.671,
+      "gain_inr": 1609.6616,
+      "gain_pct": 5.7488,
+      "xirr_pct": null,
+      "attribution": null,
+      "significant_mover": false,
+      "units_source": "cas"
+    },
+    {
+      "isin": "INF179KC1DU7",
+      "symbol": "150737",
+      "name": "HDFC Silver ETF Fund of Fund",
+      "type": "mf",
+      "sector": "Other Scheme - FoF Domestic",
+      "market_cap_bucket": null,
+      "quantity": 1015.8,
+      "avg_cost": 39.3759,
+      "price": 23.9837,
+      "price_date": "2026-11-25",
+      "market_value": 24362.6425,
+      "weight_pct": 4.1796,
+      "day_change_pct": -4.8247,
+      "day_change_inr": -1235.0096,
+      "contribution_pct": -0.2113,
+      "high_52w": 61.3938,
+      "low_52w": 23.9837,
+      "gain_inr": -15635.3575,
+      "gain_pct": -39.0903,
+      "xirr_pct": null,
+      "attribution": null,
+      "significant_mover": true,
+      "units_source": "cas"
+    },
+    {
+      "isin": "INF204KC1402",
+      "symbol": "SILVERBEES",
+      "name": "Nippon India Silver ETF",
+      "type": "stock",
+      "sector": "Gold & Silver",
+      "market_cap_bucket": null,
+      "quantity": 162.0,
+      "avg_cost": 284.82,
+      "price": 141.48,
+      "price_date": "2026-11-26",
+      "market_value": 22919.7593,
+      "weight_pct": 3.9321,
+      "day_change_pct": 2.2254,
+      "day_change_inr": 498.9603,
+      "contribution_pct": 0.0854,
+      "high_52w": 360.0,
+      "low_52w": 137.6,
+      "gain_inr": -23221.0807,
+      "gain_pct": -50.3265,
+      "xirr_pct": null,
+      "attribution": {
+        "market_pct": 0.282,
+        "sector_pct": 0.0,
+        "stock_specific_pct": 1.944,
+        "driver": "stock_specific",
+        "sector_index": null,
+        "sector_move_pct": null,
+        "beta": 1.1153
+      },
+      "significant_mover": true,
+      "units_source": "groww"
+    },
+    {
+      "isin": "INF109K01W82",
+      "symbol": "120313",
+      "name": "ICICI Prudential Income plus Arbitrage Omni FOF",
+      "type": "mf",
+      "sector": "Other Scheme - FoF Domestic",
+      "market_cap_bucket": null,
+      "quantity": 296.46,
+      "avg_cost": 67.4627,
+      "price": 72.6794,
+      "price_date": "2026-11-25",
+      "market_value": 21546.5349,
+      "weight_pct": 3.6965,
+      "day_change_pct": 0.1363,
+      "day_change_inr": 29.3199,
+      "contribution_pct": 0.005,
+      "high_52w": 72.6794,
+      "low_52w": 68.5795,
+      "gain_inr": 1546.5349,
+      "gain_pct": 7.7327,
+      "xirr_pct": null,
+      "attribution": null,
+      "significant_mover": false,
+      "units_source": "cas"
+    },
+    {
+      "isin": "INF205K013T3",
+      "symbol": "145137",
+      "name": "Invesco India Small Cap Fund",
+      "type": "mf",
+      "sector": "Equity Schemes - Small Cap Fund",
+      "market_cap_bucket": "Small",
+      "quantity": 369.063,
+      "avg_cost": 54.1886,
+      "price": 57.23,
+      "price_date": "2026-11-25",
+      "market_value": 21121.4755,
+      "weight_pct": 3.6236,
+      "day_change_pct": 0.9169,
+      "day_change_inr": 191.9128,
+      "contribution_pct": 0.0328,
+      "high_52w": 57.23,
+      "low_52w": 40.9,
+      "gain_inr": 1122.4755,
+      "gain_pct": 5.6127,
+      "xirr_pct": null,
+      "attribution": null,
+      "significant_mover": false,
+      "units_source": "cas"
+    },
+    {
+      "isin": "INF194KB1AL4",
+      "symbol": "147946",
+      "name": "BANDHAN Small Cap Fund",
+      "type": "mf",
+      "sector": "Equity Scheme - Small Cap Fund",
+      "market_cap_bucket": "Small",
+      "quantity": 349.15,
+      "avg_cost": 57.2791,
+      "price": 55.939,
+      "price_date": "2026-11-25",
+      "market_value": 19531.1018,
+      "weight_pct": 3.3507,
+      "day_change_pct": -0.1018,
+      "day_change_inr": -19.9015,
+      "contribution_pct": -0.0034,
+      "high_52w": 58.119,
+      "low_52w": 44.631,
+      "gain_inr": -467.8982,
+      "gain_pct": -2.3396,
+      "xirr_pct": null,
+      "attribution": null,
+      "significant_mover": false,
+      "units_source": "cas"
+    },
+    {
+      "isin": "INF204KB17I5",
+      "symbol": "GOLDBEES",
+      "name": "Nippon India ETF Gold BeES",
+      "type": "stock",
+      "sector": "Gold & Silver",
+      "market_cap_bucket": null,
+      "quantity": 161.0,
+      "avg_cost": 78.68,
+      "price": 100.96,
+      "price_date": "2026-11-26",
+      "market_value": 16254.5599,
+      "weight_pct": 2.7886,
+      "day_change_pct": 0.8491,
+      "day_change_inr": 136.8498,
+      "contribution_pct": 0.0234,
+      "high_52w": 148.14,
+      "low_52w": 99.88,
+      "gain_inr": 3587.0799,
+      "gain_pct": 28.3172,
+      "xirr_pct": null,
+      "attribution": {
+        "market_pct": 0.133,
+        "sector_pct": 0.0,
+        "stock_specific_pct": 0.716,
+        "driver": "stock_specific",
+        "sector_index": null,
+        "sector_move_pct": null,
+        "beta": 0.5272
+      },
+      "significant_mover": false,
+      "units_source": "groww"
+    },
+    {
+      "isin": "INE0NT901020",
+      "symbol": "NETWEB",
+      "name": "Netweb Technologies India Limited",
+      "type": "stock",
+      "sector": "Technology",
+      "market_cap_bucket": "Small",
+      "quantity": 2.0,
+      "avg_cost": 5613.7,
+      "price": 4057.0,
+      "price_date": "2026-11-26",
+      "market_value": 8114.0,
+      "weight_pct": 1.392,
+      "day_change_pct": 1.1519,
+      "day_change_inr": 92.3999,
+      "contribution_pct": 0.0158,
+      "high_52w": 5813.0,
+      "low_52w": 2920.0,
+      "gain_inr": -3113.4,
+      "gain_pct": -27.7304,
+      "xirr_pct": null,
+      "attribution": {
+        "market_pct": 0.193,
+        "sector_pct": 0.0,
+        "stock_specific_pct": 0.959,
+        "driver": "stock_specific",
+        "sector_index": "^CNXIT",
+        "sector_move_pct": 3.6619,
+        "beta": 0.7643
+      },
+      "significant_mover": false,
+      "units_source": "groww"
+    },
+    {
+      "isin": "INE1EEM01017",
+      "symbol": "BLEL",
+      "name": "Behari Lal Engineering Limited",
+      "type": "stock",
+      "sector": "Basic Materials",
+      "market_cap_bucket": null,
+      "quantity": 20.0,
+      "avg_cost": 522.9,
+      "price": 371.4,
+      "price_date": "2026-11-26",
+      "market_value": 7427.9999,
+      "weight_pct": 1.2743,
+      "day_change_pct": -1.105,
+      "day_change_inr": -82.9999,
+      "contribution_pct": -0.0142,
+      "high_52w": 548.0,
+      "low_52w": 370.0,
+      "gain_inr": -3030.0001,
+      "gain_pct": -28.973,
+      "xirr_pct": null,
+      "attribution": {
+        "market_pct": 0.087,
+        "sector_pct": 0.835,
+        "stock_specific_pct": -2.027,
+        "driver": "stock_specific",
+        "sector_index": "^CNXMETAL",
+        "sector_move_pct": 1.166,
+        "beta": 0.3448
+      },
+      "significant_mover": false,
+      "units_source": "groww"
+    },
+    {
+      "isin": "INE531E01026",
+      "symbol": "HINDCOPPER",
+      "name": "Hindustan Copper Limited",
+      "type": "stock",
+      "sector": "Basic Materials",
+      "market_cap_bucket": "Mid",
+      "quantity": 16.0,
+      "avg_cost": 620.6,
+      "price": 411.05,
+      "price_date": "2026-11-26",
+      "market_value": 6576.7998,
+      "weight_pct": 1.1283,
+      "day_change_pct": 3.033,
+      "day_change_inr": 193.5996,
+      "contribution_pct": 0.0331,
+      "high_52w": 760.05,
+      "low_52w": 308.5,
+      "gain_inr": -3352.8002,
+      "gain_pct": -33.7657,
+      "xirr_pct": null,
+      "attribution": {
+        "market_pct": 0.326,
+        "sector_pct": 0.913,
+        "stock_specific_pct": 1.794,
+        "driver": "stock_specific",
+        "sector_index": "^CNXMETAL",
+        "sector_move_pct": 1.166,
+        "beta": 1.2903
+      },
+      "significant_mover": true,
+      "units_source": "groww"
+    },
+    {
+      "isin": "INE0ATZ01017",
+      "symbol": "KRONOX",
+      "name": "Kronox Lab Sciences Limited",
+      "type": "stock",
+      "sector": "Basic Materials",
+      "market_cap_bucket": "Small",
+      "quantity": 36.0,
+      "avg_cost": 219.29,
+      "price": 174.08,
+      "price_date": "2026-11-26",
+      "market_value": 6266.8801,
+      "weight_pct": 1.0751,
+      "day_change_pct": -0.7978,
+      "day_change_inr": -50.3998,
+      "contribution_pct": -0.0086,
+      "high_52w": 227.74,
+      "low_52w": 96.0,
+      "gain_inr": -1627.5599,
+      "gain_pct": -20.6165,
+      "xirr_pct": null,
+      "attribution": {
+        "market_pct": 0.275,
+        "sector_pct": 0.183,
+        "stock_specific_pct": -1.256,
+        "driver": "stock_specific",
+        "sector_index": "^CNXMETAL",
+        "sector_move_pct": 1.166,
+        "beta": 1.0875
+      },
+      "significant_mover": false,
+      "units_source": "groww"
+    },
+    {
+      "isin": "INE00VM01036",
+      "symbol": "MANORAMA",
+      "name": "Manorama Industries Limited",
+      "type": "stock",
+      "sector": "Consumer Defensive",
+      "market_cap_bucket": "Small",
+      "quantity": 3.0,
+      "avg_cost": 1953.0,
+      "price": 1866.7,
+      "price_date": "2026-11-26",
+      "market_value": 5600.0999,
+      "weight_pct": 0.9607,
+      "day_change_pct": 0.3656,
+      "day_change_inr": 20.3998,
+      "contribution_pct": 0.0035,
+      "high_52w": 2161.0,
+      "low_52w": 1060.6,
+      "gain_inr": -258.9001,
+      "gain_pct": -4.4188,
+      "xirr_pct": null,
+      "attribution": {
+        "market_pct": 0.336,
+        "sector_pct": -0.0,
+        "stock_specific_pct": 0.029,
+        "driver": "market",
+        "sector_index": "^CNXFMCG",
+        "sector_move_pct": -0.9372,
+        "beta": 1.3314
+      },
+      "significant_mover": false,
+      "units_source": "groww"
+    },
+    {
+      "isin": "INE138Y01010",
+      "symbol": "KFINTECH",
+      "name": "KFin Technologies Limited",
+      "type": "stock",
+      "sector": "Technology",
+      "market_cap_bucket": "Small",
+      "quantity": 5.0,
+      "avg_cost": 976.55,
+      "price": 995.0,
+      "price_date": "2026-11-26",
+      "market_value": 4975.0,
+      "weight_pct": 0.8535,
+      "day_change_pct": 6.531,
+      "day_change_inr": 305.0,
+      "contribution_pct": 0.0522,
+      "high_52w": 1115.8,
+      "low_52w": 784.0,
+      "gain_inr": 92.25,
+      "gain_pct": 1.8893,
+      "xirr_pct": null,
+      "attribution": {
+        "market_pct": 0.309,
+        "sector_pct": 0.487,
+        "stock_specific_pct": 5.734,
+        "driver": "stock_specific",
+        "sector_index": "^CNXIT",
+        "sector_move_pct": 3.6619,
+        "beta": 1.2242
+      },
+      "significant_mover": true,
+      "units_source": "groww"
+    },
+    {
+      "isin": "INE419U01012",
+      "symbol": "HAPPSTMNDS",
+      "name": "Happiest Minds Technologies Limited",
+      "type": "stock",
+      "sector": "Technology",
+      "market_cap_bucket": "Small",
+      "quantity": 15.0,
+      "avg_cost": 439.35,
+      "price": 284.95,
+      "price_date": "2026-11-26",
+      "market_value": 4274.2502,
+      "weight_pct": 0.7333,
+      "day_change_pct": -1.2818,
+      "day_change_inr": -55.4997,
+      "contribution_pct": -0.0095,
+      "high_52w": 519.9,
+      "low_52w": 283.5,
+      "gain_inr": -2315.9998,
+      "gain_pct": -35.1428,
+      "xirr_pct": null,
+      "attribution": {
+        "market_pct": 0.289,
+        "sector_pct": 1.104,
+        "stock_specific_pct": -2.675,
+        "driver": "stock_specific",
+        "sector_index": "^CNXIT",
+        "sector_move_pct": 3.6619,
+        "beta": 1.1426
+      },
+      "significant_mover": false,
+      "units_source": "groww"
+    },
+    {
+      "isin": "INE078V01014",
+      "symbol": "VIKRAMSOLR",
+      "name": "Vikram Solar Limited",
+      "type": "stock",
+      "sector": "Technology",
+      "market_cap_bucket": "Small",
+      "quantity": 30.0,
+      "avg_cost": 185.0,
+      "price": 141.04,
+      "price_date": "2026-11-26",
+      "market_value": 4231.1998,
+      "weight_pct": 0.7259,
+      "day_change_pct": 1.2927,
+      "day_change_inr": 53.9996,
+      "contribution_pct": 0.0092,
+      "high_52w": 313.1,
+      "low_52w": 124.5,
+      "gain_inr": -1318.8002,
+      "gain_pct": -23.7622,
+      "xirr_pct": null,
+      "attribution": {
+        "market_pct": 0.3,
+        "sector_pct": 0.0,
+        "stock_specific_pct": 0.992,
+        "driver": "stock_specific",
+        "sector_index": "^CNXIT",
+        "sector_move_pct": 3.6619,
+        "beta": 1.1888
+      },
+      "significant_mover": false,
+      "units_source": "groww"
+    },
+    {
+      "isin": "INE0Q3J01015",
+      "symbol": "KRN",
+      "name": "KRN Heat Exchanger and Refrigeration Limited",
+      "type": "stock",
+      "sector": "Technology",
+      "market_cap_bucket": "Small",
+      "quantity": 3.0,
+      "avg_cost": 1517.7,
+      "price": 972.4,
+      "price_date": "2026-11-26",
+      "market_value": 2917.2001,
+      "weight_pct": 0.5005,
+      "day_change_pct": -1.9956,
+      "day_change_inr": -59.4,
+      "contribution_pct": -0.0102,
+      "high_52w": 1687.0,
+      "low_52w": 589.8,
+      "gain_inr": -1635.8999,
+      "gain_pct": -35.9294,
+      "xirr_pct": null,
+      "attribution": {
+        "market_pct": 0.256,
+        "sector_pct": 0.0,
+        "stock_specific_pct": -2.251,
+        "driver": "stock_specific",
+        "sector_index": "^CNXIT",
+        "sector_move_pct": 3.6619,
+        "beta": 1.0112
+      },
+      "significant_mover": false,
+      "units_source": "groww"
+    },
+    {
+      "isin": "INF457M01133",
+      "symbol": "140107",
+      "name": "CPSE ETF",
+      "type": "mf",
+      "sector": "Other Scheme - Other  ETFs",
+      "market_cap_bucket": null,
+      "quantity": 1.0,
+      "avg_cost": null,
+      "price": 90.9681,
+      "price_date": "2026-11-25",
+      "market_value": 90.9681,
+      "weight_pct": 0.0156,
+      "day_change_pct": 0.7987,
+      "day_change_inr": 0.7208,
+      "contribution_pct": 0.0001,
+      "high_52w": 108.8702,
+      "low_52w": 85.9057,
+      "gain_inr": null,
+      "gain_pct": null,
+      "xirr_pct": null,
+      "attribution": null,
+      "significant_mover": false,
+      "units_source": "cas"
+    }
+  ],
+  "indices": {
+    "^CNXFMCG": {
+      "close": 49673.5508,
+      "day_change_pct": -0.9372,
+      "date": "2026-11-26"
+    },
+    "^CNXIT": {
+      "close": 33386.9492,
+      "day_change_pct": 3.6619,
+      "date": "2026-11-26"
+    },
+    "^CNXMETAL": {
+      "close": 11713.5,
+      "day_change_pct": 1.166,
+      "date": "2026-11-26"
+    },
+    "^CRSLDX": {
+      "close": 24086.5,
+      "day_change_pct": 0.2543,
+      "date": "2026-11-26"
+    },
+    "^NSEI": {
+      "close": 25884.5,
+      "day_change_pct": 0.2527,
+      "date": "2026-11-26"
+    }
+  },
+  "risk": {
+    "metrics": {
+      "observations": 364,
+      "annual_return_pct": 11.57,
+      "annual_volatility_pct": 17.74,
+      "sharpe": 0.29,
+      "sortino": 0.32,
+      "max_drawdown_pct": -19.75,
+      "beta": 0.83
+    },
+    "scenarios": [
+      {
+        "nifty_move_pct": -5,
+        "portfolio_move_pct": -4.17,
+        "impact_inr": -24315
+      },
+      {
+        "nifty_move_pct": -10,
+        "portfolio_move_pct": -8.34,
+        "impact_inr": -48629
+      },
+      {
+        "nifty_move_pct": -20,
+        "portfolio_move_pct": -16.69,
+        "impact_inr": -97259
+      }
+    ]
+  },
+  "diversification": {
+    "total_value": 582889.3162,
+    "by_holding_type": [
+      {
+        "name": "Mutual funds",
+        "value": 493331.5674,
+        "pct": 84.64
+      },
+      {
+        "name": "Direct stocks",
+        "value": 89557.7488,
+        "pct": 15.36
+      }
+    ],
+    "by_asset_class": [
+      {
+        "name": "Equity",
+        "value": 407403.0199,
+        "pct": 69.89
+      },
+      {
+        "name": "Gold & Silver",
+        "value": 124330.0998,
+        "pct": 21.33
+      },
+      {
+        "name": "Debt",
+        "value": 29609.6616,
+        "pct": 5.08
+      },
+      {
+        "name": "Hybrid",
+        "value": 21546.5349,
+        "pct": 3.7
+      }
+    ],
+    "by_market_cap": [
+      {
+        "name": "Small",
+        "value": 140860.5005,
+        "pct": 34.58
+      },
+      {
+        "name": "Mid",
+        "value": 105550.1073,
+        "pct": 25.91
+      },
+      {
+        "name": "Unclassified",
+        "value": 94824.3554,
+        "pct": 23.28
+      },
+      {
+        "name": "Large",
+        "value": 66168.0567,
+        "pct": 16.24
+      }
+    ],
+    "by_fund_category": [
+      {
+        "name": "Equity Scheme - Mid Cap Fund",
+        "value": 98973.3075,
+        "pct": 16.98
+      },
+      {
+        "name": "Equity Scheme - Sectoral/ Thematic",
+        "value": 87305.3874,
+        "pct": 14.98
+      },
+      {
+        "name": "Equity Scheme - Small Cap Fund",
+        "value": 83360.3951,
+        "pct": 14.3
+      },
+      {
+        "name": "Other Scheme - FoF Domestic",
+        "value": 76329.7478,
+        "pct": 13.1
+      },
+      {
+        "name": "Equity Scheme - Large Cap Fund",
+        "value": 66168.0567,
+        "pct": 11.35
+      },
+      {
+        "name": "Fund of Funds Scheme (Domestic) - Fund of Funds Scheme (Domestic)",
+        "value": 30372.5677,
+        "pct": 5.21
+      },
+      {
+        "name": "Debt Scheme - Corporate Bond Fund",
+        "value": 29609.6616,
+        "pct": 5.08
+      },
+      {
+        "name": "Equity Schemes - Small Cap Fund",
+        "value": 21121.4755,
+        "pct": 3.62
+      },
+      {
+        "name": "Other Scheme - Other  ETFs",
+        "value": 90.9681,
+        "pct": 0.02
+      }
+    ],
+    "by_sector": [
+      {
+        "name": "Equity Scheme - Mid Cap Fund",
+        "value": 98973.3075,
+        "pct": 16.98
+      },
+      {
+        "name": "Equity Scheme - Sectoral/ Thematic",
+        "value": 87305.3874,
+        "pct": 14.98
+      },
+      {
+        "name": "Equity Scheme - Small Cap Fund",
+        "value": 83360.3951,
+        "pct": 14.3
+      },
+      {
+        "name": "Other Scheme - FoF Domestic",
+        "value": 76329.7478,
+        "pct": 13.1
+      },
+      {
+        "name": "Equity Scheme - Large Cap Fund",
+        "value": 66168.0567,
+        "pct": 11.35
+      },
+      {
+        "name": "Gold & Silver",
+        "value": 39174.3192,
+        "pct": 6.72
+      },
+      {
+        "name": "Fund of Funds Scheme (Domestic) - Fund of Funds Scheme (Domestic)",
+        "value": 30372.5677,
+        "pct": 5.21
+      },
+      {
+        "name": "Debt Scheme - Corporate Bond Fund",
+        "value": 29609.6616,
+        "pct": 5.08
+      },
+      {
+        "name": "Technology",
+        "value": 24511.6501,
+        "pct": 4.21
+      },
+      {
+        "name": "Equity Schemes - Small Cap Fund",
+        "value": 21121.4755,
+        "pct": 3.62
+      },
+      {
+        "name": "Basic Materials",
+        "value": 20271.6797,
+        "pct": 3.48
+      },
+      {
+        "name": "Consumer Defensive",
+        "value": 5600.0999,
+        "pct": 0.96
+      },
+      {
+        "name": "Other Scheme - Other  ETFs",
+        "value": 90.9681,
+        "pct": 0.02
+      }
+    ],
+    "top_exposures": [
+      {
+        "name": "ICICI Prudential Technology Fund",
+        "pct": 14.98,
+        "value": 87305.3874,
+        "via": [
+          "fund (no breakdown yet)"
+        ]
+      },
+      {
+        "name": "Nippon India Large Cap Fund",
+        "pct": 11.35,
+        "value": 66168.0567,
+        "via": [
+          "fund (no breakdown yet)"
+        ]
+      },
+      {
+        "name": "Nippon India Small Cap Fund",
+        "pct": 10.95,
+        "value": 63829.2932,
+        "via": [
+          "fund (no breakdown yet)"
+        ]
+      },
+      {
+        "name": "Motilal Oswal Midcap Fund",
+        "pct": 10.31,
+        "value": 60075.8062,
+        "via": [
+          "fund (no breakdown yet)"
+        ]
+      },
+      {
+        "name": "HDFC Mid Cap Fund",
+        "pct": 6.67,
+        "value": 38897.5013,
+        "via": [
+          "fund (no breakdown yet)"
+        ]
+      },
+      {
+        "name": "Nippon India Silver ETF FOF",
+        "pct": 5.22,
+        "value": 30420.5705,
+        "via": [
+          "fund (no breakdown yet)"
+        ]
+      },
+      {
+        "name": "Axis Silver Fund of Fund",
+        "pct": 5.21,
+        "value": 30372.5677,
+        "via": [
+          "fund (no breakdown yet)"
+        ]
+      },
+      {
+        "name": "Nippon India Corporate Bond Fund",
+        "pct": 5.08,
+        "value": 29609.6616,
+        "via": [
+          "fund (no breakdown yet)"
+        ]
+      },
+      {
+        "name": "HDFC Silver ETF Fund of Fund",
+        "pct": 4.18,
+        "value": 24362.6425,
+        "via": [
+          "fund (no breakdown yet)"
+        ]
+      },
+      {
+        "name": "Nippon India Silver ETF",
+        "pct": 3.93,
+        "value": 22919.7593,
+        "via": [
+          "direct"
+        ]
+      }
+    ],
+    "effective_holdings": 12.6,
+    "hhi": 0.0792,
+    "top5_pct": 54.3,
+    "fund_overlap": [],
+    "flags": [
+      "Top 5 positions make up 54% of the portfolio."
+    ],
+    "suggestions": [],
+    "funds_without_breakdown": [
+      "ICICI Prudential Technology Fund",
+      "Nippon India Large Cap Fund",
+      "Nippon India Small Cap Fund",
+      "Motilal Oswal Midcap Fund",
+      "HDFC Mid Cap Fund",
+      "Nippon India Silver ETF FOF",
+      "Axis Silver Fund of Fund",
+      "Nippon India Corporate Bond Fund",
+      "HDFC Silver ETF Fund of Fund",
+      "ICICI Prudential Income plus Arbitrage Omni FOF",
+      "Invesco India Small Cap Fund",
+      "BANDHAN Small Cap Fund",
+      "CPSE ETF"
+    ]
+  },
+  "history": [
+    {
+      "date": "2026-11-12",
+      "value": 615135.6049,
+      "cost": 416752.86
+    },
+    {
+      "date": "2026-11-13",
+      "value": 614185.9968,
+      "cost": 416752.86
+    },
+    {
+      "date": "2026-11-14",
+      "value": 611623.4887,
+      "cost": 416752.86
+    },
+    {
+      "date": "2026-11-17",
+      "value": 602411.8152,
+      "cost": 416752.86
+    },
+    {
+      "date": "2026-11-18",
+      "value": 600657.0199,
+      "cost": 416752.86
+    },
+    {
+      "date": "2026-11-19",
+      "value": 593849.9671,
+      "cost": 655740.86
+    },
+    {
+      "date": "2026-11-20",
+      "value": 591076.8346,
+      "cost": 655740.86
+    },
+    {
+      "date": "2026-11-23",
+      "value": 588069.8059,
+      "cost": 655740.86
+    },
+    {
+      "date": "2026-11-24",
+      "value": 586524.4706,
+      "cost": 655740.86
+    },
+    {
+      "date": "2026-11-25",
+      "value": 584497.4684,
+      "cost": 655740.86
+    },
+    {
+      "date": "2026-11-26",
+      "value": 582889.3162,
+      "cost": 655740.86
+    }
+  ],
+  "research": {
+    "reasons": {},
+    "news": [],
+    "events": [],
+    "outlook": [],
+    "market_wrap": null
+  },
+  "health": {
+    "notes": [],
+    "price_source": "yahoo",
+    "last_cas": {
+      "filename": "CDSL-2026-10.pdf",
+      "period_to": "2026-10-31",
+      "imported_at": "2026-11-12T23:22:58.703198"
+    },
+    "reconciliation_vs_cas": []
+  },
+  "disclaimer": "Describes and explains the portfolio; not investment advice."
+}
