@@ -1,0 +1,45 @@
+{
+  "date": "2026-11-27",
+  "market_wrap": {
+    "text": "Nifty fell about 1.1% to roughly 25,607, with IT the weakest sector (Nifty IT -1.9%) and FMCG down about 0.9%, while metals rose (Nifty Metal +1.4%). In morning trade, HDFC Sky linked the weakness to proposed US tariffs of up to 20% on 14 trading partners including India and to expectations of a Fed rate hike in December; no full close report could be opened, so the closing figures are from the snapshot.",
+    "source_name": "HDFC Sky (morning report)",
+    "source_url": "https://hdfcsky.com/news/bse-nse-sensex-november-27-2026-open-report-sensex-nifty-trade-marginally-lower-in-morning-trade-as-us-tariff-worries-offset-firm-asia-easing-brent"
+  },
+  "reasons": [
+    {
+      "match": [
+        "SILVERBEES"
+      ],
+      "theme": "Silver",
+      "driver": "Commodity",
+      "reason": "Silver extended its rebound from near 14-month lows: MCX silver was up about 5–6% to around ₹1.53–1.54 lakh/kg in the afternoon and COMEX silver about 10% higher, on value buying, a recovery in Asian tech stocks and thin Thanksgiving trade.",
+      "sentiment": "positive",
+      "sources": [
+        {
+          "name": "Upstox gold & silver tracker",
+          "url": "https://upstox.com/news/market-news/commodities/gold-price-tracker-nov-27-mcx-gold-prices-mcx-silver-rates-comex-gold-comex-silver-gold-prices-today-bullion-market-silver-prices-today/liveblog-204059/"
+        },
+        {
+          "name": "Deccan Chronicle",
+          "url": "https://www.deccanchronicle.com/business/economics/gold-prices-rise-to-rs-124-lakh-silver-surges-51-to-rs-153-lakh-on-mcx-2008437"
+        }
+      ]
+    },
+    {
+      "match": [
+        "GOLDBEES"
+      ],
+      "theme": "Gold",
+      "driver": "Commodity",
+      "reason": "Gold rebounded with silver: MCX December gold rose about 3% to roughly ₹1.26 lakh per 10g at the day's high, on value buying after recent lows; Upstox noted the December Fed meeting and sticky US inflation could cap gains.",
+      "sentiment": "positive",
+      "sources": [
+        {
+          "name": "Upstox gold & silver tracker",
+          "url": "https://upstox.com/news/market-news/commodities/gold-price-tracker-nov-27-mcx-gold-prices-mcx-silver-rates-comex-gold-comex-silver-gold-prices-today-bullion-market-silver-prices-today/liveblog-204059/"
+        }
+      ]
+    }
+  ],
+  "news": []
+}
