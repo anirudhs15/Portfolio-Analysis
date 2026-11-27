@@ -1,36 +1,36 @@
 [
  {
   "as_of": "2026-11-27",
-  "mode": "close",
-  "generated_at": "2026-11-27T15:42:54+05:30",
-  "total_value": 584558.95,
-  "day_inr": 1668.03,
-  "day_pct": 0.29,
+  "mode": "night",
+  "generated_at": "2026-11-27T22:07:03+05:30",
+  "total_value": 588464.23,
+  "day_inr": 5573.32,
+  "day_pct": 0.96,
   "nifty_pct": -1.07,
-  "vs_nifty_pct": 1.36,
+  "vs_nifty_pct": 2.03,
   "invested": 655740.86,
-  "gain_inr": -71272.88,
-  "gain_pct": -10.87,
+  "gain_inr": -67367.98,
+  "gain_pct": -10.27,
   "cost_coverage_pct": 100.0,
-  "value_with_cost": 584467.98,
+  "value_with_cost": 588372.87,
   "no_cost": [
    {
     "name": "CPSE ETF",
-    "value": 90.97
+    "value": 91.36
    }
   ],
   "holdings_count": 24,
   "stocks_count": 9,
   "funds_count": 15,
   "effective_holdings": 12.7,
-  "top5_pct": 54.1,
-  "volatility_pct": 17.9,
+  "top5_pct": 54.0,
+  "volatility_pct": 17.96,
   "beta": 0.82,
-  "max_drawdown_pct": -19.87,
-  "sharpe": 0.36,
-  "one_year_return_pct": 12.85,
-  "movers_count": 2,
-  "market_wrap": "Nifty fell about 1.1% to roughly 25,607, with IT the weakest sector (Nifty IT -1.9%) and FMCG down about 0.9%, while metals rose (Nifty Metal +1.4%). In morning trade, HDFC Sky linked the weakness to proposed US tariffs of up to 20% on 14 trading partners including India and to expectations of a Fed rate hike in December; no full close report could be opened, so the closing figures are from the snapshot.",
-  "market_wrap_source": "https://hdfcsky.com/news/bse-nse-sensex-november-27-2026-open-report-sensex-nifty-trade-marginally-lower-in-morning-trade-as-us-tariff-worries-offset-firm-asia-easing-brent"
+  "max_drawdown_pct": -19.92,
+  "sharpe": 0.34,
+  "one_year_return_pct": 12.69,
+  "movers_count": 5,
+  "market_wrap": "The Nifty fell 277 points (1.07%) to 25,607 and the Sensex 989 points to 83,339, snapping a four-week winning run, as Brent crude neared $98, the rupee weakened toward ₹92.9 per dollar and proposed US tariffs on trading partners including India weighed; IT led the losses (HCL Tech, Infosys and TCS down about 2.5–2.8%). Broader markets held up, with the Nifty Smallcap 100 up 0.56%.",
+  "market_wrap_source": "https://www.businesstoday.in/markets/stocks/story/bt-closing-bell-sensex-plunges-989-pts-nifty-ends-at-25607-what-fridays-market-fall-reflects-569980-2026-11-27"
  }
 ]

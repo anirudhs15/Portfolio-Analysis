@@ -1,11 +1,11 @@
 [
  {
   "theme": "Silver",
-  "view": "Silver and gold fell again on 25 November (Silver BeES −5.5%, Gold BeES −2.9%) ahead of US inflation data. That data, out tonight, showed October core PCE inflation at 3.3% against 3.2% expected, cementing expectations of a December US rate rise, which has been the main pressure on bullion.",
+  "view": "Silver and gold have rebounded for two days from near one-year lows on value buying (Silver BeES +4.2% and Gold BeES +2.8% on 27 November), but stronger-than-expected US inflation has kept a December US rate rise priced in, which has been the main pressure on bullion.",
   "watch": "The 8–9 December Fed decision and the dollar.",
   "tone": "cautious",
-  "source_name": "StockAnalysis (US PCE, October 2026)",
-  "source_url": "https://stockanalysis.com/news/us-pce-inflation-october-2026/"
+  "source_name": "Upstox gold & silver tracker (27 Nov)",
+  "source_url": "https://upstox.com/news/market-news/commodities/gold-price-tracker-nov-27-mcx-gold-prices-mcx-silver-rates-comex-gold-comex-silver-gold-prices-today-bullion-market-silver-prices-today/liveblog-204059/"
  },
  {
   "theme": "Small & mid caps",
@@ -17,11 +17,11 @@
  },
  {
   "theme": "Technology",
-  "view": "A global sell-off in AI stocks hit Asian hardware names today (Taiwan −6.2%, Korea over 5%), weighing on AI-server maker Netweb, while Indian IT services stocks rose (Nifty IT +1.3%).",
-  "watch": "December-quarter results from January.",
+  "view": "Indian IT services stocks led the 27 November fall (HCL Tech, Infosys and TCS down about 2.5–2.8%) on proposed US tariffs on trading partners including India; Geojit also flagged that a revival in Asian AI stocks could divert flows away from India.",
+  "watch": "US tariff decisions and December-quarter results from January.",
   "tone": "mixed",
-  "source_name": "Moneycontrol (markets, 20 Nov)",
-  "source_url": "https://www.moneycontrol.com/news/business/markets/sensex-nifty-inching-towards-all-time-high-india-decouples-from-global-rout-only-major-market-in-the-green-14085693.html"
+  "source_name": "Business Today (closing bell, 27 Nov)",
+  "source_url": "https://www.businesstoday.in/markets/stocks/story/bt-closing-bell-sensex-plunges-989-pts-nifty-ends-at-25607-what-fridays-market-fall-reflects-569980-2026-11-27"
  },
  {
   "theme": "Copper & metals",

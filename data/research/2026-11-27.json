@@ -1,9 +1,9 @@
 {
   "date": "2026-11-27",
   "market_wrap": {
-    "text": "Nifty fell about 1.1% to roughly 25,607, with IT the weakest sector (Nifty IT -1.9%) and FMCG down about 0.9%, while metals rose (Nifty Metal +1.4%). In morning trade, HDFC Sky linked the weakness to proposed US tariffs of up to 20% on 14 trading partners including India and to expectations of a Fed rate hike in December; no full close report could be opened, so the closing figures are from the snapshot.",
-    "source_name": "HDFC Sky (morning report)",
-    "source_url": "https://hdfcsky.com/news/bse-nse-sensex-november-27-2026-open-report-sensex-nifty-trade-marginally-lower-in-morning-trade-as-us-tariff-worries-offset-firm-asia-easing-brent"
+    "text": "The Nifty fell 277 points (1.07%) to 25,607 and the Sensex 989 points to 83,339, snapping a four-week winning run, as Brent crude neared $98, the rupee weakened toward ₹92.9 per dollar and proposed US tariffs on trading partners including India weighed; IT led the losses (HCL Tech, Infosys and TCS down about 2.5–2.8%). Broader markets held up, with the Nifty Smallcap 100 up 0.56%.",
+    "source_name": "Business Today (closing bell)",
+    "source_url": "https://www.businesstoday.in/markets/stocks/story/bt-closing-bell-sensex-plunges-989-pts-nifty-ends-at-25607-what-fridays-market-fall-reflects-569980-2026-11-27"
   },
   "reasons": [
     {
@@ -39,7 +39,66 @@
           "url": "https://upstox.com/news/market-news/commodities/gold-price-tracker-nov-27-mcx-gold-prices-mcx-silver-rates-comex-gold-comex-silver-gold-prices-today-bullion-market-silver-prices-today/liveblog-204059/"
         }
       ]
+    },
+    {
+      "match": [
+        "150615",
+        "149760",
+        "150737"
+      ],
+      "theme": "Silver",
+      "driver": "Commodity",
+      "reason": "These are 26 November NAVs (today's were not yet published), reflecting Thursday's silver rebound: MCX December silver rose about 2–3% to around ₹1.46 lakh/kg on value buying near one-year lows and steady US Treasury yields. Silver rose further today (Silver BeES +4.2%), which should show in the next NAVs.",
+      "sentiment": "positive",
+      "sources": [
+        {
+          "name": "Upstox gold & silver tracker (26 Nov)",
+          "url": "https://upstox.com/news/market-news/commodities/gold-price-tracker-nov-26-mcx-gold-prices-mcx-silver-rates-comex-gold-comex-silver-us-pce-inflation-gold-prices-today-silver-price-today/liveblog-203983/"
+        }
+      ]
     }
   ],
-  "news": []
+  "news": [],
+  "outlook": [
+    {
+      "theme": "Silver",
+      "view": "Silver and gold have rebounded for two days from near one-year lows on value buying (Silver BeES +4.2% and Gold BeES +2.8% on 27 November), but stronger-than-expected US inflation has kept a December US rate rise priced in, which has been the main pressure on bullion.",
+      "watch": "The 8–9 December Fed decision and the dollar.",
+      "tone": "cautious",
+      "source_name": "Upstox gold & silver tracker (27 Nov)",
+      "source_url": "https://upstox.com/news/market-news/commodities/gold-price-tracker-nov-27-mcx-gold-prices-mcx-silver-rates-comex-gold-comex-silver-gold-prices-today-bullion-market-silver-prices-today/liveblog-204059/"
+    },
+    {
+      "theme": "Small & mid caps",
+      "view": "They have outperformed large caps this year, but lagged today's bank-led rally (Nifty Smallcap 100 −0.13%) and tend to fall harder when rates rise or foreign investors sell.",
+      "watch": "RBI decision on 4 December and foreign investor flows.",
+      "tone": "mixed",
+      "source_name": "Business Standard market close",
+      "source_url": "https://www.business-standard.com/markets/news/stock-market-live-november-20-nse-bse-sensex-today-nifty50-gift-nifty-crude-oil-prices-126112000118_1.html"
+    },
+    {
+      "theme": "Technology",
+      "view": "Indian IT services stocks led the 27 November fall (HCL Tech, Infosys and TCS down about 2.5–2.8%) on proposed US tariffs on trading partners including India; Geojit also flagged that a revival in Asian AI stocks could divert flows away from India.",
+      "watch": "US tariff decisions and December-quarter results from January.",
+      "tone": "mixed",
+      "source_name": "Business Today (closing bell, 27 Nov)",
+      "source_url": "https://www.businesstoday.in/markets/stocks/story/bt-closing-bell-sensex-plunges-989-pts-nifty-ends-at-25607-what-fridays-market-fall-reflects-569980-2026-11-27"
+    },
+    {
+      "theme": "Copper & metals",
+      "view": "Record copper prices drove Hindustan Copper's profit surge, but copper has since slipped to a five-month low on a strong dollar and weak China data, dragging metal stocks.",
+      "watch": "Global copper prices and the dollar.",
+      "tone": "mixed",
+      "source_name": "Business Standard",
+      "source_url": "https://www.business-standard.com/markets/news/hindustan-copper-shares-fall-3-as-copper-prices-hit-5-month-low-126111800284_1.html"
+    },
+    {
+      "theme": "Interest rates",
+      "view": "The RBI is in a tightening phase, which tends to lower bond prices in the short term and raise yields on new bonds.",
+      "watch": "RBI decision on 4 December.",
+      "tone": "cautious",
+      "source_name": "5paisa",
+      "source_url": "https://www.5paisa.com/blog/rbi-mpc-meeting-schedule"
+    }
+  ]
 }
